@@ -4,13 +4,13 @@ import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
 import NavLink from "react-bootstrap/NavLink";
 import Container from "react-bootstrap/Container";
-import logo from "../assets/logo.jpg"
+
 
 const NavBar = () => {
     return (
         <Navbar bg="light" expand="md" fixed="top">
             <Container>
-                <Navbar.Brand href="#home"><img src={logo} alt="logo" height="50" /></Navbar.Brand>
+                <Navbar.Brand>BarBelles</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
