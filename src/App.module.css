@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-a {
+/* a {
     color: #512d38;
     transition: color ease-in-out 0.4s;
     font-size: 1.2rem;
@@ -15,9 +15,9 @@ a {
 
 a:hover {
     text-decoration: none;
-}
+} */
 
-a:hover i {
+/* a:hover i {
     color: #b27092;
     transition: color ease-in-out 0.3s;
 }
@@ -32,5 +32,5 @@ i {
 i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: blue;
-}
+    color: #b27092;
+} */

@@ -1,13 +1,43 @@
-* {
+/* * {
     color:#512d38;
-}
+} */
 
 .NavBar {
     background-color: #ffe9f3;
+}
+
+.NavBarLink {
+    color: #512d38;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.NavBarLink:hover {
+        color: #b27092;
+        transition: color ease-in-out 0.3s;
+        text-decoration: none;
 }
 
 .NavBarBrandText {
     font-family: "Satisfy", cursive;
     font-size: 3rem;
     color: #512d38 !important;
+}
+
+.NavBarLink:hover i {
+    color: #b27092;
+    transition: color ease-in-out 0.3s;
+}
+
+i {
+    color: #512d38;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    padding: 0.2rem;
+}
+
+i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #b27092;
 }
