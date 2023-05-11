@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="md">
+        <Navbar bg="light" expand="md" fixed="top">
             <Container>
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
