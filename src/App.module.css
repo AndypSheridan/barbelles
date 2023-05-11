@@ -10,6 +10,7 @@
 a {
     color: #512d38;
     transition: color ease-in-out 0.4s;
+    font-size: 1.2rem;
 }
 
 a:hover {
