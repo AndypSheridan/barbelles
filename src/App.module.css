@@ -2,3 +2,34 @@
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #512d38;
+    transition: color ease-in-out 0.4s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:hover i {
+    color: white;
+    transition: color ease-in-out 0.3s;
+}
+
+i {
+    color: red;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    padding: 0.2rem;
+}
+
+i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: blue;
+}
