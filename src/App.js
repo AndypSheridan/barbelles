@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-      <Button variant="primary">Primary</Button>
+      <NavBar />
       </h1>
     </div>
   );
