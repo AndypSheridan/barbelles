@@ -5,11 +5,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavLink from "react-bootstrap/NavLink";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png"
+import styles from "../styles/NavBar.module.css"
 
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="md" fixed="top">
+        <Navbar className={styles.NavBar} expand="md" fixed="top">
             <Container>
                 <Navbar.Brand><img src={logo} alt="logo" /> BarBelles</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
