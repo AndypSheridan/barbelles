@@ -6,8 +6,10 @@ function App() {
   return (
     <div className={styles.App}>
       <NavBar />
-      <Container>
-        
+      <Container className={styles.Main}>
+        <h1>Home</h1>
+        <h1>Sign in</h1>
+        <h1>Sign in</h1>
       </Container>
     </div>
   );
