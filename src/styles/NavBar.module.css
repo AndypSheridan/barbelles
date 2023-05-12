@@ -4,15 +4,16 @@
 
 .NavBar {
     background-color: #ffe9f3;
+    border-bottom: 1px solid #87baab;
 }
 
-.NavBarLink {
+.NavLink {
     color: #512d38;
     padding: 0.5rem;
     font-size: 1.2rem;
 }
 
-.NavBarLink:hover {
+.NavLink:hover {
         color: #b27092;
         transition: color ease-in-out 0.3s;
         text-decoration: none;
@@ -24,7 +25,7 @@
     color: #512d38 !important;
 }
 
-.NavBarLink:hover i {
+.NavLink:hover i {
     color: #b27092;
     transition: color ease-in-out 0.3s;
 }
@@ -41,3 +42,8 @@ i:hover {
     transition: color ease-in-out 0.3s;
     color: #b27092;
 }
+
+.Active i {
+    color: #87baab;
+}
+
