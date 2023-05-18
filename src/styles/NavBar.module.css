@@ -1,10 +1,9 @@
-/* * {
-    color:#512d38;
-} */
-
 .NavBar {
-    background-color: #ffe9f3;
-    border-bottom: 1px solid #87baab;
+    background-color: rgba(255, 233, 243, 0.8);
+}
+
+.Logo {
+    
 }
 
 .NavLink {

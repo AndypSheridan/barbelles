@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import styles from "../styles/NavBar.module.css";
 
 const NavBar = () => {
@@ -13,7 +13,7 @@ const NavBar = () => {
             <Container>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
-                        <img src={logo} alt="logo" /> BarBelles
+                        <img src={logo} className={styles.Logo} alt="logo" /> BarBelles
                     </Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
