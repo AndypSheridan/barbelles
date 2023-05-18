@@ -44,6 +44,9 @@ const SignUpForm = () => {
     };
 
     return (
+            <div>
+                Hello world
+            </div>
     );
 };
 
