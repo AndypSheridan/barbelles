@@ -1,0 +1,10 @@
+.Main {
+    padding-top: 110px;
+    background-image: url("./assets/homebackgroundimage.jpg");
+    max-width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
