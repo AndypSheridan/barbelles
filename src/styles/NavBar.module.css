@@ -10,9 +10,9 @@
 }
 
 .NavLink:hover {
-        color: #b27092;
-        transition: color ease-in-out 0.3s;
-        text-decoration: none;
+    color: #b27092;
+    transition: color ease-in-out 0.3s;
+    text-decoration: none;
 }
 
 .NavBarBrandText {
