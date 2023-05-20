@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from '../styles/HomePage.module.css'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 
 const HomePage = () => {
   return (
-    <Container className={styles.Main}>
-
-    </Container>
+   
+<Row className={styles.homeBackground}>
+  <Col>
+  </Col>
+</Row>
   )
 }
 
