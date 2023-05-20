@@ -5,14 +5,7 @@ import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import {
-    Form,
-    Button,
-    Col,
-    Row,
-    Container,
-    Alert,
-} from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -44,9 +37,13 @@ const SignUpForm = () => {
     };
 
     return (
-            <div>
-                Hello world
-            </div>
+        <Container className={styles.signUpBg}>
+            <Row>
+                <Col>
+                    <h1></h1>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
