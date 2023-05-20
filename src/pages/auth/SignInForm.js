@@ -6,7 +6,8 @@ const SignInForm = () => {
     return (
         <Container className={styles.signInBg}>
             <Row>
-                <Col></Col>
+                <Col>
+                </Col>
             </Row>
         </Container>
     );
