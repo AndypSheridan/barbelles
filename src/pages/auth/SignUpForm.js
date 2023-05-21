@@ -38,16 +38,25 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={`d-none d-md-block ${styles.Col}`} md={6}>
-                <img src={signUpImage} className={styles.signUpImage} alt='...' />
-                </Col>
-                <Col md={6}>
-                    <Container className="mb-3 text-center">
-                        <p>You can sign up for the community here...</p>
+                <Col className={`d-none d-md-flex ${styles.Col}`} md={6}>
+                    <Container className="mx-auto p-0">
+                        <p className={`mx-auto ${styles.About}`}>
+                            About us
+                            <hr />
+                            We are online fitness community for women 
+                        </p>
+
                     </Container>
+                </Col>
+
+                <Col md={6}>
+                    <Container className="mb-3 text-center p-0 mx-auto">
+                        <p className="mx-auto">You can sign up for the community here...</p>
+                    </Container>
+                    <Container className="p-0 mx-auto">
                     <Form
                         onSubmit={handleSubmit}
-                        className={styles.Form}
+                        className={`mx-auto ${styles.Form}`}
                     >
                         <Form.Group controlId="username">
                             <Form.Label className="d-none">Username</Form.Label>
@@ -108,8 +117,9 @@ const SignUpForm = () => {
                             </Alert>
                         ))}
                     </Form>
-                    <Container className="mt-3 text-center">
-                    <p>If you already have an account <Link to="/signin">
+                    </Container>
+                    <Container className="mt-3 p-0 mx-auto text-center">
+                    <p className="mx-auto">If you already have an account <Link to="/signin">
                              <span>please click here to sign in</span>
                         </Link></p>
                     </Container>
