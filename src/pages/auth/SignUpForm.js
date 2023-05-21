@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-
+import image from "../../assets/community.jpeg"
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Alert, Image } from "react-bootstrap";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -40,8 +40,8 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={styles.Col}>
-                    <p>Barbelles</p>
+                <Col className={styles.Col} md={6}>
+                   
                 </Col>
                 <Col>
                     <Form className={styles.Form}>

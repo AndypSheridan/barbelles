@@ -25,14 +25,8 @@
 }
 
 .Col {
-    /* background-image: url('../assets/community.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    padding: 1rem;
-    width: 10%;
-    border-radius: 50%;
 }
+
 
 .Form {
     text-align: center;
