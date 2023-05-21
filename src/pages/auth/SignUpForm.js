@@ -49,19 +49,22 @@ const SignUpForm = () => {
                         <Form.Group controlId="username">
                             <Form.Label>Username</Form.Label>
                             <Form.Control
+                                value={username}
+                                onChange={handleChange}
                                 type="text"
                                 placeholder="Username"
                                 name="username"
-                                value={username}
-                                onChange={handleChange}
                             />
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicPassword">
+                        <Form.Group controlId="password1">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
+                                value={password1}
+                                onChange={handleChange}
                                 type="password"
                                 placeholder="Password"
+                                name="password1"
                             />
                         </Form.Group>
 
