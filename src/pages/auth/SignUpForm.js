@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import image from "../../assets/community.jpeg"
 import styles from "../../styles/SignUpForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
-
-import { Form, Button, Col, Row, Container, Alert, Image } from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -68,16 +64,18 @@ const SignUpForm = () => {
                             />
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicPassword">
+                        <Form.Group controlId="password2">
                             <Form.Label>Confirm password</Form.Label>
                             <Form.Control
+                                value={password2}
+                                onChange={handleChange}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Confirm password"
                             />
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
-                            Submit
+                            Sign up
                         </Button>
                     </Form>
                 </Col>
