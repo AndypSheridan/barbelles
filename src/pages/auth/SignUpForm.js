@@ -44,7 +44,8 @@ const SignUpForm = () => {
                    
                 </Col>
                 <Col md={6}>
-                    <Form className={`mx-auto ${styles.Form}`}>
+                    <Form onSubmit={handleSubmit}
+                    className={`mx-auto ${styles.Form}`}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label></Form.Label>
                             <Form.Control
