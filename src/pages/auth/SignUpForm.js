@@ -3,6 +3,8 @@ import { useHistory, Link } from "react-router-dom";
 import styles from "../../styles/SignUpForm.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
+import signUpImage from "../../assets/signupimage.jpeg"
+
 
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({
@@ -36,14 +38,19 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={`d-none d-md-block ${styles.Col}`} md={6}></Col>
+                <Col className={`d-none d-md-block ${styles.Col}`} md={6}>
+                <img src={signUpImage} className={styles.signUpImage} alt='...' />
+                </Col>
                 <Col md={6}>
+                    <Container className="mb-3 text-center">
+                        <p>You can sign up for the community here...</p>
+                    </Container>
                     <Form
                         onSubmit={handleSubmit}
-                        className={`mx-auto ${styles.Form}`}
+                        className={styles.Form}
                     >
                         <Form.Group controlId="username">
-                            <Form.Label>Username</Form.Label>
+                            <Form.Label className="d-none">Username</Form.Label>
                             <Form.Control
                                 value={username}
                                 onChange={handleChange}
@@ -52,14 +59,14 @@ const SignUpForm = () => {
                                 name="username"
                             />
                         </Form.Group>
-                        {errors.username?.map((message, index) => (
-                            <Alert variant="warning" key={index}>
+                        {errors.username?.map((message, idx) => (
+                            <Alert variant="warning" key={idx}>
                                 {message}
                             </Alert>
                         ))}
 
                         <Form.Group controlId="password1">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label className="d-none">Password</Form.Label>
                             <Form.Control
                                 value={password1}
                                 onChange={handleChange}
@@ -68,23 +75,26 @@ const SignUpForm = () => {
                                 name="password1"
                             />
                         </Form.Group>
-                        {errors.password1?.map((message, index) => (
-                            <Alert variant="warning" key={index}>
+                        {errors.password1?.map((message, idx) => (
+                            <Alert variant="warning" key={idx}>
                                 {message}
                             </Alert>
                         ))}
 
                         <Form.Group controlId="password2">
-                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Label className="d-none">
+                                Confirm password
+                            </Form.Label>
                             <Form.Control
                                 value={password2}
                                 onChange={handleChange}
                                 type="password"
                                 placeholder="Confirm password"
+                                name="password2"
                             />
                         </Form.Group>
-                        {errors.password2?.map((message, index) => (
-                            <Alert variant="warning" key={index}>
+                        {errors.password2?.map((message, idx) => (
+                            <Alert variant="warning" key={idx}>
                                 {message}
                             </Alert>
                         ))}
@@ -92,12 +102,17 @@ const SignUpForm = () => {
                         <Button variant="primary" type="submit">
                             Sign up
                         </Button>
-                        {errors.non_field_errors?.map((message, index) => (
-                            <Alert variant="warning" key={index}>
+                        {errors.non_field_errors?.map((message, idx) => (
+                            <Alert variant="warning" key={idx}>
                                 {message}
                             </Alert>
                         ))}
                     </Form>
+                    <Container className="mt-3 text-center">
+                    <p>If you already have an account <Link to="/signin">
+                             <span>please click here to sign in</span>
+                        </Link></p>
+                    </Container>
                 </Col>
             </Row>
         </Container>

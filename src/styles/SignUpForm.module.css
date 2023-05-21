@@ -17,24 +17,49 @@
 
 .SignUpHeader {
     padding-top: 8rem;
+    padding-bottom: 2rem;
     text-align: center;
+    color:#512d38;
 }
 
 .Row {
-    padding-top: 3rem;
+    padding-top: 0.5rem;
 }
 
 .Col {
 }
 
+/* img {
+    align-self: center;
+    width: 85%;
+} */
 
-.Form {
-    text-align: center;
-    width: 75%;
+.signUpImage {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: cover;
+    margin-left: 2rem;
+}
+
+p {
+    width: 85%;
     border: 1px solid white;
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
     color: #512d38;
-    min-height: 100%;
+}
+
+span {
+    color:aliceblue;
+}
+
+.Form {
+    text-align: center;
+    width: 85%;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #512d38;
 }
