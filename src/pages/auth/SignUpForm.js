@@ -83,6 +83,11 @@ const SignUpForm = () => {
                                 placeholder="Confirm password"
                             />
                         </Form.Group>
+                        {errors.password2?.map((message, index) => (
+                            <Alert variant="warning" key={index}>
+                                {message}
+                            </Alert>
+                        ))}
 
                         <Button variant="primary" type="submit">
                             Sign up
