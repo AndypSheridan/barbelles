@@ -68,6 +68,11 @@ const SignUpForm = () => {
                                 name="password1"
                             />
                         </Form.Group>
+                        {errors.password1?.map((message, index) => (
+                            <Alert variant="warning" key={index}>
+                                {message}
+                            </Alert>
+                        ))}
 
                         <Form.Group controlId="password2">
                             <Form.Label>Confirm password</Form.Label>
