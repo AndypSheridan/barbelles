@@ -35,6 +35,12 @@
     color: #512d38;
 }
 
+.AboutBgImg {
+    background-image: url('../assets/signupimage.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* img {
     align-self: center;
     width: 85%;

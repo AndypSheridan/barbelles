@@ -39,11 +39,14 @@ const SignUpForm = () => {
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
                 <Col className={`d-none d-md-flex ${styles.Col}`} md={6}>
-                    <Container className="mx-auto p-0">
-                        <p className={`mx-auto ${styles.About}`}>
+                    <Container className={`mx-auto p-0 `}>
+                        <p className={`mx-auto ${styles.About} ${styles.AboutBgImg}`}>
                             About us
                             <hr />
                             We are online fitness community for women 
+                            hekdhkedhekdh
+                            <br />
+                            iejgfe3ijgfhe3
                         </p>
 
                     </Container>
