@@ -40,13 +40,13 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={styles.Col} md={6}>
+                <Col className={`d-none d-md-block ${styles.Col}`} md={6}>
                    
                 </Col>
-                <Col>
-                    <Form className={styles.Form}>
+                <Col md={6}>
+                    <Form className={`mx-auto ${styles.Form}`}>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label></Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email"
