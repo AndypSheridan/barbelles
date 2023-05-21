@@ -37,9 +37,10 @@ const SignUpForm = () => {
     };
 
     return (
-        <Container className={styles.signUpBg}>
+        <Container className={styles.SignUpBg}>
+            <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col>
+                <Col className={styles.Col}>
                     <p>Barbelles</p>
                 </Col>
                 <Col>

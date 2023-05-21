@@ -1,4 +1,4 @@
-.signUpBg {
+.SignUpBg {
     background: rgb(2, 0, 36);
     background: linear-gradient(
         90deg,
@@ -15,10 +15,32 @@
     position: fixed;
 }
 
+.SignUpHeader {
+    padding-top: 8rem;
+    text-align: center;
+}
+
 .Row {
-    padding-top: 110px;
+    padding-top: 3rem;
+}
+
+.Col {
+    /* background-image: url('../assets/community.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    padding: 1rem;
+    width: 10%;
+    border-radius: 50%;
 }
 
 .Form {
     text-align: center;
+    width: 85%;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #512d38;
+    min-height: 100%;
 }
