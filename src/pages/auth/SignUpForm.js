@@ -49,8 +49,11 @@ const SignUpForm = () => {
                         <Form.Group controlId="username">
                             <Form.Label>Username</Form.Label>
                             <Form.Control
-                                type="email"
-                                placeholder="Enter email"
+                                type="text"
+                                placeholder="Username"
+                                name="username"
+                                value={username}
+                                onChange={handleChange}
                             />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
