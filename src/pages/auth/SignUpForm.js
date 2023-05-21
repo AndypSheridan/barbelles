@@ -40,7 +40,10 @@ const SignUpForm = () => {
         <Container className={styles.signUpBg}>
             <Row className={styles.Row}>
                 <Col>
-                    <Form className={styles.SignUpForm}>
+                    <p>Barbelles</p>
+                </Col>
+                <Col>
+                    <Form className={styles.Form}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
