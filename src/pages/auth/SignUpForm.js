@@ -52,6 +52,11 @@ const SignUpForm = () => {
                                 name="username"
                             />
                         </Form.Group>
+                        {errors.username?.map((message, index) => (
+                            <Alert variant="warning" key={index}>
+                                {message}
+                            </Alert>
+                        ))}
 
                         <Form.Group controlId="password1">
                             <Form.Label>Password</Form.Label>
