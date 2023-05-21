@@ -36,12 +36,12 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={`d-none d-md-block ${styles.Col}`} md={6}>
-                   
-                </Col>
+                <Col className={`d-none d-md-block ${styles.Col}`} md={6}></Col>
                 <Col md={6}>
-                    <Form onSubmit={handleSubmit}
-                    className={`mx-auto ${styles.Form}`}>
+                    <Form
+                        onSubmit={handleSubmit}
+                        className={`mx-auto ${styles.Form}`}
+                    >
                         <Form.Group controlId="username">
                             <Form.Label>Username</Form.Label>
                             <Form.Control
@@ -92,6 +92,11 @@ const SignUpForm = () => {
                         <Button variant="primary" type="submit">
                             Sign up
                         </Button>
+                        {errors.non_field_errors?.map((message, index) => (
+                            <Alert variant="warning" key={index}>
+                                {message}
+                            </Alert>
+                        ))}
                     </Form>
                 </Col>
             </Row>
