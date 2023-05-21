@@ -46,8 +46,8 @@ const SignUpForm = () => {
                 <Col md={6}>
                     <Form onSubmit={handleSubmit}
                     className={`mx-auto ${styles.Form}`}>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label></Form.Label>
+                        <Form.Group controlId="username">
+                            <Form.Label>Username</Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email"
@@ -64,6 +64,15 @@ const SignUpForm = () => {
                                 placeholder="Password"
                             />
                         </Form.Group>
+
+                        <Form.Group controlId="formBasicPassword">
+                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
+                            />
+                        </Form.Group>
+
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
