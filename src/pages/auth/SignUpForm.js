@@ -54,7 +54,7 @@ const SignUpForm = () => {
 
                 <Col md={6}>
                     <Container className="mb-3 text-center p-0 mx-auto">
-                        <p className="mx-auto">You can sign up for the community here...</p>
+                        <p className="mx-auto">Just complete the form below to sign up!</p>
                     </Container>
                     <Container className="p-0 mx-auto">
                     <Form
@@ -122,8 +122,8 @@ const SignUpForm = () => {
                     </Form>
                     </Container>
                     <Container className="mt-3 p-0 mx-auto text-center">
-                    <p className="mx-auto">If you already have an account <Link to="/signin">
-                             <span>please click here to sign in</span>
+                    <p className="mx-auto">If you already have an account please <Link to="/signin">
+                             <span>sign in</span>
                         </Link></p>
                     </Container>
                 </Col>

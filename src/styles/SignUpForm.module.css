@@ -28,7 +28,7 @@
 
 .About {
     width: 85%;
-    border: 1px solid white;
+    border: 1px solid #FFF;
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
@@ -55,7 +55,7 @@
 
 p {
     width: 85%;
-    border: 1px solid white;
+    border: 1px solid #FFF;
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
@@ -63,13 +63,13 @@ p {
 }
 
 span {
-    color:aliceblue;
+    color: #FFF;
 }
 
 .Form {
     text-align: center;
     width: 85%;
-    border: 1px solid white;
+    border: 1px solid #FFF;
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
