@@ -4,6 +4,7 @@ import styles from "../../styles/SignInForm.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import buttonstyles from "../../styles/Button.module.css"
 
 
 const SignInForm = () => {
@@ -83,7 +84,7 @@ const SignInForm = () => {
                             </Alert>
                         ))}
 
-                        <Button variant="primary" type="submit">
+                        <Button className={buttonstyles.Button} type="submit">
                             Sign in
                         </Button>
                         {errors.non_field_errors?.map((message, idx) => (
