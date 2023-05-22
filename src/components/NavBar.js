@@ -45,10 +45,20 @@ const NavBar = () => {
                 <i className="fa-solid fa-bookmark"></i> My stuff
             </NavLink>
             <NavLink
-                to="/signin"
+                onClick={() => {
+
+                }}
+                to="/"
                 className={styles.NavLink}
             >
                 <i className="fa-solid fa-door-open"></i> Log out
+            </NavLink>
+            <NavLink
+                to={`profiles/${currentUser?.profile_id}`}
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+            >
+                <img src={currentUser?.profile_image} />
             </NavLink>
         </>
     );
