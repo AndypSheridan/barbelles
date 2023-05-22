@@ -35,7 +35,7 @@ const SignUpForm = () => {
 
     return (
         <Container className={styles.SignUpBg}>
-            <h1 className={styles.SignUpHeader}>Join our Community</h1>
+            <h1 className={styles.SignInHeader}>Join our Community</h1>
             <Row className={styles.Row}>
                 <Col className={`d-none d-md-flex ${styles.Col}`} md={6}>
                     <Container className={`mx-auto my-auto p-0 `}>

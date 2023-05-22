@@ -7,12 +7,12 @@ import axios from "axios";
 const SignInForm = () => {
     return (
         <Container className={styles.signInBg}>
-            <h1>Sign in</h1>
+            <h1 className={styles.SignInHeader}>Sign in</h1>
             <Row>
                 <Col>
                     <Form className={`mx-auto ${styles.Form}`}>
                         <Form.Group controlId="username">
-                            <Form.Label className="d-none">Username</Form.Label>
+                            <Form.Label className="d-none">Enter your username</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Username"
@@ -20,17 +20,17 @@ const SignInForm = () => {
                             />
                         </Form.Group>
 
-                        <Form.Group controlId="password1">
+                        <Form.Group controlId="password">
                             <Form.Label className="d-none">Password</Form.Label>
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
-                                name="password1"
+                                name="password"
                             />
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
-                            Sign up
+                            Sign in
                         </Button>
                     </Form>
                 </Col>
