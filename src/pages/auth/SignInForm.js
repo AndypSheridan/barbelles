@@ -5,10 +5,16 @@ import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const SignInForm = () => {
+
     const [signInData, setSigninData] = useState({
         username: "",
         password: "",
     });
+
+    const {username, password} = signInData;
+
+    
+
 
     return (
         <Container className={styles.signInBg}>
