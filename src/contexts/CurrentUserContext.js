@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import axios from "axios";
+import { axiosRes } from "../api/axiosDefaults";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -9,6 +10,8 @@ export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
 export const CurrentUserProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
+
+    const 
 
     const handleMount = async () => {
         try {
@@ -22,6 +25,21 @@ export const CurrentUserProvider = ({ children }) => {
     useEffect(() => {
         handleMount();
     }, []);
+
+    useMemo(() => {
+        axiosRes.interceptors.response.use(
+            (response) => response, 
+            async (err) => {
+                if (err.response?.status === 401){
+                    try{
+                        await axios.post('/dj-rest-auth/token/refresh/')
+                    } catch(err) {
+
+                    }
+                }
+            }
+        )
+    })
 
     return (
         <CurrentUserContext.Provider value={currentUser}>
