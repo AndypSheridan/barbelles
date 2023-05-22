@@ -10,6 +10,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const CurrentUserContext = createContext()
+export const SetCurrentUserContext = createContext()
 
 function App() {
     const [currentUser, setCurrentUser] = useState(null);
