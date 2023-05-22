@@ -41,7 +41,8 @@ const SignUpForm = () => {
                     <Container className={`mx-auto my-auto p-0 `}>
                         <p className={`mx-auto ${styles.About}`}>
                             About us
-                            <hr />
+                            <br />
+                            <br />
                             Barbelles is an online fitness community for women
                             and we are committed to providing a friendly and
                             inclusive environment to learn, grow and share your

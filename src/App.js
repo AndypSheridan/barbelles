@@ -6,8 +6,13 @@ import './api/axiosDefaults';
 import SignUpForm from "./pages/auth/SignUpForm";
 import HomePage from "./pages/HomePage";
 import SignInForm from "./pages/auth/SignInForm";
+import { useState } from "react";
+
 
 function App() {
+
+    const[currentUser, setCurrentUser] = useState(null);
+
     return (
         <div className={styles.App}>
             <NavBar />
