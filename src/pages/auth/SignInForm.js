@@ -13,8 +13,6 @@ const SignInForm = () => {
 
     const {username, password} = signInData;
 
-    
-
 
     return (
         <Container className={styles.signInBg}>
@@ -27,6 +25,7 @@ const SignInForm = () => {
                                 Enter your username
                             </Form.Label>
                             <Form.Control
+                                value={username}
                                 type="text"
                                 placeholder="Username"
                                 name="username"
@@ -36,6 +35,7 @@ const SignInForm = () => {
                         <Form.Group controlId="password">
                             <Form.Label className="d-none">Password</Form.Label>
                             <Form.Control
+                                value={password}
                                 type="password"
                                 placeholder="Password"
                                 name="password"
