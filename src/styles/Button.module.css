@@ -9,6 +9,8 @@
     min-width: 75px;
 }
 
+
+
 .Button:hover {
     opacity: 0.8;
     border-color: transparent;
