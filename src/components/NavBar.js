@@ -6,25 +6,28 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo2.png";
 import styles from "../styles/NavBar.module.css";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import {
+    useCurrentUser,
+    useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
 
-    // const createPostIcon = (
-    //     <NavLink
-    //         to="/posts/create"
-    //         className={styles.NavLink}
-    //         activeClassName={styles.Active}
-    //     >
-    //         <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
-    //     </NavLink>
-    // );
+    const handleSignOut = async () => {
+        try {
+            await axios.post("dj-rest-auth/logout/");
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     const signedInIcons = (
         <>
-        <NavLink
+            <NavLink
                 to="/posts/create"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
@@ -45,13 +48,7 @@ const NavBar = () => {
             >
                 <i className="fa-solid fa-bookmark"></i> My stuff
             </NavLink>
-            <NavLink
-                onClick={() => {
-
-                }}
-                to="/"
-                className={styles.NavLink}
-            >
+            <NavLink onClick={() => {}} to="/" className={styles.NavLink}>
                 <i className="fa-solid fa-door-open"></i> Log out
             </NavLink>
             <NavLink
