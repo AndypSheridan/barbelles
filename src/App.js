@@ -6,8 +6,10 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import HomePage from "./pages/HomePage";
 import SignInForm from "./pages/auth/SignInForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+
+export const CurrentUserContext
 
 function App() {
     const [currentUser, setCurrentUser] = useState(null);
@@ -20,6 +22,10 @@ function App() {
             console.log(err);
         }
     };
+
+    useEffect(() => {
+        handleMount();
+    }, []);
 
     return (
         <div className={styles.App}>
