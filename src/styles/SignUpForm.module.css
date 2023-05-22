@@ -12,7 +12,7 @@
     padding-right: 0px;
     min-width: 100vw;
     min-height: 100vh;
-    position: fixed;
+    background-attachment: fixed;
 }
 
 .SignUpHeader {

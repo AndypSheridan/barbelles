@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 .App {
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
@@ -26,11 +34,11 @@
     width: 100%;
 }
 
-.Image {
+/* .Image {
     max-height: 40vh;
     max-width: 100%;
     object-fit: contain;
-}
+} */
 
 a {
     color: #555555;
