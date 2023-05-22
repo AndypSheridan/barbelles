@@ -1,7 +1,11 @@
 .Avatar {
     border-radius: 50%;
-    /* margin: 0px 8px 0px 8px; */
+    margin: 0px 8px 0px 8px;
     object-fit: cover;
+}
+
+.AvatarNavLink {
+    padding-top: 7px !important
 }
 
 

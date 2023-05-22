@@ -9,6 +9,10 @@
     vertical-align: middle;
 }
 
+.AvatarNavLink {
+    padding-top: 7px !important;
+}
+
 .NavLink:hover {
     color: #b27092;
     transition: color ease-in-out 0.3s;
