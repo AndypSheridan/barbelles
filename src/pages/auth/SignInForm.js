@@ -35,8 +35,8 @@ const SignInForm = () => {
     return (
         <Container className={styles.signInBg}>
             <h1 className={styles.SignInHeader}>Sign in</h1>
-            <Row>
-                <Col>
+            <Row className="text-center">
+                <Col className="mx-auto" md={6}>
                     <Form
                         onSubmit={handleSubmit}
                         className={`mx-auto ${styles.Form}`}
@@ -78,6 +78,11 @@ const SignInForm = () => {
                         <Button variant="primary" type="submit">
                             Sign in
                         </Button>
+                        {errors.non_field_errors?.map((message, idx) => (
+                            <Alert className="mt-3" key={idx} variant="warning">
+                                {message}
+                            </Alert>
+                        ))}
                     </Form>
                 </Col>
             </Row>
