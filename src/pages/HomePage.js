@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/HomePage.module.css'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
 const HomePage = () => {
   return (

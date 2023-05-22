@@ -3,7 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 import styles from "../../styles/SignUpForm.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
-import signUpImage from "../../assets/signupimage.jpeg";
+
 
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({

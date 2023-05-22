@@ -35,22 +35,16 @@
     color: #512d38;
 }
 
-.AboutBgImg {
-    background-image: url('../assets/signupimage.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* img {
-    align-self: center;
-    width: 85%;
-} */
-
 .signUpImage {
     max-height: 40vh;
     max-width: 100%;
     object-fit: cover;
     margin-left: 2rem;
+}
+
+span:hover {
+    color: red;
+    transition: color ease-in-out 0.2s;
 }
 
 p {
