@@ -28,7 +28,7 @@ const SignInForm = () => {
             await axios.post("/dj-rest-auth/login/", signInData);
             history.push("/");
         } catch (err) {
-            setErrors(err.response?.data)
+            setErrors(err.response?.data);
         }
     };
 
@@ -53,6 +53,11 @@ const SignInForm = () => {
                                 name="username"
                             />
                         </Form.Group>
+                        {errors.username?.map((message, idx) => (
+                            <Alert key={idx} variant="warning">
+                                {message}
+                            </Alert>
+                        ))}
 
                         <Form.Group controlId="password">
                             <Form.Label className="d-none">Password</Form.Label>
@@ -64,6 +69,11 @@ const SignInForm = () => {
                                 name="password"
                             />
                         </Form.Group>
+                        {errors.password?.map((message, idx) => (
+                            <Alert key={idx} variant="warning">
+                                {message}
+                            </Alert>
+                        ))}
 
                         <Button variant="primary" type="submit">
                             Sign in
