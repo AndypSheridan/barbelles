@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import logo from "../assets/logo2.png";
 import styles from "../styles/NavBar.module.css";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
@@ -55,10 +56,10 @@ const NavBar = () => {
             </NavLink>
             <NavLink
                 to={`profiles/${currentUser?.profile_id}`}
-                className={styles.NavLink}
+                className={`${styles.NavLink} ${styles.AvatarNavLink}`}
                 activeClassName={styles.Active}
             >
-                <img src={currentUser?.profile_image} />
+                <Avatar src={currentUser?.profile_image} text="Profile" />
             </NavLink>
         </>
     );
@@ -82,7 +83,7 @@ const NavBar = () => {
     );
 
     return (
-        <Navbar className={styles.NavBar} expand="md" fixed="top">
+        <Navbar className={styles.NavBar} expand="lg" fixed="top">
             <Container>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>

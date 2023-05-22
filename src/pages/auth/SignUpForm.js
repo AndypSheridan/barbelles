@@ -141,7 +141,7 @@ const SignUpForm = () => {
                         <p className="mx-auto">
                             If you already have an account please{" "}
                             <Link to="/signin">
-                                <span>sign in</span>
+                                <span className={styles.SignUpSpan}>sign in</span>
                             </Link>
                         </p>
                     </Container>
