@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "react-bootstrap/Nav";
 // import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
@@ -17,7 +17,21 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    const [expanded, setExpanded] = useState(false)
+    const [expanded, setExpanded] = useState(false);
+    const ref = useRef(null);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setExpanded(false);
+            }
+        };
+
+        document.addEventListener("mouseup", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mouseup", handleClickOutside);
+        };
+    }, [ref]);
 
     const handleSignOut = async () => {
         try {
@@ -83,7 +97,12 @@ const NavBar = () => {
     );
 
     return (
-        <Navbar className={styles.NavBar} expanded={expanded} expand="md" fixed="top">
+        <Navbar
+            className={styles.NavBar}
+            expanded={expanded}
+            expand="md"
+            fixed="top"
+        >
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
@@ -94,7 +113,11 @@ const NavBar = () => {
 
                 {/* {currentUser && createPostIcon} */}
 
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle
+                    onClick={() => setExpanded(!expanded)}
+                    ref={ref}
+                    aria-controls="basic-navbar-nav"
+                />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto text-center">
                         <NavLink
