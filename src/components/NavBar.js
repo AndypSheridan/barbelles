@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Nav from "react-bootstrap/Nav";
 // import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,14 +6,38 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo2.png";
 import styles from "../styles/NavBar.module.css";
+import { CurrentUserContext } from "../App";
 
 const NavBar = () => {
+    const currentUser = useContext(CurrentUserContext);
+
+    const signedInIcons = <>{currentUser?.username}</>
+    const signedOutIcons = (
+        <>
+            <NavLink
+                to="/signin"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+            >
+                <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign in
+            </NavLink>
+            <NavLink
+                to="/signup"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+            >
+                <i className="fa-solid fa-plus"></i> Sign up
+            </NavLink>
+        </>
+    );
+
     return (
         <Navbar className={styles.NavBar} expand="md" fixed="top">
             <Container>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
-                        <img src={logo} className={styles.Logo} alt="logo" /> BarBelles
+                        <img src={logo} className={styles.Logo} alt="logo" />{" "}
+                        BarBelles
                     </Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,21 +51,7 @@ const NavBar = () => {
                         >
                             <i className="fas fa-home"></i> Home
                         </NavLink>
-                        <NavLink
-                            to="/signin"
-                            className={styles.NavLink}
-                            activeClassName={styles.Active}
-                        >
-                            <i className="fa-solid fa-arrow-right-to-bracket"></i>{" "}
-                            Sign in
-                        </NavLink>
-                        <NavLink
-                            to="/signup"
-                            className={styles.NavLink}
-                            activeClassName={styles.Active}
-                        >
-                            <i className="fa-solid fa-plus"></i> Sign up
-                        </NavLink>
+                        {currentUser ? signedInIcons : signedOutIcons}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

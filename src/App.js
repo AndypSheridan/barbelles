@@ -19,7 +19,7 @@ function App() {
         try {
             const { data } = await axios.get("dj-rest-auth/user");
             setCurrentUser(data);
-        } catch {
+        } catch (err) {
             console.log(err);
         }
     };
@@ -29,8 +29,8 @@ function App() {
     }, []);
 
     return (
-        <CurrentUserContext.Provider>
-            <SetCurrentUserContext.Provider>
+        <CurrentUserContext.Provider value={currentUser}>
+            <SetCurrentUserContext.Provider value={setCurrentUser}>
                 <div className={styles.App}>
                     <NavBar />
                     <Container className={styles.Main}>
