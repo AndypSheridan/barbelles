@@ -11,6 +11,16 @@ import { useCurrentUser } from "../contexts/CurrentUserContext";
 const NavBar = () => {
     const currentUser = useCurrentUser();
 
+    const createPostIcon = (
+        <NavLink
+                to="/posts/create"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+            >
+                <i className="fa-solid fa-arrow-up-from-bracket"></i>Share post
+            </NavLink>
+    )
+
     const signedInIcons = <>{currentUser?.username}</>
     const signedOutIcons = (
         <>

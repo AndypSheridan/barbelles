@@ -17,7 +17,7 @@ function App() {
                     <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route
-                        render={() => <p>Oh no, this page can't be found!!</p>}
+                        render={() => <p className={styles.PageNotFound}>Oh no, this page can't be found!!</p>}
                     />
                 </Switch>
             </Container>
