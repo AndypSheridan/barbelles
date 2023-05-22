@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 // import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
@@ -17,7 +17,7 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    
+    const [expanded, setExpanded] = useState(false)
 
     const handleSignOut = async () => {
         try {
@@ -83,7 +83,7 @@ const NavBar = () => {
     );
 
     return (
-        <Navbar className={styles.NavBar} expand="lg" fixed="top">
+        <Navbar className={styles.NavBar} expanded={expanded} expand="md" fixed="top">
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
