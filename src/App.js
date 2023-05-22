@@ -6,10 +6,10 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import HomePage from "./pages/HomePage";
 import SignInForm from "./pages/auth/SignInForm";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-export const CurrentUserContext
+export const CurrentUserContext = createContext()
 
 function App() {
     const [currentUser, setCurrentUser] = useState(null);
