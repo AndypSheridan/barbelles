@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import styles from "../../styles/SignInForm.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const SignInForm = () => {
+    const [signInData, setSigninData] = useState({
+        username: "",
+        password: "",
+    });
+
     return (
         <Container className={styles.signInBg}>
             <h1 className={styles.SignInHeader}>Sign in</h1>
@@ -12,7 +17,9 @@ const SignInForm = () => {
                 <Col>
                     <Form className={`mx-auto ${styles.Form}`}>
                         <Form.Group controlId="username">
-                            <Form.Label className="d-none">Enter your username</Form.Label>
+                            <Form.Label className="d-none">
+                                Enter your username
+                            </Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Username"
