@@ -27,7 +27,9 @@ const SignInForm = () => {
         try {
             await axios.post("/dj-rest-auth/login/", signInData);
             history.push("/");
-        } catch (err) {}
+        } catch (err) {
+            setErrors(err.response?.data)
+        }
     };
 
     return (
