@@ -17,6 +17,8 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
+    
+
     const handleSignOut = async () => {
         try {
             await axios.post("dj-rest-auth/logout/");
@@ -82,7 +84,7 @@ const NavBar = () => {
 
     return (
         <Navbar className={styles.NavBar} expand="lg" fixed="top">
-            <Container>
+            <Container className={`mx-0 ${styles.NavBarContainer}`}>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
                         <img src={logo} className={styles.Logo} alt="logo" />{" "}
@@ -94,7 +96,7 @@ const NavBar = () => {
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto text-left">
+                    <Nav className="ml-auto text-center">
                         <NavLink
                             exact
                             to="/"
