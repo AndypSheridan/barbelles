@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import styles from "../../styles/SignUpForm.module.css";
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
-
+import CustomButton from "../../components/CustomButton";
 
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({
@@ -127,9 +127,11 @@ const SignUpForm = () => {
                                 </Alert>
                             ))}
 
-                            <Button variant="primary" type="submit">
+                            <CustomButton type="submit" title="Submit" />
+
+                            {/* <Button variant="primary" type="submit">
                                 Sign up
-                            </Button>
+                            </Button> */}
                             {errors.non_field_errors?.map((message, idx) => (
                                 <Alert variant="warning" key={idx}>
                                     {message}
@@ -141,7 +143,9 @@ const SignUpForm = () => {
                         <p className="mx-auto">
                             If you already have an account please{" "}
                             <Link to="/signin">
-                                <span className={styles.SignUpSpan}>sign in</span>
+                                <span className={styles.SignUpSpan}>
+                                    sign in
+                                </span>
                             </Link>
                         </p>
                     </Container>

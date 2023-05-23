@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../styles/SignInForm.module.css";
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
-import buttonstyles from "../../styles/Button.module.css"
+import CustomButton from "../../components/CustomButton";
 
 
 const SignInForm = () => {
@@ -84,9 +84,11 @@ const SignInForm = () => {
                             </Alert>
                         ))}
 
-                        <Button className={buttonstyles.Button} type="submit">
+                        <CustomButton type="submit" title="Submit" />
+
+                        {/* <Button className={buttonstyles.Button} type="submit">
                             Sign in
-                        </Button>
+                        </Button> */}
                         {errors.non_field_errors?.map((message, idx) => (
                             <Alert className="mt-3" key={idx} variant="warning">
                                 {message}
