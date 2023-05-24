@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 // import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo2.png";
@@ -52,9 +53,7 @@ const NavBar = () => {
             >
                 <i className="fa-solid fa-bookmark"></i> My stuff
             </NavLink>
-            <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
-                <i className="fa-solid fa-door-open"></i> Log out
-            </NavLink>
+            
             <NavLink
                 to={`profiles/${currentUser?.profile_id}`}
                 className={`${styles.NavLink} ${styles.AvatarNavLink}`}
@@ -62,6 +61,15 @@ const NavBar = () => {
             >
                 <Avatar src={currentUser?.profile_image} text="Profile" />
             </NavLink>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
+                <i className="fa-solid fa-door-open"></i> Log out
+            </NavLink>
+        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
         </>
     );
     const signedOutIcons = (
