@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 // import NavbarBrand from "react-bootstrap/NavbarBrand";
 import Navbar from "react-bootstrap/Navbar";
@@ -30,10 +30,12 @@ const NavBar = () => {
         }
     };
 
+    const [ show, setShow ] = useState(false);
+
     const signedInIcons = (
         <>
         
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown show={show} title="Dropdown" id="basic-nav-dropdown" onClick = {() => setShow(!show)}>
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
