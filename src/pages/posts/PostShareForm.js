@@ -26,6 +26,16 @@ const PostShareForm = () => {
         });
     };
 
+    const handleChangeImage = (event) => {
+        if (event.target.files.length){
+            URL.revokeObjectURL(image);
+            setPostData({
+                ...postData,
+                image: URL.createObjectURL(event.target.files[0]),
+            })
+        }
+    }
+
     const textFields = (
         <div className="text-center">
             <Form.Group>
