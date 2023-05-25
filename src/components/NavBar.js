@@ -41,7 +41,7 @@ const NavBar = () => {
                 <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
             </NavLink>
 
-            <NavDropdown title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown">
+            <NavDropdown alignRight title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown">
                 <NavDropdown.Item>
                 <NavLink
                 to="/posts-feed"
@@ -59,13 +59,11 @@ const NavBar = () => {
                 activeClassName={styles.Active}
                 onClick={() => setExpanded(false)}
             >
-                <i className="fa-solid fa-list"></i> Tutorials
+                <i className="fa-solid fa-graduation-cap"></i> Tutorials
             </NavLink>
                 </NavDropdown.Item>
                 
             </NavDropdown>
-
-            
 
             <NavDropdown
                 title={<Avatar src={currentUser?.profile_image} />}
