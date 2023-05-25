@@ -27,14 +27,14 @@ const PostShareForm = () => {
     };
 
     const handleChangeImage = (event) => {
-        if (event.target.files.length){
+        if (event.target.files.length) {
             URL.revokeObjectURL(image);
             setPostData({
                 ...postData,
                 image: URL.createObjectURL(event.target.files[0]),
-            })
+            });
         }
-    }
+    };
 
     const textFields = (
         <div className="text-center">
@@ -42,7 +42,7 @@ const PostShareForm = () => {
                 <Form.Label>Title</Form.Label>
                 <Form.Control
                     value={title}
-                    onClick={handleChange}
+                    onChange={handleChange}
                     type="text"
                     name="title"
                 />
@@ -53,7 +53,7 @@ const PostShareForm = () => {
                 <Form.Control
                     as="textarea"
                     value={content}
-                    onClick={handleChange}
+                    onChange={handleChange}
                     rows={8}
                     name="content"
                 />
@@ -72,6 +72,16 @@ const PostShareForm = () => {
                 <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
                     <Container className="d-flex flex-column justify-content-center">
                         <Form.Group className="text-center">
+                            ( image ? ( 
+                                <>
+                                <figure>
+
+                                </figure>
+                                <div>
+                                    
+                                </div>
+                                </>
+                            ) : (
                             <Form.Label
                                 className="d-flex justify-content-center"
                                 htmlFor="image-upload"
@@ -81,7 +91,12 @@ const PostShareForm = () => {
                                     message={"Upload your image here!"}
                                 />
                             </Form.Label>
-                            <Form.File id="image-upload" accept="image/*" />
+                            ) )
+                            <Form.File
+                                id="image-upload"
+                                accept="image/*"
+                                onChange={handleChangeImage}
+                            />
                         </Form.Group>
                     </Container>
                 </Col>
