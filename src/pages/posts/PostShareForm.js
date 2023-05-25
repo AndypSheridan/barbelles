@@ -13,6 +13,10 @@ const PostShareForm = () => {
 
     const textFields = (
         <div className="text-center">
+            <Form.Group>
+                <Form.Label>Title</Form.Label>
+                <Form.Control type="text" name="title" value={title} />
+            </Form.Group>
             <Button onClick={() => {}}>cancel</Button>
             <Button onClick={() => {}} type="submit">
                 Share
@@ -25,21 +29,21 @@ const PostShareForm = () => {
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
                     <Container className="d-flex flex-column justify-content-center">
-                    <Form.Group className="text-center">
-              
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                ASSET
-              </Form.Label>
-
-          </Form.Group>
+                        <Form.Group className="text-center">
+                            <Form.Label
+                                className="d-flex justify-content-center"
+                                htmlFor="image-upload"
+                            >
+                                ASSET
+                            </Form.Label>
+                        </Form.Group>
                     </Container>
                 </Col>
                 <Col md={6} lg={6} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
+                    <Container className={appStyles.Content}>
+                        {textFields}
+                    </Container>
+                </Col>
             </Row>
         </Form>
     );
