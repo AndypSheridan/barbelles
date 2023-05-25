@@ -22,6 +22,8 @@ const PostShareForm = () => {
     });
     const { title, content, image } = postData;
 
+    const imageInput = useRef(null)
+
     const handleChange = (event) => {
         setPostData({
             ...postData,
