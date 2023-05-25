@@ -11,6 +11,7 @@ import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 import CustomButton from "../../components/CustomButton";
+import { useHistory } from "react-router-dom";
 
 const PostShareForm = () => {
     const [errors, setErrors] = useState();
@@ -23,6 +24,7 @@ const PostShareForm = () => {
     const { title, content, image } = postData;
 
     const imageInput = useRef(null);
+    const history = useHistory();
 
     const handleChange = (event) => {
         setPostData({
