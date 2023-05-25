@@ -4,17 +4,17 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Alert from "react-bootstrap/Alert";
 import Container from "react-bootstrap/Container";
 import styles from "../../styles/PostShareEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
-import CustomButton from "../../components/CustomButton";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
+import { axiosReq } from "../../api/axiosDefaults";
 
-const PostShareForm = () => {
+function PostShareForm() {
     const [errors, setErrors] = useState();
 
     const [postData, setPostData] = useState({
@@ -34,8 +34,18 @@ const PostShareForm = () => {
         });
     };
 
+    const handleChangeImage = (event) => {
+        if (event.target.files.length) {
+            URL.revokeObjectURL(image);
+            setPostData({
+                ...postData,
+                image: URL.createObjectURL(event.target.files[0]),
+            });
+        }
+    };
+
     const handleSubmit = async (event) => {
-        event.prevent.default();
+        event.preventDefault();
         const formData = new FormData();
 
         formData.append("title", title);
@@ -44,22 +54,12 @@ const PostShareForm = () => {
 
         try {
             const { data } = await axiosReq.post("/posts/", formData);
-            history.push(`/posts/${data.id}`)
+            history.push(`/posts/${data.id}`);
         } catch (err) {
-            console.log(err)
-            if (err.response?.status !== 401){
-                setErrors(err.response?.data)
+            console.log(err);
+            if (err.response?.status !== 401) {
+                setErrors(err.response?.data);
             }
-        }
-    };
-
-    const handleChangeImage = (event) => {
-        if (event.target.files.length) {
-            URL.revokeObjectURL(image);
-            setPostData({
-                ...postData,
-                image: URL.createObjectURL(event.target.files[0]),
-            });
         }
     };
 
@@ -74,6 +74,11 @@ const PostShareForm = () => {
                     name="title"
                 />
             </Form.Group>
+            {errors?.title?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+            ))}
 
             <Form.Group>
                 <Form.Label>Content</Form.Label>
@@ -85,11 +90,19 @@ const PostShareForm = () => {
                     name="content"
                 />
             </Form.Group>
+            {errors?.content?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+            ))}
 
-            <Button className={btnStyles.Black} onClick={() => {}}>
+            <Button
+                className={btnStyles.Black}
+                onClick={() => history.goBack()}
+            >
                 Cancel
             </Button>
-            <CustomButton type="submit" title="Submit" />
+            <Button type="submit">Share</Button>
         </div>
     );
 
@@ -148,6 +161,12 @@ const PostShareForm = () => {
                                     accept="image/*"
                                 />
                             </Form.Group>
+                            {errors?.image?.map((message, idx) => (
+                                <Alert variant="warning" key={idx}>
+                                    {message}
+                                </Alert>
+                            ))}
+
                             <div className="d-md-none">{textFields}</div>
                         </Container>
                     </Col>
