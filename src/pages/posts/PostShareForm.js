@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import UploadIcon from "../../assets/uploadIcon.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
