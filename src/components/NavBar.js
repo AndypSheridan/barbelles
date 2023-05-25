@@ -42,7 +42,7 @@ const NavBar = () => {
             </NavLink>
 
             <NavDropdown alignRight title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown" className={styles.FeedsDropdown}>
-                <NavDropdown.Item>
+                {/* <NavDropdown.Item> */}
                 <NavLink
                 to="/posts-feed"
                 className={styles.NavLink}
@@ -51,8 +51,8 @@ const NavBar = () => {
             >
                 <i className="fa-solid fa-list"></i> Posts
             </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
+                {/* </NavDropdown.Item> */}
+                {/* <NavDropdown.Item> */}
                 <NavLink
                 to="/tutorials-feed"
                 className={styles.NavLink}
@@ -61,7 +61,7 @@ const NavBar = () => {
             >
                 <i className="fa-solid fa-graduation-cap"></i> Tutorials
             </NavLink>
-                </NavDropdown.Item>
+                {/* </NavDropdown.Item> */}
                 
             </NavDropdown>
 
@@ -71,7 +71,7 @@ const NavBar = () => {
                 alignRight
                 className={styles.ProfileDropdown}
             >
-                <NavDropdown.Item>
+                {/* <NavDropdown.Item> */}
                     <NavLink
                         to={`profiles/${currentUser?.profile_id}`}
                         className={`${styles.NavLink} ${styles.AvatarNavLink}`}
@@ -83,8 +83,8 @@ const NavBar = () => {
                             text="Profile"
                         />
                     </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
+                {/* </NavDropdown.Item> */}
+                {/* <NavDropdown.Item> */}
                     <NavLink
                         to="/liked"
                         className={styles.NavLink}
@@ -93,8 +93,8 @@ const NavBar = () => {
                     >
                         <i className="fa-solid fa-bookmark"></i> Liked content
                     </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
+                {/* </NavDropdown.Item> */}
+                {/* <NavDropdown.Item> */}
                     <NavLink
                         to="/"
                         onClick={handleSignOut}
@@ -102,7 +102,7 @@ const NavBar = () => {
                     >
                         <i className="fa-solid fa-door-open"></i> Log out
                     </NavLink>
-                </NavDropdown.Item>
+                {/* </NavDropdown.Item> */}
             </NavDropdown>
         </>
     );

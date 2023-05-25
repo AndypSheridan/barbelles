@@ -10,11 +10,8 @@
     color: #512d38;
     padding: 0.5rem;
     font-size: 1rem;
-    vertical-align: middle;
-}
-
-.AvatarNavLink {
-    /* padding-top: 6px !important; */
+    /* vertical-align: middle; */
+    display: block;
 }
 
 .NavLink:hover {

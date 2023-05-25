@@ -19,10 +19,10 @@ function PostShareForm() {
 
     const [postData, setPostData] = useState({
         title: "",
-        content: "",
+        story: "",
         image: "",
     });
-    const { title, content, image } = postData;
+    const { title, story, image } = postData;
 
     const imageInput = useRef(null);
     const history = useHistory();
@@ -49,7 +49,7 @@ function PostShareForm() {
         const formData = new FormData();
 
         formData.append("title", title);
-        formData.append("content", content);
+        formData.append("story", story);
         formData.append("image", imageInput.current.files[0]);
 
         try {
@@ -84,10 +84,10 @@ function PostShareForm() {
                 <Form.Label>Content</Form.Label>
                 <Form.Control
                     as="textarea"
-                    value={content}
+                    value={story}
                     onChange={handleChange}
                     rows={8}
-                    name="content"
+                    name="story"
                 />
             </Form.Group>
             {errors?.content?.map((message, idx) => (
