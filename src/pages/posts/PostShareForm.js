@@ -13,7 +13,12 @@ const PostShareForm = () => {
 
     const textFields = (
         <div>
-            <Button onClick={() => {}}></Button>
+            <Button onClick={() => {}}>
+                cancel
+            </Button>
+            <Button onClick={() => {}} type="submit">
+                Share
+            </Button>
         </div>
     );
 
