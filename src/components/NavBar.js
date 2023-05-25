@@ -12,7 +12,6 @@ import {
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import axios from "axios";
-import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { NavDropdown } from "react-bootstrap";
 
 const NavBar = () => {
