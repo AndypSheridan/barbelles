@@ -14,7 +14,7 @@
 }
 
 .AvatarNavLink {
-    padding-top: 7px !important;
+    /* padding-top: 6px !important; */
 }
 
 .NavLink:hover {
@@ -34,9 +34,13 @@
     transition: color ease-in-out 0.3s;
 }
 
-.ProfileNavDropdown {
-    padding-bottom: 4px;
+.ProfileDropdown {
+    /* padding-bottom: px !important; */
 }
+
+/* .FeedsDropdown {
+    padding-top: 0px;
+} */
 
 i {
     color: #512d38;

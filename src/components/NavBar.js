@@ -41,7 +41,7 @@ const NavBar = () => {
                 <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
             </NavLink>
 
-            <NavDropdown alignRight title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown">
+            <NavDropdown alignRight title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown" className={styles.FeedsDropdown}>
                 <NavDropdown.Item>
                 <NavLink
                 to="/posts-feed"
@@ -69,6 +69,7 @@ const NavBar = () => {
                 title={<Avatar src={currentUser?.profile_image} />}
                 id="basic-nav-dropdown"
                 alignRight
+                className={styles.ProfileDropdown}
             >
                 <NavDropdown.Item>
                     <NavLink
