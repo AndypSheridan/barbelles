@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import styles from "../../styles/PostShareEditForm.module.css";
 import appStyles from "../../App.module.css";
+import Asset from "../../components/Asset";
 
 const PostShareForm = () => {
     const [errors, setErrors] = useState();
@@ -34,7 +35,7 @@ const PostShareForm = () => {
                                 className="d-flex justify-content-center"
                                 htmlFor="image-upload"
                             >
-                                ASSET
+                                <Asset />
                             </Form.Label>
                         </Form.Group>
                     </Container>
