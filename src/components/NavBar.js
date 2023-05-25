@@ -33,7 +33,7 @@ const NavBar = () => {
     const signedInIcons = (
         <>
             <NavLink
-                to="/posts/create"
+                to="/posts/share"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
                 onClick={() => setExpanded(false)}

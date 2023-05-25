@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import UploadIcon from "../../assets/uploadIcon.png"
+import React, { useState } from "react";
+import UploadIcon from "../../assets/uploadIcon.png";
 
 const PostShareForm = () => {
-  return (
-    <div>PostShareForm</div>
-  )
-}
+    const [errors, setErrors] = useState();
 
-export default PostShareForm
+    return <div>PostShareForm</div>;
+};
+
+export default PostShareForm;
