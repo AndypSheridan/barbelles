@@ -12,12 +12,43 @@ import Asset from "../../components/Asset";
 const PostShareForm = () => {
     const [errors, setErrors] = useState();
 
+    const [postData, setPostData] = useState({
+        title: "",
+        content: "",
+        image: "",
+    });
+    const { title, content, image } = postData;
+
+    const handleChange = (event) => {
+        setPostData({
+            ...postData,
+            [event.target.name]: event.target.value,
+        });
+    };
+
     const textFields = (
         <div className="text-center">
             <Form.Group>
                 <Form.Label>Title</Form.Label>
-                <Form.Control type="text" name="title" value={title} />
+                <Form.Control
+                    value={title}
+                    onClick={handleChange}
+                    type="text"
+                    name="title"
+                />
             </Form.Group>
+
+            <Form.Group>
+                <Form.Label>Tell us about your journey</Form.Label>
+                <Form.Control
+                    as="textarea"
+                    value={content}
+                    onClick={handleChange}
+                    rows={8}
+                    name="content"
+                />
+            </Form.Group>
+
             <Button onClick={() => {}}>cancel</Button>
             <Button onClick={() => {}} type="submit">
                 Share
@@ -35,8 +66,12 @@ const PostShareForm = () => {
                                 className="d-flex justify-content-center"
                                 htmlFor="image-upload"
                             >
-                                <Asset />
+                                <Asset
+                                    src={UploadIcon}
+                                    message={"Upload your image here!"}
+                                />
                             </Form.Label>
+                            <Form.File />
                         </Form.Group>
                     </Container>
                 </Col>
