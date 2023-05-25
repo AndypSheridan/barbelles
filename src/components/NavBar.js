@@ -41,28 +41,36 @@ const NavBar = () => {
                 <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
             </NavLink>
 
-            <NavDropdown alignRight title={<span><i className="fa-solid fa-list"></i>Feeds</span>} id="basic-nav-dropdown" className={styles.FeedsDropdown}>
+            <NavDropdown
+                alignRight
+                title={
+                    <span>
+                        <i className="fa-solid fa-list"></i>Feeds
+                    </span>
+                }
+                id="basic-nav-dropdown"
+                className={styles.FeedsDropdown}
+            >
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                to="/posts-feed"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <i className="fa-solid fa-list"></i> Posts
-            </NavLink>
+                    to="/posts-feed"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-list"></i> Posts
+                </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                to="/tutorials-feed"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <i className="fa-solid fa-graduation-cap"></i> Tutorials
-            </NavLink>
+                    to="/tutorials-feed"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-graduation-cap"></i> Tutorials
+                </NavLink>
                 {/* </NavDropdown.Item> */}
-                
             </NavDropdown>
 
             <NavDropdown
@@ -72,36 +80,33 @@ const NavBar = () => {
                 className={styles.ProfileDropdown}
             >
                 {/* <NavDropdown.Item> */}
-                    <NavLink
-                        to={`profiles/${currentUser?.profile_id}`}
-                        className={`${styles.NavLink} ${styles.AvatarNavLink}`}
-                        activeClassName={styles.Active}
-                        onClick={() => setExpanded(false)}
-                    >
-                        <Avatar
-                            src={currentUser?.profile_image}
-                            text="Profile"
-                        />
-                    </NavLink>
+                <NavLink
+                    to={`profiles/${currentUser?.profile_id}`}
+                    className={`${styles.NavLink} ${styles.AvatarNavLink}`}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <Avatar src={currentUser?.profile_image} text="Profile" />
+                </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                    <NavLink
-                        to="/liked"
-                        className={styles.NavLink}
-                        activeClassName={styles.Active}
-                        onClick={() => setExpanded(false)}
-                    >
-                        <i className="fa-solid fa-bookmark"></i> Liked content
-                    </NavLink>
+                <NavLink
+                    to="/liked"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-bookmark"></i> Liked content
+                </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                    <NavLink
-                        to="/"
-                        onClick={handleSignOut}
-                        className={styles.NavLink}
-                    >
-                        <i className="fa-solid fa-door-open"></i> Log out
-                    </NavLink>
+                <NavLink
+                    to="/"
+                    onClick={handleSignOut}
+                    className={styles.NavLink}
+                >
+                    <i className="fa-solid fa-door-open"></i> Log out
+                </NavLink>
                 {/* </NavDropdown.Item> */}
             </NavDropdown>
         </>
