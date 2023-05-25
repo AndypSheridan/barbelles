@@ -29,10 +29,6 @@
     color: #512d38 !important;
 }
 
-/* .Navbar.Collapse.in {
-    display: block !important;
-} */
-
 .NavLink:hover i {
     color: #b27092;
     transition: color ease-in-out 0.3s;
