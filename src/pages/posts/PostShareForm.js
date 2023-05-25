@@ -21,13 +21,25 @@ const PostShareForm = () => {
     );
 
     return (
-        <Form>
+        <Form className={styles.PostShareEditForm}>
             <Row>
                 <Col>
                     <Container>
-                        
+                    <Form.Group className="text-center">
+              
+              <Form.Label
+                className="d-flex justify-content-center"
+                htmlFor="image-upload"
+              >
+                ASSET
+              </Form.Label>
+
+          </Form.Group>
                     </Container>
                 </Col>
+                <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+          <Container className={appStyles.Content}>{textFields}</Container>
+        </Col>
             </Row>
         </Form>
     );
