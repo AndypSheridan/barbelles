@@ -69,11 +69,12 @@ const PostShareForm = () => {
     );
 
     return (
-        <Form className={styles.PostShareEditForm}>
+        <Container className={styles.PostShareEditBgImage}>
+        <Form className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}>
             <Row>
-                <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
-                    <Container className="d-flex flex-column justify-content-center">
-                        <Form.Group className="text-center">
+                <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
+                    <Container className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}>
+                        <Form.Group className={`${styles.PostShareBgTransparent} text-center`}>
                             { image ? ( 
                                 <>
                                 <figure>
@@ -106,13 +107,14 @@ const PostShareForm = () => {
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
-                <Col md={6} lg={6} className="d-none d-md-block p-0 p-md-2">
-                    <Container className={appStyles.Content}>
+                <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
+                    <Container className={`${appStyles.Content} ${styles.PostShareContainer}`}>
                         {textFields}
                     </Container>
                 </Col>
             </Row>
         </Form>
+        </Container>
     );
 };
 

@@ -26,7 +26,7 @@ html, body {
 }
 
 .Content {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 2px;
     border: 1px solid #dadadf;

@@ -1,8 +1,33 @@
-.PostShareEditForm {
-    margin-top: 8rem;
+.PostShareEditBgImage {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(244, 191, 219, 1) 35%,
+        rgba(135, 186, 171, 1) 100%
+    );
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
-.Container {
-    min-height: 400px;
-    border: 1px solid black;
+.PostShareEditForm {
+    padding-top: 250px;
+}
+
+.PostShareContainer {
+    width: 85%;
+}
+
+.PostShareEditImageFormBg {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.PostShareBgTransparent {
+    background-color: transparent;
+    border: none;
 }
