@@ -19,7 +19,8 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    const { expanded, setExpanded, ref } = useClickOutsideToggle();
+    // const { expanded, setExpanded, ref } = useClickOutsideToggle();
+    const [ expanded, setExpanded ] = useState(false);
 
     const handleSignOut = async () => {
         try {
@@ -36,20 +37,23 @@ const NavBar = () => {
         <>
         
             <NavDropdown show={show} title="Dropdown" id="basic-nav-dropdown" onClick = {() => setShow(!show)}>
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item ><NavLink
+                to="/liked"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
+            >
+                <i className="fa-solid fa-bookmark"></i> My stuff
+            </NavLink></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
               </NavDropdown.Item>
             </NavDropdown>
             <NavLink
                 to="/posts/create"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
             >
                 <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
             </NavLink>
@@ -57,16 +61,11 @@ const NavBar = () => {
                 to="/feed"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
             >
                 <i className="fa-solid fa-list"></i> Feed
             </NavLink>
-            <NavLink
-                to="/liked"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-            >
-                <i className="fa-solid fa-bookmark"></i> My stuff
-            </NavLink>
+            
             <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
                 <i className="fa-solid fa-door-open"></i> Log out
             </NavLink>
@@ -74,6 +73,7 @@ const NavBar = () => {
                 to={`profiles/${currentUser?.profile_id}`}
                 className={`${styles.NavLink} ${styles.AvatarNavLink}`}
                 activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
             >
                 <Avatar src={currentUser?.profile_image} text="Profile" />
             </NavLink>
@@ -85,6 +85,7 @@ const NavBar = () => {
                 to="/signin"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
             >
                 <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign in
             </NavLink>
@@ -92,6 +93,7 @@ const NavBar = () => {
                 to="/signup"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
             >
                 <i className="fa-solid fa-plus"></i> Sign up
             </NavLink>
@@ -116,9 +118,10 @@ const NavBar = () => {
                 {/* {currentUser && createPostIcon} */}
 
                 <Navbar.Toggle
-                    onClick={() => setExpanded(!expanded)}
-                    ref={ref}
+                    // onClick={() => setExpanded(!expanded)}
+                    // ref={ref}
                     aria-controls="basic-navbar-nav"
+                    onClick={() => setExpanded(expanded ? false : "expanded")}
                 />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto text-center">
@@ -127,6 +130,7 @@ const NavBar = () => {
                             to="/"
                             className={styles.NavLink}
                             activeClassName={styles.Active}
+                            onClick={() => setExpanded(false)}
                         >
                             <i className="fas fa-home"></i> Home
                         </NavLink>
