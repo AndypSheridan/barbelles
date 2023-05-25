@@ -20,7 +20,7 @@ const NavBar = () => {
     const setCurrentUser = useSetCurrentUser();
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
-    const [ expanded, setExpanded ] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const handleSignOut = async () => {
         try {
@@ -31,23 +31,37 @@ const NavBar = () => {
         }
     };
 
-    const [ show, setShow ] = useState(false);
-
     const signedInIcons = (
         <>
-        
-            <NavDropdown show={show} title="Dropdown" id="basic-nav-dropdown" onClick = {() => setShow(!show)}>
-              <NavDropdown.Item ><NavLink
-                to="/liked"
-                className={styles.NavLink}
+            <NavDropdown title={<Avatar src={currentUser?.profile_image} />} id="basic-nav-dropdown">
+            <NavDropdown.Item>
+                <NavLink
+                to={`profiles/${currentUser?.profile_id}`}
+                className={`${styles.NavLink} ${styles.AvatarNavLink}`}
                 activeClassName={styles.Active}
                 onClick={() => setExpanded(false)}
             >
-                <i className="fa-solid fa-bookmark"></i> My stuff
-            </NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
+                <Avatar src={currentUser?.profile_image} text="Profile" />
+            </NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                    <NavLink
+                        to="/liked"
+                        className={styles.NavLink}
+                        activeClassName={styles.Active}
+                        onClick={() => setExpanded(false)}
+                    >
+                        <i className="fa-solid fa-bookmark"></i> Liked content
+                    </NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
+                <i className="fa-solid fa-door-open"></i> Log out
+            </NavLink>
+
+                </NavDropdown.Item>
+                
+                
             </NavDropdown>
             <NavLink
                 to="/posts/create"
@@ -65,18 +79,9 @@ const NavBar = () => {
             >
                 <i className="fa-solid fa-list"></i> Feed
             </NavLink>
+
             
-            <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
-                <i className="fa-solid fa-door-open"></i> Log out
-            </NavLink>
-            <NavLink
-                to={`profiles/${currentUser?.profile_id}`}
-                className={`${styles.NavLink} ${styles.AvatarNavLink}`}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <Avatar src={currentUser?.profile_image} text="Profile" />
-            </NavLink>
+            
         </>
     );
     const signedOutIcons = (
