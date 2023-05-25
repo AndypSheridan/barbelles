@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import styles from "../../styles/PostShareEditForm.module.css";
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css"
+import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 import CustomButton from "../../components/CustomButton";
@@ -22,7 +22,7 @@ const PostShareForm = () => {
     });
     const { title, content, image } = postData;
 
-    const imageInput = useRef(null)
+    const imageInput = useRef(null);
 
     const handleChange = (event) => {
         setPostData({
@@ -64,59 +64,79 @@ const PostShareForm = () => {
                 />
             </Form.Group>
 
-            <Button className={btnStyles.Black} onClick={() => {}}>Cancel</Button>
+            <Button className={btnStyles.Black} onClick={() => {}}>
+                Cancel
+            </Button>
             <CustomButton type="submit" title="Submit" />
         </div>
     );
 
     return (
         <Container className={styles.PostShareEditBgImage}>
-            
-        <Form className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}>
-        <h1 className="text-center py-2">Share your journey here!</h1>
-            <Row>
-                <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
-                    <Container className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}>
-                        <Form.Group className={`${styles.PostShareBgTransparent} text-center`}>
-                            { image ? ( 
-                                <>
-                                <figure>
-                                    <Image className={appStyles.Image} src={image} rounded />
-                                </figure>
-                                <div className={styles.PostShareBgTransparent}>
-                                    <Form.Label className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                                    htmlFor="image-upload">Change image
-
-                                    </Form.Label>
-                                </div>
-                                </>
-                            ) : (
-                            <Form.Label
-                                className="d-flex justify-content-center"
-                                htmlFor="image-upload"
+            <Form
+                className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
+            >
+                <h1 className="text-center py-2">Share your journey here!</h1>
+                <Row>
+                    <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
+                        <Container
+                            className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
+                        >
+                            <Form.Group
+                                className={`${styles.PostShareBgTransparent} text-center`}
                             >
-                                <Asset
-                                    src={UploadIcon}
-                                    message={"Upload your image here!"}
+                                {image ? (
+                                    <>
+                                        <figure>
+                                            <Image
+                                                className={appStyles.Image}
+                                                src={image}
+                                                rounded
+                                            />
+                                        </figure>
+                                        <div
+                                            className={
+                                                styles.PostShareBgTransparent
+                                            }
+                                        >
+                                            <Form.Label
+                                                className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                                htmlFor="image-upload"
+                                            >
+                                                Change image
+                                            </Form.Label>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <Form.Label
+                                        className="d-flex justify-content-center"
+                                        htmlFor="image-upload"
+                                    >
+                                        <Asset
+                                            src={UploadIcon}
+                                            message={"Upload your image here!"}
+                                        />
+                                    </Form.Label>
+                                )}
+                                <Form.File
+                                    ref={imageInput}
+                                    onChange={handleChangeImage}
+                                    id="image-upload"
+                                    accept="image/*"
                                 />
-                            </Form.Label>
-                            ) }
-                            <Form.File
-                                id="image-upload"
-                                accept="image/*"
-                                onChange={handleChangeImage}
-                            />
-                        </Form.Group>
-                        <div className="d-md-none">{textFields}</div>
-                    </Container>
-                </Col>
-                <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
-                    <Container className={`${appStyles.Content} ${styles.PostShareContainer}`}>
-                        {textFields}
-                    </Container>
-                </Col>
-            </Row>
-        </Form>
+                            </Form.Group>
+                            <div className="d-md-none">{textFields}</div>
+                        </Container>
+                    </Col>
+                    <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
+                        <Container
+                            className={`${appStyles.Content} ${styles.PostShareContainer}`}
+                        >
+                            {textFields}
+                        </Container>
+                    </Col>
+                </Row>
+            </Form>
         </Container>
     );
 };
