@@ -71,7 +71,7 @@ const PostShareForm = () => {
                                     message={"Upload your image here!"}
                                 />
                             </Form.Label>
-                            <Form.File />
+                            <Form.File id="image-upload" accept="image/*" />
                         </Form.Group>
                     </Container>
                 </Col>
