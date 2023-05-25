@@ -37,7 +37,7 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={`d-none d-md-flex ${styles.Col}`} md={6}>
+                <Col className={`${styles.Col} d-none d-md-flex`} md={6}>
                     <Container className={`mx-auto my-auto p-0 `}>
                         <p className={`mx-auto ${styles.About}`}>
                             About us

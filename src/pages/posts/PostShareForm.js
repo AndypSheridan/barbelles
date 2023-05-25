@@ -12,7 +12,7 @@ const PostShareForm = () => {
     const [errors, setErrors] = useState();
 
     const textFields = (
-        <div>
+        <div className="text-center">
             <Button onClick={() => {}}>cancel</Button>
             <Button onClick={() => {}} type="submit">
                 Share
@@ -23,8 +23,8 @@ const PostShareForm = () => {
     return (
         <Form className={styles.PostShareEditForm}>
             <Row>
-                <Col>
-                    <Container>
+                <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
+                    <Container className="d-flex flex-column justify-content-center">
                     <Form.Group className="text-center">
               
               <Form.Label
@@ -37,7 +37,7 @@ const PostShareForm = () => {
           </Form.Group>
                     </Container>
                 </Col>
-                <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+                <Col md={6} lg={6} className="d-none d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
             </Row>
