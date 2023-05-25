@@ -10,6 +10,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css"
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
+import CustomButton from "../../components/CustomButton";
 
 const PostShareForm = () => {
     const [errors, setErrors] = useState();
@@ -51,7 +52,7 @@ const PostShareForm = () => {
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Tell us about your journey</Form.Label>
+                <Form.Label>Content</Form.Label>
                 <Form.Control
                     as="textarea"
                     value={content}
@@ -61,16 +62,16 @@ const PostShareForm = () => {
                 />
             </Form.Group>
 
-            <Button onClick={() => {}}>cancel</Button>
-            <Button onClick={() => {}} type="submit">
-                Share
-            </Button>
+            <Button className={btnStyles.Black} onClick={() => {}}>Cancel</Button>
+            <CustomButton type="submit" title="Submit" />
         </div>
     );
 
     return (
         <Container className={styles.PostShareEditBgImage}>
+            
         <Form className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}>
+        <h1 className="text-center py-2">Share your journey here!</h1>
             <Row>
                 <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                     <Container className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}>
@@ -80,7 +81,7 @@ const PostShareForm = () => {
                                 <figure>
                                     <Image className={appStyles.Image} src={image} rounded />
                                 </figure>
-                                <div>
+                                <div className={styles.PostShareBgTransparent}>
                                     <Form.Label className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
                                     htmlFor="image-upload">Change image
 

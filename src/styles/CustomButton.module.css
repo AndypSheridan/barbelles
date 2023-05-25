@@ -1,3 +1,8 @@
 .CustomButton {
     background-color: #512d38;
+    margin: 5px;
+}
+
+.Cancel {
+    background-color: #f4bfdb;
 }

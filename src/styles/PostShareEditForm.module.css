@@ -16,11 +16,12 @@
 }
 
 .PostShareEditForm {
-    padding-top: 250px;
+    padding-top: 120px;
 }
 
 .PostShareContainer {
     width: 85%;
+    height: 100%;
 }
 
 .PostShareEditImageFormBg {
