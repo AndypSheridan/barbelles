@@ -8,28 +8,28 @@ import logo from "../assets/logo2.png";
 import styles from "../styles/NavBar.module.css";
 import {
     useCurrentUser,
-    useSetCurrentUser,
+    // useSetCurrentUser,
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
-import axios from "axios";
+// import axios from "axios";
 import { NavDropdown } from "react-bootstrap";
 import SignOutModal from "./SignOutModal";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
-    const setCurrentUser = useSetCurrentUser();
+    // const setCurrentUser = useSetCurrentUser();
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
 
-    const handleSignOut = async () => {
-        try {
-            await axios.post("dj-rest-auth/logout/");
-            setCurrentUser(null);
-        } catch (err) {
-            console.log(err);
-        }
-    };
+    // const handleSignOut = async () => {
+    //     try {
+    //         await axios.post("dj-rest-auth/logout/");
+    //         setCurrentUser(null);
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // };
 
     const signedInIcons = (
         <>
@@ -101,15 +101,19 @@ const NavBar = () => {
                 </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                <NavLink
+
+
+                <SignOutModal  />
+
+                {/* <NavLink
                     to="/"
                     onClick={handleSignOut}
                     className={styles.NavLink}
                     
                 >
                     <i className="fa-solid fa-door-open"></i> Log out
-                </NavLink>
-                <SignOutModal />
+                </NavLink> */}
+
                 {/* </NavDropdown.Item> */}
             </NavDropdown>
         </>
