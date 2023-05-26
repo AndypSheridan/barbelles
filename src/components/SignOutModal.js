@@ -5,6 +5,7 @@ import {
     useSetCurrentUser,
 } from "../contexts/CurrentUserContext";
 import axios from "axios";
+// import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
 
 
@@ -31,7 +32,7 @@ const SignOutModal = () => {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>SignOut
+            <Button variant="danger" className="mx-auto d-block" onClick={handleShow}>SignOut
             </Button>
 
             <Modal show={show} onHide={handleClose}>
