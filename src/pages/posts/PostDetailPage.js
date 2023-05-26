@@ -7,8 +7,21 @@ import Col from "react-bootstrap/Col"
 import appStyles from "../../App.module.css"
 
 const PostDetailPage = () => {
+
+    
+
   return (
-    <div>PostDetailPage</div>
+    <Container className='h-100'>
+        <Row>
+            <Col>
+            <p>Posts</p>
+            <Container>
+                Comments
+            </Container>
+
+            </Col>
+        </Row>
+    </Container>
   )
 }
 

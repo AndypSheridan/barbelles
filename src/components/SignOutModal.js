@@ -32,14 +32,14 @@ const SignOutModal = () => {
                 className="mx-auto d-block"
                 onClick={handleShow}
             >
-                SignOut
+                Sign out
             </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>Are you sure you want to sign out?</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Not yet!
                     </Button>
                     <Button variant="primary" onClick={handleSignOut}>
                         I'm sure!
