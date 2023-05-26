@@ -102,8 +102,7 @@ const NavBar = () => {
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
 
-
-                <SignOutModal  />
+                <SignOutModal />
 
                 {/* <NavLink
                     to="/"
