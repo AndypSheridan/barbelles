@@ -13,6 +13,7 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import { NavDropdown } from "react-bootstrap";
+import SignOutModal from "./SignOutModal";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
@@ -104,9 +105,11 @@ const NavBar = () => {
                     to="/"
                     onClick={handleSignOut}
                     className={styles.NavLink}
+                    
                 >
                     <i className="fa-solid fa-door-open"></i> Log out
                 </NavLink>
+                <SignOutModal />
                 {/* </NavDropdown.Item> */}
             </NavDropdown>
         </>
