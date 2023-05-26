@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 // import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
 
@@ -41,9 +42,12 @@ const SignOutModal = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Not yet!
                     </Button>
+                    
+                    <NavLink to="/">
                     <Button variant="primary" onClick={handleSignOut}>
                         I'm sure!
                     </Button>
+                    </NavLink>
                 </Modal.Footer>
             </Modal>
         </>
