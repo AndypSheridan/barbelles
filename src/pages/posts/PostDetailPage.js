@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/PostDetailPage.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import Post from "./Post";
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -33,7 +34,7 @@ const PostDetailPage = () => {
             <Row className={styles.Row}>
                 <Col>
                     <p>Placeholder text</p>
-                    <p>Post component</p>
+                    <Post />
                     <Container>Comments</Container>
                 </Col>
                 <Col>
