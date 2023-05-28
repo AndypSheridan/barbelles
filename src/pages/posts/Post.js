@@ -37,6 +37,9 @@ const Post = (props) => {
                 </div>
             </Media>
         </Card.Body>
+        <Link>
+        <Card.Img src={image} alt={title} />
+        </Link>
     </Card>
     );
 };
