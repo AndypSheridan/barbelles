@@ -1,10 +1,21 @@
-import React from 'react'
-
+import React from "react";
 
 const Post = (props) => {
-  return (
-    <div>Post component</div>
-  )
-}
+    const {
+        id,
+        owner,
+        profile_id,
+        profile_image,
+        comments_count,
+        likes_count,
+        like_id,
+        title,
+        story,
+        image,
+        updated_at,
+    } = props;
 
-export default Post
+    return <div>Post component</div>;
+};
+
+export default Post;
