@@ -1,7 +1,8 @@
 import React from "react";
-import { useCurrentUser } from "../../contexts/CurrentUserContext"
-import { Card, Media} from "react-bootstrap";
-import {Link} from "react-router-dom"
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Card, Media } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Avatar from "../../components/Avatar";
 
 const Post = (props) => {
     const {
@@ -19,17 +20,20 @@ const Post = (props) => {
     } = props;
 
     const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner
+    const is_owner = currentUser?.username === owner;
 
-    return 
+    return (
     <Card>
         <Card.Body>
             <Media>
                 <Link to={`/profiles/${profile_id}`}>
+                    <Avatar src={profile_image} height={60} />
+                    {owner}
                 </Link>
             </Media>
         </Card.Body>
     </Card>
+    );
 };
 
 export default Post;
