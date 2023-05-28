@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
 import appStyles from "../../App.module.css"
+import styles from "../../styles/PostDetailPage.module.css"
 
 const PostDetailPage = () => {
 
@@ -12,7 +13,7 @@ const PostDetailPage = () => {
 
   return (
     <Container className='h-100'>
-        <Row className=''>
+        <Row className={styles.Row}>
             <Col>
             <p>Posts</p>
             <Container>
