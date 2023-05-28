@@ -1,8 +1,9 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media } from "react-bootstrap";
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import styles from "../../styles/Post.module.css"
 
 const Post = (props) => {
     const {
@@ -43,6 +44,15 @@ const Post = (props) => {
         <Card.Body>
             {title && <Card.Title className="text-center">{title}</Card.Title>}
             {story && <Card.Text>{story}</Card.Text>}
+            <div className={styles.PostInteraction}>
+                {is_owner ? (
+                    <OverlayTrigger placement="top" overlay={<Tooltip>You can't like your own post!</Tooltip>}>
+                        <i className="far fa-heart" />
+                    </OverlayTrigger>
+                ) : like_id ? (
+                    <span onClick={() => {}}></span>
+                )}
+            </div>
         </Card.Body>
     </Card>
     );
