@@ -17,6 +17,7 @@ const Post = (props) => {
         story,
         image,
         updated_at,
+        postPage,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -32,6 +33,7 @@ const Post = (props) => {
                 </Link>
                 <div className="d-flex align-items-center justify-content-between">
                     <span>{updated_at}</span>
+                    {is_owner && postPage && "..."}
                 </div>
             </Media>
         </Card.Body>
