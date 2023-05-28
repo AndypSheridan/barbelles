@@ -25,8 +25,8 @@ const PostDetailPage = () => {
             }
         };
 
-      
-    });
+    handleMount()
+    }, [id]);
 
     return (
         <Container className="h-100">
