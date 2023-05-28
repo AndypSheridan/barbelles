@@ -1,4 +1,5 @@
 import React from "react";
+import { useCurrentUser } from "../../contexts/CurrentUserContext"
 
 const Post = (props) => {
     const {
@@ -14,6 +15,8 @@ const Post = (props) => {
         image,
         updated_at,
     } = props;
+
+    const currentUser = useCurrentUser
 
     return <div>Post component</div>;
 };
