@@ -16,7 +16,8 @@ const Post = (props) => {
         updated_at,
     } = props;
 
-    const currentUser = useCurrentUser
+    const currentUser = useCurrentUser();
+    const is_owner = currentUser?.username === owner
 
     return <div>Post component</div>;
 };
