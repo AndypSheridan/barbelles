@@ -30,6 +30,9 @@ const Post = (props) => {
                     <Avatar src={profile_image} height={60} />
                     {owner}
                 </Link>
+                <div className="d-flex align-items-center">
+                    <span>{updated_at}</span>
+                </div>
             </Media>
         </Card.Body>
     </Card>
