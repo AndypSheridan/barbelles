@@ -1,6 +1,7 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext"
-import { Card, Media } from "react-bootstrap";
+import { Card, Media} from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 const Post = (props) => {
     const {
@@ -23,7 +24,10 @@ const Post = (props) => {
     return 
     <Card>
         <Card.Body>
-            <Media></Media>
+            <Media>
+                <Link to={`/profiles/${profile_id}`}>
+                </Link>
+            </Media>
         </Card.Body>
     </Card>
 };
