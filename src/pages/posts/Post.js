@@ -1,5 +1,6 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext"
+import { Card, Media } from "react-bootstrap";
 
 const Post = (props) => {
     const {
@@ -19,7 +20,12 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner
 
-    return <div>Post component</div>;
+    return 
+    <Card>
+        <Card.Body>
+            <Media></Media>
+        </Card.Body>
+    </Card>
 };
 
 export default Post;
