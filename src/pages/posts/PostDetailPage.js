@@ -6,10 +6,11 @@ import Col from "react-bootstrap/Col"
 
 import appStyles from "../../App.module.css"
 import styles from "../../styles/PostDetailPage.module.css"
+import { useParams } from 'react-router-dom';
 
 const PostDetailPage = () => {
 
-    
+    const {id} = useParams
 
   return (
     <Container className='h-100'>
