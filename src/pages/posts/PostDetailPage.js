@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,8 +10,9 @@ import { useParams } from "react-router-dom";
 
 const PostDetailPage = () => {
     const { id } = useParams();
-    const [post, setPost] = useState();
-    
+    const [post, setPost] = useState({ results: [] });
+
+    useEffect(()=>{})
 
     return (
         <Container className="h-100">
@@ -22,7 +23,7 @@ const PostDetailPage = () => {
                     <Container>Comments</Container>
                 </Col>
                 <Col>
-                <p>More placeholder text</p>
+                    <p>More placeholder text</p>
                 </Col>
             </Row>
         </Container>
