@@ -34,7 +34,7 @@ const PostDetailPage = () => {
             <Row className={styles.Row}>
                 <Col>
                     <p>Placeholder text</p>
-                    <Post {...post.results[0]} setPosts={setPost} />
+                    <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>Comments</Container>
                 </Col>
                 <Col>
