@@ -15,7 +15,8 @@ const PostDetailPage = () => {
     <Container className='h-100'>
         <Row className={styles.Row}>
             <Col>
-            <p>Posts</p>
+            <p>Placeholder text</p>
+            <p>Post component</p>
             <Container>
                 Comments
             </Container>
