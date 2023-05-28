@@ -37,7 +37,7 @@ const PostDetailPage = () => {
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>Comments</Container>
                 </Col>
-                <Col>
+                <Col className="d-lg-block d-none">
                     <p>More placeholder text</p>
                 </Col>
             </Row>
