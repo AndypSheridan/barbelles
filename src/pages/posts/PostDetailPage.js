@@ -12,7 +12,15 @@ const PostDetailPage = () => {
     const { id } = useParams();
     const [post, setPost] = useState({ results: [] });
 
-    useEffect(()=>{})
+    useEffect(()=>{
+      const handleMount = async () => {
+        try{
+          
+        } catch(err){
+          
+        }
+      }
+    })
 
     return (
         <Container className="h-100">
