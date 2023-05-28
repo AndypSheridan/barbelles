@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,6 +10,8 @@ import { useParams } from "react-router-dom";
 
 const PostDetailPage = () => {
     const { id } = useParams();
+    const [post, setPost] = useState();
+    
 
     return (
         <Container className="h-100">
