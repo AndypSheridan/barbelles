@@ -12,7 +12,7 @@ const PostDetailPage = () => {
 
   return (
     <Container className='h-100'>
-        <Row>
+        <Row className=''>
             <Col>
             <p>Posts</p>
             <Container>
