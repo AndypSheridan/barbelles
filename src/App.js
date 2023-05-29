@@ -12,7 +12,6 @@ import PostsFeedPage from "./pages/posts/PostsFeedPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
-
     const currentUser = useCurrentUser();
     const profile_id = currentUser?.profile_id || "";
 
@@ -27,6 +26,15 @@ function App() {
                         path="/"
                         render={() => (
                             <PostsFeedPage message="No search results found. Adjust the search keyword(s)" />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/posts-feed"
+                        render={() => (
+                            <PostsFeedPage 
+                            message="No search results found. Adjust the search keyword(s) or follow someone in the community"
+                            filter={`owner__followed__owner__profile=${profile_id}&`} />
                         )}
                     />
                     <Route exact path="/signin" render={() => <SignInForm />} />
