@@ -37,6 +37,14 @@ function App() {
                             filter={`owner__followed__owner__profile=${profile_id}&`} />
                         )}
                     />
+                    <Route
+                        exact
+                        path="/liked"
+                        render={() => (
+                            <PostsFeedPage message="No search results found. Adjust the search keyword(s) or like a post"
+                            filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} />
+                        )}
+                    />
                     <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route
