@@ -24,6 +24,14 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
+    const handleLike = async () => {
+        try {
+            const {data} =
+        } catch(err) {
+
+        }
+    }
+
     return (
         <Card>
             <Card.Body>
