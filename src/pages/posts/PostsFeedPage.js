@@ -9,7 +9,19 @@ import appStyles from "../../App.module.css"
 import styles from "../../styles/PostsFeedPage.module.css"
 
 const PostsFeedPage = () => {
-    return <div>PostsFeedPage</div>;
+    return (
+    <Container className="h-100">
+        <Row>
+            <Col>
+            <p>Placeholder text 1</p>
+            <p>Post feed will go here</p>
+            </Col>
+            <Col>
+            <p>Placeholder text 2</p>
+            </Col>
+        </Row>
+    </Container>
+        )
 };
 
 export default PostsFeedPage;
