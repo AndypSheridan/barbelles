@@ -12,11 +12,11 @@ const PostsFeedPage = () => {
     return (
     <Container className="h-100">
         <Row>
-            <Col>
+            <Col lg={8}>
             <p>Placeholder text 1</p>
             <p>Post feed will go here</p>
             </Col>
-            <Col>
+            <Col className="d-lg-block d-none" lg={4}>
             <p>Placeholder text 2</p>
             </Col>
         </Row>
