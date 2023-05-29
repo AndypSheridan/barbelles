@@ -4,6 +4,7 @@ import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Post.module.css";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
     const {
@@ -19,6 +20,7 @@ const Post = (props) => {
         image,
         updated_at,
         postPage,
+        setPosts,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -26,7 +28,7 @@ const Post = (props) => {
 
     const handleLike = async () => {
         try {
-            const {data} =
+            const {data} = await axiosRes.post("/likes/", {post:id})
         } catch(err) {
 
         }
