@@ -83,7 +83,7 @@ const Post = (props) => {
                             <i className="fas fa-heart" />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleLike}>
                             <i className="far fa-heart" />
                         </span>
                     ) : (
