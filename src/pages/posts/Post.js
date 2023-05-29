@@ -46,6 +46,14 @@ const Post = (props) => {
         }
     };
 
+    const handleUnlike = async () => {
+        try {
+
+        } catch(err) {
+            console.log(err)
+        }
+    }
+
     return (
         <Card>
             <Card.Body>
