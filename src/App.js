@@ -17,13 +17,31 @@ function App() {
             <Container className={styles.Main}>
                 <Switch>
                     {/* <Route exact path="/" render={() => <HomePage />} /> */}
-                    <Route exact path="/" render={() => <PostsFeedPage />} />
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <PostsFeedPage message="No search results found. Adjust the search keyword(s)" />
+                        )}
+                    />
                     <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
-                    <Route exact path="/posts/share" render={() => <PostShareForm />} />
-                    <Route exact path="/posts/:id" render={() => <PostDetailPage />} />
                     <Route
-                        render={() => <p className={styles.PageNotFound}>Oh no, this page can't be found!!</p>}
+                        exact
+                        path="/posts/share"
+                        render={() => <PostShareForm />}
+                    />
+                    <Route
+                        exact
+                        path="/posts/:id"
+                        render={() => <PostDetailPage />}
+                    />
+                    <Route
+                        render={() => (
+                            <p className={styles.PageNotFound}>
+                                Oh no, this page can't be found!!
+                            </p>
+                        )}
                     />
                 </Switch>
             </Container>
