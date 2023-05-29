@@ -48,11 +48,23 @@ const Post = (props) => {
 
     const handleUnlike = async () => {
         try {
-
-        } catch(err) {
-            console.log(err)
+            await axiosRes.delete(`/likes/${like_id}`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? {
+                              ...post,
+                              likes_count: post.likes_count - 1,
+                              like_id: null,
+                          }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            console.log(err);
         }
-    }
+    };
 
     return (
         <Card>
@@ -87,7 +99,7 @@ const Post = (props) => {
                             <i className="far fa-heart" />
                         </OverlayTrigger>
                     ) : like_id ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleUnlike}>
                             <i className="fas fa-heart" />
                         </span>
                     ) : currentUser ? (
