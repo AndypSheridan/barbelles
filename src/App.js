@@ -9,8 +9,12 @@ import SignInForm from "./pages/auth/SignInForm";
 import PostShareForm from "./pages/posts/PostShareForm";
 import PostDetailPage from "./pages/posts/PostDetailPage";
 import PostsFeedPage from "./pages/posts/PostsFeedPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+
+    const currentUser = useCurrentUser
+
     return (
         <div className={styles.App}>
             <NavBar />
