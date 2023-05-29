@@ -10,8 +10,8 @@ import styles from "../../styles/PostsFeedPage.module.css"
 
 const PostsFeedPage = () => {
     return (
-    <Container className="h-100">
-        <Row>
+    <Container className={`${styles.homeBackground}`}>
+        <Row >
             <Col lg={8}>
             <p>Placeholder text 1</p>
             <p>Post feed will go here</p>
