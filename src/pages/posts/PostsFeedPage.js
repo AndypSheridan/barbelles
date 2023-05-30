@@ -36,8 +36,11 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     return (
         <Container className={`${styles.homeBackground}`}>
             <Row>
-                <Col lg={8}>
+                <Col className={styles.Col} lg={8}>
                     <p>Placeholder text 1</p>
+
+                    <i className={`fas fa-search ${styles.SearchIcon}`} />
+
                     {hasLoaded ? (
                         <>
                         {posts.results.length ? (
