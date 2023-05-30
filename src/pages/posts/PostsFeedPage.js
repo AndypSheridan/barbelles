@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -7,10 +7,17 @@ import Row from "react-bootstrap/Row";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeedPage.module.css";
+import { useLocation } from "react-router-dom";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
-    const [hasLoaded, setHasLoaded] = useState(false)
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        
+    })
+
 
     return (
         <Container className={`${styles.homeBackground}`}>
