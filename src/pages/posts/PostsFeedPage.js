@@ -12,6 +12,7 @@ import { useLocation } from "react-router-dom";
 import Post from "./Post";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import Asset from "../../components/Asset";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
@@ -67,13 +68,16 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {posts.results.length ? (
-                                posts.results.map((post) => (
-                                    <Post
-                                        key={post.id}
-                                        {...post}
-                                        setPosts={setPosts}
-                                    />
-                                ))
+                                <InfiniteScroll children={
+                                    posts.results.map((post) => (
+                                        <Post
+                                            key={post.id}
+                                            {...post}
+                                            setPosts={setPosts}
+                                        />
+                                    ))
+                                } />
+                                
                             ) : (
                                 <Container>
                                     <Asset
