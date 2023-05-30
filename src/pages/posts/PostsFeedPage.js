@@ -18,6 +18,8 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
 
+    const [query, setQuery] = useState("");
+
     useEffect(() => {
         const fetchPosts = async () => {
             try {
