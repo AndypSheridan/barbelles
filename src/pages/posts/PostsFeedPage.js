@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -9,6 +9,8 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeedPage.module.css";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
+    const [posts, setPosts] = useState({ results: [] });
+
     return (
         <Container className={`${styles.homeBackground}`}>
             <Row>
