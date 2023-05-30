@@ -5,23 +5,23 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-import appStyles from "../../App.module.css"
-import styles from "../../styles/PostsFeedPage.module.css"
+import appStyles from "../../App.module.css";
+import styles from "../../styles/PostsFeedPage.module.css";
 
-const PostsFeedPage = () => {
+const PostsFeedPage = ({ message, filter = "" }) => {
     return (
-    <Container className={`${styles.homeBackground}`}>
-        <Row >
-            <Col lg={8}>
-            <p>Placeholder text 1</p>
-            <p>Post feed will go here</p>
-            </Col>
-            <Col className="d-lg-block d-none" lg={4}>
-            <p>Placeholder text 2</p>
-            </Col>
-        </Row>
-    </Container>
-        )
+        <Container className={`${styles.homeBackground}`}>
+            <Row>
+                <Col lg={8}>
+                    <p>Placeholder text 1</p>
+                    <p>Post feed will go here</p>
+                </Col>
+                <Col className="d-lg-block d-none" lg={4}>
+                    <p>Placeholder text 2</p>
+                </Col>
+            </Row>
+        </Container>
+    );
 };
 
 export default PostsFeedPage;
