@@ -38,6 +38,10 @@ const PostsFeedPage = ({ message, filter = "" }) => {
         const searchTimer = setTimeout(() => {
             fetchPosts();
         }, 1200);
+
+        return () => {
+            clearTimeout(searchTimer);
+        };
     }, [filter, query, pathname]);
 
     return (
