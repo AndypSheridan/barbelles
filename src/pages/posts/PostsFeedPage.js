@@ -25,7 +25,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                 console.log(err);
             }
         };
-    });
+
+        fetchPosts()
+    }, [filter, pathname]);
 
     return (
         <Container className={`${styles.homeBackground}`}>
