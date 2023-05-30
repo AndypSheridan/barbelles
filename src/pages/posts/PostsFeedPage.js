@@ -26,7 +26,8 @@ const PostsFeedPage = ({ message, filter = "" }) => {
             }
         };
 
-        fetchPosts()
+        setHasLoaded(false);
+        fetchPosts();
     }, [filter, pathname]);
 
     return (
@@ -34,7 +35,17 @@ const PostsFeedPage = ({ message, filter = "" }) => {
             <Row>
                 <Col lg={8}>
                     <p>Placeholder text 1</p>
-                    <p>Post feed will go here</p>
+                    {hasLoaded ? (
+                        <>
+                        {posts.results.length ? (
+                            console.log("map posts")
+                        ) : (
+                            console.log("show no results")
+                        )}
+                        </>
+                    ) : (
+                        console.log("Spinner")
+                    )}
                 </Col>
                 <Col className="d-lg-block d-none" lg={4}>
                     <p>Placeholder text 2</p>
