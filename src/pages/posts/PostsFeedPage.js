@@ -40,6 +40,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     <p>Placeholder text 1</p>
 
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
+                    <Form className={styles.SearchBar}>
+                        
+                    </Form>
 
                     {hasLoaded ? (
                         <>
