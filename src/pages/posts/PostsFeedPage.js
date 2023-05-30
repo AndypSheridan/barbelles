@@ -18,7 +18,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const { data } = await axiosReq.get;
+                const { data } = await axiosReq.get(`/posts-feed/?${filter}`);
+                setPosts(data);
+                setHasLoaded(True);
             } catch (err) {
                 console.log(err);
             }
