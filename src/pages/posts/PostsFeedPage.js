@@ -9,6 +9,9 @@ import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeedPage.module.css";
 import { useLocation } from "react-router-dom";
+import Post from "./Post";
+import NoSearchResults from "../../assets/nosearchresults.png"
+import Asset from "../../components/Asset";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
@@ -18,9 +21,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const { data } = await axiosReq.get(`/posts-feed/?${filter}`);
+                const { data } = await axiosReq.get(`/posts/?${filter}`);
                 setPosts(data);
-                setHasLoaded(True);
+                setHasLoaded(true);
             } catch (err) {
                 console.log(err);
             }
@@ -38,10 +41,13 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                         {posts.results.length ? (
-                            console.log("map posts")
-                        ) : (
-                            console.log("show no results")
-                        )}
+                            posts.results.map( post => (
+                                <Post key={post.id} {...post} setPosts={setPosts} />
+                            ))
+                        ) : <Container>
+                            <Asset src={NoSearchResults} message={message} />
+                        </Container>
+                        }
                         </>
                     ) : (
                         console.log("Spinner")
