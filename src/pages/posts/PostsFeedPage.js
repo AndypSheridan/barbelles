@@ -76,7 +76,11 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                                             setPosts={setPosts}
                                         />
                                     ))
-                                } />
+                                }
+                                dataLength={posts.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!posts.next}
+                                />
                                 
                             ) : (
                                 <Container>
