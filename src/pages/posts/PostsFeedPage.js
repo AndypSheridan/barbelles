@@ -80,6 +80,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                                 dataLength={posts.results.length}
                                 loader={<Asset spinner />}
                                 hasMore={!!posts.next}
+                                next={() => {}}
                                 />
                                 
                             ) : (
