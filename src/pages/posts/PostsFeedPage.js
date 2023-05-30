@@ -13,6 +13,7 @@ import Post from "./Post";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
@@ -49,7 +50,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
         <Container className={`${styles.homeBackground}`}>
             <Row>
                 <Col className={styles.Col} lg={8}>
-                    <p>Placeholder text 1</p>
+                    <p>Placeholder 1</p>
 
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
                     <Form
@@ -68,21 +69,22 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {posts.results.length ? (
-                                <InfiniteScroll children={
-                                    posts.results.map((post) => (
+                                <InfiniteScroll
+                               
+                                    children={posts.results.map((post) => (
                                         <Post
                                             key={post.id}
                                             {...post}
                                             setPosts={setPosts}
                                         />
-                                    ))
-                                }
-                                dataLength={posts.results.length}
-                                loader={<Asset spinner />}
-                                hasMore={!!posts.next}
-                                next={() => {}}
+                                    ))}
+                                    dataLength={posts.results.length}
+                                    loader={<Asset spinner />}
+                                    hasMore={!!posts.next}
+                                    next={() => {
+                                        fetchMoreData(posts, setPosts)
+                                    }}
                                 />
-                                
                             ) : (
                                 <Container>
                                     <Asset
