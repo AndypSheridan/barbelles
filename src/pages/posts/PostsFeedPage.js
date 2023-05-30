@@ -23,7 +23,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const { data } = await axiosReq.get(`/posts/?${filter}`);
+                const { data } = await axiosReq.get(
+                    `/posts/?${filter}search=${query}`
+                );
                 setPosts(data);
                 setHasLoaded(true);
             } catch (err) {
@@ -33,7 +35,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
 
         setHasLoaded(false);
         fetchPosts();
-    }, [filter, pathname]);
+    }, [filter, query, pathname]);
 
     return (
         <Container className={`${styles.homeBackground}`}>
@@ -47,6 +49,8 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         onSubmit={(event) => event.preventDefault()}
                     >
                         <Form.Control
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
                             type="text"
                             className="mr-sm-2"
                             placeholder="Search posts"
