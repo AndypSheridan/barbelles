@@ -50,7 +50,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         }
                         </>
                     ) : (
-                        console.log("Spinner")
+                        <Container>
+                            <Asset spinner />
+                        </Container>
                     )}
                 </Col>
                 <Col className="d-lg-block d-none" lg={4}>
