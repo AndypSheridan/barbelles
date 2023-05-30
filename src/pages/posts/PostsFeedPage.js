@@ -10,7 +10,7 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeedPage.module.css";
 import { useLocation } from "react-router-dom";
 import Post from "./Post";
-import NoSearchResults from "../../assets/nosearchresults.png"
+import NoSearchResults from "../../assets/nosearchresults.png";
 import Asset from "../../components/Asset";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
@@ -40,20 +40,35 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     <p>Placeholder text 1</p>
 
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
-                    <Form className={styles.SearchBar}>
-                        
+                    <Form
+                        className={styles.SearchBar}
+                        onSubmit={(event) => event.preventDefault()}
+                    >
+                        <Form.Control
+                            type="text"
+                            className="mr-sm-2"
+                            placeholder="Search posts"
+                        />
                     </Form>
 
                     {hasLoaded ? (
                         <>
-                        {posts.results.length ? (
-                            posts.results.map( post => (
-                                <Post key={post.id} {...post} setPosts={setPosts} />
-                            ))
-                        ) : <Container>
-                            <Asset src={NoSearchResults} message={message} />
-                        </Container>
-                        }
+                            {posts.results.length ? (
+                                posts.results.map((post) => (
+                                    <Post
+                                        key={post.id}
+                                        {...post}
+                                        setPosts={setPosts}
+                                    />
+                                ))
+                            ) : (
+                                <Container>
+                                    <Asset
+                                        src={NoSearchResults}
+                                        message={message}
+                                    />
+                                </Container>
+                            )}
                         </>
                     ) : (
                         <Container>
