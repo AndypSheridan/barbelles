@@ -10,6 +10,7 @@ import styles from "../../styles/PostsFeedPage.module.css";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
+    const [hasLoaded, setHasLoaded] = useState(false)
 
     return (
         <Container className={`${styles.homeBackground}`}>
