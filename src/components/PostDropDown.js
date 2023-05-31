@@ -6,17 +6,14 @@ import styles from "../styles/PostDropDown.module.css";
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
 const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
-    <a
-        
+    <i
+        className="fas fa-ellipsis-v"
         ref={ref}
         onClick={(e) => {
             e.preventDefault();
             onClick(e);
         }}
-    >
-        {children}
-        &#x25bc;
-    </a>
+    />
 ));
 
 // forwardRef again here!
