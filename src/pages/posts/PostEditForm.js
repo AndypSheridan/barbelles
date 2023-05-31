@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import UploadIcon from "../../assets/uploadIcon.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -27,6 +27,21 @@ const PostEditForm = () => {
     const imageInput = useRef(null);
     const history = useHistory();
     const {id} = useParams();
+
+    useEffect(() => {
+        const handleMount = async () => {
+            try {
+                const {data} = await axiosReq.get(`/posts/${id}/`)
+                const { title, story, image, is_owner } = data;
+
+                is_owner 
+                ? setPostData({title, story, image})
+                : history.push("/")
+            } catch (err) {
+                console.log(err)
+            }
+        }
+    })
 
     const handleChange = (event) => {
         setPostData({
