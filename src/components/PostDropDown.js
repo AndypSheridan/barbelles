@@ -18,12 +18,10 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 
 export const PostDropDown = () => {
     return (
-        <Dropdown className="ml-auto">
-        <Dropdown.Toggle as={PostDropDownMenu} id="dropdown-custom-components">
-            Custom toggle
-        </Dropdown.Toggle>
+        <Dropdown className="ml-auto" drop="down">
+        <Dropdown.Toggle as={PostDropDownMenu} />
 
-        <Dropdown.Menu >
+        <Dropdown.Menu className="text-center" >
             <Dropdown.Item eventKey="1">Red</Dropdown.Item>
             <Dropdown.Item eventKey="2">Blue</Dropdown.Item>
             <Dropdown.Item eventKey="3" active>
