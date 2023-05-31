@@ -28,6 +28,10 @@ const Post = (props) => {
     const is_owner = currentUser?.username === owner;
     const history = useHistory();
 
+    const handlePostEdit = () => {
+        history.push(`posts/${id}/edit`)
+    }
+
     const handleLike = async () => {
         try {
             const { data } = await axiosRes.post("/likes/", { post: id });
