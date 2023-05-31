@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 
+
 const PostDetailPage = () => {
     const { id } = useParams();
     const [post, setPost] = useState({ results: [] });
