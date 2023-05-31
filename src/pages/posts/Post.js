@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -26,6 +26,7 @@ const Post = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    const history = useHistory();
 
     const handleLike = async () => {
         try {

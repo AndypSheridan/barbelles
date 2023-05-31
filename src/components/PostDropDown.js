@@ -35,7 +35,7 @@ export const PostDropDown = () => {
                     aria-label="delete"
                     onClick={() => {}}
                 >
-                    <i className="fa-reular fa-square-minus" />
+                    <i className="fa-regular fa-square-minus" />
                     Delete
                 </Dropdown.Item>
             </Dropdown.Menu>
