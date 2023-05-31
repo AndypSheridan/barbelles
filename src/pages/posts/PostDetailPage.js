@@ -9,7 +9,7 @@ import styles from "../../styles/PostDetailPage.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-
+import CommentShareForm from "../comments/CommentShareForm";
 
 const PostDetailPage = () => {
     const { id } = useParams();
