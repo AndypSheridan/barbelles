@@ -120,7 +120,7 @@ const PostEditForm = () => {
             >
                 Cancel
             </Button>
-            <Button type="submit">Share</Button>
+            <Button type="submit">Update</Button>
         </div>
     );
 
