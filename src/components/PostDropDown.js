@@ -5,9 +5,9 @@ import styles from "../styles/PostDropDown.module.css";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
-const PostDropDownMenu = React.forwardRef(({ children, onClick }, ref) => (
+const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
     <a
-        href=""
+        
         ref={ref}
         onClick={(e) => {
             e.preventDefault();
