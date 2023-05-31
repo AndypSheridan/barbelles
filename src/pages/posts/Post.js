@@ -28,9 +28,18 @@ const Post = (props) => {
     const is_owner = currentUser?.username === owner;
     const history = useHistory();
 
+    const handlePostDelete = async () => {
+        try {
+            axiosRes.delete(`/posts/${id}/`);
+            history.goBack();
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     const handlePostEdit = () => {
-        history.push(`posts/${id}/edit`)
-    }
+        history.push(`posts/${id}/edit`);
+    };
 
     const handleLike = async () => {
         try {
@@ -82,7 +91,12 @@ const Post = (props) => {
                     </Link>
                     <div className="d-flex align-items-center justify-content-between">
                         <span>{updated_at}</span>
-                        {is_owner && postPage && <PostDropDown />}
+                        {is_owner && postPage && (
+                            <PostDropDown
+                                handlePostEdit={handlePostEdit}
+                                handlePostDelete={handlePostDelete}
+                            />
+                        )}
                     </div>
                 </Media>
             </Card.Body>
