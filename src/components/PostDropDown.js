@@ -16,12 +16,15 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
-export const PostDropDown = ({handlePostEdit}) => {
+export const PostDropDown = ({ handlePostEdit, handlePostDelete }) => {
     return (
         <Dropdown className="ml-auto" drop="down">
             <Dropdown.Toggle as={PostDropDownMenu} />
 
-            <Dropdown.Menu className="text-center">
+            <Dropdown.Menu
+                popperConfig={{ strategy: "fixed" }}
+                className="text-center"
+            >
                 <Dropdown.Item
                     className={styles.DropdownItem}
                     aria-label="edit"
@@ -33,7 +36,7 @@ export const PostDropDown = ({handlePostEdit}) => {
                 <Dropdown.Item
                     className={styles.DropdownItem}
                     aria-label="delete"
-                    onClick={() => {}}
+                    onClick={handlePostDelete}
                 >
                     <i className="fa-regular fa-square-minus" />
                     Delete
