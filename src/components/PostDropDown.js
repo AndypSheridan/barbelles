@@ -19,16 +19,26 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 export const PostDropDown = () => {
     return (
         <Dropdown className="ml-auto" drop="down">
-        <Dropdown.Toggle as={PostDropDownMenu} />
+            <Dropdown.Toggle as={PostDropDownMenu} />
 
-        <Dropdown.Menu className="text-center" >
-            <Dropdown.Item eventKey="1">Red</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Blue</Dropdown.Item>
-            <Dropdown.Item eventKey="3" active>
-                Orange
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="1">Red-Orange</Dropdown.Item>
-        </Dropdown.Menu>
-    </Dropdown>
-    )
-}
+            <Dropdown.Menu className="text-center">
+                <Dropdown.Item
+                    className={styles.DropdownItem}
+                    aria-label="edit"
+                    onClick={() => {}}
+                >
+                    <i className="fa-regular fa-pen-to-square" />
+                    Edit
+                </Dropdown.Item>
+                <Dropdown.Item
+                    className={styles.DropdownItem}
+                    aria-label="delete"
+                    onClick={() => {}}
+                >
+                    <i className="fa-reular fa-square-minus" />
+                    Delete
+                </Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+    );
+};
