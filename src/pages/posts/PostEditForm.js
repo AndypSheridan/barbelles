@@ -135,7 +135,8 @@ const PostEditForm = () => {
                 <Row>
                     <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
-                            className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
+                            className={`${appStyles.Content} ${styles.PostShareContainer}
+                            ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
                         >
                             <Form.Group
                                 className={`${styles.PostShareBgTransparent} text-center`}
