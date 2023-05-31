@@ -10,6 +10,7 @@ import PostShareForm from "./pages/posts/PostShareForm";
 import PostDetailPage from "./pages/posts/PostDetailPage";
 import PostsFeedPage from "./pages/posts/PostsFeedPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
+import PostEditForm from "./pages/posts/PostEditForm";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -35,6 +36,13 @@ function App() {
                             <PostsFeedPage 
                             message="No search results found. Adjust the search keyword(s) or follow someone in the community"
                             filter={`owner__followed__owner__profile=${profile_id}&`} />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/posts/:id/edit"
+                        render={() => (
+                            <PostEditForm />
                         )}
                     />
                     <Route

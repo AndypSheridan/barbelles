@@ -14,7 +14,7 @@ import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostShareForm() {
+const PostEditForm = () => {
     const [errors, setErrors] = useState();
 
     const [postData, setPostData] = useState({
@@ -183,4 +183,4 @@ function PostShareForm() {
     );
 };
 
-export default PostShareForm;
+export default PostEditForm;
