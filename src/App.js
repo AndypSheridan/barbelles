@@ -40,13 +40,6 @@ function App() {
                     />
                     <Route
                         exact
-                        path="/posts/:id/edit"
-                        render={() => (
-                            <PostEditForm />
-                        )}
-                    />
-                    <Route
-                        exact
                         path="/liked"
                         render={() => (
                             <PostsFeedPage message="No search results found. Adjust the search keyword(s) or like a post"
@@ -64,6 +57,13 @@ function App() {
                         exact
                         path="/posts/:id"
                         render={() => <PostDetailPage />}
+                    />
+                    <Route
+                        exact
+                        path="/posts/:id/edit"
+                        render={() => (
+                            <PostEditForm />
+                        )}
                     />
                     <Route
                         render={() => (

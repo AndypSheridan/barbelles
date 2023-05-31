@@ -11,7 +11,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
 const PostEditForm = () => {
@@ -26,6 +26,7 @@ const PostEditForm = () => {
 
     const imageInput = useRef(null);
     const history = useHistory();
+    const {id} = useParams();
 
     const handleChange = (event) => {
         setPostData({

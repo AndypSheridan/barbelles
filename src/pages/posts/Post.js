@@ -38,7 +38,7 @@ const Post = (props) => {
     };
 
     const handlePostEdit = () => {
-        history.push(`posts/${id}/edit`);
+        history.push(`/posts/${id}/edit`);
     };
 
     const handleLike = async () => {
