@@ -1,18 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
-import UploadIcon from "../../assets/uploadIcon.png";
+import styles from "../../styles/PostShareEditForm.module.css";
+import { useHistory, useParams } from "react-router-dom";
+import btnStyles from "../../styles/Button.module.css";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Alert from "react-bootstrap/Alert";
-import Container from "react-bootstrap/Container";
-import styles from "../../styles/PostShareEditForm.module.css";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
-import { useHistory, useParams } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
 
 const PostEditForm = () => {
     const [errors, setErrors] = useState();
@@ -68,11 +66,14 @@ const PostEditForm = () => {
 
         formData.append("title", title);
         formData.append("story", story);
-        formData.append("image", imageInput.current.files[0]);
+
+        if (imageInput?.current?.files[0]) {
+            formData.append("image", imageInput.current.files[0]);
+        }
 
         try {
-            const { data } = await axiosReq.post("/posts/", formData);
-            history.push(`/posts/${data.id}`);
+            await axiosReq.put(`/posts/${id}/`, formData);
+            history.push(`/posts/${id}`);
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
@@ -139,39 +140,22 @@ const PostEditForm = () => {
                             <Form.Group
                                 className={`${styles.PostShareBgTransparent} text-center`}
                             >
-                                {image ? (
-                                    <>
-                                        <figure>
-                                            <Image
-                                                className={appStyles.Image}
-                                                src={image}
-                                                rounded
-                                            />
-                                        </figure>
-                                        <div
-                                            className={
-                                                styles.PostShareBgTransparent
-                                            }
-                                        >
-                                            <Form.Label
-                                                className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                                                htmlFor="image-upload"
-                                            >
-                                                Change image
-                                            </Form.Label>
-                                        </div>
-                                    </>
-                                ) : (
+                                <figure>
+                                    <Image
+                                        className={appStyles.Image}
+                                        src={image}
+                                        rounded
+                                    />
+                                </figure>
+                                <div className={styles.PostShareBgTransparent}>
                                     <Form.Label
-                                        className="d-flex justify-content-center"
+                                        className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
                                         htmlFor="image-upload"
                                     >
-                                        <Asset
-                                            src={UploadIcon}
-                                            message={"Upload your image here!"}
-                                        />
+                                        Change image
                                     </Form.Label>
-                                )}
+                                </div>
+
                                 <Form.File
                                     ref={imageInput}
                                     onChange={handleChangeImage}
