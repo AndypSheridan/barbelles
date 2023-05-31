@@ -38,7 +38,17 @@ const PostDetailPage = () => {
         <Container className="h-100">
             <Row className={styles.Row}>
                 <Col>
-                    <p>Placeholder text</p>
+                    {currentUser ? (
+                        <CommentShareForm
+                            profile_id={currentUser.profile_id}
+                            profile_image={profile_image}
+                            post={id}
+                            setPost={setPost}
+                            setComments={setComments}
+                        />
+                    ) : comments.results.length ? (
+                        "Comments"
+                    ) : null}
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>Comments</Container>
                 </Col>
