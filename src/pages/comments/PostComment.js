@@ -7,7 +7,16 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 
 const PostComment = (props) => {
-    const { profile_id, profile_image, owner, updated_at, content } = props;
+    const {
+        profile_id,
+        profile_image,
+        owner,
+        updated_at,
+        content,
+        id,
+        setPost,
+        setComments,
+    } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
@@ -25,7 +34,10 @@ const PostComment = (props) => {
                     <p>{content}</p>
                 </Media.Body>
                 {is_owner && (
-                    <ComponentDropDown handleCommentEdit={() => {}} handleCommentDelete={() => {}} />
+                    <ComponentDropDown
+                        handleCommentEdit={() => {}}
+                        handleCommentDelete={() => {}}
+                    />
                 )}
             </Media>
         </div>
