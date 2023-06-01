@@ -28,7 +28,7 @@ const Post = (props) => {
     const is_owner = currentUser?.username === owner;
     const history = useHistory();
 
-    const handlePostDelete = async () => {
+    const handleDelete = async () => {
         try {
             await axiosRes.delete(`/posts/${id}/`);
             history.goBack();
@@ -37,7 +37,7 @@ const Post = (props) => {
         }
     };
 
-    const handlePostEdit = () => {
+    const handleEdit = () => {
         history.push(`/posts/${id}/edit`);
     };
 
@@ -93,8 +93,8 @@ const Post = (props) => {
                         <span>{updated_at}</span>
                         {is_owner && postPage && (
                             <ComponentDropDown
-                                handlePostEdit={handlePostEdit}
-                                handlePostDelete={handlePostDelete}
+                                handleEdit={handleEdit}
+                                handleDelete={handleDelete}
                             />
                         )}
                     </div>

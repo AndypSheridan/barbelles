@@ -16,7 +16,7 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
-export const ComponentDropDown = ({ handlePostEdit, handlePostDelete }) => {
+export const ComponentDropDown = ({ handleEdit, handleDelete }) => {
     return (
         <Dropdown className="ml-auto" drop="down">
             <Dropdown.Toggle as={PostDropDownMenu} />
@@ -28,7 +28,7 @@ export const ComponentDropDown = ({ handlePostEdit, handlePostDelete }) => {
                 <Dropdown.Item
                     className={styles.DropdownItem}
                     aria-label="edit"
-                    onClick={handlePostEdit}
+                    onClick={handleEdit}
                 >
                     <i className="fa-regular fa-pen-to-square" />
                     Edit
@@ -36,7 +36,7 @@ export const ComponentDropDown = ({ handlePostEdit, handlePostDelete }) => {
                 <Dropdown.Item
                     className={styles.DropdownItem}
                     aria-label="delete"
-                    onClick={handlePostDelete}
+                    onClick={handleDelete}
                 >
                     <i className="fa-regular fa-square-minus" />
                     Delete
