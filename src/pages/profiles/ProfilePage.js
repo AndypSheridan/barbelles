@@ -14,6 +14,7 @@ import {
     useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import { Button, Image } from "react-bootstrap";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -96,8 +97,11 @@ const ProfilePage = () => {
     const mainProfilePosts = (
         <>
             <hr />
-            <p className="text-center">Profile owner posts</p>
+            <p className="text-center">{profile?.owner}'s' posts</p>
             <hr />
+            {profilePosts.results.length ? (
+                <InfiniteScroll
+            )}
         </>
     );
 
