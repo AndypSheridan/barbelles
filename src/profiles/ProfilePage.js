@@ -9,13 +9,19 @@ import styles from "../styles/ProfilePage.module.css";
 import appStyles from "../App.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../api/axiosDefaults";
-import { useSetProfileData } from "../contexts/ProfileDataContext";
+import {
+    useProfileData,
+    useSetProfileData,
+} from "../contexts/ProfileDataContext";
+import { Image } from "react-bootstrap";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
     const setProfileData = useSetProfileData();
+    const { profilePage } = useProfileData();
+    const [profile] = profilePage.results;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,7 +46,7 @@ const ProfilePage = () => {
         <>
             <Row noGutters className="px-3 text-center">
                 <Col className="text-lg-left" lg={3}>
-                    <p>Image</p>
+                    <Image>
                 </Col>
                 <Col lg={6}>
                     <h4>Username</h4>
