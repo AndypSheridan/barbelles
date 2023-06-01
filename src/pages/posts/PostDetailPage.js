@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
+import PostComment from "../comments/PostComment";
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -55,7 +56,7 @@ const PostDetailPage = () => {
                     ) : null}
                     {comments.results.length ? (
                        comments.results.map(comment => (
-                        <p key={comment.id}>{comment.owner}: {comment.content}</p>
+                        <PostComment key={comment.id} />
                        ))
                     ) : currentUser ? (
                         <span>Be the first to comment!!</span>
