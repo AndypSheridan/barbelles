@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import { axiosReq } from "../../api/axiosDefaults";
-
-import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsFeedPage.module.css";
-import { useLocation } from "react-router-dom";
-import Post from "./Post";
 import NoSearchResults from "../../assets/nosearchresults.png";
-import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
+import styles from "../../styles/PostsFeedPage.module.css";
+import Container from "react-bootstrap/Container";
+import { axiosReq } from "../../api/axiosDefaults";
 import { fetchMoreData } from "../../utils/utils";
+import { useLocation } from "react-router-dom";
+import appStyles from "../../App.module.css";
+import Asset from "../../components/Asset";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Post from "./Post";
+import TopProfiles from "../../profiles/TopProfiles";
+
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
@@ -101,7 +101,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                     )}
                 </Col>
                 <Col className="d-lg-block d-none" lg={4}>
-                    <p>Placeholder text 2</p>
+                    <TopProfiles />
                 </Col>
             </Row>
         </Container>

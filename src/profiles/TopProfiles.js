@@ -1,10 +1,11 @@
-import React from 'react'
-import appStyles from "../App.module.css"
+import React from "react";
+import appStyles from "../App.module.css";
+import Container from "react-bootstrap/Container";
 
 const TopProfiles = () => {
-  return (
-    <div>TopProfiles</div>
-  )
-}
+    return <Container className={appStyles.Content}>
+        <p>Top profiles</p>
+    </Container>;
+};
 
-export default TopProfiles
+export default TopProfiles;
