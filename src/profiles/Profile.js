@@ -8,9 +8,13 @@ const Profile = (props) => {
     const { id, following_id, image, owner } = profile;
 
     const currentUser = useCurrentUser();
-    
+    const is_owner = currentUser?.username === owner;
 
-    return <div>Profile</div>;
+    return <div className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}>
+        <div>
+            <Link to={`/profiles/${id}`} className="align-self-center"></Link>
+        </div>
+    </div>;
 };
 
 export default Profile;
