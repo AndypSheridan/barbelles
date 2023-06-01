@@ -9,7 +9,7 @@ const ProfilePage = () => {
     return (
         <Container>
             <Row>
-                <Col>
+                <Col lg={8}>
                     <TopProfiles mobile />
                     <Container>
                         {hasLoaded ? (
@@ -21,6 +21,8 @@ const ProfilePage = () => {
                             <Asset spinner />
                         )}
                     </Container>
+                </Col>
+                <Col lg={4}>
                 </Col>
             </Row>
         </Container>
