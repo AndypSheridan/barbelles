@@ -3,11 +3,17 @@ import Container from 'react-bootstrap/Container'
 import Asset from '../components/Asset'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import TopProfiles from './TopProfiles'
 
 const ProfilePage = () => {
   return (
     <Container>
-        <R
+        <Row>
+            <Col>
+            <TopProfiles
+            
+            </Col>
+        </Row>
     </Container>
   )
 }
