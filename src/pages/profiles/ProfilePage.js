@@ -84,7 +84,7 @@ const ProfilePage = () => {
                         (profile?.following_id ? (
                             <Button onClick={() => {}}>Unfollow</Button>
                         ) : (
-                            <Button onClick={() => {}}>Follow</Button>
+                            <Button onClick={() => handleFollow}>Follow</Button>
                         ))}
                 </Col>
                 <Col className="p-3">
