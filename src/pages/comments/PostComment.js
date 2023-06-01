@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/PostComment.module.css";
 import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
