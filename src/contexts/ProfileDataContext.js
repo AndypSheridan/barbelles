@@ -2,11 +2,11 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq } from "../api/axiosDefaults";
 
-export const ProfileDataContext = createContext();
-export const SetProfileDataContext = createContext();
+const ProfileDataContext = createContext();
+const SetProfileDataContext = createContext();
 
 export const useProfileData = () => useContext(ProfileDataContext);
-export const useSetProfileData = () => useContext(useSetProfileData);
+export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
     const [profileData, setProfileData] = useState({

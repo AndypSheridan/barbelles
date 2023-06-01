@@ -1,44 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Container from "react-bootstrap/Container";
 import TopProfiles from "./TopProfiles";
-import Asset from "../components/Asset";
+import Asset from "../../components/Asset";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import styles from "../styles/ProfilePage.module.css";
-import appStyles from "../App.module.css";
+import styles from "../../styles/ProfilePage.module.css";
+import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
-import { axiosReq } from "../api/axiosDefaults";
+import { axiosReq } from "../../api/axiosDefaults";
 import {
     useProfileData,
     useSetProfileData,
-} from "../contexts/ProfileDataContext";
-import { Image } from "react-bootstrap";
+} from "../../contexts/ProfileDataContext";
+import { Button, Image } from "react-bootstrap";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
     const setProfileData = useSetProfileData();
-    const { profilePage } = useProfileData();
-    const [profile] = profilePage.results;
+    const { pageProfile } = useProfileData();
+    const [profile] = pageProfile.results;
+    const is_owner = currentUser?.username === profile?.owner;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [{ data: profilePage }] = await Promise.all([
+                const [{ data: pageProfile }] = await Promise.all([
                     axiosReq.get(`/profiles/${id}/`),
                 ]);
                 setProfileData((prevState) => ({
                     ...prevState,
-                    profilePage: { results: [profilePage] },
+                    pageProfile: { results: [pageProfile] },
                 }));
                 setHasLoaded(true);
             } catch (err) {
                 console.log(err);
             }
         };
-
         fetchData();
     }, [id, setProfileData]);
 
@@ -46,14 +46,41 @@ const ProfilePage = () => {
         <>
             <Row noGutters className="px-3 text-center">
                 <Col className="text-lg-left" lg={3}>
-                    <Image>
+                    <Image
+                        className={styles.ProfileImage}
+                        roundedCircle
+                        src={profile?.image}
+                    />
                 </Col>
                 <Col lg={6}>
-                    <h4>Username</h4>
-                    <p>Stats</p>
+                    <h4>{profile?.owner}</h4>
+                    <Row className="justify-content-center no-gutters">
+                        <Col xs={3} className="my-2">
+                            <div>
+                                {profile?.posts_count}
+                            </div>
+                            <div>Posts</div>
+                        </Col>
+                        <Col xs={3} className="my-2">
+                            <div>
+                                {profile?.followers_count}
+                            </div>
+                            <div>Followers</div>
+                        </Col>
+                        <Col xs={3} className="my-2">
+                            <div>
+                                {profile?.following_count}
+                            </div>
+                            <div>Following</div>
+                        </Col>
+                    </Row>
                 </Col>
                 <Col className="text-lg-right" lg={3}>
-                    <p>Follow button</p>
+                    {currentUser && !is_owner && (profile?.following_id ? (
+                        <Button onClick={() => {}}>Unfollow</Button>
+                    ) : (
+                        <Button onClick={()=>{}}>Follow</Button>
+                    ))}
                 </Col>
                 <Col className="p-3">
                     <p>Profile bio</p>

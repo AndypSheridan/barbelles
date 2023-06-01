@@ -12,7 +12,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Post from "./Post";
-import TopProfiles from "../../profiles/TopProfiles";
+import TopProfiles from "../profiles/TopProfiles";
 
 
 const PostsFeedPage = ({ message, filter = "" }) => {
