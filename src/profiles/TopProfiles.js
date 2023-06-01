@@ -14,9 +14,13 @@ const TopProfiles = () => {
     useEffect(() => {
         const handleMount = async () => {
             try{
-                const {data} = await axiosReq
+                const {data} = await axiosReq.get('/profiles/?ordering=-followers_count')
+                setProfileData(prevState => ({
+                    ...prevState,
+                    topProfiles: data,
+                }))
             } catch(err) {
-
+                console.log(err)
             }
         }
     })
