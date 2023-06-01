@@ -16,6 +16,7 @@ import {
 import { Button, Image } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
+import { fetchMoreData } from "../../utils/utils";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -103,7 +104,12 @@ const ProfilePage = () => {
             {profilePosts.results.length ? (
                 <InfiniteScroll children={profilePosts.results.map((post) => (
                     <Post key={post.id} {...post} setPosts={setProfilePosts} />
-                ))}>
+                ))}
+                dataLength={profilePosts.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!profilePosts.next}
+                next={() => fetchMoreData(profilePosts, setProfilePosts)}
+                >
 
                 </InfiniteScroll>
             ) : (
