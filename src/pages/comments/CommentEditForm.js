@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentShareEditForm.module.css"
 
-const CommentEditForm = () => {
+const CommentEditForm = (props) => {
     const { id, content, setShowEditForm, setComments } = props;
 
     const [formContent, setFormContent] = useState(content);
