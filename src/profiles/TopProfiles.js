@@ -44,12 +44,12 @@ const TopProfiles = ({ mobile }) => {
                     {mobile ? (
                         <div className="d-flex justify-content-around">
                             {topProfiles.results.slice(0, 4).map((profile) => (
-                                <Profile key={profile.id} />
+                                <Profile key={profile.id} profile={profile} mobile />
                             ))}
                         </div>
                     ) : (
                         topProfiles.results.map((profile) => (
-                            <Profile key={profile.id} />
+                            <Profile key={profile.id} profile={profile} />
                         ))
                     )}
                 </>
