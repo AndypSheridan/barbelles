@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/PostComment.module.css";
+import { axiosRes } from "../../api/axiosDefaults";
+import CommentEditForm from "./CommentEditForm";
 import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { ComponentDropDown } from "../../components/ComponentDropDown";
-import { axiosRes } from "../../api/axiosDefaults";
-import CommentEditForm from "./CommentEditForm";
 
 const PostComment = (props) => {
     const {
@@ -19,6 +19,8 @@ const PostComment = (props) => {
         setPost,
         setComments,
     } = props;
+
+    const [showEditForm, setShowEditForm] = useState(false);
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
