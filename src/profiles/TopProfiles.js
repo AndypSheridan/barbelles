@@ -5,7 +5,7 @@ import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Asset from "../components/Asset";
 
-const TopProfiles = () => {
+const TopProfiles = ({mobile}) => {
     const [profileData, setProfileData] = useState({
         pageProfile: { results: [] },
         topProfiles: { results: [] },
