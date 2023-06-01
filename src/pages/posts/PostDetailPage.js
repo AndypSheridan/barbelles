@@ -53,6 +53,13 @@ const PostDetailPage = () => {
                     ) : comments.results.length ? (
                         "Comments"
                     ) : null}
+                    {comments.results.length ? (
+                        "comments"
+                    ) : currentUser ? (
+                        <span>Be the first to comment!!</span>
+                    ) : (
+                        <span>No comments yet...</span>
+                    )}
                     </Container>
                 </Col>
                 <Col className="d-lg-block d-none">
