@@ -16,7 +16,7 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
-export const PostDropDown = ({ handlePostEdit, handlePostDelete }) => {
+export const ComponentDropDown = ({ handlePostEdit, handlePostDelete }) => {
     return (
         <Dropdown className="ml-auto" drop="down">
             <Dropdown.Toggle as={PostDropDownMenu} />

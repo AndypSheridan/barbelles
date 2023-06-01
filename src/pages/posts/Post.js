@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
-import { PostDropDown } from "../../components/PostDropDown";
+import { ComponentDropDown } from "../../components/ComponentDropDown";
 
 const Post = (props) => {
     const {
@@ -92,7 +92,7 @@ const Post = (props) => {
                     <div className="d-flex align-items-center justify-content-between">
                         <span>{updated_at}</span>
                         {is_owner && postPage && (
-                            <PostDropDown
+                            <ComponentDropDown
                                 handlePostEdit={handlePostEdit}
                                 handlePostDelete={handlePostDelete}
                             />
