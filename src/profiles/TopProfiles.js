@@ -17,7 +17,7 @@ const TopProfiles = ({ mobile }) => {
         >
             {topProfiles.results.length ? (
                 <>
-                    <p>Top profiles</p>
+                    <p>Top Belles</p>
                     {mobile ? (
                         <div className="d-flex justify-content-around">
                             {topProfiles.results.slice(0, 4).map((profile) => (

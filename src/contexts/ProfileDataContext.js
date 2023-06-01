@@ -39,6 +39,5 @@ export const ProfileDataProvider = ({ children }) => {
                 {children}
             </SetProfileDataContext.Provider>
         </ProfileDataContext.Provider>
-    )
-}
-
+    );
+};
