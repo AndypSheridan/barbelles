@@ -49,7 +49,7 @@ const PostComment = (props) => {
     };
 
     return (
-        <div>
+        <>
             <hr />
             <Media>
                 <Link to={`/profiles/${profile_id}`}>
@@ -67,7 +67,7 @@ const PostComment = (props) => {
                     />
                 )}
             </Media>
-        </div>
+        </>
     );
 };
 
