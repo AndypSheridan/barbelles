@@ -7,12 +7,28 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styles from "../styles/ProfilePage.module.css"
 import appStyles from "../App.module.css"
+import { useParams } from "react-router-dom";
+import { axiosReq } from "../api/axiosDefaults";
+import { useSetProfileData } from "../contexts/ProfileDataContext";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
+    const {id} = useParams();
+    const setProfileData = useSetProfileData()
 
     useEffect(() => {
+        
+        const fetchData = async () => {
+            try {
+                const [{data: profilePage}] = await Promise.all([
+                    axiosReq.get(`/profiles/${id}/`)
+                ])
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
         setHasLoaded(true);
     }, []);
 
