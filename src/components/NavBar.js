@@ -82,7 +82,7 @@ const NavBar = () => {
             >
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                    to={`profiles/${currentUser?.profile_id}`}
+                    to={`/profiles/${currentUser?.profile_id}`}
                     className={`${styles.NavLink} ${styles.AvatarNavLink}`}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
