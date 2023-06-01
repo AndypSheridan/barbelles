@@ -7,7 +7,7 @@ const CommentEditForm = () => {
     const [formContent, setFormContent] = useState(content);
 
     return (
-        <Form>
+        <Form onSubmit={()=>{}}>
             <Form.Group>
                 <Form.Control />
             </Form.Group>
