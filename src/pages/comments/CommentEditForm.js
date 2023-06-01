@@ -53,7 +53,13 @@ const CommentEditForm = (props) => {
                 >
                     Cancel
                 </button>
-                <button>Update</button>
+                <button
+                    type="submit"
+                    disabled={!content.trim()}
+                    className={styles.Button}
+                >
+                    Update
+                </button>
             </div>
         </Form>
     );
