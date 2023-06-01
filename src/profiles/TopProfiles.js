@@ -7,30 +7,7 @@ import Asset from "../components/Asset";
 import Profile from "./Profile";
 
 const TopProfiles = ({ mobile }) => {
-    const [profileData, setProfileData] = useState({
-        pageProfile: { results: [] },
-        topProfiles: { results: [] },
-    });
-
-    const { topProfiles } = profileData;
-    const currentUser = useCurrentUser();
-
-    useEffect(() => {
-        const handleMount = async () => {
-            try {
-                const { data } = await axiosReq.get(
-                    "/profiles/?ordering=-followers_count"
-                );
-                setProfileData((prevState) => ({
-                    ...prevState,
-                    topProfiles: data,
-                }));
-            } catch (err) {
-                console.log(err);
-            }
-        };
-        handleMount();
-    }, [currentUser]);
+    
 
     return (
         <Container
