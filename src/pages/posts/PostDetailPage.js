@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/PostDetailPage.module.css";
 import CommentShareForm from "../comments/CommentShareForm";
+import PostComment from "../comments/PostComment";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
+import { fetchMoreData } from "../../utils/utils";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
+import Asset from "../../components/Asset";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
-import PostComment from "../comments/PostComment";
-import InfiniteScroll from "react-infinite-scroll-component";
-import Asset from "../../components/Asset";
-import { fetchMoreData } from "../../utils/utils";
 
 const PostDetailPage = () => {
     const { id } = useParams();
