@@ -36,7 +36,7 @@ const CommentEditForm = (props) => {
     };
 
     return (
-        <Form onSubmit={() => {}}>
+        <Form onSubmit={handleSubmit}>
             <Form.Group className="pr-1">
                 <Form.Control
                     onChange={handleChange}
