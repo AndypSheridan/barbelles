@@ -16,10 +16,10 @@ const CommentEditForm = () => {
             </Form.Group>
             <div>
             <button>
-
+                Cancel
             </button>
             <button>
-                
+                Update
             </button>
             </div>
         </Form>
