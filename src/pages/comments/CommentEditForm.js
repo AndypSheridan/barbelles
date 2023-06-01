@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const CommentEditForm = () => {
     const { id, content, setShowEditForm, setComments } = props;
@@ -10,7 +11,12 @@ const CommentEditForm = () => {
         setFormContent(event.target.value);
     }
 
-    
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            await axiosRes
+        } catch(err) {}
+    }
 
     return (
         <Form onSubmit={()=>{}}>
