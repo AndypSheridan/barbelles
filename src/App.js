@@ -11,6 +11,7 @@ import PostDetailPage from "./pages/posts/PostDetailPage";
 import PostsFeedPage from "./pages/posts/PostsFeedPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
+import ProfilePage from "./profiles/ProfilePage";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -33,17 +34,20 @@ function App() {
                         exact
                         path="/posts-feed"
                         render={() => (
-                            <PostsFeedPage 
-                            message="No search results found. Adjust the search keyword(s) or follow someone in the community"
-                            filter={`owner__followed__owner__profile=${profile_id}&`} />
+                            <PostsFeedPage
+                                message="No search results found. Adjust the search keyword(s) or follow someone in the community"
+                                filter={`owner__followed__owner__profile=${profile_id}&`}
+                            />
                         )}
                     />
                     <Route
                         exact
                         path="/liked"
                         render={() => (
-                            <PostsFeedPage message="No search results found. Adjust the search keyword(s) or like a post"
-                            filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} />
+                            <PostsFeedPage
+                                message="No search results found. Adjust the search keyword(s) or like a post"
+                                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                            />
                         )}
                     />
                     <Route exact path="/signin" render={() => <SignInForm />} />
@@ -61,9 +65,12 @@ function App() {
                     <Route
                         exact
                         path="/posts/:id/edit"
-                        render={() => (
-                            <PostEditForm />
-                        )}
+                        render={() => <PostEditForm />}
+                    />
+                    <Route
+                        exact
+                        path="/profiles/:id/"
+                        render={() => <ProfilePage />}
                     />
                     <Route
                         render={() => (
