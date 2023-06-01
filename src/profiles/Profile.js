@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/Profile.module.css";
 import btnStyles from "../styles/Button.module.css";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "../components/Avatar";
 
 const Profile = (props) => {
     const { profile, mobile, imageSize = 60 } = props;
@@ -12,7 +13,9 @@ const Profile = (props) => {
 
     return <div className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}>
         <div>
-            <Link to={`/profiles/${id}`} className="align-self-center"></Link>
+            <Link to={`/profiles/${id}`} className="align-self-center">
+                <Avatar
+            </Link>
         </div>
     </div>;
 };
