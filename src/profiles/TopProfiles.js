@@ -5,7 +5,7 @@ import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Asset from "../components/Asset";
 
-const TopProfiles = ({mobile}) => {
+const TopProfiles = ({ mobile }) => {
     const [profileData, setProfileData] = useState({
         pageProfile: { results: [] },
         topProfiles: { results: [] },
@@ -32,13 +32,25 @@ const TopProfiles = ({mobile}) => {
     }, [currentUser]);
 
     return (
-        <Container className={appStyles.Content}>
+        <Container
+            className={`${appStyles.Content} ${
+                mobile && "d-lg-none text-center mb-3"
+            }`}
+        >
             {topProfiles.results.length ? (
                 <>
                     <p>Top profiles</p>
-                    {topProfiles.results.map((profile) => (
-                        <p key={profile.id}>{profile.owner}</p>
-                    ))}
+                    {mobile ? (
+                        <div className="d-flex justify-content-around">
+                            {topProfiles.results.slice(0, 4).map((profile) => (
+                                <p key={profile.id}>{profile.owner}</p>
+                            ))}
+                        </div>
+                    ) : (
+                        topProfiles.results.map((profile) => (
+                            <p key={profile.id}>{profile.owner}</p>
+                        ))
+                    )}
                 </>
             ) : (
                 <Asset spinner />
