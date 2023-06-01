@@ -18,13 +18,33 @@ export const ProfileDataProvider = ({ children }) => {
 
     const handleFollow = async (clickedProfile) => {
         try {
-            const {data} = await axiosRes.post('/followers/', {
-                followed: clickedProfile.id
-            })
-        } catch(err) {
-            console.log(err)
+            const { data } = await axiosRes.post("/followers/", {
+                followed: clickedProfile.id,
+            });
+            setProfileData((prevState) => ({
+                ...prevState,
+                topProfiles: {
+                    ...prevState.topProfiles,
+                    results: prevState.topProfiles.results.map((profile) => {
+                        return profile.id === clickedProfile.id
+                            ? {
+                                  ...profile,
+                                  followers_count: profile.followers_count + 1,
+                                  following_id: data.id,
+                              }
+                            : profile.is_owner
+                            ? {
+                                  ...profile,
+                                  following_count: profile.following_count + 1,
+                              }
+                            : profile;
+                    }),
+                },
+            }));
+        } catch (err) {
+            console.log(err);
         }
-    }
+    };
 
     useEffect(() => {
         const handleMount = async () => {
@@ -45,7 +65,9 @@ export const ProfileDataProvider = ({ children }) => {
 
     return (
         <ProfileDataContext.Provider value={profileData}>
-            <SetProfileDataContext.Provider value={{setProfileData, handleFollow}}>
+            <SetProfileDataContext.Provider
+                value={{ setProfileData, handleFollow }}
+            >
                 {children}
             </SetProfileDataContext.Provider>
         </ProfileDataContext.Provider>

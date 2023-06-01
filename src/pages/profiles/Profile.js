@@ -37,7 +37,9 @@ const Profile = (props) => {
                     (following_id ? (
                         <Button onClick={() => {}}>Unfollow</Button>
                     ) : (
-                        <Button onClick={() => handleFollow(profile)}>Follow</Button>
+                        <Button onClick={() => handleFollow(profile)}>
+                            Follow
+                        </Button>
                     ))}
             </div>
         </div>
