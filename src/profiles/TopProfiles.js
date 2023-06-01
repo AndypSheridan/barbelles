@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Asset from "../components/Asset";
+import Profile from "./Profile";
 
 const TopProfiles = ({ mobile }) => {
     const [profileData, setProfileData] = useState({
@@ -43,12 +44,12 @@ const TopProfiles = ({ mobile }) => {
                     {mobile ? (
                         <div className="d-flex justify-content-around">
                             {topProfiles.results.slice(0, 4).map((profile) => (
-                                <p key={profile.id}>{profile.owner}</p>
+                                <Profile />
                             ))}
                         </div>
                     ) : (
                         topProfiles.results.map((profile) => (
-                            <p key={profile.id}>{profile.owner}</p>
+                            <Profile />
                         ))
                     )}
                 </>
