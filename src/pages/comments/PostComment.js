@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 import { axiosRes } from "../../api/axiosDefaults";
+import CommentEditForm from "./CommentEditForm";
 
 const PostComment = (props) => {
     const {
