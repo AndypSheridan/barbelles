@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import {
     useProfileData,
     useSetProfileData,
@@ -23,20 +23,12 @@ const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
-    const setProfileData = useSetProfileData();
+    const { setProfileData, handleFollow } = useSetProfileData();
     const { pageProfile } = useProfileData();
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.owner;
 
     const [profilePosts, setProfilePosts] = useState({ results: [] });
-
-    const handleFollow = async (clickedProfile) => {
-        try {
-
-        } catch(err) {
-            
-        }
-    }
 
     useEffect(() => {
         const fetchData = async () => {
