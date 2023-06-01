@@ -58,11 +58,11 @@ const PostComment = (props) => {
                 <Media.Body className="align-self-center ml-2">
                     <span className={styles.Owner}>{owner}</span>
                     <span className={styles.Date}>{updated_at}</span>
-                    <p>{content}</p>
+                    {showEditForm ? <CommentEditForm /> : <p>{content}</p>}
                 </Media.Body>
-                {is_owner && (
+                {is_owner && !showEditForm && (
                     <ComponentDropDown
-                        handleEdit={() => {}}
+                        handleEdit={() => setShowEditForm(true)}
                         handleDelete={handleDelete}
                     />
                 )}
