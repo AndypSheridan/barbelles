@@ -11,6 +11,8 @@ import Col from "react-bootstrap/Col";
 import Post from "./Post";
 import PostComment from "../comments/PostComment";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -56,14 +58,21 @@ const PostDetailPage = () => {
                         ) : null}
                         {comments.results.length ? (
                             <InfiniteScroll
-                            comments.results.map((comment) => (
-                                <PostComment
-                                    key={comment.id}
-                                    {...comment}
-                                    setPost={setPost}
-                                    setComments={setComments}
-                                />
-                            ))
+                                children={comments.results.map((comment) => (
+                                    <PostComment
+                                        key={comment.id}
+                                        {...comment}
+                                        setPost={setPost}
+                                        setComments={setComments}
+                                    />
+                                ))}
+                                dataLength={comments.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!comments.next}
+                                next={() =>
+                                    fetchMoreData(comments, setComments)
+                                }
+                            />
                         ) : currentUser ? (
                             <span>Be the first to comment!!</span>
                         ) : (
