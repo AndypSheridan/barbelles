@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const CommentEditForm = () => {
-
     const { id, content, setShowEditForm, setComments } = props;
 
-  return (
-    <div>CommentEditForm</div>
-  )
-}
+    const [formContent, setFormContent] = useState(content);
 
-export default CommentEditForm
+    return <div>CommentEditForm</div>;
+};
+
+export default CommentEditForm;
