@@ -21,11 +21,12 @@ const PostDetailPage = () => {
     useEffect(() => {
         const handleMount = async () => {
             try {
-                const [{ data: post }] = await Promise.all([
+                const [{ data: post }, {data: comments} ] = await Promise.all([
                     axiosReq.get(`/posts/${id}`),
+                    axiosReq.get(`/comments/?post=${id}`)
                 ]);
                 setPost({ results: [post] });
-                console.log(post);
+                setComments(comments)
             } catch (err) {
                 console.log(err);
             }
