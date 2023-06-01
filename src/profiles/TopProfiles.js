@@ -15,22 +15,27 @@ const TopProfiles = () => {
 
     useEffect(() => {
         const handleMount = async () => {
-            try{
-                const {data} = await axiosReq.get('/profiles/?ordering=-followers_count')
-                setProfileData(prevState => ({
+            try {
+                const { data } = await axiosReq.get(
+                    "/profiles/?ordering=-followers_count"
+                );
+                setProfileData((prevState) => ({
                     ...prevState,
                     topProfiles: data,
-                }))
-            } catch(err) {
-                console.log(err)
+                }));
+            } catch (err) {
+                console.log(err);
             }
-        }
-        handleMount()
-    })
+        };
+        handleMount();
+    }, [currentUser]);
 
     return (
         <Container className={appStyles.Content}>
             <p>Top profiles</p>
+            {topProfiles.results.map(profile => (
+                <p key={profile.id}>{profile.owner}</p>
+            ))}
         </Container>
     );
 };
