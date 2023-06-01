@@ -6,9 +6,15 @@ const CommentEditForm = () => {
 
     const [formContent, setFormContent] = useState(content);
 
+    const handleChange = (event) => {
+        setFormContent(event.target.value);
+    }
+
+    
+
     return (
         <Form onSubmit={()=>{}}>
-            <Form.Group>
+            <Form.Group className="pr-1">
                 <Form.Control />
             </Form.Group>
             <Form.Group>
