@@ -50,7 +50,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
         <Container className={`${styles.homeBackground}`}>
             <Row>
                 <Col className={styles.Col} lg={8}>
-                    <p>Placeholder 1</p>
+                    <TopProfiles mobile />
 
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
                     <Form

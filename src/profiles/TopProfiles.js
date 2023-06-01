@@ -34,10 +34,11 @@ const TopProfiles = () => {
     return (
         <Container className={appStyles.Content}>
             {topProfiles.results.length ? (
-                <><p>Top profiles</p>
-                {topProfiles.results.map(profile => (
-                    <p key={profile.id}>{profile.owner}</p>
-                ))}
+                <>
+                    <p>Top profiles</p>
+                    {topProfiles.results.map((profile) => (
+                        <p key={profile.id}>{profile.owner}</p>
+                    ))}
                 </>
             ) : (
                 <Asset spinner />
