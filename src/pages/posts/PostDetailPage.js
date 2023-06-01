@@ -10,6 +10,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
 import PostComment from "../comments/PostComment";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -54,6 +55,7 @@ const PostDetailPage = () => {
                             "Comments"
                         ) : null}
                         {comments.results.length ? (
+                            <InfiniteScroll
                             comments.results.map((comment) => (
                                 <PostComment
                                     key={comment.id}
