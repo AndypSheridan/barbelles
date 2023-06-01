@@ -24,9 +24,9 @@ const PostComment = (props) => {
                     <span className={styles.Date}>{updated_at}</span>
                     <p>{content}</p>
                 </Media.Body>
-                (is_owner && (
+                {is_owner && (
                     <ComponentDropDown handleCommentEdit={() => {}} handleCommentDelete={() => {}} />
-                ))
+                )}
             </Media>
         </div>
     );

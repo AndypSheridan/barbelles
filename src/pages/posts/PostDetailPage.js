@@ -22,12 +22,12 @@ const PostDetailPage = () => {
     useEffect(() => {
         const handleMount = async () => {
             try {
-                const [{ data: post }, {data: comments} ] = await Promise.all([
+                const [{ data: post }, { data: comments }] = await Promise.all([
                     axiosReq.get(`/posts/${id}`),
-                    axiosReq.get(`/comments/?post=${id}`)
+                    axiosReq.get(`/comments/?post=${id}`),
                 ]);
                 setPost({ results: [post] });
-                setComments(comments)
+                setComments(comments);
             } catch (err) {
                 console.log(err);
             }
@@ -40,29 +40,33 @@ const PostDetailPage = () => {
         <Container className="h-100">
             <Row className={styles.Row}>
                 <Col>
-                    
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>
-                    {currentUser ? (
-                        <CommentShareForm
-                            profile_id={currentUser.profile_id}
-                            profileImage={profile_image}
-                            post={id}
-                            setPost={setPost}
-                            setComments={setComments}
-                        />
-                    ) : comments.results.length ? (
-                        "Comments"
-                    ) : null}
-                    {comments.results.length ? (
-                       comments.results.map(comment => (
-                        <PostComment key={comment.id} {...comment} />
-                       ))
-                    ) : currentUser ? (
-                        <span>Be the first to comment!!</span>
-                    ) : (
-                        <span>No comments yet...</span>
-                    )}
+                        {currentUser ? (
+                            <CommentShareForm
+                                profile_id={currentUser.profile_id}
+                                profileImage={profile_image}
+                                post={id}
+                                setPost={setPost}
+                                setComments={setComments}
+                            />
+                        ) : comments.results.length ? (
+                            "Comments"
+                        ) : null}
+                        {comments.results.length ? (
+                            comments.results.map((comment) => (
+                                <PostComment
+                                    key={comment.id}
+                                    {...comment}
+                                    setPost={setPost}
+                                    setComments={setComments}
+                                />
+                            ))
+                        ) : currentUser ? (
+                            <span>Be the first to comment!!</span>
+                        ) : (
+                            <span>No comments yet...</span>
+                        )}
                     </Container>
                 </Col>
                 <Col className="d-lg-block d-none">
