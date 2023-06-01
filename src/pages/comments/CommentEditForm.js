@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
-import styles from "../../styles/CommentShareEditForm.module.css"
+import styles from "../../styles/CommentShareEditForm.module.css";
 
 const CommentEditForm = (props) => {
     const { id, content, setShowEditForm, setComments } = props;
@@ -32,20 +32,27 @@ const CommentEditForm = (props) => {
             }));
 
             setShowEditForm(false);
-
         } catch (err) {}
     };
 
     return (
         <Form onSubmit={() => {}}>
             <Form.Group className="pr-1">
-                <Form.Control />
+                <Form.Control
+                    onChange={handleChange}
+                    value={formContent}
+                    as="textarea"
+                    rows={2}
+                />
             </Form.Group>
-            <Form.Group>
-                <Form.Control />
-            </Form.Group>
-            <div>
-                <button>Cancel</button>
+            <div className="text-right">
+                <button
+                    type="button"
+                    onClick={() => setShowEditForm(false)}
+                    className={styles.Button}
+                >
+                    Cancel
+                </button>
                 <button>Update</button>
             </div>
         </Form>
