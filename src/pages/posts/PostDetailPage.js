@@ -56,7 +56,7 @@ const PostDetailPage = () => {
                     ) : null}
                     {comments.results.length ? (
                        comments.results.map(comment => (
-                        <PostComment key={comment.id} />
+                        <PostComment key={comment.id} {...comment} />
                        ))
                     ) : currentUser ? (
                         <span>Be the first to comment!!</span>
