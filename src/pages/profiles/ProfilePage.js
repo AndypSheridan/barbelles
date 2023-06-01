@@ -30,10 +30,18 @@ const ProfilePage = () => {
 
     const [profilePosts, setProfilePosts] = useState({ results: [] });
 
+    const handleFollow = async (clickedProfile) => {
+        try {
+
+        } catch(err) {
+            
+        }
+    }
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [{data: pageProfile}, {data: profilePosts} ] =
+                const [{ data: pageProfile }, { data: profilePosts }] =
                     await Promise.all([
                         axiosReq.get(`/profiles/${id}/`),
                         axiosReq.get(`/posts/?owner__profile=${id}`),
