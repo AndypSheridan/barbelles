@@ -1,8 +1,12 @@
+.Row {
+    padding-top: 8rem;
+}
+
 .ProfileImage {
     object-fit: cover;
     height: 125px;
     width: 125px;
-    margin: 4px
+    margin: 0px
 }
 
 @media screen and (max-width: 991px) {

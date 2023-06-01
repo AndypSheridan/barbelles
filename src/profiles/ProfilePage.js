@@ -5,6 +5,8 @@ import TopProfiles from "./TopProfiles";
 import Asset from "../components/Asset";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import styles from "../styles/ProfilePage.module.css"
+import appStyles from "../App.module.css"
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -20,7 +22,7 @@ const ProfilePage = () => {
                 <Col className="text-lg-left" lg={3}>
                     <p>Image</p>
                 </Col>
-                <Col className="m-2" lg={6}>
+                <Col lg={6}>
                     <h4>Username</h4>
                     <p>Stats</p>
                 </Col>
@@ -44,10 +46,10 @@ const ProfilePage = () => {
 
     return (
         <Container>
-            <Row>
+            <Row className={styles.Row}>
                 <Col className="py-2 p-0 p-lg-2" lg={8}>
                     <TopProfiles mobile />
-                    <Container>
+                    <Container className={appStyles.Content}>
                         {hasLoaded ? (
                             <>
                                 {mainProfile}
@@ -58,7 +60,10 @@ const ProfilePage = () => {
                         )}
                     </Container>
                 </Col>
-                <Col lg={4} className="d-none d-lg-block p-0 p-lg-2"></Col>
+                <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+                <TopProfiles />
+                </Col>
+                
             </Row>
         </Container>
     );
