@@ -1,11 +1,16 @@
-import React from 'react'
-import styles from "../styles/Profile.module.css"
-import btnStyles from "../styles/Button.module.css"
+import React from "react";
+import styles from "../styles/Profile.module.css";
+import btnStyles from "../styles/Button.module.css";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const Profile = (props) => {
-  return (
-    <div>Profile</div>
-  )
-}
+    const { profile, mobile, imageSize = 60 } = props;
+    const { id, following_id, image, owner } = profile;
 
-export default Profile
+    const currentUser = useCurrentUser();
+    
+
+    return <div>Profile</div>;
+};
+
+export default Profile;
