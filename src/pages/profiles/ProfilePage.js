@@ -24,16 +24,20 @@ const ProfilePage = () => {
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.owner;
 
+    const [profilePosts, setProfilePosts] = useState({ results: []});
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [{ data: pageProfile }] = await Promise.all([
+                const [{ data: pageProfile, data: profilePosts }] = await Promise.all([
                     axiosReq.get(`/profiles/${id}/`),
+                    axiosReq.get(`/posts/?owner__profile=${id}`)
                 ]);
                 setProfileData((prevState) => ({
                     ...prevState,
                     pageProfile: { results: [pageProfile] },
                 }));
+                setProfilePosts(profilePosts);
                 setHasLoaded(true);
             } catch (err) {
                 console.log(err);
@@ -83,7 +87,7 @@ const ProfilePage = () => {
                     ))}
                 </Col>
                 <Col className="p-3">
-                    <p>Profile bio</p>
+                    { profile?.bio && (<Col className="p-3">{profile.bio}</Col>)}
                 </Col>
             </Row>
         </>
