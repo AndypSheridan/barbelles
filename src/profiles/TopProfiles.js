@@ -3,6 +3,7 @@ import appStyles from "../App.module.css";
 import Container from "react-bootstrap/Container";
 import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Asset from "../components/Asset";
 
 const TopProfiles = () => {
     const [profileData, setProfileData] = useState({
@@ -32,10 +33,15 @@ const TopProfiles = () => {
 
     return (
         <Container className={appStyles.Content}>
-            <p>Top profiles</p>
-            {topProfiles.results.map(profile => (
-                <p key={profile.id}>{profile.owner}</p>
-            ))}
+            {topProfiles.results.length ? (
+                <><p>Top profiles</p>
+                {topProfiles.results.map(profile => (
+                    <p key={profile.id}>{profile.owner}</p>
+                ))}
+                </>
+            ) : (
+                <Asset spinner />
+            )}
         </Container>
     );
 };
