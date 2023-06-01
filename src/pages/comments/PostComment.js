@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 
 const PostComment = (props) => {
-    return 
+    const { profile_id, profile_image, owner, updated_at, content } = props;
+
+    return(
     <div>
         <hr />
         <Media>
@@ -18,7 +20,7 @@ const PostComment = (props) => {
                 <p>{content}</p>
             </Media.Body>
         </Media>
-    </div>
+    </div>)
 };
 
 export default PostComment;
