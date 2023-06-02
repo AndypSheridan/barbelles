@@ -20,18 +20,39 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 ));
 
 export const ProfileDropDown = ({ id }) => {
-    const useHistory = useHistory();
+    const history = useHistory();
     return (
         <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="down">
             <Dropdown.Toggle as={PostDropDownMenu} />
             <DropdownMenu>
-                <DropdownItem>
-
-                </DropdownItem>
+                <Dropdown.Item
+                    onClick={() => history.push(`/profiles/${id}/edit`)}
+                    aria-label="edit-profile"
+                >
+                    <i className="fas fa-edit" /> edit profile
+                </Dropdown.Item>
+                <Dropdown.Item
+                    onClick={() =>
+                        history.push(`/profiles/${id}/edit/username`)
+                    }
+                    aria-label="edit-username"
+                >
+                    <i className="far fa-id-card" />
+                    change username
+                </Dropdown.Item>
+                <Dropdown.Item
+                    onClick={() =>
+                        history.push(`/profiles/${id}/edit/password`)
+                    }
+                    aria-label="edit-password"
+                >
+                    <i className="fas fa-key" />
+                    change password
+                </Dropdown.Item>
             </DropdownMenu>
         </Dropdown>
-    )
-}
+    );
+};
 
 export const ComponentDropDown = ({ handleEdit, handleDelete }) => {
     return (
