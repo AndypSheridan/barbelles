@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { ProfileDropDown } from "../../components/ComponentDropDown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Container from "react-bootstrap/Container";
-import TopProfiles from "./TopProfiles";
-import Asset from "../../components/Asset";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import NoSearchResults from "../../assets/nosearchresults.png";
+import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/ProfilePage.module.css";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import { fetchMoreData } from "../../utils/utils";
+import { Button, Image } from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
 import {
     useProfileData,
     useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import { Button, Image } from "react-bootstrap";
-import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import TopProfiles from "./TopProfiles";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
-import { fetchMoreData } from "../../utils/utils";
-import NoSearchResults from "../../assets/nosearchresults.png";
-import { ProfileDropDown } from "../../components/ComponentDropDown";
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -54,6 +54,7 @@ const ProfilePage = () => {
 
     const mainProfile = (
         <>
+        {profile?.is_owner && <ProfileDropDown id={profile?.id} />}
             <Row noGutters className="px-3 text-center">
                 <Col className="text-lg-left" lg={3}>
                     <Image
