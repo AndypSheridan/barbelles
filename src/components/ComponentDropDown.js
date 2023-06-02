@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useHistory } from "react-router-dom";
 
 import styles from "../styles/PostDropDown.module.css";
 

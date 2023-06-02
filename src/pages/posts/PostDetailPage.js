@@ -44,6 +44,7 @@ const PostDetailPage = () => {
         <Container className="h-100">
             <Row className={styles.Row}>
                 <Col>
+                <TopProfiles mobile />
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>
                         {currentUser ? (
