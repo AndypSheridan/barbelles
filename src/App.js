@@ -76,6 +76,21 @@ function App() {
                         render={() => <ProfilePage />}
                     />
                     <Route
+                        exact
+                        path="/profiles/:id/edit/username"
+                        render={() => <UsernameEditForm />}
+                    />
+                    <Route
+                        exact
+                        path="/profiles/:id/edit/password"
+                        render={() => <UserPasswordEditForm />}
+                    />
+                    <Route
+                        exact
+                        path="/profiles/:id/edit"
+                        render={() => <UserProfileEditForm />}
+                    />
+                    <Route
                         render={() => (
                             <p className={styles.PageNotFound}>
                                 Oh no, this page can't be found!!
