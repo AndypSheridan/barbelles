@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
-import { axiosReq, axiosRes } from "../../api/axiosDefaults";
+import { axiosReq } from "../../api/axiosDefaults";
 import {
     useProfileData,
     useSetProfileData,

@@ -19,6 +19,7 @@ export const ProfileDataProvider = ({ children }) => {
 
     const handleFollow = async (clickedProfile) => {
         try {
+            console.log("trying post")
             const { data } = await axiosRes.post("/followers/", {
                 followed: clickedProfile.id,
             });
@@ -41,6 +42,10 @@ export const ProfileDataProvider = ({ children }) => {
             console.log(err);
         }
     };
+
+    const handleUnfollow = async () => {
+        
+    }
 
     useEffect(() => {
         const handleMount = async () => {
