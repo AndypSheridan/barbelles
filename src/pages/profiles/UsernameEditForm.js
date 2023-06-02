@@ -28,7 +28,7 @@ const UsernameEditForm = () => {
     const setCurrentUser = useSetCurrentUser();
 
     useEffect(() => {
-        if (currentUser?.profile_id?.toString() === id) {
+        if (currentUser?.profile_id?.toString() !== id) {
             setUsername(currentUser.username);
         } else {
             history.push("/");
