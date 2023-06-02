@@ -13,6 +13,7 @@ import Asset from "../../components/Asset";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
+import TopProfiles from "../profiles/TopProfiles";
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -81,7 +82,7 @@ const PostDetailPage = () => {
                     </Container>
                 </Col>
                 <Col className="d-lg-block d-none">
-                    <p>More placeholder text</p>
+                    <TopProfiles />
                 </Col>
             </Row>
         </Container>
