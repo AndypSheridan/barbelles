@@ -3,6 +3,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { useHistory } from "react-router-dom";
 
 import styles from "../styles/PostDropDown.module.css";
+import DropdownMenu from "react-bootstrap/DropdownMenu";
+import DropdownItem from "react-bootstrap/DropdownItem";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -16,6 +18,20 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
         }}
     />
 ));
+
+export const ProfileDropDown = ({ id }) => {
+    const useHistory = useHistory();
+    return (
+        <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="down">
+            <Dropdown.Toggle as={PostDropDownMenu} />
+            <DropdownMenu>
+                <DropdownItem>
+
+                </DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    )
+}
 
 export const ComponentDropDown = ({ handleEdit, handleDelete }) => {
     return (
