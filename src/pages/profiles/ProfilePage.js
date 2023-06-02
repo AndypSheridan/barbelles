@@ -24,7 +24,8 @@ const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
-    const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
+    const { setProfileData, handleFollow, handleUnfollow } =
+        useSetProfileData();
     const { pageProfile } = useProfileData();
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.owner;
@@ -54,7 +55,7 @@ const ProfilePage = () => {
 
     const mainProfile = (
         <>
-        {profile?.is_owner && <ProfileDropDown id={profile?.id} />}
+            {profile?.is_owner && <ProfileDropDown id={profile?.id} />}
             <Row noGutters className="px-3 text-center">
                 <Col className="text-lg-left" lg={3}>
                     <Image
@@ -84,9 +85,13 @@ const ProfilePage = () => {
                     {currentUser &&
                         !is_owner &&
                         (profile?.following_id ? (
-                            <Button onClick={() => handleUnfollow(profile)}>Unfollow</Button>
+                            <Button onClick={() => handleUnfollow(profile)}>
+                                Unfollow
+                            </Button>
                         ) : (
-                            <Button onClick={() => handleFollow(profile)}>Follow</Button>
+                            <Button onClick={() => handleFollow(profile)}>
+                                Follow
+                            </Button>
                         ))}
                 </Col>
                 <Col className="p-3">
