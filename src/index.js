@@ -8,7 +8,7 @@ import App from "./App";
 import "./index.css";
 
 ReactDOM.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
@@ -16,7 +16,8 @@ ReactDOM.render(
                 </ProfileDataProvider>
             </CurrentUserProvider>
         </Router>
-    </React.StrictMode>,
+    // </React.StrictMode>
+    ,
     document.getElementById("root")
 );
 
