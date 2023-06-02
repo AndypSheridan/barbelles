@@ -23,7 +23,7 @@ export const followHelper = (profile, clickedProfile, following_id) => {
         ? {
               ...profile,
               followers_count: profile.followers_count + 1,
-              following_id: data.id,
+              following_id,
           }
         : profile.is_owner
         ? {

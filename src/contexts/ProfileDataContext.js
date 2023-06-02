@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { followHelper } from "../utils/utils";
 
 const ProfileDataContext = createContext();
 const SetProfileDataContext = createContext();
@@ -25,7 +26,7 @@ export const ProfileDataProvider = ({ children }) => {
             setProfileData((prevState) => ({
                 ...prevState,
                 pageProfile: {
-                    results: prevState.pageProfile.results.map((profile) => ),
+                    results: prevState.pageProfile.results.map((profile) => followHelper),
                 },
                 topProfiles: {
                     ...prevState.topProfiles,
