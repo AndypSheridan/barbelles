@@ -43,8 +43,12 @@ export const ProfileDataProvider = ({ children }) => {
         }
     };
 
-    const handleUnfollow = async () => {
-        
+    const handleUnfollow = async (clickedProfile) => {
+        try {
+            await axiosRes.delete(`/followers/${clickedProfile.following_id}/`)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     useEffect(() => {
