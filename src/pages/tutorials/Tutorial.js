@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from "../../styles/Tutorial.module.css"
 
-const Tutorial = () => {
+const Tutorial = (props) => {
 
 
 
   return (
-    <div>Tutorial</div>
+    <div>Placeholder</div>
   )
 }
 
