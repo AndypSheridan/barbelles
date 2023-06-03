@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import { removeTokenTimestamp } from "../utils/utils";
 // import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
 
@@ -18,6 +19,7 @@ const SignOutModal = () => {
         try {
             await axios.post("dj-rest-auth/logout/");
             setCurrentUser(null);
+            removeTokenTimestamp();
         } catch (err) {
             console.log(err);
         }
