@@ -71,6 +71,14 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-graduation-cap"></i> Tutorials
                 </NavLink>
+                <NavLink
+                    to="/tutorials/share"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
+                </NavLink>
                 {/* </NavDropdown.Item> */}
             </NavDropdown>
 
