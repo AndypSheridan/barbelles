@@ -16,7 +16,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
 function PostShareForm() {
-    useRedirect("loggedOut")
+    useRedirect("loggedOut");
     const [errors, setErrors] = useState();
 
     const [postData, setPostData] = useState({
@@ -183,6 +183,6 @@ function PostShareForm() {
             </Form>
         </Container>
     );
-};
+}
 
 export default PostShareForm;
