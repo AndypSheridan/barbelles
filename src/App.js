@@ -15,6 +15,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UserProfileEditForm from "./pages/profiles/UserProfileEditForm";
 import UserPasswordEditForm from "./pages/profiles/UserPasswordEditForm";
 import UsernameEditForm from "./pages/profiles/UsernameEditForm";
+import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
 
 function App() {
     const currentUser = useCurrentUser();
