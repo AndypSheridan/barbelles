@@ -33,7 +33,7 @@ const TutorialDetailPage = () => {
             <Row className={`${styles.Row}`}>
                 <Col className="py-2 p-0 p-lg-2" lg={8}>
                     <p>Placeholder 1</p>
-                    <Tutorial />
+                    <Tutorial {...tutorial.results[0]} setTutorial={setTutorial} />
                     <Container className={appStyles.Content}>
                         Comments
                     </Container>
