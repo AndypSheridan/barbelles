@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import styles from "../../styles/SignInForm.module.css";
-import { Form, Col, Row, Container, Alert } from "react-bootstrap";
-import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import CustomButton from "../../components/CustomButton";
+import styles from "../../styles/SignInForm.module.css";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
 
 
 const SignInForm = () => {
