@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
 import Container from "react-bootstrap/Container";
-import styles from "../../styles/PostShareEditForm.module.css";
+import styles from "../../styles/TutorialShareEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router-dom";
@@ -23,7 +23,6 @@ function TutorialShareForm() {
     });
     const { title, summary, video } = postData;
 
-    const imageInput = useRef(null);
     const history = useHistory();
 
     const handleChange = (event) => {
@@ -32,16 +31,6 @@ function TutorialShareForm() {
             [event.target.name]: event.target.value,
         });
     };
-
-    // const handleChangeImage = (event) => {
-    //     if (event.target.files.length) {
-    //         URL.revokeObjectURL(image);
-    //         setPostData({
-    //             ...postData,
-    //             image: URL.createObjectURL(event.target.files[0]),
-    //         });
-    //     }
-    // };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -119,9 +108,9 @@ function TutorialShareForm() {
     );
 
     return (
-        <Container className={styles.PostShareEditBgImage}>
+        <Container className={styles.TutorialShareEditBgImage}>
             <Form
-                className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
+                className={`${styles.TutorialShareEditForm} ${styles.TutorialShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
                 <h1 className="text-center py-2">Upload tutorial</h1>
