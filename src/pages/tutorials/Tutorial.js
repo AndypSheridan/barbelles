@@ -53,11 +53,23 @@ const Tutorial = (props) => {
 
     const handleUnfavourite = async () => {
         try {
-                await axiosRes
+            await axiosRes.delete(`/favourites/${favourite_id}/`);
+            setTutorials((prevTutorials) => ({
+                ...prevTutorials,
+                results: prevTutorials.results.map((tutorial) => {
+                    return tutorial.id === id
+                        ? {
+                              ...tutorial,
+                              favourites_count: tutorial.favourites_count - 1,
+                              like_id: null,
+                          }
+                        : tutorial;
+                }),
+            }));
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
-    }
+    };
 
     return (
         <Card className={styles.Tutorial}>
@@ -103,11 +115,11 @@ const Tutorial = (props) => {
                             <i className="far fa-heart" />
                         </OverlayTrigger>
                     ) : favourite_id ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleUnfavourite}>
                             <i className="fas fa-heart" />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleFavourite}>
                             <i className="far fa-heart" />
                         </span>
                     ) : (
