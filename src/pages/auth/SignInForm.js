@@ -6,6 +6,7 @@ import styles from "../../styles/SignInForm.module.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
+import { setTokenTimestamp } from "../../utils/utils";
 
 const SignInForm = () => {
     const setCurrentUser = useSetCurrentUser();
@@ -30,6 +31,7 @@ const SignInForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setTokenTimestamp(data);
         try {
             const { data } = await axios.post(
                 "/dj-rest-auth/login/",
