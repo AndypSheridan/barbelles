@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import styles from "../../styles/TutorialDetailPage.module.css";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -13,9 +14,18 @@ const TutorialDetailPage = () => {
 
     useEffect(() => {
         const handleMount = async () => {
-            
+            try {
+                const [{data: tutorial}] = await Promise.all([
+                    axiosReq.get(`/tutorials/${id}`)
+                ])
+                setTutorial({ results: [tutorial]})
+                console.log(tutorial)
+            } catch(err){
+                console.log(err)
+            }
         }
-    })
+        handleMount();
+    }, [id])
 
     return (
         <Container className="h-100">
