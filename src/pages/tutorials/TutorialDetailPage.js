@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 const TutorialDetailPage = () => {
 
     const { id } =useParams();
+    const [tutorial, setTutorial] = useState()
 
     return (
         <Container className="h-100">
