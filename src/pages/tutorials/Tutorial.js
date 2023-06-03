@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { axiosRes } from "../../api/axiosDefaults";
 
 
 const Tutorial = (props) => {
@@ -27,6 +28,12 @@ const Tutorial = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    const handleFavourite = async () => {
+        try {
+            const { data } = await axiosRes
+        }
+    }
 
     return (
         <Card className={styles.Tutorial}>
