@@ -62,6 +62,11 @@ function App() {
                     />
                     <Route
                         exact
+                        path="/tutorials/share"
+                        render={() => <TutorialShareForm />}
+                    />
+                    <Route
+                        exact
                         path="/posts/:id"
                         render={() => <PostDetailPage />}
                     />
