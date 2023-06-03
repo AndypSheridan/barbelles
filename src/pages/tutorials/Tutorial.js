@@ -9,7 +9,6 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { axiosRes } from "../../api/axiosDefaults";
 
-
 const Tutorial = (props) => {
     const {
         id,
@@ -24,6 +23,7 @@ const Tutorial = (props) => {
         video,
         updated_at,
         tutorialDetailPage,
+        setTutorials,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -31,7 +31,31 @@ const Tutorial = (props) => {
 
     const handleFavourite = async () => {
         try {
-            const { data } = await axiosRes
+            const { data } = await axiosRes.post("/favourites/", {
+                tutorial: id,
+            });
+            setTutorials((prevTutorials) => ({
+                ...prevTutorials,
+                results: prevTutorials.results.map((tutorial) => {
+                    return tutorial.id === id
+                        ? {
+                              ...tutorial,
+                              favourites_count: tutorial.favourites_count + 1,
+                              favourite_id: data.id,
+                          }
+                        : tutorial;
+                }),
+            }));
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    const handleUnfavourite = async () => {
+        try {
+                await axiosRes
+        } catch (err) {
+            console.log(err)
         }
     }
 
@@ -44,9 +68,13 @@ const Tutorial = (props) => {
                         {owner}
                     </Link>
                     <div className="d-flex align-items-center">
-                        <span><Link to={`/tutorials/${id}`}>View tutorial | </Link> {updated_at}</span> | 
-                        
-                        {is_owner && tutorialDetailPage && "..."}
+                        <span>
+                            <Link to={`/tutorials/${id}`}>
+                                View tutorial |{" "}
+                            </Link>{" "}
+                            {updated_at}
+                        </span>{" "}
+                        |{is_owner && tutorialDetailPage && "..."}
                     </div>
                 </Media>
             </Card.Body>
@@ -58,24 +86,28 @@ const Tutorial = (props) => {
                 ></iframe>
             </div>
             <Card.Body>
-                {title && <Card.Title className="text-center">{title}</Card.Title>}
+                {title && (
+                    <Card.Title className="text-center">{title}</Card.Title>
+                )}
                 {summary && <Card.Text>{summary}</Card.Text>}
                 <div className={styles.TutorialInteraction}>
-                {is_owner ? (
+                    {is_owner ? (
                         <OverlayTrigger
                             placement="top"
                             overlay={
-                                <Tooltip>You can't like your own Tutorial!</Tooltip>
+                                <Tooltip>
+                                    You can't like your own Tutorial!
+                                </Tooltip>
                             }
                         >
                             <i className="far fa-heart" />
                         </OverlayTrigger>
                     ) : favourite_id ? (
-                        <span onClick={()=>{}}>
+                        <span onClick={() => {}}>
                             <i className="fas fa-heart" />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={()=>{}}>
+                        <span onClick={() => {}}>
                             <i className="far fa-heart" />
                         </span>
                     ) : (
