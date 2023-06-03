@@ -7,9 +7,9 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
-
 const SignInForm = () => {
     const setCurrentUser = useSetCurrentUser();
+    useRedirect("loggedIn");
 
     const [signInData, setSigninData] = useState({
         username: "",
@@ -36,7 +36,7 @@ const SignInForm = () => {
                 signInData
             );
             setCurrentUser(data.user);
-            history.push("/");
+            history.goBack();
         } catch (err) {
             setErrors(err.response?.data);
         }
