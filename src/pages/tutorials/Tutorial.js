@@ -61,7 +61,7 @@ const Tutorial = (props) => {
                         ? {
                               ...tutorial,
                               favourites_count: tutorial.favourites_count - 1,
-                              like_id: null,
+                              favourite_id: null,
                           }
                         : tutorial;
                 }),
@@ -86,7 +86,7 @@ const Tutorial = (props) => {
                             </Link>{" "}
                             {updated_at}
                         </span>{" "}
-                        |{is_owner && tutorialDetailPage && "..."}
+                        {is_owner && tutorialDetailPage && "..."}
                     </div>
                 </Media>
             </Card.Body>
