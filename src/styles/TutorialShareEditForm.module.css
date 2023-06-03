@@ -1,4 +1,4 @@
-.PostShareEditBgImage {
+.TutorialShareEditBgImage {
     background: rgb(2, 0, 36);
     background: linear-gradient(
         90deg,
@@ -15,20 +15,20 @@
     background-attachment: fixed;
 }
 
-.PostShareEditForm {
+.TutorialShareEditForm {
     padding-top: 120px;
 }
 
-.PostShareContainer {
+.TutorialShareContainer {
     width: 85%;
     height: 100%;
 }
 
-.PostShareEditImageFormBg {
+.TutorialShareEditImageFormBg {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.PostShareBgTransparent {
+.TutorialShareBgTransparent {
     background-color: transparent;
     border: none;
 }

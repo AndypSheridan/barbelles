@@ -61,7 +61,7 @@ function TutorialShareForm() {
                     name="video"
                 />
             </Form.Group>
-            {errors?.content?.map((message, idx) => (
+            {errors?.video?.map((message, idx) => (
                 <Alert variant="warning" key={idx}>
                     {message}
                 </Alert>
@@ -91,7 +91,7 @@ function TutorialShareForm() {
                     name="summary"
                 />
             </Form.Group>
-            {errors?.content?.map((message, idx) => (
+            {errors?.summary?.map((message, idx) => (
                 <Alert variant="warning" key={idx}>
                     {message}
                 </Alert>
@@ -114,7 +114,7 @@ function TutorialShareForm() {
                 onSubmit={handleSubmit}
             >
                 <h1 className="text-center py-2">Upload tutorial</h1>
-                <Row>
+                <Row className="text-center">
                     {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
@@ -171,7 +171,7 @@ function TutorialShareForm() {
                             {/* <div className="d-md-none">{textFields}</div>
                         </Container>
                     </Col> */}
-                    <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
+                    <Col md={6} lg={6} className="d-md-block p-2 mx-auto p-md-2">
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer}`}
                         >
