@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import UploadIcon from "../../assets/uploadIcon.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -9,8 +8,6 @@ import Container from "react-bootstrap/Container";
 import styles from "../../styles/PostShareEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -21,10 +18,10 @@ function TutorialShareForm() {
 
     const [postData, setPostData] = useState({
         title: "",
-        story: "",
-        image: "",
+        summary: "",
+        video: "",
     });
-    const { title, story, image } = postData;
+    const { title, summary, video } = postData;
 
     const imageInput = useRef(null);
     const history = useHistory();
@@ -36,27 +33,27 @@ function TutorialShareForm() {
         });
     };
 
-    const handleChangeImage = (event) => {
-        if (event.target.files.length) {
-            URL.revokeObjectURL(image);
-            setPostData({
-                ...postData,
-                image: URL.createObjectURL(event.target.files[0]),
-            });
-        }
-    };
+    // const handleChangeImage = (event) => {
+    //     if (event.target.files.length) {
+    //         URL.revokeObjectURL(image);
+    //         setPostData({
+    //             ...postData,
+    //             image: URL.createObjectURL(event.target.files[0]),
+    //         });
+    //     }
+    // };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
 
         formData.append("title", title);
-        formData.append("story", story);
-        formData.append("image", imageInput.current.files[0]);
+        formData.append("summary", summary);
+        formData.append("video", video);
 
         try {
-            const { data } = await axiosReq.post("/posts/", formData);
-            history.push(`/posts/${data.id}`);
+            const { data } = await axiosReq.post("/tutorials/", formData);
+            history.push(`/tutorials/${data.id}`);
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
@@ -67,6 +64,19 @@ function TutorialShareForm() {
 
     const textFields = (
         <div className="text-center">
+            <Form.Group>
+                <Form.Label>YouTube link</Form.Label>
+                <Form.Control
+                    value={video}
+                    onChange={handleChange}
+                    name="video"
+                />
+            </Form.Group>
+            {errors?.content?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -83,13 +93,13 @@ function TutorialShareForm() {
             ))}
 
             <Form.Group>
-                <Form.Label>Content</Form.Label>
+                <Form.Label>Instructions</Form.Label>
                 <Form.Control
                     as="textarea"
-                    value={story}
+                    value={summary}
                     onChange={handleChange}
                     rows={8}
-                    name="story"
+                    name="summary"
                 />
             </Form.Group>
             {errors?.content?.map((message, idx) => (
@@ -114,9 +124,9 @@ function TutorialShareForm() {
                 className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                <h1 className="text-center py-2">Share your journey here!</h1>
+                <h1 className="text-center py-2">Upload tutorial</h1>
                 <Row>
-                    <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
+                    {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
                         >
@@ -167,11 +177,11 @@ function TutorialShareForm() {
                                 <Alert variant="warning" key={idx}>
                                     {message}
                                 </Alert>
-                            ))}
+                            ))} */}
 
-                            <div className="d-md-none">{textFields}</div>
+                            {/* <div className="d-md-none">{textFields}</div>
                         </Container>
-                    </Col>
+                    </Col> */}
                     <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer}`}
