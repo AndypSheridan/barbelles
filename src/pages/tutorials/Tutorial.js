@@ -5,6 +5,9 @@ import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
 
 const Tutorial = (props) => {
     const {
@@ -34,7 +37,8 @@ const Tutorial = (props) => {
                         {owner}
                     </Link>
                     <div className="d-flex align-items-center">
-                        <span>{updated_at}</span>
+                        <span><Link to={`/tutorials/${id}`}>View tutorial | </Link> {updated_at}</span> | 
+                        
                         {is_owner && tutorialDetailPage && "..."}
                     </div>
                 </Media>
@@ -43,9 +47,49 @@ const Tutorial = (props) => {
                 <iframe
                     src={video}
                     title="Tutorial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
             </div>
+            <Card.Body>
+                {title && <Card.Title className="text-center">{title}</Card.Title>}
+                {summary && <Card.Text>{summary}</Card.Text>}
+                <div className={styles.TutorialInteraction}>
+                {is_owner ? (
+                        <OverlayTrigger
+                            placement="top"
+                            overlay={
+                                <Tooltip>You can't like your own Tutorial!</Tooltip>
+                            }
+                        >
+                            <i className="far fa-heart" />
+                        </OverlayTrigger>
+                    ) : favourite_id ? (
+                        <span onClick={()=>{}}>
+                            <i className="fas fa-heart" />
+                        </span>
+                    ) : currentUser ? (
+                        <span onClick={()=>{}}>
+                            <i className="far fa-heart" />
+                        </span>
+                    ) : (
+                        <OverlayTrigger
+                            placement="top"
+                            overlay={
+                                <Tooltip>
+                                    Please log in or sign up to like a post!
+                                </Tooltip>
+                            }
+                        >
+                            <i className="far fa-heart" />
+                        </OverlayTrigger>
+                    )}
+                    {favourites_count}
+                    <Link to={`/tutorials/${id}`}>
+                        <i className="far fa-comments" />
+                    </Link>
+                    {tutorial_comments_count}
+                </div>
+            </Card.Body>
         </Card>
     );
 };
