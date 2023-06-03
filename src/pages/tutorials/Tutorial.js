@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Tutorial.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Card, Media } from "react-bootstrap";
 
 const Tutorial = (props) => {
     const {
@@ -20,7 +21,14 @@ const Tutorial = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
-    return <div>Placeholder</div>;
+    return <Card className={styles.Tutorial}>
+        <Card.Body>
+            <Media className="align-items-center justify-content-between">
+
+            </Media>
+        </Card.Body>
+
+    </Card>
 };
 
 export default Tutorial;
