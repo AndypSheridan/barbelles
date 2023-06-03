@@ -11,7 +11,11 @@ const TutorialDetailPage = () => {
     const { id } = useParams();
     const [tutorial, setTutorial] = useState({ results: [] });
 
-    useEffect()
+    useEffect(() => {
+        const handleMount = async () => {
+            
+        }
+    })
 
     return (
         <Container className="h-100">
