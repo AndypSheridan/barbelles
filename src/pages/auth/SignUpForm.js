@@ -7,7 +7,7 @@ import CustomButton from "../../components/CustomButton";
 import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
-    useRedirect
+    useRedirect("loggedIn");
     const [signUpData, setSignUpData] = useState({
         username: "",
         password1: "",
