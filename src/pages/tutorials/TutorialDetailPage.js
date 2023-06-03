@@ -7,6 +7,7 @@ import styles from "../../styles/TutorialDetailPage.module.css";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import Tutorial from "./Tutorial";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -32,7 +33,7 @@ const TutorialDetailPage = () => {
             <Row className={`${styles.Row}`}>
                 <Col className="py-2 p-0 p-lg-2" lg={8}>
                     <p>Placeholder 1</p>
-                    <p>Tutorial component</p>
+                    <Tutorial />
                     <Container className={appStyles.Content}>
                         Comments
                     </Container>
