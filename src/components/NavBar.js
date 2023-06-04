@@ -64,7 +64,7 @@ const NavBar = () => {
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                    to="/tutorials-feed"
+                    to="/tutorials"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}

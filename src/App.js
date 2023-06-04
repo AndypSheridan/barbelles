@@ -75,11 +75,12 @@ function App() {
                     />
                     <Route
                         exact
-                        path="/tutorials-feed"
+                        path="/tutorials"
                         render={() => (
                             <TutorialsFeedPage message="No search results found. Adjust the search keyword(s)" />
                         )}
                     />
+
                     <Route
                         exact
                         path="/tutorials/share"
