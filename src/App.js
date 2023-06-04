@@ -76,7 +76,9 @@ function App() {
                     <Route
                         exact
                         path="/tutorials-feed"
-                        render={() => <TutorialsFeedPage />}
+                        render={() => (
+                            <TutorialsFeedPage message="No search results found. Adjust the search keyword(s)" />
+                        )}
                     />
                     <Route
                         exact
