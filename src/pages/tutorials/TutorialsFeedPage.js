@@ -60,14 +60,18 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
-                                <InfiniteScroll></InfiniteScroll>
-                                tutorials.results.map((tutorial) => (
-                                    <Tutorial
-                                        key={tutorial.id}
-                                        {...tutorial}
-                                        setTutorials={setTutorials}
-                                    />
-                                ))
+                                <InfiniteScroll 
+                                children={
+                                    tutorials.results.map((tutorial) => (
+                                        <Tutorial
+                                            key={tutorial.id}
+                                            {...tutorial}
+                                            setTutorials={setTutorials}
+                                        />
+                                    ))
+                                }
+                                />
+                                
                             ) : (
                                 <Container className={appStyles.Content}>
                                     <Asset
