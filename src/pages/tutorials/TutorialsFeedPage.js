@@ -70,6 +70,10 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                                         />
                                     ))
                                 }
+                                dataLength={tutorials.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!tutorials.next}
+                                next={() => {}}
                                 />
                                 
                             ) : (
