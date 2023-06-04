@@ -8,6 +8,7 @@ import Tutorial from "./Tutorial";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import NoSearchResults from "../../assets/nosearchresults.png";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -59,6 +60,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
+                                <InfiniteScroll></InfiniteScroll>
                                 tutorials.results.map((tutorial) => (
                                     <Tutorial
                                         key={tutorial.id}
