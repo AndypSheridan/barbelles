@@ -3,7 +3,7 @@ import styles from "../../styles/Tutorial.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -29,6 +29,7 @@ const Tutorial = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    const history = useHistory();
 
     const handleFavourite = async () => {
         try {
@@ -72,6 +73,8 @@ const Tutorial = (props) => {
         }
     };
 
+
+
     return (
         <Card className={styles.Tutorial}>
             <Card.Body>
@@ -87,7 +90,7 @@ const Tutorial = (props) => {
                             </Link>{" "}
                             {updated_at}
                         </span>{" "}
-                        {is_owner && tutorialDetailPage && "..."}
+                        {is_owner && tutorialDetailPage && <ComponentDropDown />}
                     </div>
                 </Media>
             </Card.Body>
