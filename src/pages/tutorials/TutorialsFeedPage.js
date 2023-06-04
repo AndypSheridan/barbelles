@@ -3,7 +3,10 @@ import Container from "react-bootstrap/Container";
 import styles from "../../styles/TutorialsFeedPage.module.css";
 import { Col, Row } from "react-bootstrap";
 
-const TutorialsFeedPage = () => {
+const TutorialsFeedPage = ({message, filter=""}) => {
+
+    const [tutorials, setTutorials] = 
+
     return (
         <Container className={`${styles.Container} h-100`}>
             <Row>
