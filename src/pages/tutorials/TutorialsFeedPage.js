@@ -34,9 +34,10 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                 <Col lg={8} className="p-0">
                     <p>PLaceholder 1</p>
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
-                    <Form>
-                        
-                    </Form>
+                    <Form
+                        className={styles.SearchBar}
+                        onSubmit={(event) => event.preventDefault()}
+                    ></Form>
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
