@@ -21,7 +21,9 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchTutorials = async () => {
             try {
-                const { data } = await axiosReq.get(`/tutorials/?${filter}search=${query}`);
+                const { data } = await axiosReq.get(
+                    `/tutorials/?${filter}search=${query}`
+                );
                 setTutorials(data);
                 setHasLoaded(true);
             } catch (err) {
@@ -29,15 +31,13 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
             }
         };
         setHasLoaded(false);
-        
+
         const searchTimer = setTimeout(() => {
             fetchTutorials();
-        }, 1200)
+        }, 1200);
         return () => {
-            clearTimeout(searchTimer)
-        }
-
-        fetchTutorials();
+            clearTimeout(searchTimer);
+        };
     }, [filter, query, pathname]);
 
     return (
@@ -61,22 +61,23 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
-                                <InfiniteScroll 
-                                children={
-                                    tutorials.results.map((tutorial) => (
-                                        <Tutorial
-                                            key={tutorial.id}
-                                            {...tutorial}
-                                            setTutorials={setTutorials}
-                                        />
-                                    ))
-                                }
-                                dataLength={tutorials.results.length}
-                                loader={<Asset spinner />}
-                                hasMore={!!tutorials.next}
-                                next={fetchMoreData}
+                                <InfiniteScroll
+                                    children={tutorials.results.map(
+                                        (tutorial) => (
+                                            <Tutorial
+                                                key={tutorial.id}
+                                                {...tutorial}
+                                                setTutorials={setTutorials}
+                                            />
+                                        )
+                                    )}
+                                    dataLength={tutorials.results.length}
+                                    loader={<Asset spinner />}
+                                    hasMore={!!tutorials.next}
+                                    next={() =>
+                                        fetchMoreData(tutorials, setTutorials)
+                                    }
                                 />
-                                
                             ) : (
                                 <Container className={appStyles.Content}>
                                     <Asset
