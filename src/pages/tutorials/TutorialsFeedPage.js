@@ -7,11 +7,11 @@ const TutorialsFeedPage = () => {
     return (
         <Container className={`${styles.Container} h-100`}>
             <Row>
-                <Col >
+                <Col lg={8} className="p-0">
                 <p>PLaceholder 1</p>
                 <p>Tutorials</p>
                 </Col>
-                <Col>
+                <Col lg={4} className="d-lg-block d-none p-0">
                 <p>Placeholder 2</p>
                 </Col>
             </Row>
