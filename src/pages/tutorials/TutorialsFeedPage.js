@@ -13,7 +13,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchTutorials = async () => {
             try {
-                await axiosReq
+                await axiosReq.get(`/tutorials/?${filter}`)
             } catch (err) {
                 console.log(err)
             }
