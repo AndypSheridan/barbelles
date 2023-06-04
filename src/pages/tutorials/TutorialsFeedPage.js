@@ -13,12 +13,16 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     useEffect(() => {
         const fetchTutorials = async () => {
             try {
-                await axiosReq.get(`/tutorials/?${filter}`)
+                const { data } = await axiosReq.get(`/tutorials/?${filter}`);
+                setTutorials(data);
+                setHasLoaded(true);
             } catch (err) {
-                console.log(err)
+                console.log(err);
             }
-        }
-    })
+        };
+        setHasLoaded(false);
+        fetchTutorials();
+    }, [filter, pathname]);
 
     return (
         <Container className={`${styles.Container} h-100`}>
