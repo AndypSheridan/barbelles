@@ -8,6 +8,7 @@ import Avatar from "../../components/Avatar";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { axiosRes } from "../../api/axiosDefaults";
+import { ComponentDropDown } from "../../components/ComponentDropDown";
 
 const Tutorial = (props) => {
     const {
