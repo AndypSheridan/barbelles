@@ -17,6 +17,7 @@ import UserPasswordEditForm from "./pages/profiles/UserPasswordEditForm";
 import UsernameEditForm from "./pages/profiles/UsernameEditForm";
 import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
 import TutorialDetailPage from "./pages/tutorials/TutorialDetailPage";
+import TutorialsFeedPage from "./pages/tutorials/TutorialsFeedPage";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -71,6 +72,11 @@ function App() {
                         exact
                         path="/posts/:id/edit"
                         render={() => <PostEditForm />}
+                    />
+                    <Route
+                        exact
+                        path="/tutorials-feed"
+                        render={() => <TutorialsFeedPage />}
                     />
                     <Route
                         exact
