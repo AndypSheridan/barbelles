@@ -1,8 +1,11 @@
 import React from 'react'
+import styles from "../../styles/TutorialComment.module.css"
 
-const TutorialComment = () => {
+const TutorialComment = (props) => {
   return (
-    <div>TutorialComment</div>
+    <div>
+        
+    </div>
   )
 }
 
