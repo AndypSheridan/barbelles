@@ -82,9 +82,9 @@ const Tutorial = (props) => {
             await axiosRes.delete(`/tutorials/${id}/`);
             history.goBack();
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
-    }
+    };
 
     return (
         <Card className={styles.Tutorial}>
@@ -102,7 +102,10 @@ const Tutorial = (props) => {
                             {updated_at}
                         </span>{" "}
                         {is_owner && tutorialDetailPage && (
-                            <ComponentDropDown handleEdit={handleEdit} />
+                            <ComponentDropDown
+                                handleEdit={handleEdit}
+                                handleDelete={handleDelete}
+                            />
                         )}
                     </div>
                 </Media>
