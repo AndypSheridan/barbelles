@@ -77,6 +77,15 @@ const Tutorial = (props) => {
         history.push(`/tutorials/${id}/edit`);
     };
 
+    const handleDelete = async () => {
+        try {
+            await axiosRes.delete(`/tutorials/${id}/`);
+            history.goBack();
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     return (
         <Card className={styles.Tutorial}>
             <Card.Body>
