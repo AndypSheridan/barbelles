@@ -5,10 +5,14 @@ import { Col, Row } from "react-bootstrap";
 
 const TutorialsFeedPage = () => {
     return (
-        <Container className={styles.Container}>
+        <Container className={`${styles.Container} h-100`}>
             <Row>
+                <Col >
+                <p>PLaceholder 1</p>
+                <p>Tutorials</p>
+                </Col>
                 <Col>
-                
+                <p>Placeholder 2</p>
                 </Col>
             </Row>
             <div>TutorialsFeedPage</div>
