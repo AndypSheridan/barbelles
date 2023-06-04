@@ -10,6 +10,7 @@ import Tutorial from "./Tutorial";
 import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TutorialComment from "../tutorialcomments/TutorialComment";
+import TopProfiles from "../profiles/TopProfiles";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -39,7 +40,7 @@ const TutorialDetailPage = () => {
         <Container className="h-100">
             <Row className={`${styles.Row}`}>
                 <Col className="py-2 p-0 p-lg-2" lg={8}>
-                    <p>Placeholder 1</p>
+                    <TopProfiles mobile />
                     <Tutorial
                         {...tutorial.results[0]}
                         setTutorials={setTutorial}
@@ -76,7 +77,7 @@ const TutorialDetailPage = () => {
                     </Container>
                 </Col>
                 <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-                    Placeholder 2
+                <TopProfiles />
                 </Col>
             </Row>
         </Container>

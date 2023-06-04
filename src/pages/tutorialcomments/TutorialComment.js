@@ -72,7 +72,6 @@ const TutorialComment = (props) => {
                         <p>{content}</p>
                     )}
                 </Media.Body>
-
                 {is_owner && (
                     <ComponentDropDown
                         handleEdit={() => setShowEditForm(true)}
