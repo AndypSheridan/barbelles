@@ -9,6 +9,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { axiosRes } from "../../api/axiosDefaults";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import TutorialCommentEditForm from "../tutorialcomments/TutorialCommentEditForm";
 
 const Tutorial = (props) => {
     const {
