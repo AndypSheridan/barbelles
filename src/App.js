@@ -93,6 +93,16 @@ function App() {
                     />
                     <Route
                         exact
+                        path="/favourited"
+                        render={() => (
+                            <TutorialsFeedPage
+                                message="No search results found. Adjust the search keyword(s) or favourite a tutorial"
+                                filter={`favourites__owner__profile=${profile_id}&ordering=-favourites__created_at&`}
+                            />
+                        )}
+                    />
+                    <Route
+                        exact
                         path="/profiles/:id/"
                         render={() => <ProfilePage />}
                     />

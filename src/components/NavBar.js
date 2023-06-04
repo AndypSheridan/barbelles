@@ -79,6 +79,14 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
                 </NavLink>
+                <NavLink
+                    to="/favourited"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-bookmark"></i> Favourites
+                </NavLink>
                 {/* </NavDropdown.Item> */}
             </NavDropdown>
 
