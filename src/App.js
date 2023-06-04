@@ -18,6 +18,7 @@ import UsernameEditForm from "./pages/profiles/UsernameEditForm";
 import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
 import TutorialDetailPage from "./pages/tutorials/TutorialDetailPage";
 import TutorialsFeedPage from "./pages/tutorials/TutorialsFeedPage";
+import TutorialEditForm from "./pages/tutorials/TutorialEditForm";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -90,6 +91,11 @@ function App() {
                         exact
                         path="/tutorials/:id"
                         render={() => <TutorialDetailPage />}
+                    />
+                    <Route
+                        exact
+                        path="/tutorials/:id/edit"
+                        render={() => <TutorialEditForm />}
                     />
                     <Route
                         exact
