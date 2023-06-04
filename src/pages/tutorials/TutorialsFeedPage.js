@@ -28,7 +28,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
         };
         setHasLoaded(false);
         fetchTutorials();
-    }, [filter, pathname]);
+    }, [filter, query, pathname]);
 
     return (
         <Container className={`${styles.Container} h-100`}>
