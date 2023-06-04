@@ -14,28 +14,35 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 const TutorialDetailPage = () => {
     const { id } = useParams();
     const [tutorial, setTutorial] = useState({ results: [] });
+    const currentUser = useCurrentUser();
+    const profile_image = currentUser?.profile_image;
+    const [tutorialComments, setTutorialComments] = useState({ results: [] });
 
     useEffect(() => {
         const handleMount = async () => {
             try {
-                const [{data: tutorial}] = await Promise.all([
-                    axiosReq.get(`/tutorials/${id}`)
-                ])
-                setTutorial({ results: [tutorial]})
-                console.log(tutorial)
-            } catch(err){
-                console.log(err)
+                const [{ data: tutorial }] = await Promise.all([
+                    axiosReq.get(`/tutorials/${id}`),
+                ]);
+                setTutorial({ results: [tutorial] });
+                console.log(tutorial);
+            } catch (err) {
+                console.log(err);
             }
-        }
+        };
         handleMount();
-    }, [id])
+    }, [id]);
 
     return (
         <Container className="h-100">
             <Row className={`${styles.Row}`}>
                 <Col className="py-2 p-0 p-lg-2" lg={8}>
                     <p>Placeholder 1</p>
-                    <Tutorial {...tutorial.results[0]} setTutorials={setTutorial} tutorialDetailPage />
+                    <Tutorial
+                        {...tutorial.results[0]}
+                        setTutorials={setTutorial}
+                        tutorialDetailPage
+                    />
                     <Container className={appStyles.Content}>
                         Comments
                     </Container>
