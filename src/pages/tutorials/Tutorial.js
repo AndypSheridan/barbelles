@@ -73,7 +73,9 @@ const Tutorial = (props) => {
         }
     };
 
-
+    const handleEdit = () => {
+        history.push(`/tutorials/${id}/edit`);
+    };
 
     return (
         <Card className={styles.Tutorial}>
@@ -90,7 +92,9 @@ const Tutorial = (props) => {
                             </Link>{" "}
                             {updated_at}
                         </span>{" "}
-                        {is_owner && tutorialDetailPage && <ComponentDropDown />}
+                        {is_owner && tutorialDetailPage && (
+                            <ComponentDropDown handleEdit={handleEdit} />
+                        )}
                     </div>
                 </Media>
             </Card.Body>
