@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import styles from "../../styles/TutorialsFeedPage.module.css";
 import { Col, Row } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 const TutorialsFeedPage = ({message, filter=""}) => {
 
-    const [tutorials, setTutorials] = 
+    const [tutorials, setTutorials] = useState({ results: []});
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const {pathname} = useLocation();
 
     return (
         <Container className={`${styles.Container} h-100`}>
