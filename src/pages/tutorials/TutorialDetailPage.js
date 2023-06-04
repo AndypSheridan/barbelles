@@ -23,6 +23,7 @@ const TutorialDetailPage = () => {
             try {
                 const [{ data: tutorial }] = await Promise.all([
                     axiosReq.get(`/tutorials/${id}`),
+                    axiosReq.get(`tutorial-comments/tutorials=${id}`)
                 ]);
                 setTutorial({ results: [tutorial] });
                 console.log(tutorial);
@@ -44,7 +45,17 @@ const TutorialDetailPage = () => {
                         tutorialDetailPage
                     />
                     <Container className={appStyles.Content}>
-                        Comments
+                        {currentUser ? (
+                            <TutorialCommentShareForm
+                                profile_id={currentUser.profile_id}
+                                profileImage={profile_image}
+                                tutorial={id}
+                                setTutorial={setTutorial}
+                                setTutorialComments={setTutorialComments}
+                            />
+                        ) : tutorialComments.results.length ? (
+                            "Comments"
+                        ) : null}
                     </Container>
                 </Col>
                 <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
