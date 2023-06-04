@@ -33,22 +33,21 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
-                                tutorials.map(tutorial => (
-                                    <Tutorial />
+                                tutorials.results.map(tutorial => (
+                                    <Tutorial key={tutorial.id} {...tutorial} setTutorials={setTutorials} />
                                 ))
                             ) : (
                                 console.log("Show no search results")
                             )}
                         </>
                     ) : (
-
+                        console.log("show loading spinner")
                     )}
                 </Col>
                 <Col lg={4} className="d-lg-block d-none p-0">
                     <p>Placeholder 2</p>
                 </Col>
             </Row>
-            <div>TutorialsFeedPage</div>
         </Container>
     );
 };
