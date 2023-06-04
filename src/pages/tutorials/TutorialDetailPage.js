@@ -60,7 +60,7 @@ const TutorialDetailPage = () => {
                         ) : null}
                         {tutorialComments.results.length ? (
                             tutorialComments.results.map((tutorialComment) => (
-                                <TutorialComment />
+                                <TutorialComment key={tutorialComment.id} {...tutorialComment} />
                             ))
                         ) : currentUser ? (
                             <span>
