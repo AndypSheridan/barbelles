@@ -5,6 +5,9 @@ import { Col, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
+import appStyles from"../../App.module.css"
+import Asset from "../../components/Asset";
+
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -37,7 +40,9 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                                     <Tutorial key={tutorial.id} {...tutorial} setTutorials={setTutorials} />
                                 ))
                             ) : (
-                                console.log("Show no search results")
+                                <Container className={appStyles.Content}>
+                                    <Asset spinner />
+                                </Container>
                             )}
                         </>
                     ) : (
