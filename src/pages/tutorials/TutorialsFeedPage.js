@@ -9,6 +9,7 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -73,7 +74,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                                 dataLength={tutorials.results.length}
                                 loader={<Asset spinner />}
                                 hasMore={!!tutorials.next}
-                                next={() => {}}
+                                next={fetchMoreData}
                                 />
                                 
                             ) : (
