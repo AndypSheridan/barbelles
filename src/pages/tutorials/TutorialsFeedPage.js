@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import styles from "../../styles/TutorialsFeedPage.module.css";
-import { Col, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
@@ -34,6 +34,9 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                 <Col lg={8} className="p-0">
                     <p>PLaceholder 1</p>
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
+                    <Form>
+                        
+                    </Form>
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
