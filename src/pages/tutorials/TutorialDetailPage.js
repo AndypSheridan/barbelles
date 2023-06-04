@@ -10,6 +10,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
 import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import TutorialComment from "../tutorialcomments/TutorialComment";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -59,10 +60,7 @@ const TutorialDetailPage = () => {
                         ) : null}
                         {tutorialComments.results.length ? (
                             tutorialComments.results.map((tutorialComment) => (
-                                <p key={tutorialComment.id}>
-                                    {tutorialComment.owner}:{""}
-                                    {tutorialComment.content}
-                                </p>
+                                <TutorialComment />
                             ))
                         ) : currentUser ? (
                             <span>

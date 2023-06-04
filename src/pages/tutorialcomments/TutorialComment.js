@@ -1,12 +1,10 @@
-import React from 'react'
-import styles from "../../styles/TutorialComment.module.css"
+import React from "react";
+import styles from "../../styles/TutorialComment.module.css";
 
 const TutorialComment = (props) => {
-  return (
-    <div>
+    return <div>
         
-    </div>
-  )
-}
+    </div>;
+};
 
-export default TutorialComment
+export default TutorialComment;
