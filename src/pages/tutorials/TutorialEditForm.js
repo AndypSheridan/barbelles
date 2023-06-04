@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/TutorialShareEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
@@ -7,7 +7,6 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
-import Image from "react-bootstrap/Image";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

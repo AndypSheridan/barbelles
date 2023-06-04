@@ -96,9 +96,10 @@ const Tutorial = (props) => {
                     </Link>
                     <div className="d-flex align-items-center">
                         <span>
-                            <Link to={`/tutorials/${id}`}>
-                                View tutorial |{" "}
-                            </Link>{" "}
+                            { !tutorialDetailPage && (<Link to={`/tutorials/${id}`}>
+                                View tutorial |{"  "}
+                            </Link>) }
+                            
                             {updated_at}
                         </span>{" "}
                         {is_owner && tutorialDetailPage && (
