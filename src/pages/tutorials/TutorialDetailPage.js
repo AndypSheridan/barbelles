@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
+import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareForm";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
