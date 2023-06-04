@@ -5,9 +5,9 @@ import { Col, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
-import appStyles from"../../App.module.css"
+import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
-
+import { NoSearchResults } from "../../assets/nosearchresults.png";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -36,12 +36,16 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
-                                tutorials.results.map(tutorial => (
-                                    <Tutorial key={tutorial.id} {...tutorial} setTutorials={setTutorials} />
+                                tutorials.results.map((tutorial) => (
+                                    <Tutorial
+                                        key={tutorial.id}
+                                        {...tutorial}
+                                        setTutorials={setTutorials}
+                                    />
                                 ))
                             ) : (
                                 <Container className={appStyles.Content}>
-                                    <Asset spinner />
+                                    <Asset src={NoSearchResults} />
                                 </Container>
                             )}
                         </>
