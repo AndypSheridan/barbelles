@@ -14,10 +14,12 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
 
+    const [query, setQuery] = useState("");
+
     useEffect(() => {
         const fetchTutorials = async () => {
             try {
-                const { data } = await axiosReq.get(`/tutorials/?${filter}`);
+                const { data } = await axiosReq.get(`/tutorials/?${filter}search=${query}`);
                 setTutorials(data);
                 setHasLoaded(true);
             } catch (err) {
@@ -37,7 +39,15 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     <Form
                         className={styles.SearchBar}
                         onSubmit={(event) => event.preventDefault()}
-                    ></Form>
+                    >
+                        <Form.Control
+                            type="text"
+                            className="mr-sm-2"
+                            placeholder="Search tutorials"
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                        />
+                    </Form>
                     {hasLoaded ? (
                         <>
                             {tutorials.results.length ? (
