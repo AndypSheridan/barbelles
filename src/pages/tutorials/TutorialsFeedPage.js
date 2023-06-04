@@ -27,6 +27,14 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
             }
         };
         setHasLoaded(false);
+        
+        const searchTimer = setTimeout(() => {
+            fetchTutorials();
+        }, 1200)
+        return () => {
+            clearTimeout(searchTimer)
+        }
+
         fetchTutorials();
     }, [filter, query, pathname]);
 
