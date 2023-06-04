@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import styles from "../../styles/TutorialsFeedPage.module.css";
 import { Col, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -10,7 +11,13 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        const fet
+        const fetchTutorials = async () => {
+            try {
+                await axiosReq
+            } catch (err) {
+                console.log(err)
+            }
+        }
     })
 
     return (
