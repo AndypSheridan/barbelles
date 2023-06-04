@@ -135,7 +135,7 @@ const TutorialEditForm = () => {
             >
                 Cancel
             </Button>
-            <Button type="submit">Update</Button>
+            <Button type="submit">Save</Button>
         </div>
     );
 
