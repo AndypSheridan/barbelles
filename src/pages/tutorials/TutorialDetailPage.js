@@ -21,12 +21,13 @@ const TutorialDetailPage = () => {
     useEffect(() => {
         const handleMount = async () => {
             try {
-                const [{ data: tutorial }] = await Promise.all([
-                    axiosReq.get(`/tutorials/${id}`),
-                    axiosReq.get(`tutorial-comments/tutorials=${id}`)
-                ]);
+                const [{ data: tutorial }, { data: tutorialComments }] =
+                    await Promise.all([
+                        axiosReq.get(`/tutorials/${id}`),
+                        axiosReq.get(`/tutorial-comments/?tutorial=${id}`),
+                    ]);
                 setTutorial({ results: [tutorial] });
-                console.log(tutorial);
+                setTutorialComments(tutorialComments);
             } catch (err) {
                 console.log(err);
             }
@@ -56,6 +57,20 @@ const TutorialDetailPage = () => {
                         ) : tutorialComments.results.length ? (
                             "Comments"
                         ) : null}
+                        {tutorialComments.results.length ? (
+                            tutorialComments.results.map((tutorialComment) => (
+                                <p key={tutorialComment.id}>
+                                    {tutorialComment.owner}:{""}
+                                    {tutorialComment.content}
+                                </p>
+                            ))
+                        ) : currentUser ? (
+                            <span>
+                                Be the first to comment on this tutorial
+                            </span>
+                        ) : (
+                            <span>No comments yet...</span>
+                        )}
                     </Container>
                 </Col>
                 <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
