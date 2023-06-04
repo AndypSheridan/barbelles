@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Tutorial from "./Tutorial";
 import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareForm";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
