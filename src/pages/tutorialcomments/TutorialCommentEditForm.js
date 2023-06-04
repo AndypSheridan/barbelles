@@ -6,8 +6,8 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import { Container } from "react-bootstrap";
 
-const TutorialCommentEditForm = (props) => {
-    const { id, content, setShowCommentEditForm, setTutorialComments } = props;
+function TutorialCommentEditForm(props) {
+    const { id, content, setShowEditForm, setTutorialComments } = props;
 
     const [formContent, setFormContent] = useState(content);
 
@@ -33,7 +33,7 @@ const TutorialCommentEditForm = (props) => {
                         : tutorialComment;
                 }),
             }));
-            setShowCommentEditForm(false);
+            setShowEditForm(false);
         } catch (err) {
             console.log(err);
         }
@@ -54,7 +54,7 @@ const TutorialCommentEditForm = (props) => {
             <div className="text-right">
                 <button
                     className={styles.Button}
-                    onClick={() => setShowCommentEditForm(false)}
+                    onClick={() => setShowEditForm(false)}
                     type="button"
                 >
                     cancel

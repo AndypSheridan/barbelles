@@ -60,14 +60,22 @@ const TutorialComment = (props) => {
                     <span className={styles.Owner}>{owner}</span>
                     <span className={styles.Date}>{updated_at}</span>
                     {showEditForm ? (
-                        <TutorialCommentEditForm />
+                        <TutorialCommentEditForm
+                        id={id}
+                        profile_id={profile_id}
+                        content={content}
+                        profileImage={profile_image}
+                        setTutorialComments={setTutorialComments}
+                        setShowEditForm={setShowEditForm}
+                        />
+                    ) : (
+                        <p>{content}</p>
                     )}
-                    <p>{content}</p>
                 </Media.Body>
 
                 {is_owner && (
                     <ComponentDropDown
-                        handleEdit={() => {}}
+                        handleEdit={() => setShowEditForm(true)}
                         handleDelete={handleDelete}
                     />
                 )}
