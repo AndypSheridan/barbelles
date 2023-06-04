@@ -44,7 +44,7 @@ const TutorialDetailPage = () => {
                     <Tutorial
                         {...tutorial.results[0]}
                         setTutorials={setTutorial}
-                        tutorialDetailPage
+                        tutorialPage
                     />
                     <Container className={appStyles.Content}>
                         {currentUser ? (

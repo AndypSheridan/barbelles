@@ -19,6 +19,17 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
+const CommentDropDownMenu = React.forwardRef(({ onClick }, ref) => (
+    <i
+        className="fa-regular fa-square-caret-down"
+        ref={ref}
+        onClick={(e) => {
+            e.preventDefault();
+            onClick(e);
+        }}
+    />
+));
+
 export const ProfileDropDown = ({ id }) => {
     const history = useHistory();
     return (
@@ -84,10 +95,10 @@ export const ComponentDropDown = ({ handleEdit, handleDelete }) => {
     );
 };
 
-export const TutorialCommentDropDown = ({ handleCommentEdit, handleCommentDelete }) => {
+export const CommentDropDown = ({ handleCommentEdit, handleDelete }) => {
     return (
         <Dropdown className="ml-auto" drop="down">
-            <Dropdown.Toggle as={PostDropDownMenu} />
+            <Dropdown.Toggle as={CommentDropDownMenu} />
 
             <Dropdown.Menu
                 popperConfig={{ strategy: "fixed" }}
@@ -104,7 +115,7 @@ export const TutorialCommentDropDown = ({ handleCommentEdit, handleCommentDelete
                 <Dropdown.Item
                     className={styles.DropdownItem}
                     aria-label="delete"
-                    onClick={handleCommentDelete}
+                    onClick={handleDelete}
                 >
                     <i className="fa-regular fa-square-minus" />
                     Delete

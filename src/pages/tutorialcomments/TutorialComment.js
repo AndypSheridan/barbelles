@@ -5,7 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
-import TutorialCommentEditForm from "../tutorials/TutorialEditForm";
+import TutorialCommentEditForm from "./TutorialCommentEditForm";
 // import { TutorialCommentDropDown } from "../../components/ComponentDropDown";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 
@@ -72,7 +72,7 @@ const TutorialComment = (props) => {
                         <p>{content}</p>
                     )}
                 </Media.Body>
-                {is_owner && (
+                {is_owner && !showEditForm &&(
                     <ComponentDropDown
                         handleEdit={() => setShowEditForm(true)}
                         handleDelete={handleDelete}

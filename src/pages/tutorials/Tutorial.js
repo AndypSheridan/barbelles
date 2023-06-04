@@ -23,7 +23,7 @@ const Tutorial = (props) => {
         summary,
         video,
         updated_at,
-        tutorialDetailPage,
+        tutorialPage,
         setTutorials,
     } = props;
 
@@ -96,13 +96,13 @@ const Tutorial = (props) => {
                     </Link>
                     <div className="d-flex align-items-center">
                         <span>
-                            { !tutorialDetailPage && (<Link to={`/tutorials/${id}`}>
+                            { !tutorialPage && (<Link to={`/tutorials/${id}`}>
                                 View tutorial |{"  "}
                             </Link>) }
                             
                             {updated_at}
                         </span>{" "}
-                        {is_owner && tutorialDetailPage && (
+                        {is_owner && tutorialPage && (
                             <ComponentDropDown
                                 handleEdit={handleEdit}
                                 handleDelete={handleDelete}
