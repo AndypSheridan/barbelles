@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "../../styles/PostShareEditForm.module.css";
+import styles from "../../styles/TutorialShareEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -98,6 +98,7 @@ const TutorialEditForm = () => {
                     {message}
                 </Alert>
             ))}
+
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -140,20 +141,20 @@ const TutorialEditForm = () => {
     );
 
     return (
-        <Container className={styles.PostShareEditBgImage}>
+        <Container className={`${styles.TutorialShareEditBgImage} ${styles.TutorialShareContainer}`}>
             <Form
-                className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
+                className={`${styles.TutorialShareEditForm} ${styles.TutorialShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                <h1 className="text-center py-2">Share your journey here!</h1>
+                <h1 className="text-center py-2">Edit tutorial</h1>
                 <Row>
-                    <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
+                    {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
-                            className={`${appStyles.Content} ${styles.PostShareContainer}
-                            ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
+                            className={`${appStyles.Content} ${styles.TutorialShareContainer}
+                            ${styles.TutorialShareEditFormBg} d-flex flex-column justify-content-center`}
                         >
                             <Form.Group
-                                className={`${styles.PostShareBgTransparent} text-center`}
+                                className={`${styles.TutorialShareBgTransparent} text-center`}
                             >
                                 <figure>
                                     <Image
@@ -186,10 +187,10 @@ const TutorialEditForm = () => {
 
                             <div className="d-md-none">{textFields}</div>
                         </Container>
-                    </Col>
-                    <Col md={6} lg={6} className="d-none d-md-block p-2 p-md-2">
+                    </Col> */}
+                    <Col md={6} lg={6} className="d-none mx-auto d-md-block p-2 p-md-2">
                         <Container
-                            className={`${appStyles.Content} ${styles.PostShareContainer}`}
+                            className={`${appStyles.Content} ${styles.TutorialShareContainer}`}
                         >
                             {textFields}
                         </Container>
