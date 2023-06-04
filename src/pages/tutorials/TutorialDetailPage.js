@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -60,7 +59,12 @@ const TutorialDetailPage = () => {
                         ) : null}
                         {tutorialComments.results.length ? (
                             tutorialComments.results.map((tutorialComment) => (
-                                <TutorialComment key={tutorialComment.id} {...tutorialComment} />
+                                <TutorialComment
+                                    key={tutorialComment.id}
+                                    {...tutorialComment}
+                                    setTutorial={setTutorial}
+                                    setTutorialComments={setTutorialComments}
+                                />
                             ))
                         ) : currentUser ? (
                             <span>

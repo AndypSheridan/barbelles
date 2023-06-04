@@ -83,3 +83,33 @@ export const ComponentDropDown = ({ handleEdit, handleDelete }) => {
         </Dropdown>
     );
 };
+
+export const TutorialCommentDropDown = ({ handleCommentEdit, handleCommentDelete }) => {
+    return (
+        <Dropdown className="ml-auto" drop="down">
+            <Dropdown.Toggle as={PostDropDownMenu} />
+
+            <Dropdown.Menu
+                popperConfig={{ strategy: "fixed" }}
+                className="text-center"
+            >
+                <Dropdown.Item
+                    className={styles.DropdownItem}
+                    aria-label="edit"
+                    onClick={handleCommentEdit}
+                >
+                    <i className="fa-regular fa-pen-to-square" />
+                    Edit
+                </Dropdown.Item>
+                <Dropdown.Item
+                    className={styles.DropdownItem}
+                    aria-label="delete"
+                    onClick={handleCommentDelete}
+                >
+                    <i className="fa-regular fa-square-minus" />
+                    Delete
+                </Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+    );
+};

@@ -4,9 +4,10 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import { Container } from "react-bootstrap";
 
 const TutorialCommentEditForm = (props) => {
-    const { id, content, setShowEditForm, setTutorialComments } = props;
+    const { id, content, setShowCommentEditForm, setTutorialComments } = props;
 
     const [formContent, setFormContent] = useState(content);
 
@@ -20,7 +21,7 @@ const TutorialCommentEditForm = (props) => {
             await axiosRes.put(`/tutorial-comments/${id}/`, {
                 content: formContent.trim(),
             });
-            setComments((prevTutorialComments) => ({
+            setTutorialComments((prevTutorialComments) => ({
                 ...prevTutorialComments,
                 results: prevTutorialComments.results.map((tutorialComment) => {
                     return tutorialComment.id === id
@@ -32,13 +33,14 @@ const TutorialCommentEditForm = (props) => {
                         : tutorialComment;
                 }),
             }));
-            setShowEditForm(false);
+            setShowCommentEditForm(false);
         } catch (err) {
             console.log(err);
         }
     };
 
     return (
+        <Container>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="pr-1">
                 <Form.Control
@@ -52,7 +54,7 @@ const TutorialCommentEditForm = (props) => {
             <div className="text-right">
                 <button
                     className={styles.Button}
-                    onClick={() => setShowEditForm(false)}
+                    onClick={() => setShowCommentEditForm(false)}
                     type="button"
                 >
                     cancel
@@ -66,6 +68,7 @@ const TutorialCommentEditForm = (props) => {
                 </button>
             </div>
         </Form>
+        </Container>
     );
 };
 

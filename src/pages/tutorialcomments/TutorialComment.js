@@ -6,6 +6,7 @@ import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import TutorialCommentEditForm from "../tutorials/TutorialEditForm";
+// import { TutorialCommentDropDown } from "../../components/ComponentDropDown";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 
 const TutorialComment = (props) => {
@@ -21,7 +22,6 @@ const TutorialComment = (props) => {
     } = props;
 
     const [showEditForm, setShowEditForm] = useState(false);
-
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
@@ -60,21 +60,14 @@ const TutorialComment = (props) => {
                     <span className={styles.Owner}>{owner}</span>
                     <span className={styles.Date}>{updated_at}</span>
                     {showEditForm ? (
-                        <TutorialCommentEditForm
-                            id={id}
-                            profile_id={profile_id}
-                            content={content}
-                            profile_image={profile_image}
-                            setComments={setTutorialComments}
-                            setShowEditForm={setShowEditForm}
-                        />
-                    ) : (
-                        <p>{content}</p>
+                        <TutorialCommentEditForm />
                     )}
+                    <p>{content}</p>
                 </Media.Body>
-                {is_owner && !showEditForm && (
+
+                {is_owner && (
                     <ComponentDropDown
-                        handleEdit={() => setShowEditForm(true)}
+                        handleEdit={() => {}}
                         handleDelete={handleDelete}
                     />
                 )}
