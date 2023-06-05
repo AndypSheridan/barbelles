@@ -30,23 +30,16 @@ const NavBar = () => {
     //         console.log(err);
     //     }
     // };
+    
 
     const signedInIcons = (
         <>
-            <NavLink
-                to="/posts/share"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
-            </NavLink>
-
+            
             <NavDropdown
                 alignRight
                 title={
                     <span>
-                        <i className="fa-solid fa-list"></i>Feeds
+                        <i className="fa-solid fa-list"></i>Posts
                     </span>
                 }
                 id="basic-nav-dropdown"
@@ -64,6 +57,22 @@ const NavBar = () => {
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
                 <NavLink
+                to="/posts/share"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                onClick={() => setExpanded(false)}
+            >
+                <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
+            </NavLink>
+            <NavLink
+                    to="/liked"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-bookmark"></i> Liked
+                </NavLink>
+                {/* <NavLink
                     to="/tutorials"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
@@ -79,6 +88,50 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
                 </NavLink>
+                <NavLink
+                    to="/favourited"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-bookmark"></i> Favourites
+                </NavLink> */}
+                {/* </NavDropdown.Item> */}
+            </NavDropdown>
+
+            <NavDropdown
+                alignRight
+                title={
+                    <span>
+                        <i className="fa-solid fa-list"></i>Tutorials
+                    </span>
+                }
+                id="basic-nav-dropdown"
+                className={styles.FeedsDropdown}
+            >
+                {/* <NavDropdown.Item> */}
+                
+                {/* </NavDropdown.Item> */}
+                {/* <NavDropdown.Item> */}
+                <NavLink
+                    to="/tutorials"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-graduation-cap"></i> Tutorials
+                </NavLink>
+                
+                
+                <NavLink
+                    to="/tutorials/share"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
+                </NavLink>
+                
                 <NavLink
                     to="/favourited"
                     className={styles.NavLink}
@@ -107,14 +160,7 @@ const NavBar = () => {
                 </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                <NavLink
-                    to="/liked"
-                    className={styles.NavLink}
-                    activeClassName={styles.Active}
-                    onClick={() => setExpanded(false)}
-                >
-                    <i className="fa-solid fa-bookmark"></i> Liked content
-                </NavLink>
+                
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
 
@@ -179,7 +225,7 @@ const NavBar = () => {
                 />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto text-center">
-                        <NavLink
+                        {/* <NavLink
                             exact
                             to="/"
                             className={styles.NavLink}
@@ -187,7 +233,7 @@ const NavBar = () => {
                             onClick={() => setExpanded(false)}
                         >
                             <i className="fas fa-home"></i> Home
-                        </NavLink>
+                        </NavLink> */}
                         {currentUser ? signedInIcons : signedOutIcons}
                     </Nav>
                 </Navbar.Collapse>
