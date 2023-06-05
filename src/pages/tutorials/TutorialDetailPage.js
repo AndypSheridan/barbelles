@@ -12,6 +12,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TutorialComment from "../tutorialcomments/TutorialComment";
 import TopProfiles from "../profiles/TopProfiles";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -60,15 +62,21 @@ const TutorialDetailPage = () => {
                             "Comments"
                         ) : null}
                         {tutorialComments.results.length ? (
+                            <InfiniteScroll
+                            children={
                             tutorialComments.results.map((tutorialComment) => (
-                                <InfiniteScroll
                                 <TutorialComment
                                     key={tutorialComment.id}
                                     {...tutorialComment}
                                     setTutorial={setTutorial}
                                     setTutorialComments={setTutorialComments}
                                 />
-                            ))
+                            ))}
+                            dataLength={tutorialComments.results.length}
+                            loader={<Asset spinner />}
+                            hasMore={!!tutorialComments.next}
+                            next={() => fetchMoreData(tutorialComments, setTutorialComments)}
+                            />
                         ) : currentUser ? (
                             <span>
                                 Be the first to comment on this tutorial
