@@ -10,6 +10,7 @@ import Asset from "../../components/Asset";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import TopProfiles from "../profiles/TopProfiles";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
@@ -44,7 +45,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
         <Container className={`${styles.Container} h-100`}>
             <Row>
                 <Col lg={8} className="p-0">
-                    <p>PLaceholder 1</p>
+                    <TopProfiles mobile />
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
                     <Form
                         className={styles.SearchBar}
@@ -94,7 +95,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     )}
                 </Col>
                 <Col lg={4} className="d-lg-block d-none p-0">
-                    <p>Placeholder 2</p>
+                    <TopProfiles />
                 </Col>
             </Row>
         </Container>
