@@ -55,7 +55,7 @@ function TutorialCommentEditForm(props) {
             <div className="text-right">
                 <button
                     className={styles.Button}
-                    onClick={() => setShowCommentEditForm(false)}
+                    onClick={() => setShowEditForm(false)}
                     type="button"
                 >
                     cancel

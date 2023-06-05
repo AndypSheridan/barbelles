@@ -11,6 +11,7 @@ import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareFo
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TutorialComment from "../tutorialcomments/TutorialComment";
 import TopProfiles from "../profiles/TopProfiles";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const TutorialDetailPage = () => {
     const { id } = useParams();
@@ -60,6 +61,7 @@ const TutorialDetailPage = () => {
                         ) : null}
                         {tutorialComments.results.length ? (
                             tutorialComments.results.map((tutorialComment) => (
+                                <InfiniteScroll
                                 <TutorialComment
                                     key={tutorialComment.id}
                                     {...tutorialComment}
