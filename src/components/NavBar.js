@@ -16,11 +16,13 @@ import { NavDropdown } from "react-bootstrap";
 import SignOutModal from "./SignOutModal";
 
 const NavBar = () => {
+
     const currentUser = useCurrentUser();
     // const setCurrentUser = useSetCurrentUser();
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
+    const staff = currentUser?.profile?.is_staff.i === true;
 
     // const handleSignOut = async () => {
     //     try {
@@ -39,7 +41,7 @@ const NavBar = () => {
                 alignRight
                 title={
                     <span>
-                        <i className="fa-solid fa-list"></i>Posts
+                        <i className="fa-regular fa-image"></i>Posts
                     </span>
                 }
                 id="basic-nav-dropdown"
@@ -103,7 +105,7 @@ const NavBar = () => {
                 alignRight
                 title={
                     <span>
-                        <i className="fa-solid fa-list"></i>Tutorials
+                        <i className="fa-solid fa-graduation-cap"></i>Tutorials
                     </span>
                 }
                 id="basic-nav-dropdown"
@@ -119,9 +121,8 @@ const NavBar = () => {
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
                 >
-                    <i className="fa-solid fa-graduation-cap"></i> Tutorials
+                    <i className="fa-solid fa-list"></i> Tutorials
                 </NavLink>
-                
                 
                 <NavLink
                     to="/tutorials/share"
