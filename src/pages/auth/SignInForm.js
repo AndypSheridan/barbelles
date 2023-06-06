@@ -3,7 +3,7 @@ import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import CustomButton from "../../components/CustomButton";
 import styles from "../../styles/SignInForm.module.css";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
@@ -48,8 +48,13 @@ const SignInForm = () => {
     return (
         <Container className={styles.signInBg}>
             <h1 className={styles.SignInHeader}>Sign in</h1>
+
             <Row className="text-center">
+                
+                    
+                
                 <Col className="mx-auto" md={6}>
+                <span>Sign in |</span><Link to="/signup"><span className="text-center"> Sign up</span></Link>
                     <Form
                         onSubmit={handleSubmit}
                         className={`mx-auto ${styles.Form}`}

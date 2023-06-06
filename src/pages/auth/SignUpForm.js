@@ -39,31 +39,6 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col className={`${styles.Col} d-none d-md-flex`} md={6}>
-                    <Container className={`mx-auto my-auto p-0 `}>
-                        <p className={`mx-auto ${styles.About}`}>
-                            About us
-                            <br />
-                            <br />
-                            Barbelles is an online fitness community for women
-                            and we are committed to providing a friendly and
-                            inclusive environment to learn, grow and share your
-                            own fitness journeys.
-                            <br />
-                            Members can interact with our site content, follow
-                            others, like posts and add tutorials to your
-                            favourites section. We know everyone struggles for
-                            motivation sometimes, but with our support, we can
-                            all pull together to offer support and inspiration
-                            to help you reach your fitness goals.
-                            <br />
-                            Whether you're a seasoned pro or never trained
-                            before, we can provide something for everyone to
-                            challenge themselves and reach that next level!
-                        </p>
-                    </Container>
-                </Col>
-
                 <Col md={6}>
                     <Container className="mb-3 text-center p-0 mx-auto">
                         <p className="mx-auto">
