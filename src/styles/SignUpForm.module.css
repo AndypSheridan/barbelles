@@ -19,15 +19,16 @@
     background-attachment: fixed;
 }
 
-.SignUpHeader {
+/* .SignUpHeader {
     padding-top: 8rem;
     padding-bottom: 2rem;
     text-align: center;
     color:#512d38;
-}
+} */
 
 .Row {
-    padding-top: 8rem;
+    /* padding-top: 10rem; */
+    height: 100vh;
 }
 
 .About {

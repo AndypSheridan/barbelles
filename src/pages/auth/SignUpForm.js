@@ -38,7 +38,7 @@ const SignUpForm = () => {
 
     return (
         <Container className={styles.SignUpBg}>
-            <Row className={styles.Row}>
+            <Row className={`${styles.Row} align-items-center`}>
                 <Col md={7}></Col>
                 <Col className="mx-auto" md={5}>
                     <Container className="p-0 mx-auto">
@@ -46,7 +46,7 @@ const SignUpForm = () => {
                             onSubmit={handleSubmit}
                             className={`mx-auto ${styles.Form}`}
                         >
-                            <Container className="my-3 mx-auto text-center">
+                            <Container className="mb-3 mx-auto text-center">
                                 <Link to="/signin">
                                     <span className={styles.SignUpSpan}>
                                         Sign in |
