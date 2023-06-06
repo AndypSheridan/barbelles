@@ -15,9 +15,9 @@ html, body {
     min-height: 100vh;
 }
 
-div {
+/* div {
     overflow-x: hidden;
-}
+} */
 
 * {
     box-sizing: border-box;

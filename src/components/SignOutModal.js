@@ -45,7 +45,7 @@ const SignOutModal = () => {
                         Not yet!
                     </Button>
                     
-                    <NavLink to="/">
+                    <NavLink to="signin/">
                     <Button variant="primary" onClick={handleSignOut}>
                         I'm sure!
                     </Button>

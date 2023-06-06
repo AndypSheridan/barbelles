@@ -48,7 +48,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
 
     return (
         <Container className={`${styles.homeBackground}`}>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center mt-16">
                 <Col className={styles.Col} lg={8}>
                     <TopProfiles mobile />
 

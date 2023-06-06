@@ -65,3 +65,9 @@
     background: rgba(255, 255, 255, 0.5);
     color: #512d38;
 }
+
+@media only screen and (max-width: 768px) {
+    .Row {
+      padding-top: 8rem;
+    }
+  }
