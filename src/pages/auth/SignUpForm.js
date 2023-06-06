@@ -38,26 +38,22 @@ const SignUpForm = () => {
 
     return (
         <Container className={styles.SignUpBg}>
-            
-            
             <Row className={styles.Row}>
-            <Col md={7}>
-                
-                </Col>
+                <Col md={7}></Col>
                 <Col className="mx-auto" md={5}>
-                    <Container className="my-3 mx-auto text-center">
-
-                        <Link to="/signin">
-                            <span className={styles.SignUpSpan}>Sign in |</span>
-                        </Link>
-                        <span> Sign up</span>
-                    </Container>
-
                     <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
                             className={`mx-auto ${styles.Form}`}
                         >
+                            <Container className="my-3 mx-auto text-center">
+                                <Link to="/signin">
+                                    <span className={styles.SignUpSpan}>
+                                        Sign in |
+                                    </span>
+                                </Link>
+                                <span> Sign up</span>
+                            </Container>
                             <Form.Group controlId="username">
                                 <Form.Label className="d-none">
                                     Username
