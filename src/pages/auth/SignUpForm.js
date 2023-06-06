@@ -38,10 +38,14 @@ const SignUpForm = () => {
 
     return (
         <Container className={styles.SignUpBg}>
-            <h1 className={styles.SignUpHeader}>Join our Community</h1>
+            
+            
             <Row className={styles.Row}>
-                <Col className="mx-auto" md={6}>
-                    <Container className="my-3 p-0 mx-auto text-center">
+            <Col md={7}>
+                
+                </Col>
+                <Col className="mx-auto" md={5}>
+                    <Container className="my-3 mx-auto text-center">
 
                         <Link to="/signin">
                             <span className={styles.SignUpSpan}>Sign in |</span>

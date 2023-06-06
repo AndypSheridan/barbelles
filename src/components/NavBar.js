@@ -35,6 +35,7 @@ const NavBar = () => {
 
     const signedInIcons = (
         <>
+        
             
             <NavDropdown
                 alignRight
@@ -208,12 +209,19 @@ const NavBar = () => {
             fixed="top"
         >
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
+                { currentUser ? (
                 <NavLink to="/">
                     <Navbar.Brand className={styles.NavBarBrandText}>
                         <img src={logo} className={styles.Logo} alt="logo" />{" "}
                         BarBelles
                     </Navbar.Brand>
                 </NavLink>
+                ) : (
+                    <Navbar.Brand className={styles.NavBarBrandText}>
+                        <img src={logo} className={styles.Logo} alt="logo" />{" "}
+                        BarBelles
+                    </Navbar.Brand>
+                )}
 
                 {/* {currentUser && createPostIcon} */}
 

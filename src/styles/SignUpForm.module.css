@@ -1,17 +1,21 @@
 .SignUpBg {
-    background: rgb(2, 0, 36);
+    /* background: rgb(2, 0, 36);
     background: linear-gradient(
         90deg,
         rgba(2, 0, 36, 1) 0%,
         rgba(244, 191, 219, 1) 35%,
         rgba(135, 186, 171, 1) 100%
-    );
+    ); */
+    background-image: url("../assets/homebackgroundimage.jpg");
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
     min-width: 100vw;
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -23,7 +27,7 @@
 }
 
 .Row {
-    padding-top: 0.5rem;
+    padding-top: 8rem;
 }
 
 .About {
