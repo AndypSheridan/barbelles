@@ -41,17 +41,14 @@ const SignUpForm = () => {
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
                 <Col className="mx-auto" md={6}>
-                <Container className="mt-3 p-0 mx-auto text-center">
-                        
-                           
-                            <Link to="/signin">
-                                <span className={styles.SignUpSpan}>
-                                    Sign in | 
-                                </span>
-                            </Link>
-                            <span> Sign up</span>
+                    <Container className="my-3 p-0 mx-auto text-center">
+
+                        <Link to="/signin">
+                            <span className={styles.SignUpSpan}>Sign in |</span>
+                        </Link>
+                        <span> Sign up</span>
                     </Container>
-                    
+
                     <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
@@ -123,7 +120,6 @@ const SignUpForm = () => {
                             ))}
                         </Form>
                     </Container>
-                    
                 </Col>
             </Row>
         </Container>

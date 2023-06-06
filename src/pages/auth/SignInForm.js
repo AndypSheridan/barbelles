@@ -31,7 +31,7 @@ const SignInForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         try {
             const { data } = await axios.post(
                 "/dj-rest-auth/login/",
@@ -50,11 +50,17 @@ const SignInForm = () => {
             <h1 className={styles.SignInHeader}>Sign in</h1>
 
             <Row className="text-center">
-                
-                    
-                
                 <Col className="mx-auto" md={6}>
-                <span>Sign in |</span><Link to="/signup"><span className="text-center"> Sign up</span></Link>
+                    <Container>
+                        <span>Sign in |</span>
+                        <Link to="/signup">
+                            <span className="text-center"> Sign up</span>
+                        </Link>
+                    </Container>
+                    <span>Sign in |</span>
+                    <Link to="/signup">
+                        <span className="text-center"> Sign up</span>
+                    </Link>
                     <Form
                         onSubmit={handleSubmit}
                         className={`mx-auto ${styles.Form}`}
