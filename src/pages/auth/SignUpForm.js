@@ -5,6 +5,7 @@ import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import CustomButton from "../../components/CustomButton";
 import { useRedirect } from "../../hooks/useRedirect";
+import { Tabs, Tab } from "react-bootstrap";
 
 const SignUpForm = () => {
     useRedirect("loggedIn");
@@ -39,12 +40,18 @@ const SignUpForm = () => {
         <Container className={styles.SignUpBg}>
             <h1 className={styles.SignUpHeader}>Join our Community</h1>
             <Row className={styles.Row}>
-                <Col md={6}>
-                    <Container className="mb-3 text-center p-0 mx-auto">
-                        <p className="mx-auto">
-                            Just complete the form below to sign up!
-                        </p>
+                <Col className="mx-auto" md={6}>
+                <Container className="mt-3 p-0 mx-auto text-center">
+                        
+                           
+                            <Link to="/signin">
+                                <span className={styles.SignUpSpan}>
+                                    Sign in | 
+                                </span>
+                            </Link>
+                            <span> Sign up</span>
                     </Container>
+                    
                     <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
@@ -116,16 +123,7 @@ const SignUpForm = () => {
                             ))}
                         </Form>
                     </Container>
-                    <Container className="mt-3 p-0 mx-auto text-center">
-                        <p className="mx-auto">
-                            If you already have an account please{" "}
-                            <Link to="/signin">
-                                <span className={styles.SignUpSpan}>
-                                    sign in
-                                </span>
-                            </Link>
-                        </p>
-                    </Container>
+                    
                 </Col>
             </Row>
         </Container>
