@@ -16,6 +16,7 @@
 
 .Col {
     width: 85%;
+    padding-left: 2rem;
 }
 
 .SearchBar input {
