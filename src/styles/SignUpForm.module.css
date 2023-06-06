@@ -17,6 +17,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    object-fit: cover;
 }
 
 /* .SignUpHeader {

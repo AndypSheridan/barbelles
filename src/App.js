@@ -25,7 +25,8 @@ function App() {
     const profile_id = currentUser?.profile_id || "";
 
     return (
-        <div className={styles.App}>
+        // <Container className={styles.Container}>
+        <div className={`${styles.App} ${styles.MainDiv}`}>
             <NavBar />
             <Container className={styles.Main}>
                 <Switch>
@@ -137,6 +138,7 @@ function App() {
                 </Switch>
             </Container>
         </div>
+        // </Container>
     );
 }
 

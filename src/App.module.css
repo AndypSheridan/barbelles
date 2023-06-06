@@ -18,6 +18,15 @@ html, body {
 /* div {
     overflow-x: hidden;
 } */
+.Container {
+    overflow-x: hidden;
+    padding: 0px;
+}
+
+.MainDiv {
+    overflow-x: hidden;
+    padding: 0px;
+}
 
 * {
     box-sizing: border-box;
@@ -128,3 +137,9 @@ i:hover {
     transition: color ease-in-out 0.3s;
     color: #b27092;
 } */
+
+@media only screen and (max-width: 600px) {
+    .Main {
+      height: 100%
+    }
+  }
