@@ -100,7 +100,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         </Container>
                     )}
                 </Col>
-                <Col className="d-lg-block d-none" lg={4}>
+                <Col className={`${styles.ProfileCol} d-lg-block d-none`} lg={4}>
                     <TopProfiles />
                 </Col>
             </Row>

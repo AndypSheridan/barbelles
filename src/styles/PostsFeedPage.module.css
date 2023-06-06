@@ -16,7 +16,12 @@
 
 .Col {
     width: 85%;
-    padding-left: 2rem;
+    padding-left: 4rem;
+}
+
+.ProfileCol {
+    width: 85%;
+    padding-right: 4rem;
 }
 
 .SearchBar input {
