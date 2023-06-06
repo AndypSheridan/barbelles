@@ -42,3 +42,9 @@
     cursor: default;
     color: #cfced3;
 }
+
+@media only screen and (max-width: 992px) {
+    .Col {
+        padding-left: 2rem;
+    }
+}

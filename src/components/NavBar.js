@@ -19,6 +19,7 @@ const NavBar = () => {
 
     const currentUser = useCurrentUser();
     // const setCurrentUser = useSetCurrentUser();
+    const is_staff = currentUser?.is_staff === true;
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
@@ -115,6 +116,7 @@ const NavBar = () => {
                 
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
+                
                 <NavLink
                     to="/tutorials"
                     className={styles.NavLink}
