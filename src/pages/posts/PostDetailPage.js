@@ -7,7 +7,7 @@ import PostComment from "../comments/PostComment";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
-import appStyles from "../../App.module.css";
+// import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
 import Asset from "../../components/Asset";
 import Row from "react-bootstrap/Row";
@@ -43,7 +43,7 @@ const PostDetailPage = () => {
     return (
         <Container className="h-100">
             <Row className={styles.Row}>
-                <Col>
+                <Col lg={8}>
                 <TopProfiles mobile />
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container>
@@ -82,7 +82,7 @@ const PostDetailPage = () => {
                         )}
                     </Container>
                 </Col>
-                <Col className="d-lg-block d-none">
+                <Col className="d-lg-block d-none" lg={4}>
                     <TopProfiles />
                 </Col>
             </Row>

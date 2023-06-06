@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import { fetchMoreData } from "../../utils/utils";
 import { useLocation } from "react-router-dom";
-import appStyles from "../../App.module.css";
+// import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";

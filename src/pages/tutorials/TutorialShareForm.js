@@ -55,6 +55,7 @@ function TutorialShareForm() {
         <div className="text-center">
             <Form.Group>
                 <Form.Label>YouTube link</Form.Label>
+                <p>Example: https://www.youtube.com/watch?v=***********</p>
                 <Form.Control
                     value={video}
                     onChange={handleChange}
@@ -98,12 +99,12 @@ function TutorialShareForm() {
             ))}
 
             <Button
-                className={btnStyles.Black}
+                className={`${btnStyles.Black} mx-1`}
                 onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
-            <Button type="submit">Share</Button>
+            <Button className="mx-1" type="submit">Share</Button>
         </div>
     );
 

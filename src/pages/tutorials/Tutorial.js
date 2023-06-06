@@ -87,7 +87,7 @@ const Tutorial = (props) => {
     };
 
     return (
-        <Card className={styles.Tutorial}>
+        <Card className={`${styles.Tutorial} mb-5`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                     <Link to={`/profiles/${profile_id}`}>
@@ -129,30 +129,30 @@ const Tutorial = (props) => {
                             placement="top"
                             overlay={
                                 <Tooltip>
-                                    You can't like your own Tutorial!
+                                    You can't save your own Tutorial!
                                 </Tooltip>
                             }
                         >
-                            <i className="far fa-heart" />
+                            <i className="fa-regular fa-bookmark" />
                         </OverlayTrigger>
                     ) : favourite_id ? (
                         <span onClick={handleUnfavourite}>
-                            <i className="fas fa-heart" />
+                            <i className="fa-solid fa-bookmark" />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleFavourite}>
-                            <i className="far fa-heart" />
+                            <i className="fa-regular fa-bookmark" />
                         </span>
                     ) : (
                         <OverlayTrigger
                             placement="top"
                             overlay={
                                 <Tooltip>
-                                    Please log in or sign up to like a tutorial!
+                                    Please log in or sign up to save a tutorial!
                                 </Tooltip>
                             }
                         >
-                            <i className="far fa-heart" />
+                            <i className="fa-regular fa-bookmark" />
                         </OverlayTrigger>
                     )}
                     {favourites_count}

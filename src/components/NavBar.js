@@ -22,7 +22,6 @@ const NavBar = () => {
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
-    const staff = currentUser?.profile?.is_staff.i === true;
 
     // const handleSignOut = async () => {
     //     try {

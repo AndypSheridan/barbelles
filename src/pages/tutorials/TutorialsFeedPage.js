@@ -44,7 +44,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
     return (
         <Container className={`${styles.Container} h-100`}>
             <Row>
-                <Col lg={8} className="p-0">
+                <Col lg={8} className="pr-4">
                     <TopProfiles mobile />
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
                     <Form
@@ -94,7 +94,7 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                         </Container>
                     )}
                 </Col>
-                <Col lg={4} className="d-lg-block d-none p-0">
+                <Col lg={4} className="d-lg-block d-none">
                     <TopProfiles />
                 </Col>
             </Row>

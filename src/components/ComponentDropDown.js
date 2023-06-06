@@ -4,7 +4,8 @@ import { useHistory } from "react-router-dom";
 
 import styles from "../styles/PostDropDown.module.css";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
-import DropdownItem from "react-bootstrap/DropdownItem";
+// import DropdownItem from "react-bootstrap/DropdownItem";
+// import DeleteConfirmModal from "./DeleteConfirmModal";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -124,3 +125,4 @@ export const CommentDropDown = ({ handleCommentEdit, handleDelete }) => {
         </Dropdown>
     );
 };
+
