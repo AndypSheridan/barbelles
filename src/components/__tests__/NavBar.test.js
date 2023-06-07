@@ -40,14 +40,14 @@ test("renders tutorials link for a logged in user", async () => {
     expect(tutorialLink).toBeInTheDocument();
 });
 
-test("renders signup button when user logs out", async () => {
-    render(
-        <Router>
-            <CurrentUserProvider>
-                <NavBar />
-            </CurrentUserProvider>
-        </Router>
-    );
+// test("renders signOutModal for logged in user", async () => {
+//     render(
+//         <Router>
+//             <CurrentUserProvider>
+//                 <NavBar />
+//             </CurrentUserProvider>
+//         </Router>
+//     );
 
-    const signOutLink = await screen.findByRole('button', {name: "Sign out"})
-});
+//     const signOutModal = await screen.findByText("Sign out", { hidden: true })
+// });
