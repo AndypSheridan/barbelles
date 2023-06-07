@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { removeTokenTimestamp } from "../utils/utils";
 import { useRedirect } from "../hooks/useRedirect";
 // import CustomButton from "../components/CustomButton"
@@ -13,6 +13,7 @@ const SignOutModal = () => {
     const [show, setShow] = useState(false);
 
     const setCurrentUser = useSetCurrentUser();
+    const history = useHistory();
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
@@ -21,6 +22,7 @@ const SignOutModal = () => {
             await axios.post("dj-rest-auth/logout/");
             setCurrentUser(null);
             removeTokenTimestamp();
+            history.push("/signup")
         } catch (err) {
             console.log(err);
         }

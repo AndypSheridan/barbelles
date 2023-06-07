@@ -32,7 +32,8 @@ const SignUp = (props) => {
         event.preventDefault();
         try {
             await axios.post("/dj-rest-auth/registration/", signUpData);
-            history.push("/signin");
+            // history.push("/signup");
+            props.onFormSwitch("signin")
         } catch (err) {
             setErrors(err.response?.data);
         }
@@ -45,12 +46,13 @@ const SignUp = (props) => {
                             className={`mx-auto ${styles.Form}`}
                         >
                             <Container className="mb-3 mx-auto text-center">
+                            <span> Sign up here or </span>
                                 <Button onClick={() => props.onFormSwitch("signin")}>
                                     <span className={styles.SignUpSpan}>
                                         Sign in
                                     </span>
                                 </Button>
-                                <span> Sign up</span>
+                               
                             </Container>
                             <Form.Group controlId="username">
                                 <Form.Label className="d-none">
