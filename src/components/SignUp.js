@@ -38,9 +38,6 @@ const SignUp = () => {
     };
 
     return (
-        <Container className={`${styles.SignUpBg} h-100`}>
-            <Row className={`${styles.Row} align-items-center`}>
-            <Col className="mx-auto" md={5}>
                     <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
@@ -120,36 +117,7 @@ const SignUp = () => {
                             ))}
                         </Form>
                     </Container>
-                </Col>
-                <Col md={7} className="mt-3">
-                    <Container className={styles.About}>
-                        <h2>Welcome to Barbelles</h2>
-                        <p>
-                            We are an online fitness community for women. It
-                            doesn't matter whether you have never trained a day
-                            in your life or whether you are a seasoned pro, you
-                            are welcome here!
-                        </p>
-                        <p>
-                            You can quickly create an account to start sharing
-                            your fitness journey, take inspiration from other
-                            users, follow their own stories and learn from our
-                            ever-growing range of tutorials. You can tell us
-                            more about yourself by adding to and editing your
-                            profile.
-                        </p>
-                        <p>
-                            You can interact with the community by adding
-                            comments or asking questions in the site content.
-                            However you choose to use the community, we are here
-                            to provide a safe and friendly space to hit your goals and targets!
-                        </p>
-                    </Container>
-                </Col>
-                
-            </Row>
-        </Container>
-    );
+            )   
 };
 
 export default SignUp;
