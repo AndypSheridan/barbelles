@@ -1,6 +1,9 @@
 import { render } from "@testing-library/react"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Router } from "react-router-dom"
+import NavBar from "../NavBar"
 
 test("renders navbar component", () => {
-    render
+    render(<Router>
+        <NavBar />
+    </Router>)
 })
