@@ -8,4 +8,20 @@ test("renders navbar component", () => {
             <NavBar />
         </Router>
     );
+
+    // screen.debug();
+    const signUpLink = screen.getByRole("link", { name: "Sign up" });
+    expect(signUpLink).toBeInTheDocument();
+});
+
+test("renders navbar component", () => {
+    render(
+        <Router>
+            <NavBar />
+        </Router>
+    );
+
+    // screen.debug();
+    const signUpLink = screen.getByRole("link", { name: "Sign up" });
+    expect(signUpLink).toBeInTheDocument();
 });
