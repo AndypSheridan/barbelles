@@ -7,41 +7,45 @@ import axios from "axios";
 import CustomButton from "../../components/CustomButton";
 import { useRedirect } from "../../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
+import SignUp from "../../components/SignUp";
+import SignIn from "../../components/SignIn";
 
 const SignUpForm = () => {
-    useRedirect("loggedIn");
-    const [signUpData, setSignUpData] = useState({
-        username: "",
-        password1: "",
-        password2: "",
-    });
+    // useRedirect("loggedIn");
+    // const [signUpData, setSignUpData] = useState({
+    //     username: "",
+    //     password1: "",
+    //     password2: "",
+    // });
 
-    const { username, password1, password2 } = signUpData;
-    const history = useHistory();
-    const [errors, setErrors] = useState({});
+    // const { username, password1, password2 } = signUpData;
+    // const history = useHistory();
+    // const [errors, setErrors] = useState({});
 
-    const handleChange = (event) => {
-        setSignUpData({
-            ...signUpData,
-            [event.target.name]: event.target.value,
-        });
-    };
+    // const handleChange = (event) => {
+    //     setSignUpData({
+    //         ...signUpData,
+    //         [event.target.name]: event.target.value,
+    //     });
+    // };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            await axios.post("/dj-rest-auth/registration/", signUpData);
-            history.push("/signin");
-        } catch (err) {
-            setErrors(err.response?.data);
-        }
-    };
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     try {
+    //         await axios.post("/dj-rest-auth/registration/", signUpData);
+    //         history.push("/signin");
+    //     } catch (err) {
+    //         setErrors(err.response?.data);
+    //     }
+    // };
+
+
 
     return (
         <Container className={`${styles.SignUpBg} h-100`}>
             <Row className={`${styles.Row} align-items-center`}>
             <Col className="mx-auto" md={5}>
-                    <Container className="p-0 mx-auto">
+                    {/* <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
                             className={`mx-auto ${styles.Form}`}
@@ -113,13 +117,14 @@ const SignUpForm = () => {
                             {/* <Button variant="primary" type="submit">
                                 Sign up
                             </Button> */}
-                            {errors.non_field_errors?.map((message, idx) => (
+                            {/* {errors.non_field_errors?.map((message, idx) => (
                                 <Alert variant="warning" key={idx}>
                                     {message}
                                 </Alert>
                             ))}
                         </Form>
-                    </Container>
+                    </Container> */} 
+                    <SignUp />
                 </Col>
                 <Col md={7} className="mt-3">
                     <Container className={styles.About}>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import styles from "../../styles/SignUpForm.module.css";
-import appStyles from "../../App.module.css";
+import styles from "../styles/SignUpForm.module.css";
+import appStyles from "../App.module.css";
 import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
-import CustomButton from "../../components/CustomButton";
-import { useRedirect } from "../../hooks/useRedirect";
+import CustomButton from "../components/CustomButton";
+import { useRedirect } from "../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 
 const SignUp = () => {
