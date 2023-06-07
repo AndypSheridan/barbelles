@@ -11,6 +11,10 @@ import SignUp from "../../components/SignUp";
 import SignIn from "../../components/SignIn";
 
 const SignUpForm = () => {
+    const [currentForm, setCurrentForm] = useState("signup");
+    const toggleForm = (formName) => {
+        setCurrentForm(formName)
+    }
     // useRedirect("loggedIn");
     // const [signUpData, setSignUpData] = useState({
     //     username: "",
@@ -39,12 +43,10 @@ const SignUpForm = () => {
     //     }
     // };
 
-
-
     return (
         <Container className={`${styles.SignUpBg} h-100`}>
             <Row className={`${styles.Row} align-items-center`}>
-            <Col className="mx-auto" md={5}>
+                <Col className="mx-auto" md={5}>
                     {/* <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
@@ -117,14 +119,14 @@ const SignUpForm = () => {
                             {/* <Button variant="primary" type="submit">
                                 Sign up
                             </Button> */}
-                            {/* {errors.non_field_errors?.map((message, idx) => (
+                    {/* {errors.non_field_errors?.map((message, idx) => (
                                 <Alert variant="warning" key={idx}>
                                     {message}
                                 </Alert>
                             ))}
                         </Form>
-                    </Container> */} 
-                    <SignUp />
+                    </Container> */}
+                    {currentForm === "signup" ? <SignUp onFormSwitch={toggleForm} /> : <SignIn onFormSwitch={toggleForm} />}
                 </Col>
                 <Col md={7} className="mt-3">
                     <Container className={styles.About}>
@@ -147,11 +149,11 @@ const SignUpForm = () => {
                             You can interact with the community by adding
                             comments or asking questions in the site content.
                             However you choose to use the community, we are here
-                            to provide a safe and friendly space to hit your goals and targets!
+                            to provide a safe and friendly space to hit your
+                            goals and targets!
                         </p>
                     </Container>
                 </Col>
-                
             </Row>
         </Container>
     );

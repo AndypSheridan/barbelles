@@ -5,6 +5,7 @@ import { useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { removeTokenTimestamp } from "../utils/utils";
+import { useRedirect } from "../hooks/useRedirect";
 // import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
 
@@ -45,7 +46,7 @@ const SignOutModal = () => {
                         Not yet!
                     </Button>
                     
-                    <NavLink to="/">
+                    <NavLink to="/signup">
                     <Button variant="primary" onClick={handleSignOut}>
                         I'm sure!
                     </Button>

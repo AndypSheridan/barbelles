@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../contexts/CurrentUserContext";
 import { Form, Col, Row, Container, Alert } from "react-bootstrap";
-import CustomButton from "../../components/CustomButton";
-import styles from "../../styles/SignInForm.module.css";
+import CustomButton from "../components/CustomButton";
+import styles from "../styles/SignInForm.module.css";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
-import { useRedirect } from "../../hooks/useRedirect";
-import { setTokenTimestamp } from "../../utils/utils";
+import { useRedirect } from "../hooks/useRedirect";
+import { setTokenTimestamp } from "../utils/utils";
+import Button from "react-bootstrap/Button";
 
-const SignIn = () => {
+const SignIn = (props) => {
     const setCurrentUser = useSetCurrentUser();
     useRedirect("loggedIn");
 
@@ -57,57 +58,60 @@ const SignIn = () => {
         //                     <span className="text-center"> Sign up</span>
         //                 </Link>
         //             </Container>
-                    <Container>
-                    <Form
-                        onSubmit={handleSubmit}
-                        className={`mx-auto ${styles.Form}`}
-                    >
-                        <Form.Group controlId="username">
-                            <Form.Label className="d-none">
-                                Enter your username
-                            </Form.Label>
-                            <Form.Control
-                                value={username}
-                                onChange={handleChange}
-                                type="text"
-                                placeholder="Username"
-                                name="username"
-                            />
-                        </Form.Group>
-                        {errors.username?.map((message, idx) => (
-                            <Alert key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
+        <Container>
+            <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
+                <Container className="mb-3 mx-auto text-center">
+                    <span> Sign In</span>
+                    <Button onClick={() => props.onFormSwitch("signup")}>
+                        <span className={styles.SignUpSpan}>Sign Up</span>
+                    </Button>
+                </Container>
+                <Form.Group controlId="username">
+                    <Form.Label className="d-none">
+                        Enter your username
+                    </Form.Label>
+                    <Form.Control
+                        value={username}
+                        onChange={handleChange}
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                    />
+                </Form.Group>
+                {errors.username?.map((message, idx) => (
+                    <Alert key={idx} variant="warning">
+                        {message}
+                    </Alert>
+                ))}
 
-                        <Form.Group controlId="password">
-                            <Form.Label className="d-none">Password</Form.Label>
-                            <Form.Control
-                                value={password}
-                                onChange={handleChange}
-                                type="password"
-                                placeholder="Password"
-                                name="password"
-                            />
-                        </Form.Group>
-                        {errors.password?.map((message, idx) => (
-                            <Alert key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
+                <Form.Group controlId="password">
+                    <Form.Label className="d-none">Password</Form.Label>
+                    <Form.Control
+                        value={password}
+                        onChange={handleChange}
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                    />
+                </Form.Group>
+                {errors.password?.map((message, idx) => (
+                    <Alert key={idx} variant="warning">
+                        {message}
+                    </Alert>
+                ))}
 
-                        <CustomButton type="submit" title="Submit" />
+                <CustomButton type="submit" title="Submit" />
 
-                        {/* <Button className={buttonstyles.Button} type="submit">
+                {/* <Button className={buttonstyles.Button} type="submit">
                             Sign in
                         </Button> */}
-                        {errors.non_field_errors?.map((message, idx) => (
-                            <Alert className="mt-3" key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
-                    </Form>
-                    </Container>
+                {errors.non_field_errors?.map((message, idx) => (
+                    <Alert className="mt-3" key={idx} variant="warning">
+                        {message}
+                    </Alert>
+                ))}
+            </Form>
+        </Container>
         //         </Col>
         //     </Row>
         // </Container>

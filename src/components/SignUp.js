@@ -7,8 +7,9 @@ import axios from "axios";
 import CustomButton from "../components/CustomButton";
 import { useRedirect } from "../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
-const SignUp = () => {
+const SignUp = (props) => {
     useRedirect("loggedIn");
     const [signUpData, setSignUpData] = useState({
         username: "",
@@ -44,11 +45,11 @@ const SignUp = () => {
                             className={`mx-auto ${styles.Form}`}
                         >
                             <Container className="mb-3 mx-auto text-center">
-                                <Link to="/signin">
+                                <Button onClick={() => props.onFormSwitch("signin")}>
                                     <span className={styles.SignUpSpan}>
-                                        Sign in |
+                                        Sign in
                                     </span>
-                                </Link>
+                                </Button>
                                 <span> Sign up</span>
                             </Container>
                             <Form.Group controlId="username">
