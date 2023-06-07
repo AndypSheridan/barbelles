@@ -15,7 +15,7 @@ test("renders navbar component", () => {
     expect(signUpLink).toBeInTheDocument();
 });
 
-test("renders profile link for a logged in user", async () => {
+test("renders posts link for a logged in user", async () => {
     render(
         <Router>
             <CurrentUserProvider>
@@ -23,4 +23,6 @@ test("renders profile link for a logged in user", async () => {
             </CurrentUserProvider>
         </Router>
     );
+
+    const aboutLink = await screen.findByText("About");
 });

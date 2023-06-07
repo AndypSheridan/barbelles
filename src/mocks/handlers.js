@@ -3,7 +3,7 @@ import { rest } from "msw";
 const baseURL = "https://barbelles-api.herokuapp.com/";
 
 export const handlers = [
-    rest.get(`${baseURL}dj-rest/auth/user/`, (req, res, ctx) => {
+    rest.get(`${baseURL}dj-rest-auth/user/`, (req, res, ctx) => {
         return res(
             ctx.json({
                 pk: 2,
