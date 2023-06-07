@@ -63,6 +63,7 @@ export const ProfileDataProvider = ({ children }) => {
     }
 
     useEffect(() => {
+        console.log(currentUser)
         const handleMount = async () => {
             try {
                 const { data } = await axiosReq.get(

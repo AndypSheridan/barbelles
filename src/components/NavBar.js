@@ -14,12 +14,17 @@ import Avatar from "./Avatar";
 // import axios from "axios";
 import { NavDropdown } from "react-bootstrap";
 import SignOutModal from "./SignOutModal";
+// // import useProfileData from "../contexts/ProfileDataContext"
+// import { useProfileData } from "../contexts/ProfileDataContext";
 
 const NavBar = () => {
-
     const currentUser = useCurrentUser();
+    // const profiles = useProfileData();
+    // const currentUserProfile = profiles.pageProfile?.results[0]
     // const setCurrentUser = useSetCurrentUser();
-    const is_staff = currentUser?.is_staff === true;
+    // const is_staff = currentUserProfile?.is_staff;
+    // console.log(currentUserProfile);
+    // console.log(profiles);
 
     // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
@@ -32,15 +37,14 @@ const NavBar = () => {
     //         console.log(err);
     //     }
     // };
-    
 
     const signedInIcons = (
         <>
-        <NavLink className={styles.NavLink} to="/about">
+            <NavLink className={styles.NavLink} to="/about">
                 <i className="fa-solid fa-circle-info pl-3"></i>
                 About
             </NavLink>
-            
+
             <NavDropdown
                 alignRight
                 title={
@@ -63,14 +67,15 @@ const NavBar = () => {
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                to="/posts/share"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <i className="fa-solid fa-arrow-up-from-bracket"></i> Share post
-            </NavLink>
-            <NavLink
+                    to="/posts/share"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share
+                    post
+                </NavLink>
+                <NavLink
                     to="/liked"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
@@ -116,10 +121,10 @@ const NavBar = () => {
                 className={styles.FeedsDropdown}
             >
                 {/* <NavDropdown.Item> */}
-                
+
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                
+
                 <NavLink
                     to="/tutorials"
                     className={styles.NavLink}
@@ -128,16 +133,20 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-list"></i> Tutorials
                 </NavLink>
-                
+
+
+                {/* {is_staff &&  */}
                 <NavLink
                     to="/tutorials/share"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
                 >
-                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
+                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share
+                    tutorial
                 </NavLink>
-                
+                {/* } */}
+
                 <NavLink
                     to="/favourited"
                     className={styles.NavLink}
@@ -166,7 +175,7 @@ const NavBar = () => {
                 </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
-                
+
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}
 
@@ -214,13 +223,17 @@ const NavBar = () => {
             fixed="top"
         >
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
-                { currentUser ? (
-                <NavLink to="/">
-                    <Navbar.Brand className={styles.NavBarBrandText}>
-                        <img src={logo} className={styles.Logo} alt="logo" />{" "}
-                        BarBelles
-                    </Navbar.Brand>
-                </NavLink>
+                {currentUser ? (
+                    <NavLink to="/">
+                        <Navbar.Brand className={styles.NavBarBrandText}>
+                            <img
+                                src={logo}
+                                className={styles.Logo}
+                                alt="logo"
+                            />{" "}
+                            BarBelles
+                        </Navbar.Brand>
+                    </NavLink>
                 ) : (
                     <Navbar.Brand className={styles.NavBarBrandText}>
                         <img src={logo} className={styles.Logo} alt="logo" />{" "}
