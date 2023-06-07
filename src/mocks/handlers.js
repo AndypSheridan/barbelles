@@ -17,4 +17,7 @@ export const handlers = [
             })
         );
     }),
+    rest.post(`${baseURL}dj-rest-auth/user/logout/`, (req, res, ctx) => {
+        return res(ctx.status(200));
+    }),
 ];
