@@ -36,7 +36,10 @@ const NavBar = () => {
 
     const signedInIcons = (
         <>
-        
+        <NavLink className={styles.NavLink} to="/about">
+                <i className="fa-solid fa-circle-info pl-3"></i>
+                About
+            </NavLink>
             
             <NavDropdown
                 alignRight
@@ -184,14 +187,14 @@ const NavBar = () => {
     );
     const signedOutIcons = (
         <>
-            <NavLink
+            {/* <NavLink
                 to="/signin"
                 className={styles.NavLink}
                 activeClassName={styles.Active}
                 onClick={() => setExpanded(false)}
             >
                 <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign in
-            </NavLink>
+            </NavLink> */}
             <NavLink
                 to="/signup"
                 className={styles.NavLink}

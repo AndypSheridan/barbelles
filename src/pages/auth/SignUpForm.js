@@ -46,7 +46,7 @@ const SignUpForm = () => {
     return (
         <Container className={`${styles.SignUpBg} h-100`}>
             <Row className={`${styles.Row} align-items-center`}>
-                <Col className="mx-auto" md={5}>
+                <Col className="ml-auto" md={5}>
                     {/* <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
@@ -129,7 +129,7 @@ const SignUpForm = () => {
                     {currentForm === "signup" ? <SignUp onFormSwitch={toggleForm} /> : <SignIn onFormSwitch={toggleForm} />}
                 </Col>
                 <Col md={7} className="mt-3">
-                    <Container className={styles.About}>
+                    <Container className={`${styles.About} mb-3`}>
                         <h2>Welcome to Barbelles</h2>
                         <p>
                             We are an online fitness community for women. It
