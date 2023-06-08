@@ -8,6 +8,8 @@ import { removeTokenTimestamp } from "../utils/utils";
 import { useRedirect } from "../hooks/useRedirect";
 // import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
+import { ToastContainer, Slide, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignOutModal = () => {
     const [show, setShow] = useState(false);
@@ -22,7 +24,8 @@ const SignOutModal = () => {
             await axios.post("dj-rest-auth/logout/");
             setCurrentUser(null);
             removeTokenTimestamp();
-            history.push("/signup")
+            history.push("/signup");
+            
         } catch (err) {
             console.log(err);
         }
@@ -47,11 +50,11 @@ const SignOutModal = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Not yet!
                     </Button>
-                    
+
                     <NavLink to="/signup">
-                    <Button variant="primary" onClick={handleSignOut}>
-                        I'm sure!
-                    </Button>
+                        <Button variant="primary" onClick={handleSignOut}>
+                            I'm sure!
+                        </Button>
                     </NavLink>
                 </Modal.Footer>
             </Modal>

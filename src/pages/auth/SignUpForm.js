@@ -9,6 +9,8 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 import SignUp from "../../components/SignUp";
 import SignIn from "../../components/SignIn";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css"
 
 
 const SignUpForm = () => {
@@ -16,7 +18,6 @@ const SignUpForm = () => {
     const toggleForm = (formName) => {
         setCurrentForm(formName)
     }
-
     
     // useRedirect("loggedIn");
     // const [signUpData, setSignUpData] = useState({
@@ -50,6 +51,7 @@ const SignUpForm = () => {
         <Container className={`${styles.SignUpBg} h-100`}>
             <Row className={`${styles.Row} align-items-center`}>
                 <Col className="ml-auto" md={5}>
+                    {/* <ToastContainer /> */}
                     {/* <Container className="p-0 mx-auto">
                         <Form
                             onSubmit={handleSubmit}
