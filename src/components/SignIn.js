@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSetCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import CustomButton from "../components/CustomButton";
 import styles from "../styles/SignInForm.module.css";
@@ -12,7 +12,9 @@ import { toast } from "react-toastify";
 
 
 const SignIn = (props) => {
+
     const setCurrentUser = useSetCurrentUser();
+
     useRedirect("loggedIn");
 
     const [signInData, setSigninData] = useState({
@@ -43,7 +45,7 @@ const SignIn = (props) => {
             setCurrentUser(data.user);
             setTokenTimestamp(data);
             history.goBack();
-            toast.success("Sign in successful")
+            toast.success(`Signed in as ${username}`)
         } catch (err) {
             setErrors(err.response?.data);
         }

@@ -39,7 +39,7 @@ const SignUp = (props) => {
             await axios.post("/dj-rest-auth/registration/", signUpData);
             // history.push("/signup");
             props.onFormSwitch("signin");
-            toast("Please sign in")
+            toast.success("Signed up! Please sign in")
         } catch (err) {
             setErrors(err.response?.data);
         }
