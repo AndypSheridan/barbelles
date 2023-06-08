@@ -9,6 +9,8 @@ import { useRedirect } from "../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import btnStyles from "../styles/Button.module.css"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
 const SignUp = (props) => {
     useRedirect("loggedIn");
@@ -21,6 +23,10 @@ const SignUp = (props) => {
     const { username, password1, password2 } = signUpData;
     const history = useHistory();
     const [errors, setErrors] = useState({});
+
+    const showToastMessage = () => {
+        toast.success("Registration successful, please log in", { position: toast.POSITION.TOP_RIGHT});
+    }
 
     const handleChange = (event) => {
         setSignUpData({
@@ -35,6 +41,7 @@ const SignUp = (props) => {
             await axios.post("/dj-rest-auth/registration/", signUpData);
             // history.push("/signup");
             props.onFormSwitch("signin");
+            {showToastMessage}
         } catch (err) {
             setErrors(err.response?.data);
         }

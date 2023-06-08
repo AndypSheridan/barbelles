@@ -10,11 +10,14 @@ import { Tabs, Tab } from "react-bootstrap";
 import SignUp from "../../components/SignUp";
 import SignIn from "../../components/SignIn";
 
+
 const SignUpForm = () => {
     const [currentForm, setCurrentForm] = useState("signup");
     const toggleForm = (formName) => {
         setCurrentForm(formName)
     }
+
+    
     // useRedirect("loggedIn");
     // const [signUpData, setSignUpData] = useState({
     //     username: "",
