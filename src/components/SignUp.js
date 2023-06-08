@@ -9,6 +9,7 @@ import { useRedirect } from "../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import btnStyles from "../styles/Button.module.css"
+import { ToastContainer, toast } from "react-toastify";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css"
 
@@ -38,6 +39,7 @@ const SignUp = (props) => {
             await axios.post("/dj-rest-auth/registration/", signUpData);
             // history.push("/signup");
             props.onFormSwitch("signin");
+            toast("Please sign in")
         } catch (err) {
             setErrors(err.response?.data);
         }
@@ -101,6 +103,7 @@ const SignUp = (props) => {
                 ))}
 
                 <CustomButton type="submit" title="Submit" />
+                <ToastContainer />
 
                 {/* <Button variant="primary" type="submit">
                                 Sign up

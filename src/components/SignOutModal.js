@@ -25,7 +25,7 @@ const SignOutModal = () => {
             setCurrentUser(null);
             removeTokenTimestamp();
             history.push("/signup");
-            
+            toast.success("logged out")
         } catch (err) {
             console.log(err);
         }

@@ -6,12 +6,14 @@ import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
+import { ToastContainer } from "react-toastify";
 
 ReactDOM.render(
     // <React.StrictMode>
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
+                    <ToastContainer />
                     <App />
                 </ProfileDataProvider>
             </CurrentUserProvider>
