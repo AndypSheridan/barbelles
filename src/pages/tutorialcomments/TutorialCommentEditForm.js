@@ -6,6 +6,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 // import styles from "../../styles/CommentCreateEditForm.module.css";
 import styles from "../../styles/CommentShareEditForm.module.css";
 import { Container } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 function TutorialCommentEditForm(props) {
     const { id, content, setShowEditForm, setTutorialComments } = props;
@@ -35,6 +36,7 @@ function TutorialCommentEditForm(props) {
                 }),
             }));
             setShowEditForm(false);
+            toast.success("Comment updated")
         } catch (err) {
             console.log(err);
         }

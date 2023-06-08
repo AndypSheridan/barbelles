@@ -5,6 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 
 
 
@@ -36,6 +37,7 @@ function TutorialCommentShareForm(props) {
                 ],
             }));
             setContent("");
+            toast.success("Tutorial posted!")
         } catch (err) {
             console.log(err);
         }

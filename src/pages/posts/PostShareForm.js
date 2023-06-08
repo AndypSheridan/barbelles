@@ -14,6 +14,7 @@ import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+import { toast } from "react-toastify";
 
 function PostShareForm() {
     useRedirect("loggedOut");
@@ -57,6 +58,7 @@ function PostShareForm() {
         try {
             const { data } = await axiosReq.post("/posts/", formData);
             history.push(`/posts/${data.id}`);
+            toast.success("Posted!")
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
