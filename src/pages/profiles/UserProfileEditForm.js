@@ -17,6 +17,7 @@ import {
 import styles from "../../styles/UserProfileEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import { toast } from "react-toastify";
 
 const UserProfileEditForm = () => {
     const currentUser = useCurrentUser();
@@ -77,6 +78,7 @@ const UserProfileEditForm = () => {
                 profile_image: data.image,
             }));
             history.goBack();
+            toast.success("Profile updated")
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);

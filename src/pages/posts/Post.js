@@ -6,6 +6,7 @@ import Avatar from "../../components/Avatar";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { toast } from "react-toastify";
 
 const Post = (props) => {
     const {
@@ -32,6 +33,7 @@ const Post = (props) => {
         try {
             await axiosRes.delete(`/posts/${id}/`);
             history.goBack();
+            toast.success("Post deleted")
         } catch (err) {
             console.log(err);
         }
@@ -39,6 +41,7 @@ const Post = (props) => {
 
     const handleEdit = () => {
         history.push(`/posts/${id}/edit`);
+        toast.success("Post updated")
     };
 
     const handleLike = async () => {

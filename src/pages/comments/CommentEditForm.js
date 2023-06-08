@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentShareEditForm.module.css";
+import { toast } from "react-toastify";
 
 const CommentEditForm = (props) => {
     const { id, content, setShowEditForm, setComments } = props;
@@ -32,6 +33,7 @@ const CommentEditForm = (props) => {
             }));
 
             setShowEditForm(false);
+            toast.success("Comment updated")
         } catch (err) {}
     };
 

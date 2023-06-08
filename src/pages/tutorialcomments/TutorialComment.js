@@ -8,6 +8,7 @@ import Avatar from "../../components/Avatar";
 import TutorialCommentEditForm from "./TutorialCommentEditForm";
 // import { TutorialCommentDropDown } from "../../components/ComponentDropDown";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { toast } from "react-toastify";
 
 const TutorialComment = (props) => {
     const {
@@ -44,6 +45,7 @@ const TutorialComment = (props) => {
                     (tutorialComment) => tutorialComment.id !== id
                 ),
             }));
+            toast.success("Comment deleted")
         } catch (err) {
             console.log(err);
         }

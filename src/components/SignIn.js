@@ -8,6 +8,7 @@ import axios from "axios";
 import { useRedirect } from "../hooks/useRedirect";
 import { setTokenTimestamp } from "../utils/utils";
 import Button from "react-bootstrap/Button";
+import { toast } from "react-toastify";
 
 
 const SignIn = (props) => {
@@ -42,6 +43,7 @@ const SignIn = (props) => {
             setCurrentUser(data.user);
             setTokenTimestamp(data);
             history.goBack();
+            toast.success("Sign in successful")
         } catch (err) {
             setErrors(err.response?.data);
         }

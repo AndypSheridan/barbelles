@@ -9,6 +9,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { axiosRes } from "../../api/axiosDefaults";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { toast } from "react-toastify";
 
 const Tutorial = (props) => {
     const {
@@ -75,12 +76,14 @@ const Tutorial = (props) => {
 
     const handleEdit = () => {
         history.push(`/tutorials/${id}/edit`);
+        toast.success("Tutorial updated")
     };
 
     const handleDelete = async () => {
         try {
             await axiosRes.delete(`/tutorials/${id}/`);
             history.goBack();
+            toast.success("Tutorial deleted")
         } catch (err) {
             console.log(err);
         }

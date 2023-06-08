@@ -7,6 +7,7 @@ import CommentEditForm from "./CommentEditForm";
 import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const PostComment = (props) => {
     const {
@@ -43,6 +44,7 @@ const PostComment = (props) => {
                     (comment) => comment.id !== id
                 ),
             }));
+            toast.success("Comment deleted")
         } catch (err) {
             console.log(err);
         }

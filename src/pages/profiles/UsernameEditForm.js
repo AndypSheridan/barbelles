@@ -16,6 +16,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import { toast } from "react-toastify";
 
 const UsernameEditForm = () => {
     const [username, setUsername] = useState("");
@@ -46,6 +47,7 @@ const UsernameEditForm = () => {
                 username,
             }));
             history.goBack();
+            toast.success("Username updated")
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);

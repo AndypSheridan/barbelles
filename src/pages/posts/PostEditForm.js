@@ -11,6 +11,7 @@ import Image from "react-bootstrap/Image";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { toast } from "react-toastify";
 
 const PostEditForm = () => {
     const [errors, setErrors] = useState();
@@ -74,6 +75,7 @@ const PostEditForm = () => {
         try {
             await axiosReq.put(`/posts/${id}/`, formData);
             history.push(`/posts/${id}`);
+            toast.success("Post edited")
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {

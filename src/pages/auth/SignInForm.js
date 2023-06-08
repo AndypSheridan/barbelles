@@ -7,6 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignInForm = () => {
     const setCurrentUser = useSetCurrentUser();
@@ -40,6 +41,7 @@ const SignInForm = () => {
             setCurrentUser(data.user);
             setTokenTimestamp(data);
             history.goBack();
+            toast.success("Sign in successful")
         } catch (err) {
             setErrors(err.response?.data);
         }
@@ -97,6 +99,7 @@ const SignInForm = () => {
                         ))}
 
                         <CustomButton type="submit" title="Submit" />
+                        <ToastContainer />
 
                         {/* <Button className={buttonstyles.Button} type="submit">
                             Sign in
