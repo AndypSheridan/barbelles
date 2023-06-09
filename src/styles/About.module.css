@@ -1,7 +1,19 @@
 .AboutContainer {
     padding-top: 8rem;
     background: #000;
-    color: white;
+    color: #f4bfdb;
     min-width: 100vw;
     min-height: 100vh;
+}
+
+.AboutRow1 {
+    padding-bottom: 1rem;
+}
+
+.AboutHeader {
+    font-family: "Satisfy", cursive;
+}
+
+.AboutCol1 {
+    background-color: #87baab;
 }
