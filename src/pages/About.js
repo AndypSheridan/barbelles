@@ -21,6 +21,7 @@ const About = () => {
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage1}
+                        alt="woman sitting with medicine ball"
                     />
                 </Col>
                 <Col
@@ -47,6 +48,7 @@ const About = () => {
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage5}
+                        alt="woman on cross trainer"
                     />
                 </Col>
             </Row>
@@ -71,12 +73,17 @@ const About = () => {
                             you can easily find them again! You can also comment
                             on their posts.
                         </p>
+                        <p>
+                            Tell us a bit more about yourself by updating your
+                            profile and even upload an image!
+                        </p>
                     </Container>
                 </Col>
                 <Col className={`${styles.AboutCol2}`} lg={4}>
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage3}
+                        alt="kate training"
                     />
                 </Col>
                 <Col
@@ -84,26 +91,16 @@ const About = () => {
                     lg={4}
                 >
                     <Container className="align-items-center">
-                        <h2>What else can I do?</h2>
+                        <h2>Who's in charge here anyway?</h2>
                         <p>
-                            Struggling for inspiration? Check out the tutorials
-                            section. We are always adding new content so if
-                            nothing ignites that fire, check back again
-                            regularly!
-                        </p>
-                        <p>
-                            Follow other users! You can easily follow other
-                            users and like their posts! Posts you have liked
-                            will be saved in the 'Liked' tab in the navbar so
-                            you can easily find them again! You can also comment
-                            on their posts.
-                        </p>
-                        <p>
-                            You can interact with the community by adding
-                            comments or asking questions in the site content.
-                            However you choose to use the community, we are here
-                            to provide a safe and friendly space to hit your
-                            goals and targets!
+                            BarBelles was started in 2021 by Kate Ross (check
+                            her out pumping those battle ropes!) Kate is a
+                            leading industry expert with over ten years
+                            experience as a Trainer and Fitness Manager. But the
+                            road to discovering the benefits of fitness wasn't
+                            an easy one for Kate, which makes her perfectly
+                            placed to help out any of you who are hesitant to
+                            start on your own path!
                         </p>
                     </Container>
                 </Col>
@@ -113,6 +110,7 @@ const About = () => {
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage2}
+                        alt="group of women sitting"
                     />
                 </Col>
                 <Col
@@ -123,10 +121,11 @@ const About = () => {
                         <h2>Follow us...</h2>
                     </Container>
                 </Col>
-                <Col className={`${styles.AboutCol2}`} lg={4}>
+                <Col className={`${styles.AboutCol2} d-none d-md-flex`} lg={4}>
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage6}
+                        alt="woman smiling"
                     />
                 </Col>
             </Row>
