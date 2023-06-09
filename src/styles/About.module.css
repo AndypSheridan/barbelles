@@ -2,13 +2,16 @@
     padding-top: 8rem;
     background: #000;
     color: #f4bfdb;
-    min-width: 100vw;
-    height: 120vh;
+    /* min-width: 100vw;
+    height: 120vh; */
+    margin: 0px;
+    height: 100%;
+    min-width: 100%;
 }
 
 .AboutRow1 {
     padding-bottom: 1rem;
-    height: 800px;
+
 }
 
 .AboutHeader {
@@ -16,5 +19,19 @@
 }
 
 .AboutCol1 {
-    background-color: #87baab;
+    
 }
+
+.AboutCol2Image {
+object-fit: cover;
+    /* filter: opacity(95%); */
+}
+
+/* @media only screen and (max-width: 992px) {
+    .AboutCol2 {
+        background-image: url("../assets/community.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    }
+} */
