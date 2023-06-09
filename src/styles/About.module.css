@@ -1,3 +1,7 @@
 .AboutContainer {
     padding-top: 8rem;
+    background: #000;
+    color: white;
+    min-width: 100vw;
+    min-height: 100vh;
 }
