@@ -7,6 +7,7 @@ import communityImage2 from "../assets/community3.jpg";
 import communityImage1 from "../assets/community4.jpg";
 import communityImage3 from "../assets/kateross.jpg";
 import communityImage5 from "../assets/community5.jpg"
+import communityImage6 from "../assets/community6.jpg"
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -110,7 +111,7 @@ const About = () => {
                 </Col>
             </Row>
             <Row className={`${styles.AboutRow1}`}>
-                <Col className={`${styles.AboutCol2}`} lg={6}>
+                <Col className={`${styles.AboutCol2}`} lg={4}>
                     <img
                         className={`${styles.AboutCol2Image} img-fluid`}
                         src={communityImage2}
@@ -118,11 +119,17 @@ const About = () => {
                 </Col>
                 <Col
                     className={`${styles.AboutCol1} align text-center p-4`}
-                    lg={6}
+                    lg={4}
                 >
                     <Container className="align-items-center">
                         <h2>Ways to follow or get in touch...</h2>
                     </Container>
+                </Col>
+                <Col className={`${styles.AboutCol2}`} lg={4}>
+                    <img
+                        className={`${styles.AboutCol2Image} img-fluid`}
+                        src={communityImage6}
+                    />
                 </Col>
             </Row>
         </Container>
