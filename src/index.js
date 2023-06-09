@@ -7,14 +7,14 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import { ToastContainer } from "react-toastify";
-import appStyles from "./App.module.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
     // <React.StrictMode>
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
-                    <ToastContainer theme="dark" />
+                    <ToastContainer theme="dark" progressClassName="toastProgress" />
                     <App />
                 </ProfileDataProvider>
             </CurrentUserProvider>
