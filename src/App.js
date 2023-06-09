@@ -19,6 +19,7 @@ import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
 import TutorialDetailPage from "./pages/tutorials/TutorialDetailPage";
 import TutorialsFeedPage from "./pages/tutorials/TutorialsFeedPage";
 import TutorialEditForm from "./pages/tutorials/TutorialEditForm";
+import About from "./pages/About";
 // import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -37,6 +38,13 @@ function App() {
                         path="/"
                         render={() => (
                             <PostsFeedPage message="No search results found. Adjust the search keyword(s)" />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/about"
+                        render={() => (
+                            <About />
                         )}
                     />
                     <Route
