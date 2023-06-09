@@ -7,13 +7,14 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import { ToastContainer } from "react-toastify";
+import appStyles from "./App.module.css";
 
 ReactDOM.render(
     // <React.StrictMode>
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
-                    <ToastContainer />
+                    <ToastContainer theme="dark" />
                     <App />
                 </ProfileDataProvider>
             </CurrentUserProvider>
