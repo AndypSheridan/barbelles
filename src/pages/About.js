@@ -10,7 +10,7 @@ const About = () => {
             <h1 className={`${styles.AboutHeader} text-center`}>About our community</h1>
             <Row className={`${styles.AboutRow1} justify-content-center`}>
                 <Col className={`${styles.AboutCol1}`} lg={6}></Col>
-                <Col className={`${styles.AboutCol1}`}lg={6}></Col>
+                <Col className={`${styles.AboutCol2}`}lg={6}></Col>
             </Row>
         </Container>
     );
