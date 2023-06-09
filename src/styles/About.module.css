@@ -22,7 +22,8 @@
 .AboutCol1 {
     color: #512d38;
     background-color: #f4bfdb;
-    max-height: 100%
+    max-height: 100%;
+    font-size: 1.2rem;
 }
 
 .AboutCol2 {
