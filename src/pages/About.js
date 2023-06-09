@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container";
 import communityImage2 from "../assets/community3.jpg";
 import communityImage1 from "../assets/community4.jpg";
 import communityImage3 from "../assets/kateross.jpg";
-import communityImage5 from "../assets/community5.jpg"
-import communityImage6 from "../assets/community6.jpg"
+import communityImage5 from "../assets/community5.jpg";
+import communityImage6 from "../assets/community6.jpg";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -58,22 +58,18 @@ const About = () => {
                     <Container className="align-items-center">
                         <h2>What else can I do?</h2>
                         <p>
-                            Yes, we know that you can do that on In
+                            Struggling for inspiration? Check out the tutorials
+                            section. You can bookmark tutorials so they appear
+                            in the 'Saved' section of the navbar. We are always
+                            adding new content so if nothing ignites that fire,
+                            check back again regularly!
                         </p>
                         <p>
-                            You can quickly create an account to start sharing
-                            your fitness journey, take inspiration from other
-                            users, follow their own stories and learn from our
-                            ever-growing range of tutorials. You can tell us
-                            more about yourself by adding to and editing your
-                            profile.
-                        </p>
-                        <p>
-                            You can interact with the community by adding
-                            comments or asking questions in the site content.
-                            However you choose to use the community, we are here
-                            to provide a safe and friendly space to hit your
-                            goals and targets!
+                            Follow other users! You can easily follow other
+                            users and like their posts! Posts you have liked
+                            will be saved in the 'Liked' tab in the navbar so
+                            you can easily find them again! You can also comment
+                            on their posts.
                         </p>
                     </Container>
                 </Col>
@@ -90,15 +86,17 @@ const About = () => {
                     <Container className="align-items-center">
                         <h2>What else can I do?</h2>
                         <p>
-                            Yes, we know that you can do that on In
+                            Struggling for inspiration? Check out the tutorials
+                            section. We are always adding new content so if
+                            nothing ignites that fire, check back again
+                            regularly!
                         </p>
                         <p>
-                            You can quickly create an account to start sharing
-                            your fitness journey, take inspiration from other
-                            users, follow their own stories and learn from our
-                            ever-growing range of tutorials. You can tell us
-                            more about yourself by adding to and editing your
-                            profile.
+                            Follow other users! You can easily follow other
+                            users and like their posts! Posts you have liked
+                            will be saved in the 'Liked' tab in the navbar so
+                            you can easily find them again! You can also comment
+                            on their posts.
                         </p>
                         <p>
                             You can interact with the community by adding
@@ -122,7 +120,7 @@ const About = () => {
                     lg={4}
                 >
                     <Container className="align-items-center">
-                        <h2>Ways to follow or get in touch...</h2>
+                        <h2>Follow us...</h2>
                     </Container>
                 </Col>
                 <Col className={`${styles.AboutCol2}`} lg={4}>
