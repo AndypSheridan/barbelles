@@ -15,7 +15,9 @@ html, body {
     min-height: 100vh;
 }
 
-
+.customToastContainer .Toastify__toast-body .Toastify__toast-icon {
+    color: #ff66b3;
+}
 
 /* div {
     overflow-x: hidden;
