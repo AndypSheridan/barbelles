@@ -14,7 +14,7 @@ ReactDOM.render(
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
-                    <ToastContainer theme="dark" progressClassName="toastProgress" />
+                    <ToastContainer theme="dark" />
                     <App />
                 </ProfileDataProvider>
             </CurrentUserProvider>

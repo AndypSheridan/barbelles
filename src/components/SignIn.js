@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import {
+    useCurrentUser,
+    useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import { Form, Col, Row, Container, Alert } from "react-bootstrap";
 import CustomButton from "../components/CustomButton";
 import styles from "../styles/SignInForm.module.css";
@@ -10,9 +13,7 @@ import { setTokenTimestamp } from "../utils/utils";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
 
-
 const SignIn = (props) => {
-
     const setCurrentUser = useSetCurrentUser();
 
     useRedirect("loggedIn");
@@ -45,7 +46,11 @@ const SignIn = (props) => {
             setCurrentUser(data.user);
             setTokenTimestamp(data);
             history.goBack();
-            toast.success(`Signed in as ${username}`)
+
+            toast.success(`Signed in as ${username}`, {
+                progressStyle: { background: "#f4bfdb" },
+                bodyClassName: { color: "#f4bfdb"}
+            });
         } catch (err) {
             setErrors(err.response?.data);
         }
