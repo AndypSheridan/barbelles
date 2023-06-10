@@ -48,7 +48,7 @@ const SignIn = (props) => {
             history.goBack();
 
             toast(`Signed in as ${username}`, {
-                progressStyle: { background: "#ff66b3" },
+                progressStyle: { background: "#b27092" },
                 bodyClassName: { color: "#f4bfdb"},
             });
         } catch (err) {

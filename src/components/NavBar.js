@@ -136,6 +136,7 @@ const NavBar = () => {
 
 
                 {/* {is_staff &&  */}
+                {currentUser?.username === "testuser1" && 
                 <NavLink
                     to="/tutorials/share"
                     className={styles.NavLink}
@@ -145,6 +146,7 @@ const NavBar = () => {
                     <i className="fa-solid fa-arrow-up-from-bracket"></i> Share
                     tutorial
                 </NavLink>
+}
                 {/* } */}
 
                 <NavLink
