@@ -136,7 +136,7 @@ const NavBar = () => {
 
 
                 {/* {is_staff &&  */}
-                {currentUser?.username === "testuser1" && 
+                {currentUser?.username === "testuser1" || currentUser?.username === "admin"  && 
                 <NavLink
                     to="/tutorials/share"
                     className={styles.NavLink}
