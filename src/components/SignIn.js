@@ -12,6 +12,7 @@ import { useRedirect } from "../hooks/useRedirect";
 import { setTokenTimestamp } from "../utils/utils";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
+import appStyles from "../App.module.css"
 
 const SignIn = (props) => {
     const setCurrentUser = useSetCurrentUser();
