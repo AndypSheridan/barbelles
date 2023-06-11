@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const SocialLinks = () => {
-  return (
-    <div>Social Links</div>
-  )
-}
+    return (
+        <div>
+            <h3>Follow...</h3>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" />
+        </div>
+    );
+};
 
-export default SocialLinks
+export default SocialLinks;
