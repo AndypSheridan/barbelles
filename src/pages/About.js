@@ -118,7 +118,8 @@ const About = () => {
                     lg={4}
                 >
                     <Container className="align-items-center">
-                        <h2>Follow us...</h2>
+                        <h2>Follow</h2>
+                        
                     </Container>
                 </Col>
                 <Col className={`${styles.AboutCol2} d-none d-md-flex`} lg={4}>
