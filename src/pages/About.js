@@ -9,6 +9,7 @@ import communityImage3 from "../assets/kateross.jpg";
 import communityImage5 from "../assets/community5.jpg";
 import communityImage6 from "../assets/community6.jpg";
 import { Link } from "react-router-dom";
+import SocialLinks from "../components/SocialLinks";
 
 const About = () => {
     return (
@@ -118,8 +119,8 @@ const About = () => {
                     lg={4}
                 >
                     <Container className="align-items-center">
-                        <h2>Follow</h2>
-                        
+                        <SocialLinks />
+
                     </Container>
                 </Col>
                 <Col className={`${styles.AboutCol2} d-none d-md-flex`} lg={4}>
