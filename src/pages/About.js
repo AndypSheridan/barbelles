@@ -115,10 +115,10 @@ const About = () => {
                     />
                 </Col>
                 <Col
-                    className={`${styles.AboutCol1} align text-center p-4`}
+                    className={`${styles.AboutCol1} d-md-flex align text-center p-4`}
                     lg={4}
                 >
-                    <Container className="align-items-center">
+                    <Container className="align-items-center d-flex justify-content-center">
                         <SocialLinks />
 
                     </Container>
