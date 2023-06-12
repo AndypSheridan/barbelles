@@ -75,7 +75,7 @@ const PostEditForm = () => {
         try {
             await axiosReq.put(`/posts/${id}/`, formData);
             history.push(`/posts/${id}`);
-            toast.success("Post edited")
+            toast.success("Post edited");
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
@@ -118,12 +118,17 @@ const PostEditForm = () => {
             ))}
 
             <Button
-                className={btnStyles.Black}
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
-            <Button type="submit">Update</Button>
+            <Button
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                type="submit"
+            >
+                Update
+            </Button>
         </div>
     );
 

@@ -138,7 +138,7 @@ const TutorialEditForm = () => {
                 Cancel
             </Button>
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Dark}`}
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
                 type="submit"
             >
                 Save
