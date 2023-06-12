@@ -50,7 +50,7 @@ const SignUpForm = () => {
     return (
         <Container className={`${styles.SignUpBg}`}>
             <Row className={`${styles.Row} justify-content-start align-items-center`}>
-                <Col lg={6} className="mt-3">
+                <Col md={6} className="mt-3">
                     {/* <ToastContainer /> */}
                     {/* <Container className="p-0 mx-auto">
                         <Form
@@ -137,6 +137,9 @@ const SignUpForm = () => {
                     ) : (
                         <SignIn onFormSwitch={toggleForm} />
                     )}
+                </Col>
+                <Col md={6}>
+
                 </Col>
             </Row>
         </Container>
