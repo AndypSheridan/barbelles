@@ -73,9 +73,9 @@ const SignIn = (props) => {
         //             </Container>
         <Container>
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
-                <Container className="mb-3 mx-auto text-center">
+                <Container className="mb-3 px-2 mx-auto text-center">
                     <Welcome />
-                    <span> Sign in below or </span>
+                    <span className={styles.Span}> Sign in below or </span>
                     <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} onClick={() => props.onFormSwitch("signup")}>
                         Sign Up
                     </Button>

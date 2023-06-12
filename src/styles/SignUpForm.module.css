@@ -67,6 +67,10 @@
     color: #ff66b3;
 }
 
+.Span {
+    color: #ffe9f3;
+}
+
 @media only screen and (max-width: 768px) {
     .Row {
         padding-top: 8rem;

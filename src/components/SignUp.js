@@ -46,12 +46,12 @@ const SignUp = (props) => {
     };
 
     return (
-        <Container className="p-0 mx-auto">
+        <Container className="px-2 mx-auto">
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
                 
                 <Container className="mb-3 mx-auto text-center">
                 <Welcome />
-                    <span> Sign up below or </span>
+                    <span className={styles.Span}> Sign up below or </span>
                     <Button
                         className={`${btnStyles.Button} ${btnStyles.Pink}`}
                         onClick={() => props.onFormSwitch("signin")}
