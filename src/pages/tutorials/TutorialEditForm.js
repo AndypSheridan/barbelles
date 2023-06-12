@@ -132,17 +132,24 @@ const TutorialEditForm = () => {
             ))}
 
             <Button
-                className={btnStyles.Black}
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
-            <Button type="submit">Save</Button>
+            <Button
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
+                type="submit"
+            >
+                Save
+            </Button>
         </div>
     );
 
     return (
-        <Container className={`${styles.TutorialShareEditBgImage} ${styles.TutorialShareContainer}`}>
+        <Container
+            className={`${styles.TutorialShareEditBgImage} ${styles.TutorialShareContainer}`}
+        >
             <Form
                 className={`${styles.TutorialShareEditForm} ${styles.TutorialShareEditFormBg}`}
                 onSubmit={handleSubmit}
@@ -189,7 +196,11 @@ const TutorialEditForm = () => {
                             <div className="d-md-none">{textFields}</div>
                         </Container>
                     </Col> */}
-                    <Col md={6} lg={6} className="d-none mx-auto d-md-block p-2 p-md-2">
+                    <Col
+                        md={6}
+                        lg={6}
+                        className="d-none mx-auto d-md-block p-2 p-md-2"
+                    >
                         <Container
                             className={`${appStyles.Content} ${styles.TutorialShareContainer}`}
                         >
