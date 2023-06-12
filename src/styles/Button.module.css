@@ -2,8 +2,8 @@
     font-size: 1.2rem;
     align-self: center;
     padding: 4px 10px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     min-width: 75px;
     border: transparent;
     background-color: #87baab;
@@ -77,8 +77,8 @@
     color: #ffffff;
 }
 
-.Blue,
-.BlueOutline:hover,
+.Dark,
+.DarkOutline:hover,
 .Bright:hover {
     background-color: #512d38;
     color: #ffffff;

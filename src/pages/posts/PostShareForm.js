@@ -101,12 +101,12 @@ function PostShareForm() {
             ))}
 
             <Button
-                className={btnStyles.Black}
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
-            <Button type="submit">Share</Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} type="submit">Share</Button>
         </div>
     );
 
