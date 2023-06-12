@@ -7,15 +7,15 @@
     min-width: 75px;
     border: transparent;
     background-color: #87baab;
-    color: #512d38;
+    color: #FFF;
 }
 
 .Button:hover {
     opacity: 0.8;
     border-color: transparent;
     cursor: pointer;
-    color: #87baab;
-    background-color: #512d38;
+    color: #ffe9f3;
+    background-color: #b27092;
 }
 
 .Button:hover:active {
@@ -33,6 +33,13 @@
 .Wide {
     padding: 10px 50px;
     width: 100%;
+}
+
+.Pink,
+.PinkOutline:hover,
+.Bright:hover {
+    background-color: #ff66b3;
+    color: #ffffff;
 }
 
 .Blue,

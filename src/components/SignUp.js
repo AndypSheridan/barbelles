@@ -8,7 +8,7 @@ import CustomButton from "../components/CustomButton";
 import { useRedirect } from "../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import btnStyles from "../styles/Button.module.css"
+import btnStyles from "../styles/Button.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import Welcome from "./Welcome";
 // import { ToastContainer, toast } from "react-toastify";
@@ -26,7 +26,6 @@ const SignUp = (props) => {
     const history = useHistory();
     const [errors, setErrors] = useState({});
 
-
     const handleChange = (event) => {
         setSignUpData({
             ...signUpData,
@@ -40,7 +39,7 @@ const SignUp = (props) => {
             await axios.post("/dj-rest-auth/registration/", signUpData);
             // history.push("/signup");
             props.onFormSwitch("signin");
-            toast.success("Signed up! Please sign in")
+            toast.success("Signed up! Please sign in");
         } catch (err) {
             setErrors(err.response?.data);
         }
@@ -51,9 +50,12 @@ const SignUp = (props) => {
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
                 <Welcome />
                 <Container className="mb-3 mx-auto text-center">
-                    <span> Sign up here or </span>
-                    <Button className={btnStyles.Button} onClick={() => props.onFormSwitch("signin")}>
-                        <span className={styles.SignUpSpan}>Sign in</span>
+                    <span> Sign up below or </span>
+                    <Button
+                        className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                        onClick={() => props.onFormSwitch("signin")}
+                    >
+                        Sign in
                     </Button>
                 </Container>
                 <Form.Group controlId="username">
