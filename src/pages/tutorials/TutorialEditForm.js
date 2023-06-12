@@ -10,6 +10,7 @@ import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { toast } from "react-toastify";
 
 const TutorialEditForm = () => {
     const [errors, setErrors] = useState();
@@ -73,6 +74,7 @@ const TutorialEditForm = () => {
         try {
             await axiosReq.put(`/tutorials/${id}/`, formData);
             history.push(`/tutorials/${id}`);
+            toast.success("Tutorial updated");
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
