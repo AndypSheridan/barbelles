@@ -67,19 +67,19 @@ const ProfilePage = () => {
                     />
                 </Col>
                 <Col lg={6}>
-                    <h4>{profile?.owner}</h4>
+                    <h4 className={styles.ProfileOwner}>{profile?.owner}</h4>
                     <Row className="justify-content-center no-gutters">
                         <Col xs={3} className="my-2">
-                            <div>{profile?.posts_count}</div>
-                            <div>Posts</div>
+                            <div className={styles.TextPink}>{profile?.posts_count}</div>
+                            <div className={styles.TextBrown}>Posts</div>
+                        </Col>
+                        <Col xs={3} className="my-2 mx-1">
+                            <div className={styles.TextPink}>{profile?.followers_count}</div>
+                            <div className={styles.TextBrown}>Followers</div>
                         </Col>
                         <Col xs={3} className="my-2">
-                            <div>{profile?.followers_count}</div>
-                            <div>Followers</div>
-                        </Col>
-                        <Col xs={3} className="my-2">
-                            <div>{profile?.following_count}</div>
-                            <div>Following</div>
+                            <div className={styles.TextPink}>{profile?.following_count}</div>
+                            <div className={styles.TextBrown}>Following</div>
                         </Col>
                     </Row>
                 </Col>
@@ -101,7 +101,7 @@ const ProfilePage = () => {
                         ))}
                 </Col>
                 <Col className="p-3">
-                    {profile?.bio && <Col className="p-3">{profile.bio}</Col>}
+                    {profile?.bio && <Col className={`${styles.TextBrown} p-3`}>{profile.bio}</Col>}
                 </Col>
             </Row>
         </>
@@ -110,7 +110,7 @@ const ProfilePage = () => {
     const mainProfilePosts = (
         <>
             <hr />
-            <p className="text-center">{profile?.owner}'s posts</p>
+            <p className={`${styles.TextPink} text-center`}>{profile?.owner}'s posts</p>
             <hr />
             {profilePosts.results.length ? (
                 <InfiniteScroll

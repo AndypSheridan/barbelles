@@ -9,6 +9,38 @@
     margin: 0px
 }
 
+.FollowIcon {
+    color: #b27092;
+}
+
+.FollowIcon:hover {
+    color: #ff66b3;
+}
+
+.UnfollowIcon {
+    color: #512d38;
+}
+
+.UnfollowIcon:hover {
+    color: #ff66b3;
+}
+
+.ProfileOwner {
+    color: #512d38;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.TextPink {
+    color: #b27092;
+    font-weight: 600;
+    font-size: 1.2rem;;
+}
+
+.TextBrown {
+    color: #512d38;
+}
+
 @media screen and (max-width: 991px) {
     .ProfileImage {
         height: 250px;
