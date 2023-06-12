@@ -34,7 +34,7 @@
 
 .About {
     width: 85%;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.7);
@@ -60,15 +60,15 @@
 .Form {
     text-align: center;
     width: 85%;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     padding: 1rem;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #512d38;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ff66b3;
 }
 
 @media only screen and (max-width: 768px) {
     .Row {
-      padding-top: 8rem;
+        padding-top: 8rem;
     }
-  }
+}
