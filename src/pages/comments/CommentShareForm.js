@@ -5,8 +5,8 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
-
-
+import btnStyles from "../../styles/Button.module.css";
+import { toast } from "react-toastify";
 
 function CommentShareForm(props) {
     const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -36,6 +36,7 @@ function CommentShareForm(props) {
                 ],
             }));
             setContent("");
+            toast.success("Comment posted");
         } catch (err) {
             console.log(err);
         }
@@ -59,11 +60,11 @@ function CommentShareForm(props) {
                 </InputGroup>
             </Form.Group>
             <button
-                className={`${styles.Button} btn d-block ml-auto`}
+                className={`${btnStyles.Button} ${btnStyles.Pink} btn d-block ml-auto`}
                 disabled={!content.trim()}
                 type="submit"
             >
-                post
+                Post
             </button>
         </Form>
     );

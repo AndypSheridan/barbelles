@@ -41,7 +41,6 @@ const Post = (props) => {
 
     const handleEdit = () => {
         history.push(`/posts/${id}/edit`);
-        toast.success("Post updated")
     };
 
     const handleLike = async () => {

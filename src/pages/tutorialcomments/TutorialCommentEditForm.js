@@ -7,6 +7,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentShareEditForm.module.css";
 import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
+import btnStyles from "../../styles/Button.module.css"
 
 function TutorialCommentEditForm(props) {
     const { id, content, setShowEditForm, setTutorialComments } = props;
@@ -44,7 +45,7 @@ function TutorialCommentEditForm(props) {
 
     return (
         <Container>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="py-2">
             <Form.Group className="pr-1">
                 <Form.Control
                     className={styles.Form}
@@ -56,18 +57,18 @@ function TutorialCommentEditForm(props) {
             </Form.Group>
             <div className="text-right">
                 <button
-                    className={styles.Button}
+                    className={`${btnStyles.Button} ${btnStyles.Dark}`}
                     onClick={() => setShowEditForm(false)}
                     type="button"
                 >
-                    cancel
+                    Cancel
                 </button>
                 <button
-                    className={styles.Button}
+                    className={`${btnStyles.Button} ${btnStyles.Pink}`}
                     disabled={!content.trim()}
                     type="submit"
                 >
-                    save
+                    Update
                 </button>
             </div>
         </Form>

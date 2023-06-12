@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentShareEditForm.module.css";
 import { toast } from "react-toastify";
+import btnStyles from "../../styles/Button.module.css";
 
 const CommentEditForm = (props) => {
     const { id, content, setShowEditForm, setComments } = props;
@@ -33,14 +34,15 @@ const CommentEditForm = (props) => {
             }));
 
             setShowEditForm(false);
-            toast.success("Comment updated")
+            toast.success("Comment updated");
         } catch (err) {}
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="py-2">
             <Form.Group className="pr-1">
                 <Form.Control
+                    className={styles.Form}
                     onChange={handleChange}
                     value={formContent}
                     as="textarea"
@@ -51,14 +53,14 @@ const CommentEditForm = (props) => {
                 <button
                     type="button"
                     onClick={() => setShowEditForm(false)}
-                    className={styles.Button}
+                    className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 >
                     Cancel
                 </button>
                 <button
                     type="submit"
                     disabled={!content.trim()}
-                    className={styles.Button}
+                    className={`${btnStyles.Button} ${btnStyles.Pink}`}
                 >
                     Update
                 </button>

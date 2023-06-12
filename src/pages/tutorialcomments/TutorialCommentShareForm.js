@@ -6,11 +6,16 @@ import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
-
-
+import btnStyles from "../../styles/Button.module.css";
 
 function TutorialCommentShareForm(props) {
-    const { tutorial, setTutorial, setTutorialComments, profileImage, profile_id } = props;
+    const {
+        tutorial,
+        setTutorial,
+        setTutorialComments,
+        profileImage,
+        profile_id,
+    } = props;
     const [content, setContent] = useState("");
 
     const handleChange = (event) => {
@@ -32,12 +37,13 @@ function TutorialCommentShareForm(props) {
                 results: [
                     {
                         ...prevTutorial.results[0],
-                        tutorial_comments_count: prevTutorial.results[0].tutorial_comments_count + 1,
+                        tutorial_comments_count:
+                            prevTutorial.results[0].tutorial_comments_count + 1,
                     },
                 ],
             }));
             setContent("");
-            toast.success("Comment posted!")
+            toast.success("Comment posted!");
         } catch (err) {
             console.log(err);
         }
@@ -61,11 +67,11 @@ function TutorialCommentShareForm(props) {
                 </InputGroup>
             </Form.Group>
             <button
-                className={`${styles.Button} btn d-block ml-auto`}
+                className={`${btnStyles.Button} ${btnStyles.Pink} btn d-block ml-auto`}
                 disabled={!content.trim()}
                 type="submit"
             >
-                post
+                Post
             </button>
         </Form>
     );

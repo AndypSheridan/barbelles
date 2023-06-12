@@ -138,7 +138,7 @@ const PostEditForm = () => {
                 className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                <h1 className="text-center py-2">Share your journey here!</h1>
+                <h1 className="text-center py-2">Update your post!</h1>
                 <Row>
                     <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
