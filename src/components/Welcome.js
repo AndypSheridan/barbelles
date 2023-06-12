@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 const Welcome = () => {
     return (
-        <Container className={`mb-3 text-center`}>
+        <Container className={`my-3 text-center`}>
             <h2 className={styles.Header}>Welcome to <span className={styles.WelcomeSpan}>Barbelles</span></h2>
         </Container>
     );

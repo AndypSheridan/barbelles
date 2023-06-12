@@ -49,8 +49,8 @@ const SignUpForm = () => {
 
     return (
         <Container className={`${styles.SignUpBg}`}>
-            <Row className={`${styles.Row} align-items-center`}>
-                <Col className="ml-auto" md={6}>
+            <Row className={`${styles.Row} justify-content-start align-items-center`}>
+                <Col lg={6} className="mt-3">
                     {/* <ToastContainer /> */}
                     {/* <Container className="p-0 mx-auto">
                         <Form
@@ -131,7 +131,7 @@ const SignUpForm = () => {
                             ))}
                         </Form>
                     </Container> */}
-                    <Welcome />
+                    {/* <Welcome /> */}
                     {currentForm === "signup" ? (
                         <SignUp onFormSwitch={toggleForm} />
                     ) : (

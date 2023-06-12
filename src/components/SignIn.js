@@ -13,6 +13,7 @@ import { setTokenTimestamp } from "../utils/utils";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
 import appStyles from "../App.module.css"
+import Welcome from "./Welcome";
 
 const SignIn = (props) => {
     const setCurrentUser = useSetCurrentUser();
@@ -72,6 +73,7 @@ const SignIn = (props) => {
         <Container>
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
                 <Container className="mb-3 mx-auto text-center">
+                    <Welcome />
                     <span> Sign in here or </span>
                     <Button onClick={() => props.onFormSwitch("signup")}>
                         <span className={styles.SignUpSpan}>Sign Up</span>

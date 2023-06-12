@@ -10,6 +10,7 @@ import { Tabs, Tab } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import btnStyles from "../styles/Button.module.css"
 import { ToastContainer, toast } from "react-toastify";
+import Welcome from "./Welcome";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css"
 
@@ -48,6 +49,7 @@ const SignUp = (props) => {
     return (
         <Container className="p-0 mx-auto">
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
+                <Welcome />
                 <Container className="mb-3 mx-auto text-center">
                     <span> Sign up here or </span>
                     <Button className={btnStyles.Button} onClick={() => props.onFormSwitch("signin")}>
