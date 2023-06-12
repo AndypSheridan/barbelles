@@ -12,7 +12,7 @@ const TopProfiles = ({ mobile }) => {
 
     return (
         <Container
-            className={`${appStyles.Content} ${
+            className={`${appStyles.Content} ${styles.TopProfilesText} ${
                 mobile && "d-lg-none text-center mb-3 mw-100"
             }`}
         >
