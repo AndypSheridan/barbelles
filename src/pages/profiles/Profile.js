@@ -6,6 +6,7 @@ import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { useSetProfileData } from "../../contexts/ProfileDataContext";
+import btnStyles from "../../styles/Button.module.css"
 
 const Profile = (props) => {
     const { profile, mobile, imageSize = 60 } = props;
@@ -35,10 +36,10 @@ const Profile = (props) => {
                     currentUser &&
                     !is_owner &&
                     (following_id ? (
-                        <Button className="btn-sm" onClick={() => handleUnfollow(profile)}>Unfollow</Button>
+                        <Button className={btnStyles.Follow} onClick={() => handleUnfollow(profile)}><i className={`${styles.UnfollowIcon} fa-solid fa-user-xmark`}></i></Button>
                     ) : (
-                        <Button className="btn-sm" onClick={() => handleFollow(profile)}>
-                            Follow
+                        <Button className={btnStyles.Follow} onClick={() => handleFollow(profile)}>
+                            <i className={`${styles.FollowIcon} fa-solid fa-user-plus`}></i>
                         </Button>
                     ))}
             </div>

@@ -10,6 +10,41 @@
     color: #FFF;
 }
 
+.Follow {
+    background: transparent;
+    border-color: transparent;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.Follow:hover {
+    background-color: transparent;
+    border: transparent;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.Follow:active {
+    background-color: transparent;
+    border: transparent;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.Follow:active:focus {
+    background-color: transparent !important;
+    border: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.Follow:focus {
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
 .Button:hover {
     opacity: 0.8;
     border-color: transparent;
