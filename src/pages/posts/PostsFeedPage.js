@@ -49,7 +49,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
     return (
         <Container className={`${styles.homeBackground}`}>
             <Row className="justify-content-center mt-16">
-                <Col className={styles.Col} lg={8}>
+                <Col className={styles.Col} lg={7} md={8}>
                     <TopProfiles mobile />
 
                     <i className={`fas fa-search ${styles.SearchIcon}`} />
@@ -100,7 +100,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         </Container>
                     )}
                 </Col>
-                <Col className={`${styles.ProfileCol} d-lg-block d-none`} lg={4}>
+                <Col className={`${styles.ProfileCol} d-lg-block d-none`} lg={5}>
                     <TopProfiles />
                 </Col>
             </Row>
