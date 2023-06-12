@@ -10,6 +10,7 @@ import { useRedirect } from "../hooks/useRedirect";
 // import { handleSignOut } from "../components/NavBar"
 import { ToastContainer, Slide, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import btnStyles from "../styles/Button.module.css";
 
 const SignOutModal = () => {
     const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ const SignOutModal = () => {
             setCurrentUser(null);
             removeTokenTimestamp();
             history.push("/signup");
-            toast.success("Logged out")
+            toast.success("Logged out");
         } catch (err) {
             console.log(err);
         }
@@ -38,7 +39,7 @@ const SignOutModal = () => {
         <>
             <Button
                 variant="danger"
-                className="mx-auto d-block"
+                className={`${btnStyles.Button} ${btnStyles.Pink} mx-auto d-block`}
                 onClick={handleShow}
             >
                 Sign out
@@ -47,12 +48,18 @@ const SignOutModal = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>Are you sure you want to sign out?</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button
+                        className={`${btnStyles.Button} ${btnStyles.Dark}`}
+                        onClick={handleClose}
+                    >
                         Not yet!
                     </Button>
 
                     <NavLink to="/signup">
-                        <Button variant="primary" onClick={handleSignOut}>
+                        <Button
+                            className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                            onClick={handleSignOut}
+                        >
                             I'm sure!
                         </Button>
                     </NavLink>

@@ -50,10 +50,7 @@ const SignIn = (props) => {
             setTokenTimestamp(data);
             history.goBack();
 
-            toast.success(`Signed in as ${username}`, {
-                progressStyle: { background: "#b27092" },
-                bodyClassName: { color: "#f4bfdb" },
-            });
+            toast.success(`Signed in as ${username}`);
         } catch (err) {
             setErrors(err.response?.data);
         }
