@@ -57,12 +57,20 @@ const NavBar = () => {
             >
                 {/* <NavDropdown.Item> */}
                 <NavLink
+                    to="/"
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    onClick={() => setExpanded(false)}
+                >
+                    <i className="fa-solid fa-users"></i> All posts
+                </NavLink>
+                <NavLink
                     to="/posts-feed"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
                 >
-                    <i className="fa-solid fa-list"></i> Posts
+                    <i className="fa-solid fa-user-group"></i> Following
                 </NavLink>
                 {/* </NavDropdown.Item> */}
                 {/* <NavDropdown.Item> */}

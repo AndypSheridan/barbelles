@@ -12,6 +12,7 @@ html, body {
 
 .App {
     font-family: "Roboto", sans-serif;
+    background: #333333;
     min-height: 100vh;
 }
 
