@@ -14,6 +14,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
 import TopProfiles from "../profiles/TopProfiles";
+import appStyles from "../../App.module.css"
 
 const PostDetailPage = () => {
     const { id } = useParams();
@@ -41,12 +42,12 @@ const PostDetailPage = () => {
     }, [id]);
 
     return (
-        <Container className="h-100">
+        <Container>
             <Row className={styles.Row}>
                 <Col lg={8}>
                 <TopProfiles mobile />
                     <Post {...post.results[0]} setPosts={setPost} postPage />
-                    <Container>
+                    <Container className={`${appStyles.Content} mb-4`}>
                         {currentUser ? (
                             <CommentShareForm
                                 profile_id={currentUser.profile_id}
