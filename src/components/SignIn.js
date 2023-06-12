@@ -12,8 +12,9 @@ import { useRedirect } from "../hooks/useRedirect";
 import { setTokenTimestamp } from "../utils/utils";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
-import appStyles from "../App.module.css"
+import appStyles from "../App.module.css";
 import Welcome from "./Welcome";
+import btnStyles from "../styles/Button.module.css"
 
 const SignIn = (props) => {
     const setCurrentUser = useSetCurrentUser();
@@ -51,7 +52,7 @@ const SignIn = (props) => {
 
             toast.success(`Signed in as ${username}`, {
                 progressStyle: { background: "#b27092" },
-                bodyClassName: { color: "#f4bfdb"},
+                bodyClassName: { color: "#f4bfdb" },
             });
         } catch (err) {
             setErrors(err.response?.data);
@@ -75,8 +76,8 @@ const SignIn = (props) => {
                 <Container className="mb-3 mx-auto text-center">
                     <Welcome />
                     <span> Sign in below or </span>
-                    <Button onClick={() => props.onFormSwitch("signup")}>
-                        <span className={styles.SignUpSpan}>Sign Up</span>
+                    <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} onClick={() => props.onFormSwitch("signup")}>
+                        Sign Up
                     </Button>
                 </Container>
                 <Form.Group controlId="username">

@@ -48,8 +48,9 @@ const SignUp = (props) => {
     return (
         <Container className="p-0 mx-auto">
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
-                <Welcome />
+                
                 <Container className="mb-3 mx-auto text-center">
+                <Welcome />
                     <span> Sign up below or </span>
                     <Button
                         className={`${btnStyles.Button} ${btnStyles.Pink}`}
