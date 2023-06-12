@@ -9,6 +9,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { Tabs, Tab } from "react-bootstrap";
 import SignUp from "../../components/SignUp";
 import SignIn from "../../components/SignIn";
+import Welcome from "../../components/Welcome";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css"
 
@@ -130,6 +131,7 @@ const SignUpForm = () => {
                             ))}
                         </Form>
                     </Container> */}
+                    <Welcome />
                     {currentForm === "signup" ? (
                         <SignUp onFormSwitch={toggleForm} />
                     ) : (

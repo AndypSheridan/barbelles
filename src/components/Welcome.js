@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Welcome = () => {
-  return (
-    <div>Welcome</div>
-  )
-}
+    return (
+        <Container className={`${styles.About} mb-3`}>
+            <h2>Welcome to Barbelles</h2>
+        </Container>
+    );
+};
 
-export default Welcome
+export default Welcome;
