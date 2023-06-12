@@ -6,3 +6,9 @@
     background-color: rgba(255, 255, 255, 0.7);
     color: #512d38;
 }
+
+.Image {
+    max-height: 70vh;
+    max-width: 100%;
+    object-fit: cover;
+}
