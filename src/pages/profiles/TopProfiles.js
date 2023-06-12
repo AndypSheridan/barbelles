@@ -13,7 +13,7 @@ const TopProfiles = ({ mobile }) => {
     return (
         <Container
             className={`${appStyles.Content} ${
-                mobile && "d-lg-none text-center mb-3"
+                mobile && "d-lg-none text-center mb-3 mw-100"
             }`}
         >
             {topProfiles.results.length ? (

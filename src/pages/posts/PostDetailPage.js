@@ -77,9 +77,9 @@ const PostDetailPage = () => {
                                 }
                             />
                         ) : currentUser ? (
-                            <span>Be the first to comment!!</span>
+                            <span className={styles.NoComments}>Be the first to comment!!</span>
                         ) : (
-                            <span>No comments yet...</span>
+                            <span className={styles.NoComments}>No comments yet...</span>
                         )}
                     </Container>
                 </Col>
