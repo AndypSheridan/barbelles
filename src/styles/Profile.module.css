@@ -3,10 +3,18 @@
 }
 
 .FollowIcon {
+    color: #b27092;
+}
+
+.FollowIcon:hover {
     color: #ff66b3;
 }
 
 .UnfollowIcon {
     color: #512d38;
+}
+
+.UnfollowIcon:hover {
+    color: #ff66b3;
 }
 

@@ -9,8 +9,12 @@
 
 .PostOwner {
     font-size: 1.2rem;
-    font-weight: 400;
-    color: #512d38;
+    font-weight: 600;
+    color: #b27092;
+}
+
+.PostDate {
+    color:#512d38;
 }
 
 .Image {
