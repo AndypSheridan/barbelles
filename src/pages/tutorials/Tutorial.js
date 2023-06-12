@@ -76,7 +76,6 @@ const Tutorial = (props) => {
 
     const handleEdit = () => {
         history.push(`/tutorials/${id}/edit`);
-        toast.success("Tutorial updated");
     };
 
     const handleDelete = async () => {

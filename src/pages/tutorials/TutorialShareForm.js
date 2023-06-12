@@ -99,12 +99,12 @@ function TutorialShareForm() {
             ))}
 
             <Button
-                className={`${btnStyles.Black} mx-1`}
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
-            <Button className="mx-1" type="submit">Share</Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} type="submit">Share</Button>
         </div>
     );
 
