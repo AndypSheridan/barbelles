@@ -93,7 +93,7 @@ const Post = (props) => {
                         <span className={styles.PostOwner}>{owner}</span>
                     </Link>
                     <div className="d-flex align-items-center justify-content-between">
-                        <span>{updated_at}</span>
+                        <span className={styles.PostDate}>{updated_at}</span>
                         {is_owner && postPage && (
                             <ComponentDropDown
                                 handleEdit={handleEdit}
@@ -122,11 +122,11 @@ const Post = (props) => {
                             <i className={`${styles.HeartOutline} far fa-heart`} />
                         </OverlayTrigger>
                     ) : like_id ? (
-                        <span onClick={handleUnlike}>
+                        <span onClick={handleUnlike} className="mx-1">
                             <i className={`${styles.Heart} fas fa-heart`} />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={handleLike}>
+                        <span onClick={handleLike} className="mx-1">
                             <i className={`${styles.HeartOutline} far fa-heart`} />
                         </span>
                     ) : (
@@ -142,7 +142,7 @@ const Post = (props) => {
                         </OverlayTrigger>
                     )}
                     {likes_count}
-                    <Link to={`/posts/${id}`}>
+                    <Link to={`/posts/${id}`} className="mx-1">
                         <i className="far fa-comments" />
                     </Link>
                     {comments_count}
