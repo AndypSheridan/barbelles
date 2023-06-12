@@ -15,7 +15,9 @@ html, body {
     min-height: 100vh;
 }
 
-
+.PaddingTop {
+    padding-top: 8rem;
+}
 
 /* div {
     overflow-x: hidden;
