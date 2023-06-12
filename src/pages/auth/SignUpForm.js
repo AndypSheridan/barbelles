@@ -12,13 +12,12 @@ import SignIn from "../../components/SignIn";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css"
 
-
 const SignUpForm = () => {
     const [currentForm, setCurrentForm] = useState("signup");
     const toggleForm = (formName) => {
-        setCurrentForm(formName)
-    }
-    
+        setCurrentForm(formName);
+    };
+
     // useRedirect("loggedIn");
     // const [signUpData, setSignUpData] = useState({
     //     username: "",
@@ -50,7 +49,7 @@ const SignUpForm = () => {
     return (
         <Container className={`${styles.SignUpBg} h-100`}>
             <Row className={`${styles.Row} align-items-center`}>
-                <Col className="ml-auto" md={5}>
+                <Col className="ml-auto" md={6}>
                     {/* <ToastContainer /> */}
                     {/* <Container className="p-0 mx-auto">
                         <Form
@@ -131,33 +130,11 @@ const SignUpForm = () => {
                             ))}
                         </Form>
                     </Container> */}
-                    {currentForm === "signup" ? <SignUp onFormSwitch={toggleForm} /> : <SignIn onFormSwitch={toggleForm} />}
-                </Col>
-                <Col md={7} className="mt-3">
-                    <Container className={`${styles.About} mb-3`}>
-                        <h2>Welcome to Barbelles</h2>
-                        <p>
-                            We are an online fitness community for women. It
-                            doesn't matter whether you have never trained a day
-                            in your life or whether you are a seasoned pro, you
-                            are welcome here!
-                        </p>
-                        <p>
-                            You can quickly create an account to start sharing
-                            your fitness journey, take inspiration from other
-                            users, follow their own stories and learn from our
-                            ever-growing range of tutorials. You can tell us
-                            more about yourself by adding to and editing your
-                            profile.
-                        </p>
-                        <p>
-                            You can interact with the community by adding
-                            comments or asking questions in the site content.
-                            However you choose to use the community, we are here
-                            to provide a safe and friendly space to hit your
-                            goals and targets!
-                        </p>
-                    </Container>
+                    {currentForm === "signup" ? (
+                        <SignUp onFormSwitch={toggleForm} />
+                    ) : (
+                        <SignIn onFormSwitch={toggleForm} />
+                    )}
                 </Col>
             </Row>
         </Container>
