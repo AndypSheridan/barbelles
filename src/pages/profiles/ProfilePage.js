@@ -19,6 +19,7 @@ import TopProfiles from "./TopProfiles";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
+import btnStyles from "../../styles/Button.module.css"
 
 const ProfilePage = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -40,7 +41,7 @@ const ProfilePage = () => {
                         axiosReq.get(`/profiles/${id}/`),
                         axiosReq.get(`/posts/?owner__profile=${id}`),
                     ]);
-                    console.log(pageProfile)
+                console.log(pageProfile);
                 setProfileData((prevState) => ({
                     ...prevState,
                     pageProfile: { results: [pageProfile] },
@@ -91,7 +92,9 @@ const ProfilePage = () => {
                             </Button>
                         ) : (
                             <Button onClick={() => handleFollow(profile)}>
-                                Follow
+                                <i
+                                    className={`${styles.FollowIcon} fa-solid fa-user-plus`}
+                                ></i>
                             </Button>
                         ))}
                 </Col>
