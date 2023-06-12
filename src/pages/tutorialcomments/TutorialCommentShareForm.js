@@ -37,7 +37,7 @@ function TutorialCommentShareForm(props) {
                 ],
             }));
             setContent("");
-            toast.success("Tutorial posted!")
+            toast.success("Comment posted!")
         } catch (err) {
             console.log(err);
         }

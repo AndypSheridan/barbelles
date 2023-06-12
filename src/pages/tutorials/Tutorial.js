@@ -76,14 +76,14 @@ const Tutorial = (props) => {
 
     const handleEdit = () => {
         history.push(`/tutorials/${id}/edit`);
-        toast.success("Tutorial updated")
+        toast.success("Tutorial updated");
     };
 
     const handleDelete = async () => {
         try {
             await axiosRes.delete(`/tutorials/${id}/`);
             history.goBack();
-            toast.success("Tutorial deleted")
+            toast.success("Tutorial deleted");
         } catch (err) {
             console.log(err);
         }
@@ -99,11 +99,15 @@ const Tutorial = (props) => {
                     </Link>
                     <div className="d-flex align-items-center">
                         <span>
-                            { !tutorialPage && (<Link to={`/tutorials/${id}`}>
-                                View tutorial |{"  "}
-                            </Link>) }
-                            
-                            {updated_at}
+                            {!tutorialPage && (
+                                <Link
+                                    to={`/tutorials/${id}`}
+                                    className={styles.TutorialSpan}
+                                >
+                                    View tutorial
+                                </Link>
+                            )}
+                            {" "}{updated_at}
                         </span>{" "}
                         {is_owner && tutorialPage && (
                             <ComponentDropDown
