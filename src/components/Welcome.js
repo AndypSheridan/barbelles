@@ -1,9 +1,11 @@
 import React from "react";
+import styles from "../styles/Welcome.module.css";
+import Container from "react-bootstrap/Container";
 
 const Welcome = () => {
     return (
-        <Container className={`${styles.About} mb-3`}>
-            <h2>Welcome to Barbelles</h2>
+        <Container className={`mb-3 text-center`}>
+            <h2 className={styles.Header}>Welcome to <span className={styles.WelcomeSpan}>Barbelles</span></h2>
         </Container>
     );
 };

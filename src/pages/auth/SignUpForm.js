@@ -48,7 +48,7 @@ const SignUpForm = () => {
     // };
 
     return (
-        <Container className={`${styles.SignUpBg} h-100`}>
+        <Container className={`${styles.SignUpBg}`}>
             <Row className={`${styles.Row} align-items-center`}>
                 <Col className="ml-auto" md={6}>
                     {/* <ToastContainer /> */}
