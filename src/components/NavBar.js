@@ -144,7 +144,7 @@ const NavBar = () => {
 
 
                 {/* {is_staff &&  */}
-                {currentUser?.username === "testuser1"  && 
+                {currentUser?.profile_is_staff === true  && 
                 <NavLink
                     to="/tutorials/share"
                     className={styles.NavLink}
