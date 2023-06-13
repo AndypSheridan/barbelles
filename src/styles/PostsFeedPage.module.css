@@ -10,7 +10,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(50%);
+    /* filter: blur(50%); */
     color: pink;
 }
 
