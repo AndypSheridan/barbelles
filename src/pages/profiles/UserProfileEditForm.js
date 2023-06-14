@@ -132,7 +132,7 @@ const UserProfileEditForm = () => {
     );
 
     return (
-        <Container className={`${styles.ProfileEditBgImage} ${styles.Container} px-4`}>
+        <Container className={`${styles.ProfileEditBgImage} ${styles.Container}`}>
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>

@@ -141,13 +141,13 @@ figure {
     width: 5px;
 }
 *::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f4bfdb;
 }
 *::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #b27092;
 }
 *::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #ffe9f3;
 }
 /* a {
     color: #512d38;
