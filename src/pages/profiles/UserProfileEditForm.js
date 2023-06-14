@@ -117,16 +117,16 @@ const UserProfileEditForm = () => {
                 </Alert>
             ))}
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                className={`${btnStyles.Button} ${btnStyles.Dark}`}
                 onClick={() => history.goBack()}
             >
-                cancel
+                Cancel
             </Button>
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
                 type="submit"
             >
-                save
+                Save
             </Button>
         </>
     );

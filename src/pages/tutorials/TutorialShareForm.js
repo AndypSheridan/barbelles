@@ -55,7 +55,7 @@ function TutorialShareForm() {
         <div className="text-center">
             <Form.Group>
                 <Form.Label>YouTube link</Form.Label>
-                <p>Example: https://www.youtube.com/watch?v=***********</p>
+                <p className={styles.DarkPink}>Example: https://www.youtube.com/watch?v=***********</p>
                 <Form.Control
                     value={video}
                     onChange={handleChange}
