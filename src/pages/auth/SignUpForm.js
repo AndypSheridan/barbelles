@@ -14,7 +14,7 @@ import Welcome from "../../components/Welcome";
 // import "react-toastify/dist/ReactToastify.css"
 
 const SignUpForm = () => {
-    const [currentForm, setCurrentForm] = useState("signup");
+    const [currentForm, setCurrentForm] = useState("signin");
     const toggleForm = (formName) => {
         setCurrentForm(formName);
     };
