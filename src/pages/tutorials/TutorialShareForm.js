@@ -11,6 +11,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+import { toast } from "react-toastify";
 
 function TutorialShareForm() {
     useRedirect("loggedOut");
@@ -56,7 +57,9 @@ function TutorialShareForm() {
         <div className="text-center">
             <Form.Group>
                 <Form.Label>YouTube link</Form.Label>
-                <p className={styles.DarkPink}>Example: https://www.youtube.com/watch?v=***********</p>
+                <p className={styles.DarkPink}>
+                    Example: https://www.youtube.com/watch?v=***********
+                </p>
                 <Form.Control
                     value={video}
                     onChange={handleChange}
@@ -105,7 +108,12 @@ function TutorialShareForm() {
             >
                 Cancel
             </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} type="submit">Share</Button>
+            <Button
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                type="submit"
+            >
+                Share
+            </Button>
         </div>
     );
 
@@ -115,7 +123,6 @@ function TutorialShareForm() {
                 className={`${styles.TutorialShareEditForm} ${styles.TutorialShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                
                 <Row className="text-center">
                     {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
@@ -170,13 +177,20 @@ function TutorialShareForm() {
                                 </Alert>
                             ))} */}
 
-                            {/* <div className="d-md-none">{textFields}</div>
+                    {/* <div className="d-md-none">{textFields}</div>
                         </Container>
                     </Col> */}
-                    <Col md={6} lg={6} className="d-md-block p-2 mx-auto p-md-2">
+                    <Col
+                        md={6}
+                        lg={6}
+                        className="d-md-block p-2 mx-auto p-md-2"
+                    >
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.TextBrown}`}
-                        ><h1 className="text-center py-2">Upload tutorial</h1>
+                        >
+                            <h1 className="text-center py-2">
+                                Upload tutorial
+                            </h1>
                             {textFields}
                         </Container>
                     </Col>

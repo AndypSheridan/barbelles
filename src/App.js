@@ -32,19 +32,23 @@ function App() {
             <NavBar />
             <Container className={styles.Main}>
                 <Switch>
-                    {/* <Route exact path="/" render={() => <HomePage />} /> */}
+                    {currentUser ? (
+                        <Route
+                            exact
+                            path="/"
+                            render={() => (
+                                <PostsFeedPage message="No search results found. Adjust the search keyword(s)" />
+                            )}
+                        />
+                    ) : (
+                        <Route exact path="/" render={() => <SignUpForm />} />
+                    )}
+                    <Route exact path="/about" render={() => <About />} />
                     <Route
                         exact
-                        path="/"
+                        path="/posts"
                         render={() => (
                             <PostsFeedPage message="No search results found. Adjust the search keyword(s)" />
-                        )}
-                    />
-                    <Route
-                        exact
-                        path="/about"
-                        render={() => (
-                            <About />
                         )}
                     />
                     <Route

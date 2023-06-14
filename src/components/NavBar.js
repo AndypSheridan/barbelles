@@ -57,7 +57,7 @@ const NavBar = () => {
             >
                 {/* <NavDropdown.Item> */}
                 <NavLink
-                    to="/"
+                    to="/posts"
                     className={styles.NavLink}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
