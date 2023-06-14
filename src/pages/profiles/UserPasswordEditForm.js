@@ -85,6 +85,7 @@ const UserPasswordEditForm = () => {
                                     value={new_password2}
                                     onChange={handleChange}
                                     name="new_password2"
+                                    className="text-center"
                                 />
                             </Form.Group>
                             {errors?.new_password2?.map((message, idx) => (

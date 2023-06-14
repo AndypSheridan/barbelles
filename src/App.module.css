@@ -17,6 +17,7 @@ input[type="text"]::-webkit-input-placeholder {
 input {
     color: #b27092 !important;
     border-color: #f4bfdb !important;
+    text-align: center;
 }
 
 input:focus {
