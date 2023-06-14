@@ -61,6 +61,10 @@
     margin-top: 0 !important;
 }
 
+.Social i:hover {
+    color: #ff66b3;
+}
+
 @media only screen and (max-width: 992px) {
     .Col {
         padding: 0px;
