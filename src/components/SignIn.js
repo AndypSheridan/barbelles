@@ -53,6 +53,7 @@ const SignIn = (props) => {
             toast.success(`Signed in as ${username}`);
         } catch (err) {
             setErrors(err.response?.data);
+            toast.error("Oops please try again!");
         }
     };
 
