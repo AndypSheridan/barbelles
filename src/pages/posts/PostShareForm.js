@@ -58,7 +58,7 @@ function PostShareForm() {
         try {
             const { data } = await axiosReq.post("/posts/", formData);
             history.push(`/posts/${data.id}`);
-            toast.success("Posted!")
+            toast.success("Posted!");
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
@@ -106,7 +106,12 @@ function PostShareForm() {
             >
                 Cancel
             </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} type="submit">Share</Button>
+            <Button
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                type="submit"
+            >
+                Share
+            </Button>
         </div>
     );
 
@@ -116,12 +121,14 @@ function PostShareForm() {
                 className={`${styles.PostShareEditForm} ${styles.PostShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                <h1 className="text-center py-2">Share your journey here!</h1>
                 <Row>
                     <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
                             className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
                         >
+                            <h1 className="text-center py-2">
+                                Share your journey!
+                            </h1>
                             <Form.Group
                                 className={`${styles.PostShareBgTransparent} text-center`}
                             >
