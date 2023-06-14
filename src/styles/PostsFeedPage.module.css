@@ -45,10 +45,6 @@
     color: #ff66b3;
 }
 
-input[type="text"]::-webkit-input-placeholder {
-    color: #b27092;
-}
-
 @media only screen and (max-width: 992px) {
     .Col {
         padding: 0px;

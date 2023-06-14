@@ -10,6 +10,10 @@ html, body {
     
 }
 
+input[type="text"]::-webkit-input-placeholder {
+    color: #b27092;
+}
+
 .App {
     font-family: "Roboto", sans-serif;
     background: #333333;
