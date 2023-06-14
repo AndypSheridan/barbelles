@@ -13,9 +13,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Post from "./Post";
 import TopProfiles from "../profiles/TopProfiles";
-import SocialLinks from "../../components/SocialLinks"
-
-
+import SocialLinks from "../../components/SocialLinks";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     const [posts, setPosts] = useState({ results: [] });
@@ -72,7 +70,6 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         <>
                             {posts.results.length ? (
                                 <InfiniteScroll
-                               
                                     children={posts.results.map((post) => (
                                         <Post
                                             key={post.id}
@@ -84,7 +81,7 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                                     loader={<Asset spinner />}
                                     hasMore={!!posts.next}
                                     next={() => {
-                                        fetchMoreData(posts, setPosts)
+                                        fetchMoreData(posts, setPosts);
                                     }}
                                 />
                             ) : (
@@ -102,12 +99,14 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                         </Container>
                     )}
                 </Col>
-                <Col className={`${styles.ProfileCol} d-lg-block d-none`} lg={5}>
-                <Container className={styles.Social}>
-                    <SocialLinks />
+                <Col
+                    className={`${styles.ProfileCol} d-lg-block d-none`}
+                    lg={5}
+                >
+                    <Container className={styles.Social}>
+                        <SocialLinks />
                     </Container>
                     <TopProfiles />
-                    
                 </Col>
             </Row>
         </Container>

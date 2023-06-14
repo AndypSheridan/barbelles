@@ -11,6 +11,7 @@ import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import TopProfiles from "../profiles/TopProfiles";
+import SocialLinks from "../../components/SocialLinks";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     const [tutorials, setTutorials] = useState({ results: [] });
