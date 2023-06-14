@@ -89,7 +89,7 @@ const Tutorial = (props) => {
     };
 
     return (
-        <Card className={`${styles.Tutorial} mb-5`}>
+        <Card className={`${styles.Tutorial} mb-3`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                     <Link to={`/profiles/${profile_id}`}>
