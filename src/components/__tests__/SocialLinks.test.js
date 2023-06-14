@@ -6,16 +6,16 @@ describe('SocialLinks', () => {
   it('renders social media links with correct URLs', () => {
     render(<SocialLinks />);
 
-    const youtubeLink = screen.getByRole('link', { name: 'YouTube' });
+    const youtubeLink = screen.getByRole('link', { name: 'youtube' });
     expect(youtubeLink).toHaveAttribute('href', 'https://www.youtube.com/');
 
-    const instagramLink = screen.getByRole('link', { name: 'Instagram' });
+    const instagramLink = screen.getByRole('link', { name: 'instagram' });
     expect(instagramLink).toHaveAttribute('href', 'https://www.instagram.com/');
 
-    const facebookLink = screen.getByRole('link', { name: 'Facebook' });
+    const facebookLink = screen.getByRole('link', { name: 'facebook' });
     expect(facebookLink).toHaveAttribute('href', 'https://www.facebook.com/');
 
-    const twitterLink = screen.getByRole('link', { name: 'Twitter' });
+    const twitterLink = screen.getByRole('link', { name: 'twitter' });
     expect(twitterLink).toHaveAttribute('href', 'https://www.twitter.com/');
   });
 
