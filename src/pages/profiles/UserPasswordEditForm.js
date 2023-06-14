@@ -14,6 +14,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
+import styles from "../../styles/UserPasswordEditForm.module.css";
 
 const UserPasswordEditForm = () => {
     const history = useHistory();
@@ -47,7 +48,7 @@ const UserPasswordEditForm = () => {
         try {
             await axiosRes.post("/dj-rest-auth/password/change/", userData);
             history.goBack();
-            toast.success("Password updated")
+            toast.success("Password updated");
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);
@@ -55,56 +56,59 @@ const UserPasswordEditForm = () => {
     };
 
     return (
-        <Row className={appStyles.PaddingTop}>
-            <Col className="py-2 mx-auto text-center" md={6}>
-                <Container className={appStyles.Content}>
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group>
-                            <Form.Label>New password</Form.Label>
-                            <Form.Control
-                                placeholder="new password"
-                                type="password"
-                                value={new_password1}
-                                onChange={handleChange}
-                                name="new_password1"
-                            />
-                        </Form.Group>
-                        {errors?.new_password1?.map((message, idx) => (
-                            <Alert key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
-                        <Form.Group>
-                            <Form.Label>Confirm password</Form.Label>
-                            <Form.Control
-                                placeholder="confirm new password"
-                                type="password"
-                                value={new_password2}
-                                onChange={handleChange}
-                                name="new_password2"
-                            />
-                        </Form.Group>
-                        {errors?.new_password2?.map((message, idx) => (
-                            <Alert key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
-                        <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
-                            onClick={() => history.goBack()}
-                        >
-                            cancel
-                        </Button>
-                        <Button
-                            type="submit"
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
-                        >
-                            save
-                        </Button>
-                    </Form>
-                </Container>
-            </Col>
-        </Row>
+        <Container className={styles.PasswordEditBgImage}>
+            <Row className={appStyles.PaddingTop}>
+                <Col className="py-2 mx-auto text-center" md={6}>
+                    <Container className={appStyles.Content}>
+                        <Form onSubmit={handleSubmit}>
+                            <h1 className="my-2">Change Password</h1>
+                            <Form.Group>
+                                <Form.Label>New password</Form.Label>
+                                <Form.Control
+                                    placeholder="new password"
+                                    type="password"
+                                    value={new_password1}
+                                    onChange={handleChange}
+                                    name="new_password1"
+                                />
+                            </Form.Group>
+                            {errors?.new_password1?.map((message, idx) => (
+                                <Alert key={idx} variant="warning">
+                                    {message}
+                                </Alert>
+                            ))}
+                            <Form.Group>
+                                <Form.Label>Confirm password</Form.Label>
+                                <Form.Control
+                                    placeholder="confirm new password"
+                                    type="password"
+                                    value={new_password2}
+                                    onChange={handleChange}
+                                    name="new_password2"
+                                />
+                            </Form.Group>
+                            {errors?.new_password2?.map((message, idx) => (
+                                <Alert key={idx} variant="warning">
+                                    {message}
+                                </Alert>
+                            ))}
+                            <Button
+                                className={`${btnStyles.Button} ${btnStyles.Green}`}
+                                onClick={() => history.goBack()}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                type="submit"
+                                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                            >
+                                Save
+                            </Button>
+                        </Form>
+                    </Container>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

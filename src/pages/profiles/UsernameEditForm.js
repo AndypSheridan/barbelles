@@ -17,6 +17,7 @@ import {
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
+import styles from "../../styles/UsernameEditForm.module.css";
 
 const UsernameEditForm = () => {
     const [username, setUsername] = useState("");
@@ -47,7 +48,7 @@ const UsernameEditForm = () => {
                 username,
             }));
             history.goBack();
-            toast.success("Username updated")
+            toast.success("Username updated");
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);
@@ -55,42 +56,44 @@ const UsernameEditForm = () => {
     };
 
     return (
-        <Row className={appStyles.PaddingTop}>
-            <Col className="py-2 mx-auto text-center" md={6}>
-                <Container className={appStyles.Content}>
-                    <Form onSubmit={handleSubmit} className="my-2">
-                        <Form.Group>
-                            <Form.Label>Change username</Form.Label>
-                            <Form.Control
-                                placeholder="username"
-                                type="text"
-                                value={username}
-                                onChange={(event) =>
-                                    setUsername(event.target.value)
-                                }
-                            />
-                        </Form.Group>
-                        {errors?.username?.map((message, idx) => (
-                            <Alert key={idx} variant="warning">
-                                {message}
-                            </Alert>
-                        ))}
-                        <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
-                            onClick={() => history.goBack()}
-                        >
-                            cancel
-                        </Button>
-                        <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
-                            type="submit"
-                        >
-                            save
-                        </Button>
-                    </Form>
-                </Container>
-            </Col>
-        </Row>
+        <Container className={styles.UsernameEditBgImage}>
+            <Row className={appStyles.PaddingTop}>
+                <Col className="py-2 mx-auto text-center" md={6}>
+                    <Container className={appStyles.Content}>
+                        <Form onSubmit={handleSubmit} className="my-2">
+                            <Form.Group>
+                                <h1 className="my-2">Change username</h1>
+                                <Form.Control
+                                    placeholder="username"
+                                    type="text"
+                                    value={username}
+                                    onChange={(event) =>
+                                        setUsername(event.target.value)
+                                    }
+                                />
+                            </Form.Group>
+                            {errors?.username?.map((message, idx) => (
+                                <Alert key={idx} variant="warning">
+                                    {message}
+                                </Alert>
+                            ))}
+                            <Button
+                                className={`${btnStyles.Button} ${btnStyles.Green}`}
+                                onClick={() => history.goBack()}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                                type="submit"
+                            >
+                                Save
+                            </Button>
+                        </Form>
+                    </Container>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

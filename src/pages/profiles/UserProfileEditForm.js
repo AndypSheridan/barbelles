@@ -117,7 +117,7 @@ const UserProfileEditForm = () => {
                 </Alert>
             ))}
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Dark}`}
+                className={`${btnStyles.Button} ${btnStyles.Green} ${styles.ButtonSlide}`}
                 onClick={() => history.goBack()}
             >
                 Cancel
@@ -132,11 +132,12 @@ const UserProfileEditForm = () => {
     );
 
     return (
-        <Container className={styles.Container}>
+        <Container className={`${styles.ProfileEditBgImage} ${styles.Container} px-4`}>
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
                         <Container className={appStyles.Content}>
+                            <h1>Edit profile</h1>
                             <Form.Group>
                                 {image && (
                                     <figure>
@@ -150,10 +151,10 @@ const UserProfileEditForm = () => {
                                 ))}
                                 <div>
                                     <Form.Label
-                                        className={`${btnStyles.Button} ${btnStyles.Blue} btn my-auto`}
+                                        className={`${btnStyles.Button} ${btnStyles.Green} btn my-auto`}
                                         htmlFor="image-upload"
                                     >
-                                        Change the image
+                                        Change image
                                     </Form.Label>
                                 </div>
                                 <Form.File
