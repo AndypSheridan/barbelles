@@ -42,7 +42,7 @@ const SignUp = (props) => {
             toast.success("Signed up! Please sign in");
         } catch (err) {
             setErrors(err.response?.data);
-            toast.error("Oops please try again!");
+            toast.error("Oops, please try again!");
         }
     };
 

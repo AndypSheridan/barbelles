@@ -36,6 +36,7 @@ const Post = (props) => {
             toast.success("Post deleted")
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
         }
     };
 

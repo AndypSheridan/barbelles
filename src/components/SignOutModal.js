@@ -29,7 +29,7 @@ const SignOutModal = () => {
             toast.success("Logged out");
         } catch (err) {
             console.log(err);
-            toast.error("Oops please try again!");
+            toast.error("Oops, please try again!");
         }
     };
 
