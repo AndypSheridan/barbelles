@@ -2,17 +2,18 @@ html {
     overflow-x: hidden;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     width: 100%;
     margin: 0px;
     padding: 0px;
-    
 }
 
 input[type="text"]::-webkit-input-placeholder {
     color: #b27092;
 }
+
 
 .App {
     font-family: "Roboto", sans-serif;
@@ -60,6 +61,11 @@ input[type="text"]::-webkit-input-placeholder {
 
 .FormControl {
     color: #b27092 !important;
+}
+
+Form.Control:focus {
+    border-color: #ff66b3 !important;
+    color: #ff66b3 !important;
 }
 
 .FillerImage {
@@ -153,6 +159,6 @@ i:hover {
 
 @media only screen and (max-width: 600px) {
     .Main {
-      height: 100%
+        height: 100%;
     }
-  }
+}
