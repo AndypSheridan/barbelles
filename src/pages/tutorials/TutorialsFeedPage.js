@@ -96,6 +96,9 @@ const TutorialsFeedPage = ({ message, filter = "" }) => {
                     )}
                 </Col>
                 <Col lg={4} className="d-lg-block d-none">
+                <Container className={styles.Social}>
+                    <SocialLinks />
+                    </Container>
                     <TopProfiles />
                 </Col>
             </Row>
