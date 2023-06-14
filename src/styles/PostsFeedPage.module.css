@@ -46,6 +46,21 @@
     color: #ff66b3;
 }
 
+.Social {
+    /* border: 1px solid white; */
+    border-radius: 2px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #dadadf;
+}
+
+.Social h3 {
+    margin-top: 0 !important;
+}
+
 @media only screen and (max-width: 992px) {
     .Col {
         padding: 0px;

@@ -13,6 +13,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Post from "./Post";
 import TopProfiles from "../profiles/TopProfiles";
+import SocialLinks from "../../components/SocialLinks"
 
 
 
@@ -103,6 +104,9 @@ const PostsFeedPage = ({ message, filter = "" }) => {
                 </Col>
                 <Col className={`${styles.ProfileCol} d-lg-block d-none`} lg={5}>
                     <TopProfiles />
+                    <Container className={styles.Social}>
+                    <SocialLinks />
+                    </Container>
                 </Col>
             </Row>
         </Container>
