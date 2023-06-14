@@ -14,6 +14,31 @@ input[type="text"]::-webkit-input-placeholder {
     color: #b27092;
 }
 
+input {
+    color: #b27092 !important;
+    border-color: #f4bfdb !important;
+}
+
+input:focus {
+    color: #b27092 !important;
+    border-color: #f4bfdb !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255,102,179,0.6) !important;
+}
+
+textarea {
+    color: #b27092 !important;
+    border-color: #f4bfdb !important;
+}
+
+textarea:focus {
+    border-color: #f4bfdb !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255,102,179,0.6) !important;
+}
+
+input:focus {
+    border-color: #ff66b3;
+}
+
 
 .App {
     font-family: "Roboto", sans-serif;
@@ -61,11 +86,6 @@ input[type="text"]::-webkit-input-placeholder {
 
 .FormControl {
     color: #b27092 !important;
-}
-
-Form.Control:focus {
-    border-color: #ff66b3 !important;
-    color: #ff66b3 !important;
 }
 
 .FillerImage {
