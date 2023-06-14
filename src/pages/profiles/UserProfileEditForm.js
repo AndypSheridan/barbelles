@@ -35,23 +35,55 @@ const UserProfileEditForm = () => {
 
     const [errors, setErrors] = useState({});
 
+    // useEffect(() => {
+
+    //     const handleMount = async () => {
+    //         if (currentUser?.profile_id?.toString() === id) {
+    //             try {
+    //                 const { data } = await axiosReq.get(`/profiles/${id}/`);
+    //                 const { name, bio, image } = data;
+    //                 setProfileData({ name, bio, image });
+    //             } catch (err) {
+    //                 console.log(err);
+    //                 history.push("/");
+    //             }
+    //         } else {
+    //             history.push("/");
+    //         }
+    //     };
+
+    //     handleMount();
+    // }, [currentUser, history, id]);
+
     useEffect(() => {
+        let isMounted = true; // Flag to track component mount status
+
         const handleMount = async () => {
             if (currentUser?.profile_id?.toString() === id) {
                 try {
                     const { data } = await axiosReq.get(`/profiles/${id}/`);
                     const { name, bio, image } = data;
-                    setProfileData({ name, bio, image });
+                    if (isMounted) {
+                        setProfileData({ name, bio, image });
+                    }
                 } catch (err) {
                     console.log(err);
-                    history.push("/");
+                    if (isMounted) {
+                        history.push("/");
+                    }
                 }
             } else {
-                history.push("/");
+                if (isMounted) {
+                    history.push("/");
+                }
             }
         };
 
         handleMount();
+
+        return () => {
+            isMounted = false; // Set the flag to false when the component unmounts
+        };
     }, [currentUser, history, id]);
 
     const handleChange = (event) => {
@@ -78,7 +110,7 @@ const UserProfileEditForm = () => {
                 profile_image: data.image,
             }));
             history.goBack();
-            toast.success("Profile updated")
+            toast.success("Profile updated");
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);
@@ -132,7 +164,9 @@ const UserProfileEditForm = () => {
     );
 
     return (
-        <Container className={`${styles.ProfileEditBgImage} ${styles.Container}`}>
+        <Container
+            className={`${styles.ProfileEditBgImage} ${styles.Container}`}
+        >
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
