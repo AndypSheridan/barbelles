@@ -61,9 +61,9 @@ const UserPasswordEditForm = () => {
                 <Col className="py-2 mx-auto text-center" md={6}>
                     <Container className={appStyles.Content}>
                         <Form onSubmit={handleSubmit}>
-                            <h1 className="my-2">Change Password</h1>
+                            <h1 className={`${styles.TextBrown}my-2`}>Change Password</h1>
                             <Form.Group>
-                                <Form.Label>New password</Form.Label>
+                                <Form.Label className={styles.TextDarkPink}>New password</Form.Label>
                                 <Form.Control
                                     placeholder="new password"
                                     type="password"
@@ -78,7 +78,7 @@ const UserPasswordEditForm = () => {
                                 </Alert>
                             ))}
                             <Form.Group>
-                                <Form.Label>Confirm password</Form.Label>
+                                <Form.Label className={styles.TextDarkPink}>Confirm password</Form.Label>
                                 <Form.Control
                                     placeholder="confirm new password"
                                     type="password"
