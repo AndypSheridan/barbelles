@@ -105,8 +105,8 @@ const Tutorial = (props) => {
                                 >
                                     View
                                 </Link>
-                            )}
-                            {" "}{updated_at}
+                            )}{" "}
+                            {updated_at}
                         </span>{" "}
                         {is_owner && tutorialPage && (
                             <ComponentDropDown
@@ -124,7 +124,7 @@ const Tutorial = (props) => {
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
             </div>
-            <Card.Body>
+            <Card.Body className={styles.TextBrown}>
                 {title && (
                     <Card.Title className="text-center">{title}</Card.Title>
                 )}
@@ -139,15 +139,15 @@ const Tutorial = (props) => {
                                 </Tooltip>
                             }
                         >
-                            <i className="fa-regular fa-bookmark" />
+                            <i className={`${styles.TextPink} fa-regular fa-bookmark`} />
                         </OverlayTrigger>
                     ) : favourite_id ? (
                         <span onClick={handleUnfavourite}>
-                            <i className="fa-solid fa-bookmark" />
+                            <i className={`${styles.TextPink} fa-solid fa-bookmark`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleFavourite}>
-                            <i className="fa-regular fa-bookmark" />
+                            <i className={`${styles.TextPink} fa-regular fa-bookmark`} />
                         </span>
                     ) : (
                         <OverlayTrigger
