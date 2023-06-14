@@ -61,7 +61,7 @@ input:focus {
 }
 
 .MainDiv {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     padding: 0px;
     min-height: 100%;
 }
