@@ -103,7 +103,7 @@ const Tutorial = (props) => {
                                     to={`/tutorials/${id}`}
                                     className={styles.TutorialSpan}
                                 >
-                                    View tutorial
+                                    View
                                 </Link>
                             )}
                             {" "}{updated_at}
