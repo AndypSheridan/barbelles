@@ -54,6 +54,10 @@ html, body {
     border: 1px solid #dadadf;
 }
 
+.FormControl {
+    color: #b27092 !important;
+}
+
 .FillerImage {
     object-fit: cover;
     height: 100%;
