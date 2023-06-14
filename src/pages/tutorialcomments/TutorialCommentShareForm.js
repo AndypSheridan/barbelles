@@ -46,6 +46,7 @@ function TutorialCommentShareForm(props) {
             toast.success("Comment posted!");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
         }
     };
 

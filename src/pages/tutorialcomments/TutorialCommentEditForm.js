@@ -39,6 +39,7 @@ function TutorialCommentEditForm(props) {
             setShowEditForm(false);
             toast.success("Comment updated")
         } catch (err) {
+            toast.error("Oops, please try again!");
             console.log(err);
         }
     };

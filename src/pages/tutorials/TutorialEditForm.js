@@ -49,16 +49,6 @@ const TutorialEditForm = () => {
         });
     };
 
-    // const handleChangeImage = (event) => {
-    //     if (event.target.files.length) {
-    //         URL.revokeObjectURL(image);
-    //         setPostData({
-    //             ...postData,
-    //             image: URL.createObjectURL(event.target.files[0]),
-    //         });
-    //     }
-    // };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
@@ -77,6 +67,7 @@ const TutorialEditForm = () => {
             toast.success("Tutorial updated");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }

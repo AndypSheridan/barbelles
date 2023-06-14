@@ -78,6 +78,7 @@ const PostEditForm = () => {
             toast.success("Post edited");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }

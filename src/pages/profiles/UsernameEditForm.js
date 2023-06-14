@@ -51,6 +51,7 @@ const UsernameEditForm = () => {
             toast.success("Username updated");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
             setErrors(err.response?.data);
         }
     };

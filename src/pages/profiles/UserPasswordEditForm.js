@@ -51,6 +51,7 @@ const UserPasswordEditForm = () => {
             toast.success("Password updated");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
             setErrors(err.response?.data);
         }
     };

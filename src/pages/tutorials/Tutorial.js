@@ -85,6 +85,7 @@ const Tutorial = (props) => {
             toast.success("Tutorial deleted");
         } catch (err) {
             console.log(err);
+            toast.error("Oops, please try again!");
         }
     };
 
