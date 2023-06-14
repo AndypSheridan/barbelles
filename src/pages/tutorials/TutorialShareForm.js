@@ -114,7 +114,7 @@ function TutorialShareForm() {
                 className={`${styles.TutorialShareEditForm} ${styles.TutorialShareEditFormBg}`}
                 onSubmit={handleSubmit}
             >
-                <h1 className="text-center py-2">Upload tutorial</h1>
+                
                 <Row className="text-center">
                     {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
                         <Container
@@ -174,8 +174,8 @@ function TutorialShareForm() {
                     </Col> */}
                     <Col md={6} lg={6} className="d-md-block p-2 mx-auto p-md-2">
                         <Container
-                            className={`${appStyles.Content} ${styles.PostShareContainer}`}
-                        >
+                            className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.TextBrown}`}
+                        ><h1 className="text-center py-2">Upload tutorial</h1>
                             {textFields}
                         </Container>
                     </Col>

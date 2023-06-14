@@ -15,6 +15,10 @@
     background-attachment: fixed;
 }
 
+.TextBrown {
+    color: #512d38;
+}
+
 .TutorialShareEditForm {
     padding-top: 120px;
 }
