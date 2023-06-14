@@ -21,9 +21,9 @@ export const handlers = [
         return res(ctx.status(200));
     }),
     rest.post(`${baseURL}dj-rest-auth/token/refresh/`, (req, res, ctx) => {
-    return res(ctx.status(200));
-  }),
-  rest.post(`${baseURL}dj-rest-auth/login/`, (req, res, ctx) => {
-    return res(ctx.status(200));
-  })
+        return res(ctx.status(200));
+    }),
+    rest.post(`${baseURL}dj-rest-auth/login/`, (req, res, ctx) => {
+        return res(ctx.status(200));
+    }),
 ];
