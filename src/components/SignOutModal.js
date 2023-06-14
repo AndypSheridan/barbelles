@@ -8,7 +8,7 @@ import { removeTokenTimestamp } from "../utils/utils";
 import { useRedirect } from "../hooks/useRedirect";
 // import CustomButton from "../components/CustomButton"
 // import { handleSignOut } from "../components/NavBar"
-import { ToastContainer, Slide, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import btnStyles from "../styles/Button.module.css";
 
