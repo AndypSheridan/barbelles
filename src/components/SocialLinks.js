@@ -10,6 +10,7 @@ const SocialLinks = () => {
                 rel="noopener noreferrer"
                 className="px-2"
                 aria-label="youtube"
+                title="youtube"
             >
                 <i className="fa-brands fa-square-youtube fa-3x"></i>
             </a>
@@ -19,6 +20,7 @@ const SocialLinks = () => {
                 rel="noopener noreferrer"
                 className="px-2"
                 aria-label="instagram"
+                title="instagram"
             >
                 <i className="fa-brands fa-square-instagram fa-3x"></i>
             </a>
@@ -28,6 +30,7 @@ const SocialLinks = () => {
                 rel="noopener noreferrer"
                 className="px-2"
                 aria-label="facebook"
+                title="facebook"
             >
                 <i className="fa-brands fa-square-facebook fa-3x"></i>
             </a>
@@ -37,6 +40,7 @@ const SocialLinks = () => {
                 rel="noopener noreferrer"
                 className="px-2"
                 aria-label="twitter"
+                title="twitter"
             >
                 <i className="fa-brands fa-square-twitter fa-3x"></i>
             </a>
