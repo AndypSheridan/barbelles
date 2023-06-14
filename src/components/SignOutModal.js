@@ -56,14 +56,14 @@ const SignOutModal = () => {
                         Not yet!
                     </Button>
 
-                    <NavLink to="/signup">
+                    {/* <NavLink to="/signup"> */}
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Pink}`}
                             onClick={handleSignOut}
                         >
                             I'm sure!
                         </Button>
-                    </NavLink>
+                    {/* </NavLink> */}
                 </Modal.Footer>
             </Modal>
         </>
