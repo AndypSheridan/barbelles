@@ -1,24 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
+import styles from "../../styles/UserProfileEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
-
-import Form from "react-bootstrap/Form";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
-
-import { axiosReq } from "../../api/axiosDefaults";
 import {
     useCurrentUser,
     useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-import styles from "../../styles/UserProfileEditForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const UserProfileEditForm = () => {
     useRedirect("loggedOut");
@@ -37,28 +35,8 @@ const UserProfileEditForm = () => {
 
     const [errors, setErrors] = useState({});
 
-    // useEffect(() => {
-
-    //     const handleMount = async () => {
-    //         if (currentUser?.profile_id?.toString() === id) {
-    //             try {
-    //                 const { data } = await axiosReq.get(`/profiles/${id}/`);
-    //                 const { name, bio, image } = data;
-    //                 setProfileData({ name, bio, image });
-    //             } catch (err) {
-    //                 console.log(err);
-    //                 history.push("/");
-    //             }
-    //         } else {
-    //             history.push("/");
-    //         }
-    //     };
-
-    //     handleMount();
-    // }, [currentUser, history, id]);
-
     useEffect(() => {
-        let isMounted = true; // Flag to track component mount status
+        let isMounted = true;
 
         const handleMount = async () => {
             if (currentUser?.profile_id?.toString() === id) {
@@ -84,7 +62,7 @@ const UserProfileEditForm = () => {
         handleMount();
 
         return () => {
-            isMounted = false; // Set the flag to false when the component unmounts
+            isMounted = false;
         };
     }, [currentUser, history, id]);
 

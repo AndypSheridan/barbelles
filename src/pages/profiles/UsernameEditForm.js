@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from "react";
-
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-
+import styles from "../../styles/UsernameEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosRes } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import appStyles from "../../App.module.css";
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import {
     useCurrentUser,
     useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
-import styles from "../../styles/UsernameEditForm.module.css";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const UsernameEditForm = () => {
     useRedirect("loggedOut");

@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
+import styles from "../../styles/UserPasswordEditForm.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useHistory, useParams } from "react-router-dom";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
+import { axiosRes } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
+import appStyles from "../../App.module.css";
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-
-import { useHistory, useParams } from "react-router-dom";
-import { axiosRes } from "../../api/axiosDefaults";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
-import { toast } from "react-toastify";
-import styles from "../../styles/UserPasswordEditForm.module.css";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const UserPasswordEditForm = () => {
     useRedirect("loggedOut");
@@ -64,9 +61,13 @@ const UserPasswordEditForm = () => {
                 <Col className="py-2 mx-auto text-center" md={6}>
                     <Container className={appStyles.Content}>
                         <Form onSubmit={handleSubmit}>
-                            <h1 className={`${styles.TextBrown}my-2`}>Change Password</h1>
+                            <h1 className={`${styles.TextBrown}my-2`}>
+                                Change Password
+                            </h1>
                             <Form.Group>
-                                <Form.Label className={styles.TextDarkPink}>New password</Form.Label>
+                                <Form.Label className={styles.TextDarkPink}>
+                                    New password
+                                </Form.Label>
                                 <Form.Control
                                     placeholder="new password"
                                     type="password"
@@ -81,7 +82,9 @@ const UserPasswordEditForm = () => {
                                 </Alert>
                             ))}
                             <Form.Group>
-                                <Form.Label className={styles.TextDarkPink}>Confirm password</Form.Label>
+                                <Form.Label className={styles.TextDarkPink}>
+                                    Confirm password
+                                </Form.Label>
                                 <Form.Control
                                     placeholder="confirm new password"
                                     type="password"

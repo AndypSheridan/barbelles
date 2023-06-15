@@ -4,23 +4,23 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/ProfilePage.module.css";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
 import { Button, Image } from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
+import Asset from "../../components/Asset";
 import {
     useProfileData,
     useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import Asset from "../../components/Asset";
 import TopProfiles from "./TopProfiles";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
-import btnStyles from "../../styles/Button.module.css";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const ProfilePage = () => {
     useRedirect("loggedOut");

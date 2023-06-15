@@ -1,13 +1,12 @@
 import React from "react";
-import appStyles from "../../App.module.css";
+import { useProfileData } from "../../contexts/ProfileDataContext";
+import styles from "../../styles/TopProfiles.module.css";
 import Container from "react-bootstrap/Container";
+import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
-import { useProfileData } from "../../contexts/ProfileDataContext";
-import styles from "../../styles/TopProfiles.module.css"
 
 const TopProfiles = ({ mobile }) => {
-    
     const { topProfiles } = useProfileData();
 
     return (
@@ -22,7 +21,11 @@ const TopProfiles = ({ mobile }) => {
                     {mobile ? (
                         <div className="d-flex justify-content-around">
                             {topProfiles.results.slice(0, 4).map((profile) => (
-                                <Profile key={profile.id} profile={profile} mobile />
+                                <Profile
+                                    key={profile.id}
+                                    profile={profile}
+                                    mobile
+                                />
                             ))}
                         </div>
                     ) : (
