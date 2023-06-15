@@ -10,8 +10,10 @@ import communityImage5 from "../assets/community5.jpg";
 import communityImage6 from "../assets/community6.jpg";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
+import { useRedirect } from "../hooks/useRedirect";
 
 const About = () => {
+    useRedirect("loggedOut");
     return (
         <Container className={styles.AboutContainer}>
             <h1 className={`${styles.AboutHeader} text-center`}>
