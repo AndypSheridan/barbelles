@@ -52,3 +52,8 @@ i:hover {
     color: #87baab;
 }
 
+@media only screen and (max-width: 767px) {
+    .NavLink {
+        text-align: right;
+    }
+}

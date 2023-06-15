@@ -46,19 +46,19 @@ const NavBar = () => {
             </NavLink>
 
             <NavDropdown
-                alignRight
+                alignLeft
                 title={
                     <span>
                         <i className="fa-regular fa-image"></i>Posts
                     </span>
                 }
                 id="basic-nav-dropdown"
-                className={styles.FeedsDropdown}
+                className={`${styles.FeedsDropdown}`}
             >
                 {/* <NavDropdown.Item> */}
                 <NavLink
                     to="/posts"
-                    className={styles.NavLink}
+                    className={`${styles.NavLink}`}
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
                 >
@@ -233,7 +233,8 @@ const NavBar = () => {
             fixed="top"
         >
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
-                {currentUser ? (
+                
+            {currentUser ? (
                     <NavLink to="/">
                         <Navbar.Brand className={styles.NavBarBrandText}>
                             <img
@@ -250,7 +251,6 @@ const NavBar = () => {
                         BarBelles
                     </Navbar.Brand>
                 )}
-
                 {/* {currentUser && createPostIcon} */}
 
                 <Navbar.Toggle
@@ -258,9 +258,10 @@ const NavBar = () => {
                     // ref={ref}
                     aria-controls="basic-navbar-nav"
                     onClick={() => setExpanded(expanded ? false : "expanded")}
+                    className="text-right"
                 />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto text-center">
+                <Navbar.Collapse id="basic-navbar-nav" className="text-right">
+                    <Nav className="ml-auto text-right">
                         {/* <NavLink
                             exact
                             to="/"
@@ -273,6 +274,7 @@ const NavBar = () => {
                         {currentUser ? signedInIcons : signedOutIcons}
                     </Nav>
                 </Navbar.Collapse>
+                
             </Container>
         </Navbar>
     );
