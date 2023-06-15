@@ -15,8 +15,6 @@ const SignOutModal = () => {
     const setCurrentUser = useSetCurrentUser();
     const history = useHistory();
 
-    // const { expanded, setExpanded, ref } = useClickOutsideToggle();
-
     const handleSignOut = async () => {
         try {
             await axios.post("dj-rest-auth/logout/");
@@ -53,14 +51,12 @@ const SignOutModal = () => {
                         Not yet!
                     </Button>
 
-                    {/* <NavLink to="/signup"> */}
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Pink}`}
                             onClick={handleSignOut}
                         >
                             I'm sure!
                         </Button>
-                    {/* </NavLink> */}
                 </Modal.Footer>
             </Modal>
         </>

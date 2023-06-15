@@ -10,19 +10,9 @@ import logo from "../assets/logo2.png";
 import Nav from "react-bootstrap/Nav";
 import Avatar from "./Avatar";
 
-
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const [expanded, setExpanded] = useState(false);
-
-    // const handleSignOut = async () => {
-    //     try {
-    //         await axios.post("dj-rest-auth/logout/");
-    //         setCurrentUser(null);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
 
     const signedInIcons = (
         <>
@@ -30,9 +20,7 @@ const NavBar = () => {
                 <i className="fa-solid fa-circle-info pl-3"></i>
                 About
             </NavLink>
-
             <NavDropdown
-                // alignleft
                 title={
                     <span>
                         <i className="fa-regular fa-image"></i>Posts
@@ -41,7 +29,6 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
                 className={`${styles.FeedsDropdown}`}
             >
-                {/* <NavDropdown.Item> */}
                 <NavLink
                     to="/posts"
                     className={`${styles.NavLink}`}
@@ -58,8 +45,6 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-user-group"></i> Following
                 </NavLink>
-                {/* </NavDropdown.Item> */}
-                {/* <NavDropdown.Item> */}
                 <NavLink
                     to="/posts/share"
                     className={styles.NavLink}
@@ -77,31 +62,6 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-bookmark"></i> Liked
                 </NavLink>
-                {/* <NavLink
-                    to="/tutorials"
-                    className={styles.NavLink}
-                    activeClassName={styles.Active}
-                    onClick={() => setExpanded(false)}
-                >
-                    <i className="fa-solid fa-graduation-cap"></i> Tutorials
-                </NavLink>
-                <NavLink
-                    to="/tutorials/share"
-                    className={styles.NavLink}
-                    activeClassName={styles.Active}
-                    onClick={() => setExpanded(false)}
-                >
-                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share tutorial
-                </NavLink>
-                <NavLink
-                    to="/favourited"
-                    className={styles.NavLink}
-                    activeClassName={styles.Active}
-                    onClick={() => setExpanded(false)}
-                >
-                    <i className="fa-solid fa-bookmark"></i> Favourites
-                </NavLink> */}
-                {/* </NavDropdown.Item> */}
             </NavDropdown>
 
             <NavDropdown
@@ -114,11 +74,6 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
                 className={styles.FeedsDropdown}
             >
-                {/* <NavDropdown.Item> */}
-
-                {/* </NavDropdown.Item> */}
-                {/* <NavDropdown.Item> */}
-
                 <NavLink
                     to="/tutorials"
                     className={styles.NavLink}
@@ -128,7 +83,6 @@ const NavBar = () => {
                     <i className="fa-solid fa-list"></i> Tutorials
                 </NavLink>
 
-                {/* {is_staff &&  */}
                 {currentUser?.profile_is_staff === true && (
                     <NavLink
                         to="/tutorials/share"
@@ -140,7 +94,6 @@ const NavBar = () => {
                         Share tutorial
                     </NavLink>
                 )}
-                {/* } */}
 
                 <NavLink
                     to="/favourited"
@@ -150,7 +103,6 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-bookmark"></i> Favourites
                 </NavLink>
-                {/* </NavDropdown.Item> */}
             </NavDropdown>
 
             <NavDropdown
@@ -159,7 +111,6 @@ const NavBar = () => {
                 alignRight
                 className={styles.ProfileDropdown}
             >
-                {/* <NavDropdown.Item> */}
                 <NavLink
                     to={`/profiles/${currentUser?.profile_id}`}
                     className={`${styles.NavLink} ${styles.AvatarNavLink}`}
@@ -168,37 +119,13 @@ const NavBar = () => {
                 >
                     <Avatar src={currentUser?.profile_image} text="Profile" />
                 </NavLink>
-                {/* </NavDropdown.Item> */}
-                {/* <NavDropdown.Item> */}
-
-                {/* </NavDropdown.Item> */}
-                {/* <NavDropdown.Item> */}
 
                 <SignOutModal />
-
-                {/* <NavLink
-                    to="/"
-                    onClick={handleSignOut}
-                    className={styles.NavLink}
-                    
-                >
-                    <i className="fa-solid fa-door-open"></i> Log out
-                </NavLink> */}
-
-                {/* </NavDropdown.Item> */}
             </NavDropdown>
         </>
     );
     const signedOutIcons = (
         <>
-            {/* <NavLink
-                to="/signin"
-                className={styles.NavLink}
-                activeClassName={styles.Active}
-                onClick={() => setExpanded(false)}
-            >
-                <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign in
-            </NavLink> */}
             <NavLink
                 to="/signup"
                 className={styles.NavLink}
@@ -235,26 +162,14 @@ const NavBar = () => {
                         BarBelles
                     </Navbar.Brand>
                 )}
-                {/* {currentUser && createPostIcon} */}
 
                 <Navbar.Toggle
-                    // onClick={() => setExpanded(!expanded)}
-                    // ref={ref}
                     aria-controls="basic-navbar-nav"
                     onClick={() => setExpanded(expanded ? false : "expanded")}
                     className="text-right"
                 />
                 <Navbar.Collapse id="basic-navbar-nav" className="text-right">
                     <Nav className="ml-auto text-right">
-                        {/* <NavLink
-                            exact
-                            to="/"
-                            className={styles.NavLink}
-                            activeClassName={styles.Active}
-                            onClick={() => setExpanded(false)}
-                        >
-                            <i className="fas fa-home"></i> Home
-                        </NavLink> */}
                         {currentUser ? signedInIcons : signedOutIcons}
                     </Nav>
                 </Navbar.Collapse>
