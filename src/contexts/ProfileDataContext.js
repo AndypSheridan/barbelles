@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { useCurrentUser } from "./CurrentUserContext";
 import { unfollowHelper } from "../utils/utils";
 import { followHelper } from "../utils/utils";
 

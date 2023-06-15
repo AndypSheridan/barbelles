@@ -90,7 +90,6 @@ function App() {
                             <TutorialsFeedPage message="No search results found. Adjust the search keyword(s)" />
                         )}
                     />
-
                     <Route
                         exact
                         path="/tutorials/share"
@@ -146,7 +145,6 @@ function App() {
                 </Switch>
             </Container>
         </div>
-        // </Container>
     );
 }
 
