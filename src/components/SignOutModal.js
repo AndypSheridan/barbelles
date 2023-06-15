@@ -40,7 +40,7 @@ const SignOutModal = () => {
         <>
             <Button
                 variant="danger"
-                className={`${btnStyles.Button} ${btnStyles.Pink} mx-auto d-block`}
+                className={`${btnStyles.Button} ${btnStyles.Pink} ${btnStyles.SignOut} mx-auto d-block`}
                 onClick={handleShow}
             >
                 Sign out

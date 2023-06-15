@@ -31,8 +31,9 @@
     transition: color ease-in-out 0.3s;
 }
 
+
 /* .FeedsDropdown {
-    padding-top: 0px;
+    background: transparent;
 } */
 
 i {
@@ -55,5 +56,10 @@ i:hover {
 @media only screen and (max-width: 767px) {
     .NavLink {
         text-align: right;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        background: transparent !important;
+        border: none !important;
     }
 }
