@@ -9,8 +9,10 @@ import TutorialCommentEditForm from "./TutorialCommentEditForm";
 // import { TutorialCommentDropDown } from "../../components/ComponentDropDown";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 import { toast } from "react-toastify";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialComment = (props) => {
+    useRedirect("loggedOut");
     const {
         profile_id,
         profile_image,

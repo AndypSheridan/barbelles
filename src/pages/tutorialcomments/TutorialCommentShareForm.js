@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
 import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function TutorialCommentShareForm(props) {
+    useRedirect("loggedOut");
     const {
         tutorial,
         setTutorial,

@@ -8,8 +8,10 @@ import styles from "../../styles/CommentShareEditForm.module.css";
 import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
 import btnStyles from "../../styles/Button.module.css"
+import { useRedirect } from "../../hooks/useRedirect";
 
 function TutorialCommentEditForm(props) {
+    useRedirect("loggedOut");
     const { id, content, setShowEditForm, setTutorialComments } = props;
 
     const [formContent, setFormContent] = useState(content);
