@@ -1,14 +1,14 @@
 import React from "react";
-import styles from "../../styles/Tutorial.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Card from "react-bootstrap/Card";
-import Media from "react-bootstrap/Media";
-import { Link, useHistory } from "react-router-dom";
-import Avatar from "../../components/Avatar";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-import { axiosRes } from "../../api/axiosDefaults";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import styles from "../../styles/Tutorial.module.css";
+import { Link, useHistory } from "react-router-dom";
+import { axiosRes } from "../../api/axiosDefaults";
+import Tooltip from "react-bootstrap/Tooltip";
+import Avatar from "../../components/Avatar";
+import Media from "react-bootstrap/Media";
+import Card from "react-bootstrap/Card";
 import { toast } from "react-toastify";
 
 const Tutorial = (props) => {

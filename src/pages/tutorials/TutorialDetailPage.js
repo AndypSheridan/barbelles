@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import styles from "../../styles/TutorialDetailPage.module.css";
-import appStyles from "../../App.module.css";
-import { useParams } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
-import Tutorial from "./Tutorial";
 import TutorialCommentShareForm from "../tutorialcomments/TutorialCommentShareForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TutorialComment from "../tutorialcomments/TutorialComment";
-import TopProfiles from "../profiles/TopProfiles";
+import styles from "../../styles/TutorialDetailPage.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Asset from "../../components/Asset";
-import { fetchMoreData } from "../../utils/utils";
 import { useRedirect } from "../../hooks/useRedirect";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import { fetchMoreData } from "../../utils/utils";
+import TopProfiles from "../profiles/TopProfiles";
+import { useParams } from "react-router-dom";
+import appStyles from "../../App.module.css";
+import Asset from "../../components/Asset";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Tutorial from "./Tutorial";
 
 const TutorialDetailPage = () => {
     useRedirect("loggedOut");

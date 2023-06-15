@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-
-import Form from "react-bootstrap/Form";
-import { axiosRes } from "../../api/axiosDefaults";
-
-// import styles from "../../styles/CommentCreateEditForm.module.css";
 import styles from "../../styles/CommentShareEditForm.module.css";
-import { Container } from "react-bootstrap";
-import { toast } from "react-toastify";
-import btnStyles from "../../styles/Button.module.css"
 import { useRedirect } from "../../hooks/useRedirect";
+import btnStyles from "../../styles/Button.module.css";
+import { axiosRes } from "../../api/axiosDefaults";
+import { Container } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 
 function TutorialCommentEditForm(props) {
     useRedirect("loggedOut");
@@ -39,7 +36,7 @@ function TutorialCommentEditForm(props) {
                 }),
             }));
             setShowEditForm(false);
-            toast.success("Comment updated")
+            toast.success("Comment updated");
         } catch (err) {
             toast.error("Oops, please try again!");
             console.log(err);
@@ -48,35 +45,35 @@ function TutorialCommentEditForm(props) {
 
     return (
         <Container>
-        <Form onSubmit={handleSubmit} className="py-2">
-            <Form.Group className="pr-1">
-                <Form.Control
-                    className={styles.Form}
-                    as="textarea"
-                    value={formContent}
-                    onChange={handleChange}
-                    rows={2}
-                />
-            </Form.Group>
-            <div className="text-right">
-                <button
-                    className={`${btnStyles.Button} ${btnStyles.Dark}`}
-                    onClick={() => setShowEditForm(false)}
-                    type="button"
-                >
-                    Cancel
-                </button>
-                <button
-                    className={`${btnStyles.Button} ${btnStyles.Pink}`}
-                    disabled={!content.trim()}
-                    type="submit"
-                >
-                    Update
-                </button>
-            </div>
-        </Form>
+            <Form onSubmit={handleSubmit} className="py-2">
+                <Form.Group className="pr-1">
+                    <Form.Control
+                        className={styles.Form}
+                        as="textarea"
+                        value={formContent}
+                        onChange={handleChange}
+                        rows={2}
+                    />
+                </Form.Group>
+                <div className="text-right">
+                    <button
+                        className={`${btnStyles.Button} ${btnStyles.Dark}`}
+                        onClick={() => setShowEditForm(false)}
+                        type="button"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                        disabled={!content.trim()}
+                        type="submit"
+                    >
+                        Update
+                    </button>
+                </div>
+            </Form>
         </Container>
     );
-};
+}
 
 export default TutorialCommentEditForm;

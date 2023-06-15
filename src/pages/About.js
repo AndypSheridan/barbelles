@@ -1,16 +1,16 @@
 import React from "react";
-import styles from "../styles/About.module.css";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import communityImage6 from "../assets/community6.jpg";
 import communityImage2 from "../assets/community3.jpg";
 import communityImage1 from "../assets/community4.jpg";
-import communityImage3 from "../assets/kateross.jpg";
 import communityImage5 from "../assets/community5.jpg";
-import communityImage6 from "../assets/community6.jpg";
-import { Link } from "react-router-dom";
+import communityImage3 from "../assets/kateross.jpg";
 import SocialLinks from "../components/SocialLinks";
 import { useRedirect } from "../hooks/useRedirect";
+import Container from "react-bootstrap/Container";
+import styles from "../styles/About.module.css";
+import { Link } from "react-router-dom";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const About = () => {
     useRedirect("loggedOut");

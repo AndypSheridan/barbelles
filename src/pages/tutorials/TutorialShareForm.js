@@ -1,17 +1,17 @@
 import React, { useState } from "react";
+import styles from "../../styles/TutorialShareEditForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import { useHistory } from "react-router-dom";
+import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Alert from "react-bootstrap/Alert";
-import Container from "react-bootstrap/Container";
-import styles from "../../styles/TutorialShareEditForm.module.css";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import { useHistory } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
-import { toast } from "react-toastify";
 
 function TutorialShareForm() {
     useRedirect("loggedOut");
@@ -124,62 +124,6 @@ function TutorialShareForm() {
                 onSubmit={handleSubmit}
             >
                 <Row className="text-center">
-                    {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
-                        <Container
-                            className={`${appStyles.Content} ${styles.PostShareContainer} ${styles.PostShareEditFormBg} d-flex flex-column justify-content-center`}
-                        >
-                            <Form.Group
-                                className={`${styles.PostShareBgTransparent} text-center`}
-                            >
-                                {image ? (
-                                    <>
-                                        <figure>
-                                            <Image
-                                                className={appStyles.Image}
-                                                src={image}
-                                                rounded
-                                            />
-                                        </figure>
-                                        <div
-                                            className={
-                                                styles.PostShareBgTransparent
-                                            }
-                                        >
-                                            <Form.Label
-                                                className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                                                htmlFor="image-upload"
-                                            >
-                                                Change image
-                                            </Form.Label>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <Form.Label
-                                        className="d-flex justify-content-center"
-                                        htmlFor="image-upload"
-                                    >
-                                        <Asset
-                                            src={UploadIcon}
-                                            message={"Upload your image here!"}
-                                        />
-                                    </Form.Label>
-                                )}
-                                <Form.File
-                                    ref={imageInput}
-                                    onChange={handleChangeImage}
-                                    id="image-upload"
-                                    accept="image/*"
-                                />
-                            </Form.Group>
-                            {errors?.image?.map((message, idx) => (
-                                <Alert variant="warning" key={idx}>
-                                    {message}
-                                </Alert>
-                            ))} */}
-
-                    {/* <div className="d-md-none">{textFields}</div>
-                        </Container>
-                    </Col> */}
                     <Col
                         md={6}
                         lg={6}

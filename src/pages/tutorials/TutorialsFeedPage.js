@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
-import styles from "../../styles/TutorialsFeedPage.module.css";
-import { Col, Form, Row } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
-import Tutorial from "./Tutorial";
-import appStyles from "../../App.module.css";
-import Asset from "../../components/Asset";
 import NoSearchResults from "../../assets/nosearchresults.png";
+import styles from "../../styles/TutorialsFeedPage.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { fetchMoreData } from "../../utils/utils";
-import TopProfiles from "../profiles/TopProfiles";
 import SocialLinks from "../../components/SocialLinks";
 import { useRedirect } from "../../hooks/useRedirect";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import { fetchMoreData } from "../../utils/utils";
+import TopProfiles from "../profiles/TopProfiles";
+import { Col, Form, Row } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
+import appStyles from "../../App.module.css";
+import Asset from "../../components/Asset";
+import Tutorial from "./Tutorial";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
     useRedirect("loggedOut");

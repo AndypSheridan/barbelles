@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/TutorialShareEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { toast } from "react-toastify";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialEditForm = () => {
     useRedirect("loggedOut");
@@ -58,10 +58,6 @@ const TutorialEditForm = () => {
         formData.append("title", title);
         formData.append("summary", summary);
         formData.append("video", video);
-
-        // if (imageInput?.current?.files[0]) {
-        //     formData.append("image", imageInput.current.files[0]);
-        // }
 
         try {
             await axiosReq.put(`/tutorials/${id}/`, formData);
@@ -149,46 +145,6 @@ const TutorialEditForm = () => {
             >
                 <h1 className="text-center py-2">Edit tutorial</h1>
                 <Row>
-                    {/* <Col className={`py-2 p-0 p-md-2`} md={6} lg={6}>
-                        <Container
-                            className={`${appStyles.Content} ${styles.TutorialShareContainer}
-                            ${styles.TutorialShareEditFormBg} d-flex flex-column justify-content-center`}
-                        >
-                            <Form.Group
-                                className={`${styles.TutorialShareBgTransparent} text-center`}
-                            >
-                                <figure>
-                                    <Image
-                                        className={appStyles.Image}
-                                        src={image}
-                                        rounded
-                                    />
-                                </figure>
-                                <div className={styles.PostShareBgTransparent}>
-                                    <Form.Label
-                                        className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                                        htmlFor="image-upload"
-                                    >
-                                        Change image
-                                    </Form.Label>
-                                </div>
-
-                                <Form.File
-                                    ref={imageInput}
-                                    onChange={handleChangeImage}
-                                    id="image-upload"
-                                    accept="image/*"
-                                />
-                            </Form.Group>
-                            {errors?.image?.map((message, idx) => (
-                                <Alert variant="warning" key={idx}>
-                                    {message}
-                                </Alert>
-                            ))}
-
-                            <div className="d-md-none">{textFields}</div>
-                        </Container>
-                    </Col> */}
                     <Col
                         md={6}
                         lg={6}
