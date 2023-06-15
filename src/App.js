@@ -18,6 +18,7 @@ import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import About from "./pages/About";
 import "./api/axiosDefaults";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -137,9 +138,7 @@ function App() {
                     />
                     <Route
                         render={() => (
-                            <p className={styles.PageNotFound}>
-                                Oh no, this page can't be found!!
-                            </p>
+                            <PageNotFound />
                         )}
                     />
                 </Switch>

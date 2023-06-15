@@ -1,8 +1,10 @@
 import React from 'react'
+import styles from "../styles/PageNotFound.module.css"
+
 
 const PageNotFound = () => {
   return (
-    <div>PageNotFound</div>
+    <div className={styles.Div}>PageNotFound</div>
   )
 }
 
