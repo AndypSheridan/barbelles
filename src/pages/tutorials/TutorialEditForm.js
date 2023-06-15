@@ -11,8 +11,10 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { toast } from "react-toastify";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialEditForm = () => {
+    useRedirect("loggedOut");
     const [errors, setErrors] = useState();
 
     const [tutorialData, setTutorialData] = useState({
