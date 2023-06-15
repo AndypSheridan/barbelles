@@ -19,9 +19,7 @@ export const CurrentUserProvider = ({ children }) => {
         try {
             const { data } = await axiosRes.get("/dj-rest-auth/user/");
             setCurrentUser(data);
-        } catch (err) {
-            console.log(err);
-        }
+        } catch (err) {}
     };
 
     useEffect(() => {
@@ -41,7 +39,7 @@ export const CurrentUserProvider = ({ children }) => {
                             }
                             return null;
                         });
-                        removeTokenTimestamp()
+                        removeTokenTimestamp();
                         return config;
                     }
                 }

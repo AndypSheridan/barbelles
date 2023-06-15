@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
-import { unfollowHelper } from "../utils/utils"
+import { unfollowHelper } from "../utils/utils";
 import { followHelper } from "../utils/utils";
 
 const ProfileDataContext = createContext();
@@ -20,7 +20,6 @@ export const ProfileDataProvider = ({ children }) => {
 
     const handleFollow = async (clickedProfile) => {
         try {
-            console.log("trying post")
             const { data } = await axiosRes.post("/followers/", {
                 followed: clickedProfile.id,
             });
@@ -39,9 +38,7 @@ export const ProfileDataProvider = ({ children }) => {
                     ),
                 },
             }));
-        } catch (err) {
-            console.log(err);
-        }
+        } catch (err) {}
     };
 
     const handleUnfollow = async (clickedProfile) => {
@@ -50,20 +47,21 @@ export const ProfileDataProvider = ({ children }) => {
             setProfileData((prevState) => ({
                 ...prevState,
                 pageProfile: {
-                    results: prevState.pageProfile.results.map((profile) => unfollowHelper(profile, clickedProfile)),
+                    results: prevState.pageProfile.results.map((profile) =>
+                        unfollowHelper(profile, clickedProfile)
+                    ),
                 },
                 topProfiles: {
                     ...prevState.topProfiles,
-                    results: prevState.topProfiles.results.map((profile) => unfollowHelper(profile, clickedProfile)),
+                    results: prevState.topProfiles.results.map((profile) =>
+                        unfollowHelper(profile, clickedProfile)
+                    ),
                 },
-            }))
-        } catch (err) {
-            console.log(err)
-        }
-    }
+            }));
+        } catch (err) {}
+    };
 
     useEffect(() => {
-        console.log(currentUser)
         const handleMount = async () => {
             try {
                 const { data } = await axiosReq.get(
@@ -73,9 +71,7 @@ export const ProfileDataProvider = ({ children }) => {
                     ...prevState,
                     topProfiles: data,
                 }));
-            } catch (err) {
-                console.log(err);
-            }
+            } catch (err) {}
         };
         handleMount();
     }, [currentUser]);
