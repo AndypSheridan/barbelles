@@ -61,6 +61,7 @@
     color: #ff66b3;
 }
 
+/* Media queries */
 @media only screen and (max-width: 992px) {
     .Col {
         padding: 0px;

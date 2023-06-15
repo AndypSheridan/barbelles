@@ -116,7 +116,7 @@
 }
 
 
-
+/* Media queries */
 @media only screen and (max-width: 767px) {
     .SignOut {
         margin-right: 0.5rem !important;

@@ -100,7 +100,7 @@ input:focus {
 }
 
 a {
-    color: #555555;
+    color: #512d38;
     transition: color ease-in-out 0.3s;
 }
 
@@ -149,6 +149,7 @@ figure {
     background: #ffe9f3;
 }
 
+/* Media queries */
 @media only screen and (max-width: 600px) {
     .Main {
         height: 100%;
