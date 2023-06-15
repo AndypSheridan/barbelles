@@ -18,8 +18,10 @@ import styles from "../../styles/UserProfileEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const UserProfileEditForm = () => {
+    useRedirect("loggedOut");
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
     const { id } = useParams();
