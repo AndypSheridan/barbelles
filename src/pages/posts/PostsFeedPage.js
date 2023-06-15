@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/PostsFeedPage.module.css";
-import Container from "react-bootstrap/Container";
+import SocialLinks from "../../components/SocialLinks";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import { fetchMoreData } from "../../utils/utils";
+import TopProfiles from "../profiles/TopProfiles";
+import Container from "react-bootstrap/Container";
 import { useLocation } from "react-router-dom";
-// import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Post from "./Post";
-import TopProfiles from "../profiles/TopProfiles";
-import SocialLinks from "../../components/SocialLinks";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
     useRedirect("loggedOut");

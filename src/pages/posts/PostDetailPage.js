@@ -3,19 +3,18 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/PostDetailPage.module.css";
 import CommentShareForm from "../comments/CommentShareForm";
-import PostComment from "../comments/PostComment";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
+import PostComment from "../comments/PostComment";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
-// import appStyles from "../../App.module.css";
+import TopProfiles from "../profiles/TopProfiles";
 import { useParams } from "react-router-dom";
+import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
-import TopProfiles from "../profiles/TopProfiles";
-import appStyles from "../../App.module.css"
-import { useRedirect } from "../../hooks/useRedirect";
 
 const PostDetailPage = () => {
     useRedirect("loggedOut");
@@ -47,7 +46,7 @@ const PostDetailPage = () => {
         <Container>
             <Row className={styles.Row}>
                 <Col lg={8}>
-                <TopProfiles mobile />
+                    <TopProfiles mobile />
                     <Post {...post.results[0]} setPosts={setPost} postPage />
                     <Container className={`${appStyles.Content} mb-4`}>
                         {currentUser ? (
@@ -79,9 +78,13 @@ const PostDetailPage = () => {
                                 }
                             />
                         ) : currentUser ? (
-                            <span className={styles.NoComments}>Be the first to comment!!</span>
+                            <span className={styles.NoComments}>
+                                Be the first to comment!!
+                            </span>
                         ) : (
-                            <span className={styles.NoComments}>No comments yet...</span>
+                            <span className={styles.NoComments}>
+                                No comments yet...
+                            </span>
                         )}
                     </Container>
                 </Col>

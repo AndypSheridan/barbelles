@@ -1,20 +1,20 @@
 import React, { useState, useRef } from "react";
+import styles from "../../styles/PostShareEditForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import UploadIcon from "../../assets/uploadIcon.png";
+import { axiosReq } from "../../api/axiosDefaults";
+import Container from "react-bootstrap/Container";
+import { useHistory } from "react-router-dom";
+import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
+import Asset from "../../components/Asset";
+import Alert from "react-bootstrap/Alert";
+import { Image } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Alert from "react-bootstrap/Alert";
-import Container from "react-bootstrap/Container";
-import styles from "../../styles/PostShareEditForm.module.css";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
-import { toast } from "react-toastify";
 
 function PostShareForm() {
     useRedirect("loggedOut");

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "../../styles/PostShareEditForm.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
@@ -12,7 +13,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { toast } from "react-toastify";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const PostEditForm = () => {
     useRedirect("loggedOut");

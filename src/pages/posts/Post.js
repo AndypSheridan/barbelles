@@ -1,11 +1,11 @@
 import React from "react";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
-import Avatar from "../../components/Avatar";
-import styles from "../../styles/Post.module.css";
-import { axiosRes } from "../../api/axiosDefaults";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Link, useHistory } from "react-router-dom";
+import { axiosRes } from "../../api/axiosDefaults";
+import styles from "../../styles/Post.module.css";
+import Avatar from "../../components/Avatar";
 import { toast } from "react-toastify";
 
 const Post = (props) => {
@@ -33,7 +33,7 @@ const Post = (props) => {
         try {
             await axiosRes.delete(`/posts/${id}/`);
             history.goBack();
-            toast.success("Post deleted")
+            toast.success("Post deleted");
         } catch (err) {
             console.log(err);
             toast.error("Oops, please try again!");
@@ -88,7 +88,10 @@ const Post = (props) => {
         <Card className={`${styles.Card} mb-3`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
-                    <Link to={`/profiles/${profile_id}`} aria-label="view profile">
+                    <Link
+                        to={`/profiles/${profile_id}`}
+                        aria-label="view profile"
+                    >
                         <Avatar src={profile_image} height={60} />
                         <span className={styles.PostOwner}>{owner}</span>
                     </Link>
@@ -119,7 +122,9 @@ const Post = (props) => {
                                 <Tooltip>You can't like your own post!</Tooltip>
                             }
                         >
-                            <i className={`${styles.HeartOutline} far fa-heart`} />
+                            <i
+                                className={`${styles.HeartOutline} far fa-heart`}
+                            />
                         </OverlayTrigger>
                     ) : like_id ? (
                         <span onClick={handleUnlike} className="mx-1">
@@ -127,7 +132,9 @@ const Post = (props) => {
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike} className="mx-1">
-                            <i className={`${styles.HeartOutline} far fa-heart`} />
+                            <i
+                                className={`${styles.HeartOutline} far fa-heart`}
+                            />
                         </span>
                     ) : (
                         <OverlayTrigger
@@ -142,7 +149,11 @@ const Post = (props) => {
                         </OverlayTrigger>
                     )}
                     {likes_count}
-                    <Link to={`/posts/${id}`} className="mx-1" aria-label="view comments">
+                    <Link
+                        to={`/posts/${id}`}
+                        className="mx-1"
+                        aria-label="view comments"
+                    >
                         <i className="far fa-comments" />
                     </Link>
                     {comments_count}
