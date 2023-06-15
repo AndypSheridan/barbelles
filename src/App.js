@@ -1,32 +1,29 @@
-import styles from "./App.module.css";
-import NavBar from "./components/NavBar";
-import Container from "react-bootstrap/Container";
-import { Route, Switch } from "react-router-dom";
-import "./api/axiosDefaults";
-import SignUpForm from "./pages/auth/SignUpForm";
-import SignInForm from "./pages/auth/SignInForm";
-import PostShareForm from "./pages/posts/PostShareForm";
-import PostDetailPage from "./pages/posts/PostDetailPage";
-import PostsFeedPage from "./pages/posts/PostsFeedPage";
-import { useCurrentUser } from "./contexts/CurrentUserContext";
-import PostEditForm from "./pages/posts/PostEditForm";
-import ProfilePage from "./pages/profiles/ProfilePage";
-import UserProfileEditForm from "./pages/profiles/UserProfileEditForm";
 import UserPasswordEditForm from "./pages/profiles/UserPasswordEditForm";
-import UsernameEditForm from "./pages/profiles/UsernameEditForm";
-import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
+import UserProfileEditForm from "./pages/profiles/UserProfileEditForm";
 import TutorialDetailPage from "./pages/tutorials/TutorialDetailPage";
+import TutorialShareForm from "./pages/tutorials/TutorialShareForm";
 import TutorialsFeedPage from "./pages/tutorials/TutorialsFeedPage";
 import TutorialEditForm from "./pages/tutorials/TutorialEditForm";
+import UsernameEditForm from "./pages/profiles/UsernameEditForm";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
+import PostDetailPage from "./pages/posts/PostDetailPage";
+import PostsFeedPage from "./pages/posts/PostsFeedPage";
+import PostShareForm from "./pages/posts/PostShareForm";
+import ProfilePage from "./pages/profiles/ProfilePage";
+import PostEditForm from "./pages/posts/PostEditForm";
+import Container from "react-bootstrap/Container";
+import { Route, Switch } from "react-router-dom";
+import SignUpForm from "./pages/auth/SignUpForm";
+import NavBar from "./components/NavBar";
+import styles from "./App.module.css";
 import About from "./pages/About";
-// import { ToastContainer } from "react-toastify";
+import "./api/axiosDefaults";
 
 function App() {
     const currentUser = useCurrentUser();
     const profile_id = currentUser?.profile_id || "";
 
     return (
-        // <Container className={styles.Container}>
         <div className={`${styles.App} ${styles.MainDiv}`}>
             <NavBar />
             <Container className={styles.Main}>
@@ -70,7 +67,6 @@ function App() {
                             />
                         )}
                     />
-                    <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route
                         exact
