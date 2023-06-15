@@ -88,7 +88,7 @@ const Post = (props) => {
         <Card className={`${styles.Card} mb-3`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
-                    <Link to={`/profiles/${profile_id}`}>
+                    <Link to={`/profiles/${profile_id}`} aria-label="view profile">
                         <Avatar src={profile_image} height={60} />
                         <span className={styles.PostOwner}>{owner}</span>
                     </Link>
@@ -103,7 +103,7 @@ const Post = (props) => {
                     </div>
                 </Media>
             </Card.Body>
-            <Link to={`/posts/${id}`}>
+            <Link to={`/posts/${id}`} aria-label="view post">
                 <Card.Img className={styles.Image} src={image} alt={title} />
             </Link>
             <Card.Body>
@@ -142,7 +142,7 @@ const Post = (props) => {
                         </OverlayTrigger>
                     )}
                     {likes_count}
-                    <Link to={`/posts/${id}`} className="mx-1">
+                    <Link to={`/posts/${id}`} className="mx-1" aria-label="view comments">
                         <i className="far fa-comments" />
                     </Link>
                     {comments_count}
