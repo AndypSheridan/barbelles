@@ -20,8 +20,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
 import btnStyles from "../../styles/Button.module.css"
+import { useRedirect } from "../../hooks/useRedirect";
 
 const ProfilePage = () => {
+    useRedirect("loggedOut");
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
