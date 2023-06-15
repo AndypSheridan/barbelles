@@ -19,7 +19,6 @@ const SignUp = (props) => {
     });
 
     const { username, password1, password2 } = signUpData;
-    // const history = useHistory();
     const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
@@ -33,7 +32,6 @@ const SignUp = (props) => {
         event.preventDefault();
         try {
             await axios.post("/dj-rest-auth/registration/", signUpData);
-            // history.push("/signup");
             props.onFormSwitch("signin");
             toast.success("Signed up! Please sign in");
         } catch (err) {
@@ -105,11 +103,7 @@ const SignUp = (props) => {
                 ))}
 
                 <CustomButton type="submit" title="Submit" />
-                <ToastContainer />
 
-                {/* <Button variant="primary" type="submit">
-                                Sign up
-                            </Button> */}
                 {errors.non_field_errors?.map((message, idx) => (
                     <Alert variant="warning" key={idx}>
                         {message}
