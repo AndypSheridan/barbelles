@@ -3,7 +3,6 @@ import { axiosReq } from "../api/axiosDefaults";
 
 export const fetchMoreData = async (resource, setResource) => {
     try {
-        console.log("fetch more data");
         const { data } = await axiosReq.get(resource.next);
         setResource((prevResource) => ({
             ...prevResource,
