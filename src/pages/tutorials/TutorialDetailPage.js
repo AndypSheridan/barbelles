@@ -14,8 +14,10 @@ import TopProfiles from "../profiles/TopProfiles";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialDetailPage = () => {
+    useRedirect("loggedOut");
     const { id } = useParams();
     const [tutorial, setTutorial] = useState({ results: [] });
     const currentUser = useCurrentUser();
