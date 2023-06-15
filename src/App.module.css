@@ -41,7 +41,6 @@ input:focus {
     border-color: #ff66b3;
 }
 
-
 .App {
     font-family: "Roboto", sans-serif;
     background: #333333;
@@ -52,9 +51,6 @@ input:focus {
     padding-top: 8rem;
 }
 
-/* div {
-    overflow-x: hidden;
-} */
 .Container {
     /* overflow-x: hidden; */
     padding: 0px;
@@ -152,33 +148,6 @@ figure {
 *::-webkit-scrollbar-thumb:hover {
     background: #ffe9f3;
 }
-/* a {
-    color: #512d38;
-    transition: color ease-in-out 0.4s;
-    font-size: 1.2rem;
-}
-
-a:hover {
-    text-decoration: none;
-} */
-
-/* a:hover i {
-    color: #b27092;
-    transition: color ease-in-out 0.3s;
-}
-
-i {
-    color: #512d38;
-    font-size: 1.5rem;
-    vertical-align: middle;
-    padding: 0.2rem;
-}
-
-i:hover {
-    cursor: pointer;
-    transition: color ease-in-out 0.3s;
-    color: #b27092;
-} */
 
 @media only screen and (max-width: 600px) {
     .Main {
