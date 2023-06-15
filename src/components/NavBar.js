@@ -46,7 +46,7 @@ const NavBar = () => {
             </NavLink>
 
             <NavDropdown
-                alignLeft
+                // alignleft
                 title={
                     <span>
                         <i className="fa-regular fa-image"></i>Posts
