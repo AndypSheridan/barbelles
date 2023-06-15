@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import btnStyles from "../../styles/Button.module.css";
 import { toast } from "react-toastify";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function CommentShareForm(props) {
+    useRedirect("loggedOut");
     const { post, setPost, setComments, profileImage, profile_id } = props;
     const [content, setContent] = useState("");
 

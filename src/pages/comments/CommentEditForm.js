@@ -4,8 +4,10 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentShareEditForm.module.css";
 import { toast } from "react-toastify";
 import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const CommentEditForm = (props) => {
+    useRedirect("loggedOut");
     const { id, content, setShowEditForm, setComments } = props;
 
     const [formContent, setFormContent] = useState(content);

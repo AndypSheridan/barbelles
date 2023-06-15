@@ -8,8 +8,10 @@ import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const PostComment = (props) => {
+    useRedirect("loggedOut");
     const {
         profile_id,
         profile_image,
@@ -44,7 +46,7 @@ const PostComment = (props) => {
                     (comment) => comment.id !== id
                 ),
             }));
-            toast.success("Comment deleted")
+            toast.success("Comment deleted");
         } catch (err) {
             console.log(err);
             toast.error("Oops, please try again!");
