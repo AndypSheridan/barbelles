@@ -24,7 +24,7 @@ const Profile = (props) => {
             }`}
         >
             <div>
-                <Link to={`/profiles/${id}`} className="align-self-center">
+                <Link to={`/profiles/${id}`} className="align-self-center" aria-label="avatar image">
                     <Avatar src={image} height={imageSize} />
                 </Link>
             </div>
@@ -39,6 +39,7 @@ const Profile = (props) => {
                         <Button
                             className={btnStyles.Follow}
                             onClick={() => handleUnfollow(profile)}
+                            aria-label="unfollow"
                         >
                             <i
                                 className={`${styles.UnfollowIcon} fa-solid fa-user-xmark`}
@@ -48,6 +49,7 @@ const Profile = (props) => {
                         <Button
                             className={btnStyles.Follow}
                             onClick={() => handleFollow(profile)}
+                            aria-label="follow"
                         >
                             <i
                                 className={`${styles.FollowIcon} fa-solid fa-user-plus`}

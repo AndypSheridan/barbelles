@@ -19,7 +19,7 @@ import TopProfiles from "./TopProfiles";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
-import btnStyles from "../../styles/Button.module.css"
+import btnStyles from "../../styles/Button.module.css";
 import { useRedirect } from "../../hooks/useRedirect";
 
 const ProfilePage = () => {
@@ -72,15 +72,21 @@ const ProfilePage = () => {
                     <h4 className={styles.ProfileOwner}>{profile?.owner}</h4>
                     <Row className="justify-content-center no-gutters">
                         <Col xs={3} className="my-2">
-                            <div className={styles.TextPink}>{profile?.posts_count}</div>
+                            <div className={styles.TextPink}>
+                                {profile?.posts_count}
+                            </div>
                             <div className={styles.TextBrown}>Posts</div>
                         </Col>
                         <Col xs={3} className="my-2 mx-1">
-                            <div className={styles.TextPink}>{profile?.followers_count}</div>
+                            <div className={styles.TextPink}>
+                                {profile?.followers_count}
+                            </div>
                             <div className={styles.TextBrown}>Followers</div>
                         </Col>
                         <Col xs={3} className="my-2">
-                            <div className={styles.TextPink}>{profile?.following_count}</div>
+                            <div className={styles.TextPink}>
+                                {profile?.following_count}
+                            </div>
                             <div className={styles.TextBrown}>Following</div>
                         </Col>
                     </Row>
@@ -89,13 +95,21 @@ const ProfilePage = () => {
                     {currentUser &&
                         !is_owner &&
                         (profile?.following_id ? (
-                            <Button className={btnStyles.Follow} onClick={() => handleUnfollow(profile)} aria-label="unfollow">
+                            <Button
+                                className={btnStyles.Follow}
+                                onClick={() => handleUnfollow(profile)}
+                                aria-label="unfollow"
+                            >
                                 <i
-                                className={`${styles.UnfollowIcon} fa-solid fa-user-xmark`}
-                            ></i>
+                                    className={`${styles.UnfollowIcon} fa-solid fa-user-xmark`}
+                                ></i>
                             </Button>
                         ) : (
-                            <Button className={btnStyles.Follow} onClick={() => handleFollow(profile)} aria-label="follow">
+                            <Button
+                                className={btnStyles.Follow}
+                                onClick={() => handleFollow(profile)}
+                                aria-label="follow"
+                            >
                                 <i
                                     className={`${styles.FollowIcon} fa-solid fa-user-plus`}
                                 ></i>
@@ -103,7 +117,11 @@ const ProfilePage = () => {
                         ))}
                 </Col>
                 <Col className="p-3">
-                    {profile?.bio && <Col className={`${styles.TextBrown} p-3`}>{profile.bio}</Col>}
+                    {profile?.bio && (
+                        <Col className={`${styles.TextBrown} p-3`}>
+                            {profile.bio}
+                        </Col>
+                    )}
                 </Col>
             </Row>
         </>
@@ -112,7 +130,9 @@ const ProfilePage = () => {
     const mainProfilePosts = (
         <>
             <hr />
-            <p className={`${styles.TextPink} text-center`}>{profile?.owner}'s posts</p>
+            <p className={`${styles.TextPink} text-center`}>
+                {profile?.owner}'s posts
+            </p>
             <hr />
             {profilePosts.results.length ? (
                 <InfiniteScroll
