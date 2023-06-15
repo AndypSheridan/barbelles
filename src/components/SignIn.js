@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import {
-    useCurrentUser,
-    useSetCurrentUser,
-} from "../contexts/CurrentUserContext";
-import { Form, Col, Row, Container, Alert } from "react-bootstrap";
+import { useSetCurrentUser } from "../contexts/CurrentUserContext";
+import { Form, Container, Alert } from "react-bootstrap";
 import CustomButton from "../components/CustomButton";
 import styles from "../styles/SignInForm.module.css";
-import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
-import { useRedirect } from "../hooks/useRedirect";
+import btnStyles from "../styles/Button.module.css";
 import { setTokenTimestamp } from "../utils/utils";
+import { useRedirect } from "../hooks/useRedirect";
+import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
-import appStyles from "../App.module.css";
 import Welcome from "./Welcome";
-import btnStyles from "../styles/Button.module.css"
+import axios from "axios";
 
 const SignIn = (props) => {
     const setCurrentUser = useSetCurrentUser();
@@ -74,7 +70,10 @@ const SignIn = (props) => {
                 <Container className="mb-3 px-2 mx-auto text-center">
                     <Welcome />
                     <span className={styles.Span}> Sign in below or </span>
-                    <Button className={`${btnStyles.Button} ${btnStyles.Pink}`} onClick={() => props.onFormSwitch("signup")}>
+                    <Button
+                        className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                        onClick={() => props.onFormSwitch("signup")}
+                    >
                         Sign Up
                     </Button>
                 </Container>

@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import { useSetCurrentUser } from "../contexts/CurrentUserContext";
-import axios from "axios";
-import { NavLink, useHistory } from "react-router-dom";
 import { removeTokenTimestamp } from "../utils/utils";
-import { useRedirect } from "../hooks/useRedirect";
-// import CustomButton from "../components/CustomButton"
-// import { handleSignOut } from "../components/NavBar"
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import btnStyles from "../styles/Button.module.css";
+import "react-toastify/dist/ReactToastify.css";
+import { useHistory } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 const SignOutModal = () => {
     const [show, setShow] = useState(false);

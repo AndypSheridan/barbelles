@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import { useHistory, Link } from "react-router-dom";
-import styles from "../styles/SignUpForm.module.css";
-import appStyles from "../App.module.css";
-import { Form, Col, Row, Container, Alert } from "react-bootstrap";
-import axios from "axios";
-import CustomButton from "../components/CustomButton";
-import { useRedirect } from "../hooks/useRedirect";
-import { Tabs, Tab } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import btnStyles from "../styles/Button.module.css";
+import { Form, Container, Alert } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
+import CustomButton from "../components/CustomButton";
+import styles from "../styles/SignUpForm.module.css";
+import btnStyles from "../styles/Button.module.css";
+import { useRedirect } from "../hooks/useRedirect";
+import Button from "react-bootstrap/Button";
 import Welcome from "./Welcome";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css"
+import axios from "axios";
+
 
 const SignUp = (props) => {
     useRedirect("loggedIn");
@@ -23,7 +19,7 @@ const SignUp = (props) => {
     });
 
     const { username, password1, password2 } = signUpData;
-    const history = useHistory();
+    // const history = useHistory();
     const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
