@@ -54,17 +54,6 @@ const SignIn = (props) => {
     };
 
     return (
-        // <Container className={styles.signInBg}>
-        //     <h1 className={styles.SignInHeader}>Sign in</h1>
-
-        //     <Row className="text-center">
-        //         <Col className="mx-auto" md={6}>
-        //             <Container className="my-3">
-        //                 <span>Sign in |</span>
-        //                 <Link to="/signup">
-        //                     <span className="text-center"> Sign up</span>
-        //                 </Link>
-        //             </Container>
         <Container>
             <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
                 <Container className="mb-3 px-2 mx-auto text-center">
@@ -94,7 +83,6 @@ const SignIn = (props) => {
                         {message}
                     </Alert>
                 ))}
-
                 <Form.Group controlId="password">
                     <Form.Label className="d-none">Password</Form.Label>
                     <Form.Control
@@ -113,9 +101,6 @@ const SignIn = (props) => {
 
                 <CustomButton type="submit" title="Submit" />
 
-                {/* <Button className={buttonstyles.Button} type="submit">
-                            Sign in
-                        </Button> */}
                 {errors.non_field_errors?.map((message, idx) => (
                     <Alert className="mt-3" key={idx} variant="warning">
                         {message}
@@ -123,9 +108,6 @@ const SignIn = (props) => {
                 ))}
             </Form>
         </Container>
-        //         </Col>
-        //     </Row>
-        // </Container>
     );
 };
 
