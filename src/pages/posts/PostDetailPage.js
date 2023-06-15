@@ -15,8 +15,10 @@ import Col from "react-bootstrap/Col";
 import Post from "./Post";
 import TopProfiles from "../profiles/TopProfiles";
 import appStyles from "../../App.module.css"
+import { useRedirect } from "../../hooks/useRedirect";
 
 const PostDetailPage = () => {
+    useRedirect("loggedOut");
     const { id } = useParams();
     const [post, setPost] = useState({ results: [] });
 
