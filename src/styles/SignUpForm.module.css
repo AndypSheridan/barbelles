@@ -1,11 +1,4 @@
 .SignUpBg {
-    /* background: rgb(2, 0, 36);
-    background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(244, 191, 219, 1) 35%,
-        rgba(135, 186, 171, 1) 100%
-    ); */
     background-image: url("../assets/homebackgroundimage.jpg");
     margin-left: 0px;
     margin-right: 0px;
@@ -20,15 +13,7 @@
     object-fit: cover;
 }
 
-/* .SignUpHeader {
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-    text-align: center;
-    color:#512d38;
-} */
-
 .Row {
-    /* padding-top: 10rem; */
     height: 100%;
 }
 
@@ -52,10 +37,6 @@
     color: red;
     transition: color ease-in-out 0.2s;
 }
-
-/* .SignUpSpan {
-    color: #b27092;
-} */
 
 .Form {
     text-align: center;

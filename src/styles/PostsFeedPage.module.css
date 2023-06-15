@@ -4,13 +4,10 @@
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    /* background-image: url("../assets/homebackgroundimage.jpg"); */
     min-width: 100vw;
-    /* min-height: 100vh; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(50%); */
     color: pink;
 }
 
@@ -47,7 +44,6 @@
 }
 
 .Social {
-    /* border: 1px solid white; */
     border-radius: 2px;
     justify-content: center;
     background: rgba(255, 255, 255, 0.7);
