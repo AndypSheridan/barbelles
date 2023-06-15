@@ -43,7 +43,6 @@ const ProfilePage = () => {
                         axiosReq.get(`/profiles/${id}/`),
                         axiosReq.get(`/posts/?owner__profile=${id}`),
                     ]);
-                console.log(pageProfile);
                 setProfileData((prevState) => ({
                     ...prevState,
                     pageProfile: { results: [pageProfile] },

@@ -96,6 +96,7 @@ const PostEditForm = () => {
                     onChange={handleChange}
                     type="text"
                     name="title"
+                    aria-label="edit post title"
                 />
             </Form.Group>
             {errors?.title?.map((message, idx) => (
@@ -112,6 +113,7 @@ const PostEditForm = () => {
                     onChange={handleChange}
                     rows={8}
                     name="story"
+                    aria-label=" edit post story"
                 />
             </Form.Group>
             {errors?.content?.map((message, idx) => (

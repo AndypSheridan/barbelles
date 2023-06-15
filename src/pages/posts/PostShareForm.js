@@ -77,6 +77,7 @@ function PostShareForm() {
                     onChange={handleChange}
                     type="text"
                     name="title"
+                    aria-label="post title"
                 />
             </Form.Group>
             {errors?.title?.map((message, idx) => (
@@ -93,6 +94,7 @@ function PostShareForm() {
                     onChange={handleChange}
                     rows={8}
                     name="story"
+                    aria-label="post story"
                 />
             </Form.Group>
             {errors?.content?.map((message, idx) => (
