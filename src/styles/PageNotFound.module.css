@@ -1,3 +1,7 @@
-.Div {
+.Container {
     margin-top: 10rem;
+    height: 100vh;
+    color: #ffe9f3;
+    font-family: "Satisfy", cursive;
+    font-size: 2rem;
 }
