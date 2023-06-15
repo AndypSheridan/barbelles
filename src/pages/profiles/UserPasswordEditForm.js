@@ -15,8 +15,10 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { toast } from "react-toastify";
 import styles from "../../styles/UserPasswordEditForm.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const UserPasswordEditForm = () => {
+    useRedirect("loggedOut");
     const history = useHistory();
     const { id } = useParams();
     const currentUser = useCurrentUser();
