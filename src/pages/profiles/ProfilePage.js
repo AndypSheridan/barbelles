@@ -89,13 +89,13 @@ const ProfilePage = () => {
                     {currentUser &&
                         !is_owner &&
                         (profile?.following_id ? (
-                            <Button className={btnStyles.Follow} onClick={() => handleUnfollow(profile)}>
+                            <Button className={btnStyles.Follow} onClick={() => handleUnfollow(profile)} aria-label="unfollow">
                                 <i
                                 className={`${styles.UnfollowIcon} fa-solid fa-user-xmark`}
                             ></i>
                             </Button>
                         ) : (
-                            <Button className={btnStyles.Follow} onClick={() => handleFollow(profile)}>
+                            <Button className={btnStyles.Follow} onClick={() => handleFollow(profile)} aria-label="follow">
                                 <i
                                     className={`${styles.FollowIcon} fa-solid fa-user-plus`}
                                 ></i>
