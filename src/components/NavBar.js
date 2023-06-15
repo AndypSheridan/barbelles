@@ -1,32 +1,18 @@
 import React, { useState } from "react";
-import Nav from "react-bootstrap/Nav";
-// import NavbarBrand from "react-bootstrap/NavbarBrand";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Container from "react-bootstrap/Container";
+import styles from "../styles/NavBar.module.css";
+import { NavDropdown } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import logo from "../assets/logo2.png";
-import styles from "../styles/NavBar.module.css";
-import {
-    useCurrentUser,
-    // useSetCurrentUser,
-} from "../contexts/CurrentUserContext";
-import Avatar from "./Avatar";
-// import axios from "axios";
-import { NavDropdown } from "react-bootstrap";
 import SignOutModal from "./SignOutModal";
-// // import useProfileData from "../contexts/ProfileDataContext"
-// import { useProfileData } from "../contexts/ProfileDataContext";
+import logo from "../assets/logo2.png";
+import Nav from "react-bootstrap/Nav";
+import Avatar from "./Avatar";
+
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
-    // const profiles = useProfileData();
-    // const currentUserProfile = profiles.pageProfile?.results[0]
-    // const setCurrentUser = useSetCurrentUser();
-    // const is_staff = currentUserProfile?.is_staff;
-    // console.log(currentUserProfile);
-    // console.log(profiles);
-
-    // const { expanded, setExpanded, ref } = useClickOutsideToggle();
     const [expanded, setExpanded] = useState(false);
 
     // const handleSignOut = async () => {
@@ -142,19 +128,18 @@ const NavBar = () => {
                     <i className="fa-solid fa-list"></i> Tutorials
                 </NavLink>
 
-
                 {/* {is_staff &&  */}
-                {currentUser?.profile_is_staff === true  && 
-                <NavLink
-                    to="/tutorials/share"
-                    className={styles.NavLink}
-                    activeClassName={styles.Active}
-                    onClick={() => setExpanded(false)}
-                >
-                    <i className="fa-solid fa-arrow-up-from-bracket"></i> Share
-                    tutorial
-                </NavLink>
-}
+                {currentUser?.profile_is_staff === true && (
+                    <NavLink
+                        to="/tutorials/share"
+                        className={styles.NavLink}
+                        activeClassName={styles.Active}
+                        onClick={() => setExpanded(false)}
+                    >
+                        <i className="fa-solid fa-arrow-up-from-bracket"></i>{" "}
+                        Share tutorial
+                    </NavLink>
+                )}
                 {/* } */}
 
                 <NavLink
@@ -233,8 +218,7 @@ const NavBar = () => {
             fixed="top"
         >
             <Container className={`mx-0 ${styles.NavBarContainer}`}>
-                
-            {currentUser ? (
+                {currentUser ? (
                     <NavLink to="/">
                         <Navbar.Brand className={styles.NavBarBrandText}>
                             <img
@@ -274,7 +258,6 @@ const NavBar = () => {
                         {currentUser ? signedInIcons : signedOutIcons}
                     </Nav>
                 </Navbar.Collapse>
-                
             </Container>
         </Navbar>
     );

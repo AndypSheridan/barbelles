@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import styles from "../../styles/TutorialComment.module.css";
+import { ComponentDropDown } from "../../components/ComponentDropDown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import TutorialCommentEditForm from "./TutorialCommentEditForm";
+import styles from "../../styles/TutorialComment.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosRes } from "../../api/axiosDefaults";
+import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
-import TutorialCommentEditForm from "./TutorialCommentEditForm";
-// import { TutorialCommentDropDown } from "../../components/ComponentDropDown";
-import { ComponentDropDown } from "../../components/ComponentDropDown";
 import { toast } from "react-toastify";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialComment = (props) => {
     useRedirect("loggedOut");
@@ -47,7 +46,7 @@ const TutorialComment = (props) => {
                     (tutorialComment) => tutorialComment.id !== id
                 ),
             }));
-            toast.success("Comment deleted")
+            toast.success("Comment deleted");
         } catch (err) {
             toast.error("Oops, please try again!");
             console.log(err);
@@ -66,18 +65,18 @@ const TutorialComment = (props) => {
                     <span className={styles.Date}>{updated_at}</span>
                     {showEditForm ? (
                         <TutorialCommentEditForm
-                        id={id}
-                        profile_id={profile_id}
-                        content={content}
-                        profileImage={profile_image}
-                        setTutorialComments={setTutorialComments}
-                        setShowEditForm={setShowEditForm}
+                            id={id}
+                            profile_id={profile_id}
+                            content={content}
+                            profileImage={profile_image}
+                            setTutorialComments={setTutorialComments}
+                            setShowEditForm={setShowEditForm}
                         />
                     ) : (
                         <p>{content}</p>
                     )}
                 </Media.Body>
-                {is_owner && !showEditForm &&(
+                {is_owner && !showEditForm && (
                     <ComponentDropDown
                         handleEdit={() => setShowEditForm(true)}
                         handleDelete={handleDelete}
