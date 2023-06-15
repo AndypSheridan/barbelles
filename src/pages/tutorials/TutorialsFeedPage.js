@@ -12,8 +12,10 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import TopProfiles from "../profiles/TopProfiles";
 import SocialLinks from "../../components/SocialLinks";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
+    useRedirect("loggedOut");
     const [tutorials, setTutorials] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
