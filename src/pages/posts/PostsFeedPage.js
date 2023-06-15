@@ -14,8 +14,10 @@ import Row from "react-bootstrap/Row";
 import Post from "./Post";
 import TopProfiles from "../profiles/TopProfiles";
 import SocialLinks from "../../components/SocialLinks";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
+    useRedirect("loggedOut");
     const [posts, setPosts] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
