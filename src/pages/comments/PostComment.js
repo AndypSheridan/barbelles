@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/PostComment.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
 import Avatar from "../../components/Avatar";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useRedirect } from "../../hooks/useRedirect";
 
 const PostComment = (props) => {
     useRedirect("loggedOut");
