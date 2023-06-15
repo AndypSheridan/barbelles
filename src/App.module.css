@@ -100,7 +100,7 @@ input:focus {
 }
 
 a {
-    color: #512d38;
+    color: #512d38 !important;
     transition: color ease-in-out 0.3s;
 }
 
@@ -109,7 +109,7 @@ a:hover {
 }
 
 a:hover i {
-    color: #512d38;
+    color: #b27092;
     transition: color ease-in-out 0.3s;
 }
 
