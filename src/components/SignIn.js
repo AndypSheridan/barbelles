@@ -15,102 +15,102 @@ import Welcome from "./Welcome";
 import axios from "axios";
 
 const SignIn = (props) => {
-    const setCurrentUser = useSetCurrentUser();
+	const setCurrentUser = useSetCurrentUser();
 
-    useRedirect("loggedIn");
+	useRedirect("loggedIn");
 
-    const [signInData, setSigninData] = useState({
-        username: "",
-        password: "",
-    });
+	const [signInData, setSigninData] = useState({
+		username: "",
+		password: "",
+	});
 
-    const [errors, setErrors] = useState({});
+	const [errors, setErrors] = useState({});
 
-    const { username, password } = signInData;
-    const history = useHistory();
+	const { username, password } = signInData;
+	const history = useHistory();
 
-    const handleChange = (event) => {
-        setSigninData({
-            ...signInData,
-            [event.target.name]: event.target.value,
-        });
-    };
+	const handleChange = (event) => {
+		setSigninData({
+			...signInData,
+			[event.target.name]: event.target.value,
+		});
+	};
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+	const handleSubmit = async (event) => {
+		event.preventDefault();
 
-        try {
-            const { data } = await axios.post(
-                "/dj-rest-auth/login/",
-                signInData
-            );
-            setCurrentUser(data.user);
-            setTokenTimestamp(data);
-            history.goBack();
+		try {
+			const { data } = await axios.post(
+				"/dj-rest-auth/login/",
+				signInData
+			);
+			setCurrentUser(data.user);
+			setTokenTimestamp(data);
+			history.goBack();
 
-            toast.success(`Signed in as ${username}`);
-        } catch (err) {
-            setErrors(err.response?.data);
-            toast.error("Oops, please try again!");
-        }
-    };
+			toast.success(`Signed in as ${username}`);
+		} catch (err) {
+			setErrors(err.response?.data);
+			toast.error("Oops, please try again!");
+		}
+	};
 
-    return (
-        <Container>
-            <Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
-                <Container className="mb-3 px-2 mx-auto text-center">
-                    <Welcome />
-                    <span className={styles.Span}> Sign in below or </span>
-                    <Button
-                        className={`${btnStyles.Button} ${btnStyles.Pink}`}
-                        onClick={() => props.onFormSwitch("signup")}
-                    >
-                        Sign Up
-                    </Button>
-                </Container>
-                <Form.Group controlId="username">
-                    <Form.Label className="d-none">
-                        Enter your username
-                    </Form.Label>
-                    <Form.Control
-                        value={username}
-                        onChange={handleChange}
-                        type="text"
-                        placeholder="Username"
-                        name="username"
-                    />
-                </Form.Group>
-                {errors.username?.map((message, idx) => (
-                    <Alert key={idx} variant="warning">
-                        {message}
-                    </Alert>
-                ))}
-                <Form.Group controlId="password">
-                    <Form.Label className="d-none">Password</Form.Label>
-                    <Form.Control
-                        value={password}
-                        onChange={handleChange}
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                    />
-                </Form.Group>
-                {errors.password?.map((message, idx) => (
-                    <Alert key={idx} variant="warning">
-                        {message}
-                    </Alert>
-                ))}
+	return (
+		<Container>
+			<Form onSubmit={handleSubmit} className={`mx-auto ${styles.Form}`}>
+				<Container className="mb-3 px-2 mx-auto text-center">
+					<Welcome />
+					<span className={styles.Span}> Sign in below or </span>
+					<Button
+						className={`${btnStyles.Button} ${btnStyles.Pink}`}
+						onClick={() => props.onFormSwitch("signup")}
+					>
+						Sign Up
+					</Button>
+				</Container>
+				<Form.Group controlId="username">
+					<Form.Label className="d-none">
+						Enter your username
+					</Form.Label>
+					<Form.Control
+						value={username}
+						onChange={handleChange}
+						type="text"
+						placeholder="Username"
+						name="username"
+					/>
+				</Form.Group>
+				{errors.username?.map((message, idx) => (
+					<Alert key={idx} variant="warning">
+						{message}
+					</Alert>
+				))}
+				<Form.Group controlId="password">
+					<Form.Label className="d-none">Password</Form.Label>
+					<Form.Control
+						value={password}
+						onChange={handleChange}
+						type="password"
+						placeholder="Password"
+						name="password"
+					/>
+				</Form.Group>
+				{errors.password?.map((message, idx) => (
+					<Alert key={idx} variant="warning">
+						{message}
+					</Alert>
+				))}
 
-                <CustomButton type="submit" title="Submit" />
+				<CustomButton type="submit" title="Submit" />
 
-                {errors.non_field_errors?.map((message, idx) => (
-                    <Alert className="mt-3" key={idx} variant="warning">
-                        {message}
-                    </Alert>
-                ))}
-            </Form>
-        </Container>
-    );
+				{errors.non_field_errors?.map((message, idx) => (
+					<Alert className="mt-3" key={idx} variant="warning">
+						{message}
+					</Alert>
+				))}
+			</Form>
+		</Container>
+	);
 };
 
 export default SignIn;

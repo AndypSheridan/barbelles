@@ -8,24 +8,24 @@ import Button from "react-bootstrap/Button";
 import Asset from "./Asset";
 
 const PageNotFound = () => {
-    const history = useHistory();
+	const history = useHistory();
 
-    return (
-        <Container className={styles.Container}>
-            <Asset
-                src={noResults}
-                message={
-                    "Sorry, the page you're looking for has either moved or doesn't exist"
-                }
-            />
-            <Button
-                className={`${btnStyles.Pink} ${btnStyles.Button} ${styles.GoBack}`}
-                onClick={() => history.goBack()}
-            >
-                Go back
-            </Button>
-        </Container>
-    );
+	return (
+		<Container className={styles.Container}>
+			<Asset
+				src={noResults}
+				message={
+					"Sorry, the page you're looking for has either moved or doesn't exist"
+				}
+			/>
+			<Button
+				className={`${btnStyles.Pink} ${btnStyles.Button} ${styles.GoBack}`}
+				onClick={() => history.goBack()}
+			>
+				Go back
+			</Button>
+		</Container>
+	);
 };
 
 export default PageNotFound;

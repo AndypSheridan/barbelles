@@ -49,7 +49,6 @@ const TutorialComment = (props) => {
             toast.success("Comment deleted");
         } catch (err) {
             toast.error("Oops, please try again!");
-            console.log(err);
         }
     };
 
