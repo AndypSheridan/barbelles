@@ -60,7 +60,7 @@ const NavBar = () => {
                     activeClassName={styles.Active}
                     onClick={() => setExpanded(false)}
                 >
-                    <i className="fa-solid fa-bookmark"></i> Liked
+                    <i className="fas fa-heart"></i> Liked
                 </NavLink>
             </NavDropdown>
 
