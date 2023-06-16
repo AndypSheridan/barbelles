@@ -9,9 +9,10 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
-import { Button, Image } from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 import Asset from "../../components/Asset";
 import {
     useProfileData,
