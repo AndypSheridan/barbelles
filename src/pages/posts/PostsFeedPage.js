@@ -3,7 +3,6 @@ import NoSearchResults from "../../assets/nosearchresults.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "../../styles/PostsFeedPage.module.css";
 import SocialLinks from "../../components/SocialLinks";
-import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
 import { fetchMoreData } from "../../utils/utils";
 import TopProfiles from "../profiles/TopProfiles";
@@ -16,7 +15,6 @@ import Row from "react-bootstrap/Row";
 import Post from "./Post";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
-	// useRedirect("loggedOut");
 	const [posts, setPosts] = useState({ results: [] });
 	const [hasLoaded, setHasLoaded] = useState(false);
 	const { pathname } = useLocation();
