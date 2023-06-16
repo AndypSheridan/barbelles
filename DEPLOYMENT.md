@@ -59,7 +59,11 @@ The below works on the assumption that you already have an account with [Heroku]
 
 ### Final Deployment
 
+In *package.json* file, in the “scripts” section, add the following prebuild command: `"heroku-prebuild": "npm install -g serve"`
 
+This will install a package needed to serve the single page application on heroku.
+
+Add a *Procfile* at the root of the project with the following web command: `web: serve -s build`
 
 
 **[Back to Readme](README.md)**
