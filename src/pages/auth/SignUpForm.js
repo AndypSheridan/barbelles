@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styles from "../../styles/SignUpForm.module.css";
-import { Col, Row, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import SignUp from "../../components/SignUp";
 import SignIn from "../../components/SignIn";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const SignUpForm = () => {
     const [currentForm, setCurrentForm] = useState("signin");
