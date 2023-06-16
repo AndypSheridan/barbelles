@@ -11,6 +11,7 @@ import PostsFeedPage from "./pages/posts/PostsFeedPage";
 import PostShareForm from "./pages/posts/PostShareForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import PostEditForm from "./pages/posts/PostEditForm";
+import PageNotFound from "./components/PageNotFound";
 import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import SignUpForm from "./pages/auth/SignUpForm";
@@ -18,7 +19,6 @@ import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import About from "./pages/About";
 import "./api/axiosDefaults";
-import PageNotFound from "./components/PageNotFound";
 
 function App() {
     const currentUser = useCurrentUser();

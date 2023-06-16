@@ -23,7 +23,6 @@ const SignOutModal = () => {
             history.push("/signup");
             toast.success("Logged out");
         } catch (err) {
-            console.log(err);
             toast.error("Oops, please try again!");
         }
     };

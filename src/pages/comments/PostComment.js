@@ -48,7 +48,6 @@ const PostComment = (props) => {
             }));
             toast.success("Comment deleted");
         } catch (err) {
-            console.log(err);
             toast.error("Oops, please try again!");
         }
     };
