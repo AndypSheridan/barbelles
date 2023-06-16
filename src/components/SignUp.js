@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Form, Container, Alert } from "react-bootstrap";
 import CustomButton from "../components/CustomButton";
 import styles from "../styles/SignUpForm.module.css";
 import btnStyles from "../styles/Button.module.css";
 import { useRedirect } from "../hooks/useRedirect";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
 import Welcome from "./Welcome";
 import axios from "axios";

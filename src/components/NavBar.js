@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Container from "react-bootstrap/Container";
 import styles from "../styles/NavBar.module.css";
-import { NavDropdown } from "react-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import SignOutModal from "./SignOutModal";

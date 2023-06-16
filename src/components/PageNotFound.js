@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../styles/PageNotFound.module.css";
-import Container from "react-bootstrap/Container";
 import noResults from "../assets/nosearchresults.png";
-import Asset from "./Asset";
-import Button from "react-bootstrap/Button";
 import btnStyles from "../styles/Button.module.css";
+import Container from "react-bootstrap/Container";
 import { useHistory } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Asset from "./Asset";
 
 const PageNotFound = () => {
     const history = useHistory();
