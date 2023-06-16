@@ -46,7 +46,8 @@ const SignIn = (props) => {
 			);
 			setCurrentUser(data.user);
 			setTokenTimestamp(data);
-			history.goBack();
+			// history.goBack();
+			history.push("/")
 
 			toast.success(`Signed in as ${username}`);
 		} catch (err) {
