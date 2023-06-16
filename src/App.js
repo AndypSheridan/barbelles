@@ -69,6 +69,7 @@ function App() {
                         )}
                     />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
+                    <Route exact path="/signin" render={() => <SignUpForm />} />
                     <Route
                         exact
                         path="/posts/share"
