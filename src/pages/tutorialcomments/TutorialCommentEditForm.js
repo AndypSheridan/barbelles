@@ -3,7 +3,7 @@ import styles from "../../styles/CommentShareEditForm.module.css";
 import { useRedirect } from "../../hooks/useRedirect";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
 
