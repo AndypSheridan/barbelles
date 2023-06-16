@@ -8,10 +8,12 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
 import TopProfiles from "../profiles/TopProfiles";
-import { Col, Form, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Tutorial from "./Tutorial";
 
 const TutorialsFeedPage = ({ message, filter = "" }) => {
