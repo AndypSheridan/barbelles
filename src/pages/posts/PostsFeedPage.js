@@ -16,7 +16,7 @@ import Row from "react-bootstrap/Row";
 import Post from "./Post";
 
 const PostsFeedPage = ({ message, filter = "" }) => {
-	useRedirect("loggedOut");
+	// useRedirect("loggedOut");
 	const [posts, setPosts] = useState({ results: [] });
 	const [hasLoaded, setHasLoaded] = useState(false);
 	const { pathname } = useLocation();
