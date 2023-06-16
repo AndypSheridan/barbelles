@@ -1,11 +1,14 @@
 import React from "react";
 import { ComponentDropDown } from "../../components/ComponentDropDown";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link, useHistory } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/Post.module.css";
+import Tooltip from "react-bootstrap/Tooltip";
 import Avatar from "../../components/Avatar";
+import Media from "react-bootstrap/Media";
+import Card from "react-bootstrap/Card";
 import { toast } from "react-toastify";
 
 const Post = (props) => {
