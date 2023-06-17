@@ -47,7 +47,6 @@ const SignIn = (props) => {
 			setCurrentUser(data.user);
 			setTokenTimestamp(data);
 			history.push("/posts-feed");
-
 			toast.success(`Signed in as ${username}`);
 		} catch (err) {
 			setErrors(err.response?.data);
