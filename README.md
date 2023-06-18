@@ -579,12 +579,48 @@ The Tutorial detail page is responsive and works well on smaller devices. This i
 
 #### Profile Page
 
+A user can view their own profile by clicking on the Profile link in the navbar as detailed above. Alternatively, they can click on their own avatar when it appears across the site, for example, on a post or comment. Clicking on any profile avatar of name in will show the profile page for that particular user:
 
+![Screenshot of profile page](docs/images/profile-page-1.png)
+![Screenshot of profile page](docs/images/profile-page-2.png)
 
+Profile owners will have access to the following dropdown menu:
+
+![Screenshot of profile dropdown](docs/images/profile-dropdown.png)
+
+Users can edit their own profiles here:
+
+![Screenshot of edit profile page](docs/images/edit-profile-page.png)
+
+Upon editing a profile, the user is redirected to their profile page and a toast provides feedback that the profile was edited successfully.
+
+Users can also edit their username: 
+
+![Screenshot of edit username](docs/images/change-username.png)
+
+or password:
+
+![Screenshot of edit password](docs/images/change-password.png)
+
+The profile page displays the following statistics about the user:L
+- Number of posts
+- Number of followers
+- Number following
+
+![Screenshot of profile stats](docs/images/profile-stats.png)
+
+Beneath the profile itself, all of the posts by that particular user can be viewed as a list.
+
+The profile page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+
+![Screenshot of small-screen profile page](docs/images/profile-page-mobile-1.png)
+![Screenshot of small-screen profile page](docs/images/profile-page-mobile-2.png)
+
+<hr>
 
 **Infinite scroll**
 
-The Posts pages 
+There is an infinite scroll feature which has been implemented site-wide. This improves the user-experience by removing the need for pagination across the site. The functionality is present in the posts and tutorials feeds, and comments on both of the above.
 
 <hr>
 
