@@ -97,31 +97,43 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
 
 #### **Site User**
 As a **Registered** user I can: 
-* *create draft book posts* in order for *admin to approve and post them after reviewing*.
-* *view a list of book posts* in order to *select one to read*.
-* *click on a book post* in order to *view its content*.
-* *create a book post* in order to *share my review with the community*.
-* *comment on other users' book posts* in order to *share my opinions and interact with the community*.
-* *upload a profile picture or bio* in order to *tell a little more about myself*.
-* *edit or update my profile* in order to *keep my account up to date*.
-* *like or unlike a book review* in order to *interact with the site content*.
 * *easily login* in order to *access my account*.
-* *easily logout* in order to *end my session on the site*.
-* *edit or delete my own book post* in order to *keep my own contributions relevant*.
+* *easily logout* in order to *end my session on the site when I have finished interacting with the content and community*.
+* *view a navbar from every page* in order for *navigate easily between pages*.
+* *navigate through pages quickly and easily* in order to *view site content seamlessly without page refresh*.
+* *tell if I am logged in or not* in order to *log in if necessary*.
+* *maintain my logged-in status until I choose to log out* so that *my user experience is not compromised*.
+* *create a post* in order to *share my fitness journey with the community*.
+* *view the detail of a post* in order to *learn more about it*.
+* *edit a post* in order to *update it or make corrections after it has been created*.
+* *delete a post I have created* in order to *control my own content*.
+* *keep scrolling through posts or tutorials that are loaded automatically* rather *than having to click to the next page*.
+* *view a list most recent posts and tutorials in chronological order* in order *to see the most up-to-date content*.
+* *search posts and tutorials by keyword* in order to *find content or users*.
+* *like or unlike a post* in order to *show appreciation and interact with the community and site content*.
+* *view the detail of a tutorial* in order to *learn more about it*.
+* *create a comment on a post or tutorial* in order to *interact with the content and community*.
+* *view comments on a post or tutorial* in order to *find out what others think of the site content*.
+* *edit a comment I have added to a post or tutorial* in order to *make corrections and keep my content relevant*.
+* *delete a comment I have added to a post or tutorial* in order to *control my own content*.
+* *follow or unfollow a user* in order to *see content from specific users*.
+* *see posts by followed users* in order to *see content from specific users and learn about their fitness journeys*.
+* *view profiles of other users* in order to *see their content and learn more about them*.
+* *view a list of top profiles* in order to *see who is most popular*.
+* *edit my profile* in order to *keep my image and bio up-to-date*.
+* *update my username and password* in order to *update my display name and secure my account*.
+
+
 
 As an **Unregistered** User I can:
-* *easily determine the purpose of the site* in order to *see if I want to register and join*.
-* *easily register* in order to *start interacting with the content and community*.
+* *easily determine the purpose of the site by viewing an About page* in order to *see if I want to register and join*.
+* *easily register* in order to *access the features for registered users*.
 
 
 #### **Site Admin**
 As a **Site Admin** I can: 
-* *approve user book reviews* in order to *publish them to the site*.
-* *approve user book reviews* in order to *check that their content is appropriate*.
-* *approve user comments* in order to *filter out objectionable content*.
-* *view the number of likes on a book review* in order to *see which is the most popular*.
-* *delete user accounts* in order to *remove users who do not respect others in the community*.
-* *add to the featured authors section* in order to *keep site content fresh and relevant*.
+* *add tutorials* in order to *educate members of the community*.
+* *edit tutorials* in order to *keep content up-to-date*.
 
 <hr>
 
