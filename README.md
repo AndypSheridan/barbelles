@@ -835,7 +835,9 @@ The testing process, along with bugs, can be viewed [here](/TESTING.md)​
 
 The Deployment was a fairly lengthy process so I have detailed it in a separate file. It can be found [here](/DEPLOYMENT.md)
 
-The final deployment can be viewed [here](https://sci-fi-portal.herokuapp.com/)
+The final deployment can be viewed [here](https://barbelles.herokuapp.com/)
+The final deployment of the API can be viewed [here](https://barbelles-api.herokuapp.com/)
+The API repository can be viewed [here](https://github.com/AndypSheridan/barbelles-api)
 
 <hr>
 
