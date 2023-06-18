@@ -1,13 +1,11 @@
 # **BarBelles**
 ## **Site Overview**
 
-As a keen fan of the Science Fiction genre, I have often found it difficult to keep track of the growing number of books I have read. I have also struggled to find the passion and love for sci-fi from others within my own social or professional circles.
 
-The Sci-Fi Portal is designed with the aim of creating a platform for an online community of like-minded fans who wish to share their own experiences of sci-fi novels, short stories or animé. Users can create, read, update and delete book reviews which can be viewed by themselves as well as other registered users. The community experience is enhanced by the ability to comment on reviews, thus generating discussion and fulfilling one of the aims of providing a forum to interact and engage with other fans of the genre.
 
 <hr>
 
-![Am I Responsive Screenshot](docs/images/am-i-responsive.png)
+![Am I Responsive Screenshot](docs/images/)
 
 Click [here](https://sci-fi-portal.herokuapp.com/) to view the final deployment of the site.
 
