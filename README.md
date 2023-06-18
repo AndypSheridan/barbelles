@@ -32,9 +32,13 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
     * [***Typography***](#typography)
 1. [**Agile Development**](#agile-development)
 1. [**Features**](#features)
-    * [***Admin Page***](#admin-page)
     * [***Navbar***](#navbar)
-    * [***Social Media and Email Links***](#social-media-and-email-links)
+    * [***Account Pages***](#account-pages)
+      * [***Sign Up***](#sign-up)
+      * [***Sign In***](#sign-in)
+      * [***Sign Out***](#log-out)
+    * [***About Page***](#about-page)
+    * [***Social Media Links***](#social-media-links)
     * [***Home Page***](#home-page)
     * [***Books Page***](#books-page)
     * [***Book Detail Page***](#book-detail-page)
@@ -43,12 +47,9 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
     * [***Delete Book Page***](#delete-book-page)
     * [***Authors Page***](#authors-page)
     * [***Author Detail Page***](#author-detail-page)
-    * [***About Page***](#about-page)
+
     * [***Profile Page***](#profile-page)
-    * [***Account Pages***](#account-pages)
-      * [***Sign Up***](#sign-up)
-      * [***Log In***](#log-in)
-      * [***Log Out***](#log-out)
+    
     * [***Messages***](#messages)
     * [***Defensive Design***](#defensive-design)
     * [***User Authentication***](#user-authentication)
@@ -211,23 +212,106 @@ I used Github projects to create and track issues and User Stories. The Agile pr
 
 ### **Navbar**
 ​
-The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays links to the About Page and Sign up:
+The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays links to the About Page and Sign up. All icons used in the navbar and site-wide are from [Font Awesome](www.fontawesome.com):
 
 ![Screenshot of navbar](docs/images/navbar-logged-out.png)
 
-When the User is logged in, it offers navigation to the profile, books, authors and about pages:
+ When the User is logged in, it offers navigation to the About page and features dropdown menus to Post, Tutorial and Profile pages as well as the logout button:
 
 ![Screenshot of navbar](docs/images/navbar-logged-in.png)
 
 To display properly on smaller screens, I used a Bootstrap hamburger menu:
 
-![Screenshot of small-screen navbar](docs/images/navbar-small-screen-before.png)
-![Screenshot of small-screen navbar menu](docs/images/navbar-small-screen.png)
+![Screenshot of small-screen navbar](docs/images/navbar-logged-out-mobile.png)
+![Screenshot of small-screen navbar menu](docs/images/navbar-logged-in-mobile.png)
+
+The Posts dropdown menu features links to all posts, posts by community members the logged-in user follows, liked posts and the link for the user to share a post:
+
+![Screenshot of posts dropdown](docs/images/navbar-dropdown-mobile.png)
+
+The Tutorials dropdown menu features a link to the tutorials feed and tutorials which the logged in user has favourited. For users whose permissions have been set to `is_staff = True` via the API, there will be a link to the share tutorial page:
+
+![Screenshot of tutorial dropdown](docs/images/navbar-dropdown.png)
+
+The final dropdown uses the avatar image of the logged-in user. If no image has yet been added, there is a default image added automatically on registering. There is a link to the Profile page and a sign out button which will trigger a modal asking for sign-out confirmation.
 
 
 <hr>
 
-### Social Media and Email Links
+## Account Pages
+
+Upon navigating to the site, the user will find themselves at the landing / sign up / sign in page. The background image is a black and white one of the site owner, Kate Ross pushing a weighted sled:
+
+![Landing page](docs/images/landing.png)
+
+Options available to the user are:
+
+#### Sign Up
+
+Authentication is handled on the back-end via dj-rest-auth. To create an account, the user must complete this form:
+
+![Screenshot of signup form](docs/images/sign-up-form.png)
+
+The form will display error messages in several circumstances:
+
+* The User chooses a Username that is already taken
+* The password is too easy to guess
+* Fields are left blank
+* The passwords do not match
+
+See the example below: 
+
+![Screenshot of signup form error](docs/images/form-error.png)
+
+Once the User has successfully registered, they will receive confirmation of registration and be asked to sign in:
+
+![Screenshot of sign up toast](docs/images/sign-up-toast.png)
+
+
+<hr>
+
+#### Sign In
+
+Existing Users can sign in by completing this form:
+
+![Screenshot of sign in form](docs/images/sign-in-form.png)
+
+If the log in details are not valid, an error message is displayed. For example: 
+
+![Screenshot of sign in form errors](docs/images/sign-in-form-error.png)
+
+Upon successful sign in, a toast is displayed to provide feedback to the user and they are directed to the Posts page:
+
+![Sign in toast](docs/images/sign-in-toast.png)
+
+
+<hr>
+
+
+#### Sign Out
+
+To sign out of the site and end the current session, the User can navigate to Log Out in the profile dropdown menu in the navbar:
+
+![Screenshot of logout button](docs/images/sign-out-button.png)
+
+This will trigger the sign out modal asking for confirmation:
+
+![Screenshot of signout modal](docs/images/sign-out-modal.png)
+
+The User can cancel this process and go back or click sign out and get redirected to the landing page, where they can sign in again. A toast gives feedback to the user that they have logged out:
+
+![Screenshot of log out toast](docs/images/sign-out-toast.png)
+
+#### **Responsiveness**
+
+Here is how the page displays on an iPhone SE:
+
+![Screenshot of landing page on small screen](docs/images/landing-mobile.png)
+
+
+<hr>
+
+### Social Media Links
 
 The social media and email icons are situated on the right of the Navbar. The Social Media links are functional and will open in a new tab. 
 **NOTE:** There is no actual Social Media Content for this site at the time of writing.
@@ -239,19 +323,56 @@ The email icon opens the default email application with the recipient being a te
 
 <hr>
 
-### **Home Page**
+### About Page
 
-The Home Page uses a background chosen to evoke sci-fi imagery and features a human figure standing in front of a Portal, thus linking neatly with the name of the site. It features some simple text outlining the purpose of the site as well as a search bar, which logged-in Users can use to search for content:
+The About page can be viewed regardless of whether the user is logged in or out and displays information about the site. The text welcomes the User to the site and explains what they can do once logged in a registered User.
 
-![Screenshot of home page](docs/images/sfp-home-page.png)
+![Screenshot of about page ](docs/images/about.png)
+
+Towards the bottom of the page, a Social Links component has been used:
+
+![Screenshot of social links](docs/images/social-media-links.png)
+
+Clicking on these links will open a new browser tab on a desktop or laptop whilst on a mobile device, it will open the corresponding app on that device. At the time of writing, we did not have social media links for the site so the links will take the user to the corresponding site's homepage.
+
+
+#### **Responsiveness**
+
+Here is how the page displays on an iPhone SE. On the smaller screen size:
+
+![Screenshot of about page small screen](docs/images/about-mobile.png)
+
+<hr>
+
+### **Posts Pages**
+
+The All Posts Page features a list of all posts that have been added to the site by members of the community:
+
+![Screenshot of posts page](docs/images/posts-page.png)
 
 The Home Page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
 
-![Screenshot of small-screen home page](docs/images/sfp-home-small.png)
+![Screenshot of small-screen home page](docs/images/posts-mobile.png)
 
-Users can search for books using the search function:
+Users can search for keywords in posts and usernames using the search function:
 
-![Screenshot of home page search](docs/images/sfp-search.png)
+![Screenshot of Posts search](docs/images/search-inactive.png)
+
+When the search bar is active it glows pink:
+
+![Screenshot of Posts search when active](docs/images/search-active.png)
+
+To the right of the search bar (on large screens), the Social Links component detailed above in the About page is reused. This component will not render on a smaller screen due to the lack of available space. 
+
+The other prominent feature on this page
+
+
+
+
+
+The Following Posts Page is exactly the same as above but it uses a filter that shows posts added by members of the community whom the logged-in user has followed. If the user doesn't follow anybody, the following is displayed:
+
+![Screenshot of no results](docs/images/no-posts-found.png)
 
 <hr>
 
@@ -452,74 +573,7 @@ Here is how the page displays on an iPhone SE:
 <hr>
 
 
-## Allauth Account Pages
 
-All Account Pages use the same background, again evoking sci-fi imagery. The image is a swirling, nebulous portal which again complements the colour palette used site-wide.
-
-#### Sign Up
-
-I used allauth to handle the account pages for the project. In order to register, the User must complete the form on the Signup Page:
-
-![Screenshot of signup page](docs/images/signup.png)
-
-Once the User has successfully registered, they will be logged in and taken to the Home Page. The form will display error messages in several circumstances:
-
-* The User chooses a Username that is already taken
-* The password is not long enough
-* The password is too similar to the username or too common
-* The passwords do not match
-
-See the example below: 
-
-![Screenshot of signup page errors](docs/images/signup-errors.png)
-
-#### **Responsiveness**
-
-Here is how the page displays on an iPhone SE:
-
-![Screenshot of signup small screen](docs/images/signup-small.png)
-
-<hr>
-
-#### Log In
-
-Existing Users can log in by clicking the Log In button on the Home Page. This will bring them to the Log In Page:
-
-![Screenshot of log in page](docs/images/login-page.png)
-
-If the log in details are not valid, an error message is displayed. For example: 
-
-![Screenshot of log in page errors](docs/images/login-error-message.png)
-
-#### **Responsiveness**
-
-Here is how the page displays on an iPhone SE:
-
-![Screenshot of login small screen](docs/images/login-small.png)
-![Screenshot of login error small screen](docs/images/login-error-small.png)
-
-<hr>
-
-
-#### Log Out
-
-To log out of the site and end the current session, the User can navigate to Log Out in the Navbar. This will direct them to the Log Out Page:
-
-![Screenshot of logout page](docs/images/logout.png)
-
-The User can confirm by clicking the Log Out button or click the cancel button to return to the previous page. If the User chooses to log out, they are redirected to the Home Page and a success message informs them they have been logged out:
-
-![Screenshot of home screen logout success](docs/images/home-logout-success.png)
-
-#### **Responsiveness**
-
-Here is how the pages display on an iPhone SE:
-
-![Screenshot of logout small screen](docs/images/logout-small.png)
-![Screenshot of logout success small screen](docs/images/home-logout-success-small.png)
-
-
-<hr>
 
 ## Links and Buttons
 
