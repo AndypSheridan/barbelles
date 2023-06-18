@@ -351,7 +351,7 @@ The All Posts Page features a list of all posts that have been added to the site
 
 ![Screenshot of posts page](docs/images/posts-page.png)
 
-The Home Page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+The Posts page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
 
 ![Screenshot of small-screen home page](docs/images/posts-mobile.png)
 
@@ -382,6 +382,17 @@ The Following Posts Page is exactly the same as above but it uses a filter that 
 #### *Liked*
 
 The Liked Posts page uses a different filter which returns results from the API which the logged-in user has liked. If the user hasn't liked any posts yet, the same no-search-results image is displayed.
+
+
+#### *Share post*
+
+The share post page features a simple form where the user can upload an image, a post title and post story:
+
+![Screenshot of share post page](docs/images/share-post.png)
+
+On smaller screens, the page looks like this:
+
+![Screenshot of share post page - mobile](docs/images/share-post-mobile.png)
 
 <hr>
 
