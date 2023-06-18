@@ -644,34 +644,15 @@ I used Bootstrap buttons across the project. The button colours follow the colou
 
 User feedback is provided in the shape of success or error toasts with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'x' and will be displayed in the following situations:
 
-**Successful Login**
+- Successful registration
+- Successful login
+- Successful sign out
+- Successful post, edit and delete
+- Successful tutorial post, edit and delete
+- Successful comment post, edit and delete
+- Successful profile edit or delete
 
-![Successful login message](docs/images/login-success.png)
-
-**Successful Update Profile**
-
-![Successful update profile](docs/images/profile-success.png)
-
-**Successful Add Book Review**
-
-![Successful add book message](docs/images/add-book-success.png)
-
-**Successful Edit Book Review**
-
-![Successful edit review message](docs/images/edit-success.png)
-
-**Successful Delete Book Review**
-
-![Successful login message](docs/images/delete-success.png)
-
-**Successful Comment Submission**
-
-![Successful Comment Submission message](docs/images/comment-success.png)
-
-**Successful Logout**
-
-![Successful logout message](docs/images/logout-success.png)
-
+In the event these action are not executed as intended, error toasts will be displayed.
 
 <hr>
 
