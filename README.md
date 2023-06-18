@@ -5,9 +5,13 @@
 
 <hr>
 
-![Am I Responsive Screenshot](docs/images/)
+![Am I Responsive Screenshot](docs/images/barbelles-amiresponsive.png)
 
-Click [here](https://sci-fi-portal.herokuapp.com/) to view the final deployment of the site.
+<hr>
+
+![Am I Responsive Posts Screenshot](docs/images/barbelles-posts-amiresponsive.png)
+
+Click [here](https://barbelles.herokuapp.com/) to view the final deployment of the front-end site.
 
 <hr>
 
