@@ -1,7 +1,7 @@
 # **BarBelles**
 ## **Site Overview**
 
-
+BarBelles is an online fitness community for women. This project, developed using ReactJS, aims to provide women with a safe and inclusive space to share their own personal fitness journeys as well as the opportunity to learn and interact with others in the community. Users can read posts by others, create, update and delete their own posts as well as follow other users. There is also the facility to add, view, edit or delete comments. Users can learn from video Tutorials added by the site owner, Kate Ross; only users with staff privileges can create, edit or delete tutorials but all users can 'favourite' them and add comments. BarBelles serves as a front-end component which is connected to the [BarBelles API backend](https://github.com/AndypSheridan/barbelles-api), developed using Django Rest Framework.
 
 <hr>
 
