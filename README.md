@@ -186,16 +186,14 @@ The contrast scores for all the colours used across the project can be seen belo
 
 #### **Typography**
 ​
-I researched a number of fonts that would be in keeping with the sci-fi theme of the site. I used [Font Pair](https://www.fontpair.co/inspiration/space-mono-roboto-mono) to try a number of options and eventually chose the following:
+The site owner and I explored a number of options when looking at themes of the site. I used [Font Pair](https://www.fontpair.co/inspiration/space-mono-roboto-mono) to try a number of options and eventually, we settled on the following:
 
-* [Space Mono](https://fonts.google.com/specimen/Space+Mono)
-Chosen for its sci-fi-esque appearance.
+* [Satisfy](https://fonts.google.com/specimen/Satisfy?query=satisfy)
+Almost stereotypically feminine, Miss Ross thought this font would reinforce the female-only theme of the site.
 
 
 * [Roboto](https://fonts.google.com/specimen/Roboto)
-Chosen for its softer edges to counter the harsher appearance of Space Mono.
-
-The two are used evenly throughout the site.
+Chosen for its softer edges to counter the extravagance of Satisfy. This is the primary font used across the site.
 
 ​<hr>
 

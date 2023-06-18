@@ -5,10 +5,8 @@ import communityImage1 from "../assets/community4.jpg";
 import communityImage5 from "../assets/community5.jpg";
 import communityImage3 from "../assets/kateross.jpg";
 import SocialLinks from "../components/SocialLinks";
-import { useRedirect } from "../hooks/useRedirect";
 import Container from "react-bootstrap/Container";
 import styles from "../styles/About.module.css";
-import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
