@@ -419,9 +419,21 @@ Clicking on a post in any of the above list views will lead to the Post detail p
 ![Screenshot of share post detail page](docs/images/post-detail-1.png)
 ![Screenshot of share post detail page](docs/images/post-detail-2.png)
 
-On smaller screens
-
 This page shows the post itself along with the following:
+
+*Edit post*
+
+The owner of a post will be able to access a dropdown menu situated to the right of the date:
+
+![Screenshot of post detail dropdown](docs/images/post-dropdown.png)
+
+If the user can choose edit and will be taken to the following page which is essentially the same as the share post page:
+
+![Screenshot of edit post page](docs/images/post-edit-page.png)
+
+Upon editing the post, the user will receieve feedback in the form of a toast informing that the post has been updated.
+
+If the user clicks delete, the post will be removed and a toast will confirm this.
 
 *Likes*
 If the user likes a post it will display a solid pink heart:
@@ -463,6 +475,43 @@ The Post detail page is responsive and works well on smaller devices. This is ho
 
 ![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-1.png)
 ![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-2.png)
+
+
+<hr>
+
+### **Tutorials Pages**
+*Tutorials*
+
+The Tutorials Page features a list of all video tutorials and workouts that have been added to the site owner, Kate Ross, or by approved users who have is_staff set to True on the back-end:
+
+![Screenshot of tutorials page](docs/images/tutorials.png)
+
+The Posts page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+
+![Screenshot of small-screen tutorials page](docs/images/tutorials-mobile.png)
+
+Users can search for keywords in tutorials. Here the user is searching for yoga:
+
+![Screenshot of Tutorials search](docs/images/tutorials-search-yoga.png)
+
+In terms of the page layout, it is consistent with the Posts pages, reusing the Top Profiles and Social Media Links to create a familiar UI.
+
+*Favourites*
+
+The favourites page is the same as the Tutorials list, but makes use of a filter function which displays tutorials the user has saved to their favourites.
+
+*Share tutorial*
+
+Users who have the permission, will see the Share tutorial link in the dropdown menu and can add a link to a tutorial or workout, which will be rendered in an iframe. Clicking the link will take them to this page:
+
+![Screenshot of upload tutorial page](docs/images/upload-tutorial.png)
+
+On smaller screens, the page looks like this:
+
+![Screenshot of upload tutorial page](docs/images/upload-tutorial-mobile.png.png)
+
+
+
 
 **Infinite scroll**
 
@@ -684,9 +733,9 @@ I used Bootstrap buttons across the project. The button colours follow the colou
 
 <hr>
 
-## **Messages**
+## **Toasts**
 
-User feedback is provided in the shape of success messages with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'x' and will be displayed in the following situations:
+User feedback is provided in the shape of success or error toasts with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'x' and will be displayed in the following situations:
 
 **Successful Login**
 
@@ -794,7 +843,7 @@ The final deployment can be viewed [here](https://sci-fi-portal.herokuapp.com/)
 
 The following software and tech was used:
 
-- [BootStrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to provide key components such as the navbar and cards.
+- [React-BootStrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to provide key components such as the navbar, containers, media and cards.
 - [Cloudinary](https://cloudinary.com) to handle static images and files as well as to offer the User a front end method of uploading images.
 - CSS to provide custom styling in addition to Bootstrap.
 - [Django](https://www.djangoproject.com/) as a Python framework to develop the project.
@@ -812,6 +861,7 @@ The following software and tech was used:
 - Microsoft Excel to develop the logic for the project.
 - [Optimizilla](https://imagecompressor.com/) to compress background images for the site.
 - Python - Installed packages can be found in the requirements.txt file.
+- [React-Toastify](https://www.npmjs.com/package/react-toastify) to provide the user with feedback relating to various actions performed across the site.
 - [Shutterstock](https://www.shutterstock.com/) to source the background images for the site.
 - [Summernote](https://summernote.org/) to provide a WYSIWYG text editor in the admin area.
 
