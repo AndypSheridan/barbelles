@@ -209,17 +209,9 @@ I used Github projects to create and track issues and User Stories. The Agile pr
 
 ## **Site Navigation**
 
-### **Admin Page**
-
-The Admin page was setup almost immediately. This was crucial as it provided the initial means of adding test data and users to the project.
-
-![Screenshot of admin page](docs/images/admin.png)
-
-<hr>
-
 ### **Navbar**
 ​
-The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays just the SF|Portal logo and social media / email links:
+The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays links to the About Page and Sign up:
 
 ![Screenshot of navbar](docs/images/navbar-logged-out.png)
 
