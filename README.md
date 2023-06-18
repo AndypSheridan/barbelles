@@ -514,38 +514,38 @@ On smaller screens, the page looks like this:
 
 Clicking on the pink 'view' link on an individual tutorial in the list view will lead to the Tutorial detail page:
 
-![Screenshot of tutorial detail page](docs/images/post-detail-1.png)
-![Screenshot of tutorial detail page](docs/images/post-detail-2.png)
+![Screenshot of tutorial detail page](docs/images/tutorial-detail-1.png)
+![Screenshot of tutorial detail page](docs/images/tutorial-detail-2.png)
 
-This page shows the post itself along with the following:
+This page shows the tutorial itself along with the following:
 
-*Edit post*
+*Edit tutorial*
 
-The owner of a post will be able to access a dropdown menu situated to the right of the date:
+The owner of a tutorial will be able to access a dropdown menu situated to the right of the date:
 
-![Screenshot of post detail dropdown](docs/images/post-dropdown.png)
+![Screenshot of tutorial detail dropdown](docs/images/tutorial-dropdown.png)
 
-If the user can choose edit and will be taken to the following page which is essentially the same as the share post page:
+If the user can choose edit and will be taken to the edit tutorial page:
 
-![Screenshot of edit post page](docs/images/post-edit-page.png)
+![Screenshot of edit post page](docs/images/tutorial-edit-form.png)
 
-Upon editing the post, the user will receieve feedback in the form of a toast informing that the post has been updated.
+Upon editing the tutorial, the user will receieve feedback in the form of a toast informing that the tutorial has been updated.
 
-If the user clicks delete, the post will be removed and a toast will confirm this.
+If the user clicks delete, the tutorial will be removed and a toast will confirm this.
 
-*Likes*
-If the user likes a post it will display a solid pink heart:
-![Screenshot of like](docs/images/post-liked.png)
+*Favourites*
+If the user favourites a post it will display a solid pink bookmark icon:
+![Screenshot of favourite](docs/images/favourite.png)
 
-If the user has not liked the post, a pink heart outline will be displayed:
-![Screenshot of unliked post](docs/images/post-unliked.png)
+If the user has not liked the post, a pink bookmark outline will be displayed:
+![Screenshot of unfavourited tutorial](docs/images/unfavourite.png)
 
-The total number of likes on a post is also displayed.
+The total number of favourites on a post is also displayed.
 
-The number of comments a post has is also shown:
+The number of comments a tutorial has is also shown:
 ![Screenshot of comments](docs/images/comments.png)
 
-Beneath the post is a form for the logged-in user to add comments:
+Similar to the post detail page, beneath the tutorial is a form for the logged-in user to add comments:
 
 ![Screenshot of comments form](docs/images/comment-form.png)
 
@@ -569,13 +569,17 @@ If the user deletes a comment, the following toast is shown:
 
 ![Screenshot of comment delete toast](docs/images/comment-delete-toast.png)
 
-The Post detail page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+The Tutorial detail page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
 
-![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-1.png)
-![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-2.png)
+![Screenshot of small-screen post detail page](docs/images/tutorial-detail-mobile-1.png)
+![Screenshot of small-screen post detail page](docs/images/tutorial-detail-mobile-2.png)
 
 
 <hr>
+
+#### Profile Page
+
+
 
 
 **Infinite scroll**
