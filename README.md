@@ -50,7 +50,7 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
 
     * [***Profile Page***](#profile-page)
     
-    * [***Messages***](#messages)
+    * [***Toasts***](#messages)
     * [***Defensive Design***](#defensive-design)
     * [***User Authentication***](#user-authentication)
     * [***404 Page***](#404-page)
@@ -250,7 +250,7 @@ Options available to the user are:
 
 Authentication is handled on the back-end via dj-rest-auth. To create an account, the user must complete this form:
 
-![Screenshot of signup form](docs/images/sign-up-form.png)
+![Screenshot of sign up form](docs/images/sign-up-form.png)
 
 The form will display error messages in several circumstances:
 
@@ -261,7 +261,7 @@ The form will display error messages in several circumstances:
 
 See the example below: 
 
-![Screenshot of signup form error](docs/images/form-error.png)
+![Screenshot of sign up form error](docs/images/form-error.png)
 
 Once the User has successfully registered, they will receive confirmation of registration and be asked to sign in:
 
@@ -510,7 +510,72 @@ On smaller screens, the page looks like this:
 
 ![Screenshot of upload tutorial page](docs/images/upload-tutorial-mobile.png.png)
 
+### Tutorial Detail Page
 
+Clicking on the pink 'view' link on an individual tutorial in the list view will lead to the Tutorial detail page:
+
+![Screenshot of tutorial detail page](docs/images/post-detail-1.png)
+![Screenshot of tutorial detail page](docs/images/post-detail-2.png)
+
+This page shows the post itself along with the following:
+
+*Edit post*
+
+The owner of a post will be able to access a dropdown menu situated to the right of the date:
+
+![Screenshot of post detail dropdown](docs/images/post-dropdown.png)
+
+If the user can choose edit and will be taken to the following page which is essentially the same as the share post page:
+
+![Screenshot of edit post page](docs/images/post-edit-page.png)
+
+Upon editing the post, the user will receieve feedback in the form of a toast informing that the post has been updated.
+
+If the user clicks delete, the post will be removed and a toast will confirm this.
+
+*Likes*
+If the user likes a post it will display a solid pink heart:
+![Screenshot of like](docs/images/post-liked.png)
+
+If the user has not liked the post, a pink heart outline will be displayed:
+![Screenshot of unliked post](docs/images/post-unliked.png)
+
+The total number of likes on a post is also displayed.
+
+The number of comments a post has is also shown:
+![Screenshot of comments](docs/images/comments.png)
+
+Beneath the post is a form for the logged-in user to add comments:
+
+![Screenshot of comments form](docs/images/comment-form.png)
+
+Upon submitting a comment, the following toast is displayed to the user:
+
+![Screenshot of comment post toast](docs/images/comment-post-toast.png)
+
+All comments are listed below. A user can edit or delete a comment they have posted using the following dropdown menu:
+
+![Screenshot of comment dropdown](docs/images/comment-dropdown.png)
+
+Choosing edit will display the following form:
+
+![Screenshot of comment edit form](docs/images/comment-edit-form.png)
+
+Upon a successful edit of the comment, the following toast will provide feedback to the user:
+
+![Screenshot of comment edit toast](docs/images/comment-update-toast.png)
+
+If the user deletes a comment, the following toast is shown:
+
+![Screenshot of comment delete toast](docs/images/comment-delete-toast.png)
+
+The Post detail page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+
+![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-1.png)
+![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-2.png)
+
+
+<hr>
 
 
 **Infinite scroll**
@@ -791,15 +856,6 @@ All pages feature User Authentication meaning that a User must be logged in to v
 A custom 404 page was added to catch instances when the User may have mis-typed a URL, or if content has been removed from the site. The 404 page features text displaying the content is not available and features a back button:
 
 ![Screenshot of 404 page](docs/images/404.png)
-
-
-<hr>
-
-### **500 Page**
-
-A custom 500 page was added to catch instances when a potentially malicious User might try to subvert the site, for example to access personal data or delete content. In this case the page below displays and features a back button to redirect them to the previous page:
-
-![Screenshot of 500 page](docs/images/500-page.png)
 
 
 <hr>
