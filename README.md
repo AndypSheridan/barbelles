@@ -416,7 +416,53 @@ To provide additional feedback to the user, If the form is not submitted, an err
 
 Clicking on a post in any of the above list views will lead to the Post detail page:
 
+![Screenshot of share post detail page](docs/images/post-detail-1.png)
+![Screenshot of share post detail page](docs/images/post-detail-2.png)
 
+On smaller screens
+
+This page shows the post itself along with the following:
+
+*Likes*
+If the user likes a post it will display a solid pink heart:
+![Screenshot of like](docs/images/post-liked.png)
+
+If the user has not liked the post, a pink heart outline will be displayed:
+![Screenshot of unliked post](docs/images/post-unliked.png)
+
+The total number of likes on a post is also displayed.
+
+The number of comments a post has is also shown:
+![Screenshot of comments](docs/images/comments.png)
+
+Beneath the post is a form for the logged-in user to add comments:
+
+![Screenshot of comments form](docs/images/comment-form.png)
+
+Upon submitting a comment, the following toast is displayed to the user:
+
+![Screenshot of comment post toast](docs/images/comment-post-toast.png)
+
+All comments are listed below. A user can edit or delete a comment they have posted using the following dropdown menu:
+
+![Screenshot of comment dropdown](docs/images/comment-dropdown.png)
+
+Choosing edit will display the following form:
+
+![Screenshot of comment edit form](docs/images/comment-edit-form.png)
+
+Upon a successful edit of the comment, the following toast will provide feedback to the user:
+
+![Screenshot of comment edit toast](docs/images/comment-update-toast.png)
+
+If the user deletes a comment, the following toast is shown:
+
+![Screenshot of comment delete toast](docs/images/comment-delete-toast.png)
+
+The Post detail page is responsive and works well on smaller devices. This is how it looks on an iPhone SE:
+
+![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-1.png)
+![Screenshot of small-screen post detail page](docs/images/post-detail-mobile-2.png)
 
 **Infinite scroll**
 
