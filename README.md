@@ -1,7 +1,9 @@
 # **BarBelles**
 ## **Site Overview**
 
-BarBelles is an online fitness community for women. This project, developed using ReactJS, aims to provide women with a safe and inclusive space to share their own personal fitness journeys as well as the opportunity to learn and interact with others in the community. Users can read posts by others, create, update and delete their own posts as well as follow other users. There is also the facility to add, view, edit or delete comments. Users can learn from video Tutorials added by the site owner, Kate Ross; only users with staff privileges can create, edit or delete tutorials but all users can 'favourite' them and add comments. BarBelles serves as a front-end component which is connected to the [BarBelles API backend](https://github.com/AndypSheridan/barbelles-api), developed using Django Rest Framework.
+BarBelles is an online fitness community for women. This project, developed using ReactJS, aims to provide women with a safe and inclusive space to share their own personal fitness journeys as well as the opportunity to learn and interact with others in the community. Users can read posts by others, create, update and delete their own posts as well as follow other users. There is also the facility to add, view, edit or delete comments. Users can learn from video Tutorials added by the site owner, Kate Ross; only users with staff privileges can create, edit or delete tutorials but all users can 'favourite' them and add comments. 
+
+BarBelles serves as a front-end component which is connected to the [BarBelles API backend](https://github.com/AndypSheridan/barbelles-api), developed using Django Rest Framework.
 
 <hr>
 
@@ -11,7 +13,9 @@ BarBelles is an online fitness community for women. This project, developed usin
 
 ![Am I Responsive Posts Screenshot](docs/images/barbelles-posts-amiresponsive.png)
 
-Click [here](https://barbelles.herokuapp.com/) to view the final deployment of the front-end site.
+- Click [here](https://barbelles.herokuapp.com/) to view the final deployment of the front-end site.
+- Click [here](https://barbelles-api.herokuapp.com/) to view the final deployment of the API.
+- Click [here](https://github.com/AndypSheridan/barbelles-api) to view the API repository.
 
 <hr>
 
@@ -63,14 +67,16 @@ Click [here](https://barbelles.herokuapp.com/) to view the final deployment of t
 
 ### **Site Aims:**
 
-* Develop a colourful, interactive online platform for fans of Science Fiction literature to come together as a community.
-* To provide users with a platform to keep track of their own reading within the genre.
+* Develop a colourful, interactive online fitness content-sharing platform for women to come together as a community.
+* Connect smoothly and seamlessly to the BarBelles-API back-end.
+* Offer the User an easy way to register and login to view site content.
+* To provide members of the community with CRUD (create, read, update, delete) functionality for posts found on the site
 * Deliver an accessible and easy to navigate site for users on desktop and mobile devices.
-* Provide registered users with the opportunity share their own sci-fi experiences and to Create, Read, Update or Delete book reviews on the site.
-* Provide users with an opportunity to gain future reading inspiration by browsing the book reviews and featured authors.
-* Offer users the opportunity to interact and engage with others by liking and commenting on reviews by other users.
-* Ensure provision of safe content as reviews and comments must be approved by the admin.
-* Enhance the user experience by implementing an integrated search function for those trying to find a specific book or author.
+* Provide registered, logged-in users with the opportunity share their own fitness journeys.
+* Provide users with an opportunity to gain motivation or inspiration by viewing posts added by other members of the community.
+* Offer users the opportunity to interact and engage with others by liking and commenting on posts by other users or tutorials added by the site owner.
+* Provide filtered content for the User by based on Users they follow or content they have liked or favourited.
+* Enhance the user experience by implementing an integrated search function for those trying to find a post tutorial, or user.
 * Offer users the opportunity to provide more information about themselves by adding to their user profile.
 * Deliver to the user a comprehensive explanation and rationale behind the site through a clear and concise About page. 
 
