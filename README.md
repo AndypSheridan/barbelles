@@ -345,6 +345,7 @@ Here is how the page displays on an iPhone SE. On the smaller screen size:
 <hr>
 
 ### **Posts Pages**
+#### *All Posts*
 
 The All Posts Page features a list of all posts that have been added to the site by members of the community:
 
@@ -364,15 +365,31 @@ When the search bar is active it glows pink:
 
 To the right of the search bar (on large screens), the Social Links component detailed above in the About page is reused. This component will not render on a smaller screen due to the lack of available space. 
 
-The other prominent feature on this page
+The other prominent feature on this page is the Top Profiles component which lists most popular profiles on the site based on the most followers:
 
+![Screenshot of top profiles](docs/images/top-profiles.png)
 
+On smaller screens, the component is position across the top of the page, beneath the navbar and it shows just the four top profiles:
 
+![Screenshot of top profiles - mobile](docs/images/top-profiles-mobile.png)
 
+#### *Following*
 
 The Following Posts Page is exactly the same as above but it uses a filter that shows posts added by members of the community whom the logged-in user has followed. If the user doesn't follow anybody, the following is displayed:
 
 ![Screenshot of no results](docs/images/no-posts-found.png)
+
+#### *Liked*
+
+The Liked Posts page uses a different filter which returns results from the API which the logged-in user has liked. If the user hasn't liked any posts yet, the same no-search-results image is displayed.
+
+<hr>
+
+
+
+**Infinite scroll**
+
+The Posts pages 
 
 <hr>
 
