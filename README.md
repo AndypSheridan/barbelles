@@ -39,11 +39,11 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
       * [***Sign Out***](#log-out)
     * [***About Page***](#about-page)
     * [***Social Media Links***](#social-media-links)
-    * [***Home Page***](#home-page)
-    * [***Books Page***](#books-page)
-    * [***Book Detail Page***](#book-detail-page)
-    * [***Add Book Page***](#book-detail-page)
-    * [***Edit Book Page***](#edit-book-page)
+    * [***Posts Pages***](#home-page)
+    * [***Post Detail***](#books-page)
+    * [***Tutorials Pages***](#book-detail-page)
+    * [***Tutorial Detail***](#book-detail-page)
+    * [***Profile Pages***](#edit-book-page)
     * [***Delete Book Page***](#delete-book-page)
     * [***Authors Page***](#authors-page)
     * [***Author Detail Page***](#author-detail-page)
@@ -373,6 +373,8 @@ On smaller screens, the component is position across the top of the page, beneat
 
 ![Screenshot of top profiles - mobile](docs/images/top-profiles-mobile.png)
 
+Clicking on a user's avatar will take you to that particular user's profile page.
+
 #### *Following*
 
 The Following Posts Page is exactly the same as above but it uses a filter that shows posts added by members of the community whom the logged-in user has followed. If the user doesn't follow anybody, the following is displayed:
@@ -394,7 +396,25 @@ On smaller screens, the page looks like this:
 
 ![Screenshot of share post page - mobile](docs/images/share-post-mobile.png)
 
+The user will receive feedback if they do not submit the form correctly:
+
+![Screenshot of share post form image error](docs/images/share-post-form-image-error.png)
+
+There is also a file size-limit of 4096kb which has been set on the back-end. If the user attempt to upload a file larger than that, they will receive another error asking for a smaller size.
+
+In the event of form fields being left blank, the following will be displayed:
+
+![Screenshot of share post form field error](docs/images/form-error.png)
+
+To provide additional feedback to the user, If the form is not submitted, an error toast will be shown:
+
+![Screenshot of share post form error toast](docs/images/error-toast.png)
+
 <hr>
+
+### Post Detail Page
+
+Clicking on a post in any of the above list views will lead to the Post detail page:
 
 
 
