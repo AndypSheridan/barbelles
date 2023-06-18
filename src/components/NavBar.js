@@ -126,6 +126,10 @@ const NavBar = () => {
 	);
 	const signedOutIcons = (
 		<>
+			<NavLink className={styles.NavLink} to="/about">
+				<i className="fa-solid fa-circle-info pl-3"></i>
+				About
+			</NavLink>
 			<NavLink
 				to="/signup"
 				className={styles.NavLink}

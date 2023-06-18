@@ -84,13 +84,12 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
 
 ### **Target Audiences:**
 
-* People who are fans of Science Fiction books.
-* People who are fans of the genre in general.
-* People looking to share their own reading experiences from within the genre.
-* People looking for an online book-club which is easy to sign up to and easy to navigate.
-* People who would like to comment on other reviews in order to discuss these books.
-* People seeking future reading inspiration.
-* People who are new to the genre and would like to engage with the community.
+* Women looking to get into fitness.
+* Women who are interested in fitness in general.
+* Women who might feel too self-conscious to post about their own fitness experiences on regular social media platforms.
+* Women looking for inspiration or motivation from like-minded members of the community.
+* Women who would like to interact with and feel part of a community.
+* Women would would like to learn from tutorials and workout videos posted by the site owner, Kate Ross.
 
 <hr>
 
