@@ -742,6 +742,7 @@ There are a number of areas with scope for future improvement. This project has 
 * A list of packages which users could sign up for including personal training, group training, nutrition guidance etc.
 * As the number of tutorials grows, the facility to group them into catgories.
 * An option for users to track calories burned and add workout stats to their profiles.
+* Notifications for users.
 
 
 <hr>

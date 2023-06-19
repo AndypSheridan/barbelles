@@ -49,7 +49,9 @@ At the time of writing this is the largest project I had undertaken so I felt th
 
 The majority of User testing was conducted by myself, however I enlisted the help of family and the site owner, essentially to try to break the site or help me identify bugs and areas for improvement.
 
-All buttons and links were clicked multiple times to test they functioned as expected. Multiple test posts, tutorials, comments and profiles were created, edited and deleted to check the efficacy of the CRUD (create, read, update and delete) functionality across the site.
+All buttons and links were clicked multiple times to test they functioned as expected. Multiple test posts, tutorials, comments and profiles were created, edited and deleted to check the efficacy of the CRUD (create, read, update and delete) functionality across the site. 
+
+The social media links open to external pages as intended.
 
 Inevitably there were bugs and these are outlined and summarised below.
 
@@ -61,39 +63,27 @@ Full details of manual testing can be found on this page.
 ​
 The following bugs were identified during user testing:
 
-* Bug 🐞 - When running the search function, it would display results from books which had not yet been published and therefore resulted in an error.
-* Cause ⚒️ - Whilst the search function worked as intended, I had not set a specific condition for which results could be displayed.
-* Resolution ✅ - Added an if statement that would only display results if the Book status was set to published.
+* Bug 🐞 - Upon starting the workspace, an error message is displayed relating to the Node version.
+* Cause ⚒️ - There is a conflict between the template and current version of Node.
+* Resolution ✅ - In the terminal, enter: `nvm i 16` > `nvm use 16` > `npm start`.
 
 <br>
 
-* Bug 🐞 - Logging in would redirect the User to the Books page.
-* Cause ⚒️ - This was what I had set the login redirect to do during the initial stages of the project before the inception of the Search Function.
-* Resolution ✅ - Adjust login redirect in settings.py
+* Bug 🐞 - Received an error in the terminal about a memory leak in the application when updating the profile.
+* Cause ⚒️ - The error suggested using a clean-up function
+* Resolution ✅ - Added a clean-up function to the useEffect hook in EditProfile.js
 
 ​<br>
 
-* Bug 🐞 - An error message was displayed when submitting the 'add book' form after setting the 'created_by' field to hidden.
-* Cause ⚒️ - The field was removed so that Users could not submit reviews as other Users. This meant the field, which is required, would be empty and thus result in the error and the form failing to submit.
-* Resolution ✅ - Used some simple JavaScript code to pre-populate the 'created_by' field with the logged-in User id.
+* Bug 🐞 - The follow button would update the follow count but no longer follow or unfollow as intended
+* Cause ⚒️ - Tutor support suggested that the database had somehow become corrupted.
+* Resolution ✅ - Reset the database, re-connect the database and re-add site content.
 
 <br>
 
-* Bug 🐞 - The front end method for Users to add Book or Profile images did not work.
-* Cause ⚒️ - Lack of familiarity with, and knowledge of the Cloudinary platform.
-* Resolution ✅ - Researched the various methods to upload and save images to Cloudinary and add Cloudinary fields to forms.
-
-<br>
-
-* Bug 🐞 - Error messages displayed after creating the UserProfile class.
-* Cause ⚒️ - As the UserProfile class was added after several Users had already been created, no profiles were linked to their accounts.
-* Resolution ✅ - Used the Admin page to assign profiles to Users by using the drop-down menu.
-
-<br>
-
-* Bug 🐞 - When setting debug=False in settings.py, and removing DISABLE_COLLECTSTATIC from Heroku Config Vars, project would not deploy.
-* Cause ⚒️ - Heroku failed to collect static files due to a conflict between Whitenoise and Cloudinary.
-* Resolution ✅ - Removed Whitenoise and ran the deployment again.
+* Bug 🐞 - Users were able to access edit- and share-post pages when not logged in.
+* Cause ⚒️ - No defensive design present on these pages.
+* Resolution ✅ - Used the useRedirect hook to redirect logged-out users to the sign-in page.
 
 <br>
 
@@ -284,7 +274,7 @@ Profiles
 
 ### ***JavaScript***
 
-I used ESLint[](https://eslint.org/)to test my code for the front-end. Unfortunately, it clashed with the development version of my project and the mouse would not work, nor would links function. Adding the code: ` The following issues were raised before I uninstalled ES lint, and have been ignored intentionally as they are in relation to code provided in the 'Moments' walkthrough project. I created rules to ignore the following in the eslint.rc file - and no further issues were raised:
+I used ESLint[](https://eslint.org/)to test my code for the front-end. Unfortunately, it clashed with the development version of my project and the mouse would not work, nor would links function. Adding the code: `/* eslint-disable */` at the top of each page did not resolve this. The following issues were raised before I uninstalled ES lint, and have been ignored intentionally as they are in relation to code provided in the 'Moments' walkthrough project. I created rules to ignore the following in the eslint.rc file - and no further issues were raised:
 
 * Do not pass children as props
 * Props spreading is forbidden
