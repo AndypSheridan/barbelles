@@ -19,13 +19,10 @@
 	"plugins": ["react"],
 	"rules": {
 		"react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
-		"react/prop-types": [0, { "ignore": ["children"] }]
-	,
-	"react/react-in-jsx-scope": "off",
-	"react/prop-types": "off",
-	"no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|__" }],
-    "react/no-children-prop": 0,
-    "no-empty": ["error", { "allowEmptyCatch": true }],
-    "no-unused-vars": "off"
-    }
+		"react/react-in-jsx-scope": "off",
+		"react/prop-types": "off",
+		"react/no-children-prop": 0,
+		"no-empty": ["error", { "allowEmptyCatch": true }],
+		"no-unused-vars": "off"
+	}
 }
