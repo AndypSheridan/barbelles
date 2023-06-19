@@ -31,13 +31,13 @@
     * [*Desktop*](#edit-post-desktop)
     * [*Mobile*](#edit-post-mobile)
   * [**Scores Summary**](#scores-summary)
-
 * [**Validation**](#validation)
   * [**HTML**](#html)
   * [**CSS**](#css)
   * [**JavaScript**](#javascript)
   * [**Python / Django**](#python--django)
 * [**User Story Testing**](#user-story-testing)
+* [**Automated Testing**](#automated-testing)
 * [**Additional Testing**](#additional-testing)
 
 
