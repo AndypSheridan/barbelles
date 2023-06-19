@@ -23,6 +23,9 @@
 	,
 	"react/react-in-jsx-scope": "off",
 	"react/prop-types": "off",
-	"no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|__" }]
+	"no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|__" }],
+    "react/no-children-prop": 0,
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-unused-vars": "off"
     }
 }

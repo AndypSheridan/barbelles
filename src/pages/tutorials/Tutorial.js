@@ -45,7 +45,7 @@ const Tutorial = (props) => {
 								...tutorial,
 								favourites_count: tutorial.favourites_count + 1,
 								favourite_id: data.id,
-						  }
+						}
 						: tutorial;
 				}),
 			}));
@@ -63,7 +63,7 @@ const Tutorial = (props) => {
 								...tutorial,
 								favourites_count: tutorial.favourites_count - 1,
 								favourite_id: null,
-						  }
+						}
 						: tutorial;
 				}),
 			}));
