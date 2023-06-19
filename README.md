@@ -671,7 +671,31 @@ All buttons use the same effect on hover:
 
 <hr>
 
-## **Toasts**
+### **Components**
+
+Several components are reused throughout the project:
+
+1. Asset.js is used to integrate the user Avatar in the Navbar, profile page, posts pages and tutorials pages. It is also used in the comments. Asset.js also supplies the loading animation.
+
+2. axiosDefaults.js is a simple file created to assist with communication with the back-end API.
+
+3. CurrentUserContext.js is used to confirm users' logged-in status and what functionality they are permitted.
+
+4. DropdownMenu.js is used to allow users to edit profiles, posts, tutorials and comments.
+
+5. Navbar.js to provide an easy way to navigate the site.
+
+6. ProfileDataContext provides follow and un-follow functionality across the site.
+
+7. SocialLinks.js to render the social links on the About page as well as the tutorials and posts feed pages on larger screens.
+
+8. useRedirect.js redirects users to other pages of they are not authorised to view the page they are trying to access.
+
+9. utils.js is used to provide the infinite scroll functionality.
+
+<hr>
+
+### **Toasts**
 
 User feedback is provided in the shape of success or error toasts with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'x' and will be displayed in the following situations:
 
