@@ -545,13 +545,7 @@ The final errors displayed also related line length. I was unsure how to remedy 
 * Result 🏆:  The custom 404 page was displayed.
 * Verdict ✅: Test passed.
 
-<br>
 
-* Aim 🎯: Test 500 Page.
-* Test 🧪: When logged out, I pasted the URL of the Profile, Edit and Delete pages into the browser.
-* Result 🏆: The custom 500 page was displayed.
-* Verdict ✅: Test passed.
-​
 <hr>
 
 Back to [README](/README.md)
