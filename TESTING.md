@@ -283,14 +283,21 @@ Profiles
 
 ### ***JavaScript***
 
-I used ESLint[](https://eslint.org/)to test my code for the front-end. Unfortunately, it clashed with the development version of my project and the mouse would not work, nor would links function. Adding the code: `/* eslint-disable */` at the top of each page did not resolve this. The following issues were raised before I uninstalled ES lint, and have been ignored intentionally as they are in relation to code provided in the 'Moments' walkthrough project. I created rules to ignore the following in the eslint.rc file - and no further issues were raised:
+I used [ESLint](https://eslint.org/)to test my code for the front-end. The following issues were identified:
 
-* Do not pass children as props
-* Props spreading is forbidden
-* Do not nest ternary expressions
-* Fragments should contain more than one child
-* The use of apostrophes was flagged as an issue
-* Minor instances relating to newlines, spaces and apostrophes were fixed when it did not impede the readability of the code.
+![ESLint screenshot](docs/validation/eslint-warnings.png)
+
+* The empty block statements were intentional for this project as students had been asked to delete console.logs from catch blocks. This obviously left the empty blocks. I created a rule in the .eslintrc.json file to ignore these.
+
+* I also created a rule to ignore "do not pass children as props", seeing that this method was related to and prevalent across the Code Institute 'Moments' walkthrough. I did research other methods of achieving the same results, but at the late stage of the project was reluctant to change anything.
+
+* Minor instances relating to newlines, spaces and tabs were fixed and the errors resolved.
+
+* There were also numerous instances of 'no-unused-vars' flagging React being imported but not used. Whilst being aware that recent versions of react do not require this import, I was reluctant to remove them seeing as the ES6 snippet had added the code in the first place. As these were the only unused variables, I turned off the warnings.
+
+With the resolution of these final issues, the linter returned no warnings (the problems in the terminal in the image below all relate to spelling):
+
+![ESLint no errors](docs/validation/es-lint.png)
 
 
 <hr>

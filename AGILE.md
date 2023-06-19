@@ -18,13 +18,13 @@
 
 This was my second project developed using Agile Methodologies and I encountered challenges, and some occasional confusion, along the way. The first challenge was the plethora of information I had absorbed in a short space of time. I was attempting to apply a number of Agile methods and use various different platforms to help the planning process: 
 
-I used a [Smartsheet](https://www.smartsheet.com) template to help plan six sprints for this project:
+I used a [Smart Sheet](https://www.smartsheet.com) template to help plan six sprints for this project:
 
 ![Sprint Planning 1](docs/agile/barbelles-api-sprint-1.png)
 
 ![Sprint Planning 2](docs/agile/barbelles-api-sprint-2.png)
 
-I used the Github [project board](https://github.com/users/AndypSheridan/projects/3) to create and track issues and User Stories. I then integrated these within my Smartsheet template.
+I used the Github [project board](https://github.com/users/AndypSheridan/projects/3) to create and track issues and User Stories. I then integrated these within my Smart Sheet template.
 
 This proved instrumental in keeping me focused on tasks and creating the necessary features for the project. As this was only my second experience of using Github projects, I found that on several occasions I underestimated or overestimated the amount of time and/or tasks for each particular sprint but, on the whole, the schedule worked well. Using the Milestones feature I created Epics in Github and to these I added my User Stories, although I had already begun work on the by this point. I also created labels for the project was extremely helpful when it came to prioritising requirements for the project. 
 
