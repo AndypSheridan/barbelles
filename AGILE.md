@@ -5,6 +5,10 @@
   * [Sprint Notes](#sprint-notes)
     * [Sprint 1](#sprint-1)
     * [Sprint 2](#sprint-2)
+    * [Sprint 3](#sprint-3)
+    * [Sprint 4](#sprint-4)
+    * [Sprint 5](#sprint-5)
+    * [Sprint 5](#sprint-6)
   * [Epics](#epics)
   * [Learning Outcomes](#learning-outcomes)
 
@@ -26,7 +30,7 @@ This proved instrumental in keeping me focused on tasks and creating the necessa
 
 It has been a steep learning curve, and I felt that my plan was continually evolving rather than being something I rigidly adhered to. On reflection, I consider this to be a good thing in some respects.
 
-Sprints 1 and 2 were where I carried out all of the work on the API and I have outlined a brief summary of these below.
+Sprints 1 and 2 were where I carried out all of the work on the API and I have outlined a brief summary of these below. They are also detailed in the AGILE.md file in the back-end [GitHub Repository](https://github.com/AndypSheridan/barbelles-api/blob/main/AGILE.md)
 
 
 <hr>
@@ -58,6 +62,10 @@ At the end of this sprint, a third consultation where I demonstrated the functio
 This concluded sprint two; further details of subsequent sprints and the entire process can be found in the Readme for the front-end project.
 
 <hr>
+
+### *Sprint 3*
+
+Sprints 3-6 outline all work carried out on the project as a whole with almost 100% of that being on the front-end.
 
 ## **Epics**
 
