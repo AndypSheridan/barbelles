@@ -436,7 +436,15 @@ I used ESLint[](https://eslint.org/)to test my code for the front-end. Unfortuna
 
 ## **Automated testing**
 
+Some automated testing was performed on the following components:
 
+- Asset.js
+- Navbar.js
+- SignIn.js
+- SocialLinks.js
+- Welcome.js
+
+These tests all pass and can be found in the tests folder located in the components directory.
 
 
 <hr>
