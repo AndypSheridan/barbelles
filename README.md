@@ -630,7 +630,7 @@ The profile page is responsive and works well on smaller devices. This is how it
 
 **Infinite scroll**
 
-There is an infinite scroll feature which has been implemented site-wide. This improves the user-experience by removing the need for pagination across the site. The functionality is present in the posts and tutorials feeds, and comments on both of the above.
+The infinite scroll feature has been implemented site-wide wherever necessary. This improves the user-experience by removing the need for pagination across the site. The functionality is present in the posts and tutorials feeds, and comments on both of the above.
 
 <hr>
 
@@ -639,7 +639,7 @@ There is an infinite scroll feature which has been implemented site-wide. This i
 
 ### **Links**
 
-I used two different effects for the links in the project. One is a custom CSS effect where a white box-shadow slides from left to right across the link. The feature can be seen on the [site](https://sci-fi-portal.herokuapp.com/)
+The standard effect for links across the site, is a simple 0.3s transition from 
 
 The second effect present is another custom CSS effect which changes the text-colour when it is hovered over. Generally there is no text decoration for the links as I felt the underline did not work well with either font.
 
