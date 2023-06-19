@@ -369,6 +369,10 @@ The other prominent feature on this page is the Top Profiles component which lis
 
 ![Screenshot of top profiles](docs/images/top-profiles.png)
 
+On larger screens, the logged-in user has the option to follow or un-follow these profiles:
+
+![Screenshot of top profiles follow](docs/images/top-profiles-follow.png)
+
 On smaller screens, the component is position across the top of the page, beneath the navbar and it shows just the four top profiles:
 
 ![Screenshot of top profiles - mobile](docs/images/top-profiles-mobile.png)
@@ -584,6 +588,12 @@ A user can view their own profile by clicking on the Profile link in the navbar 
 ![Screenshot of profile page](docs/images/profile-page-1.png)
 ![Screenshot of profile page](docs/images/profile-page-2.png)
 
+In the top-right corner, there is the option to follow or un-follow that profile:
+
+![Screenshot of profile follow](docs/images/profile-follow.png)
+
+![Screenshot of profile un-follow](docs/images/profile-unfollow.png)
+
 Profile owners will have access to the following dropdown menu:
 
 ![Screenshot of profile dropdown](docs/images/profile-dropdown.png)
@@ -602,7 +612,7 @@ or password:
 
 ![Screenshot of edit password](docs/images/change-password.png)
 
-The profile page displays the following statistics about the user:L
+The profile page displays the following statistics about the user:
 - Number of posts
 - Number of followers
 - Number following
