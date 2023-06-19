@@ -748,7 +748,9 @@ The API repository can be viewed [here](https://github.com/AndypSheridan/barbell
 
 The following software and tech was used:
 
+- [Am I Responsive](https://ui.dev/amiresponsive) To ensure the project looked good on various devices.
 - [React-BootStrap](https://react-bootstrap.netlify.app/) to provide key components such as the navbar, containers, media and cards.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) as a constant tool for helping develop the site and its functionality.
 - [Cloudinary](https://cloudinary.com) to handle static images and files as well as to offer the User a front end method of uploading images.
 - CSS to provide custom styling in addition to Bootstrap.
 - [Django](https://www.djangoproject.com/) as a Python framework to develop the back-end API.
@@ -758,6 +760,7 @@ The following software and tech was used:
 - [Figma](https://www.figma.com/) to assist with the planning phase of the project.
 - [Font Awesome](https://fontawesome.com/) to provide search, heart, profile, social media icons etc.
 - Git (Gitpod and Github) as my version control for the site.
+- [Google Fonts](https://fonts.google.com/) for the fonts used site-wide.
 - [Gitpod](https://gitpod.io/) and VS Code to create, load and push my code to Github.
 - [GitHub](https://github.com/) to create the repository for the project.
 - [Heroku](https://www.heroku.com/) to deploy the project.
@@ -765,6 +768,8 @@ The following software and tech was used:
 - JavaScript - to develop all logic used on the front-end.
 - [JSX](https://legacy.reactjs.org/docs/introducing-jsx.html) used to implement JavaScript logic with HTML
 - [Optimizilla](https://imagecompressor.com/) to compress images for the site.
+- [React-BootStrap](https://react-bootstrap.netlify.app/) to provide key components such as the navbar, containers, media and cards.
+- [ReactJS](https://react.dev/) To build components and code that would function together as a single front-end aapplication.
 - [React-Toastify](https://www.npmjs.com/package/react-toastify) to provide the user with feedback relating to various actions performed across the site.
 - [Pexels](https://www.pexels.com/) to source images for the site.
 
