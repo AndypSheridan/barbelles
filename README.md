@@ -639,13 +639,34 @@ The infinite scroll feature has been implemented site-wide wherever necessary. T
 
 ### **Links**
 
-The standard effect for links across the site, is a simple 0.3s transition from 
+The effects for links across the site reinforce the colour palette for the purpose of consistency, the primary one being a simple 0.3s transition from #512d38 to #b27092:
 
-The second effect present is another custom CSS effect which changes the text-colour when it is hovered over. Generally there is no text decoration for the links as I felt the underline did not work well with either font.
+![Screenshot of link](docs/images/link.png)
+![Screenshot of link-hover](docs/images/link-active.png)
+
+Active nav links are highlighted with #87baab:
+
+![Screenshot of active nav link](docs/images/link-nav-active.png)
+
+As previously stated, an additional, brighter pink #ff66b3 was used in places:
+
+![Screenshot of brighter pink link](docs/images/social-link-active.png)
+
+This colour was also used when the follow and unfollow icons were hovered.
 
 ### **Buttons**
 
-I used Bootstrap buttons across the project. The button colours follow the colour scheme of the site, other than the 'edit' and 'delete' book buttons which use the default Bootstrap primary and danger colours in order to stand out.
+I used Bootstrap buttons across the project. The primary button colour for submit actions and confirmations uses the same bright pink specified above:
+
+![Screenshot of button -pink](docs/images/button.png)
+
+Cancel or go back button appear as below:
+
+![Screenshot of button - green](docs/images/cancel-button.png)
+
+All buttons use the same effect on hover:
+
+![Screenshot of button - hover](docs/images/button-hover.png)
 
 
 <hr>
@@ -686,7 +707,7 @@ All pages feature User Authentication meaning that a User must be logged in to v
 
 ### **404 Page**
 
-A custom 404 page was added to catch instances when the User may have mis-typed a URL, or if content has been removed from the site. The 404 page features text displaying the content is not available and features a back button:
+A custom 404 page was added to catch instances when the User may have mis-typed a URL, or if content has been removed from the site. The 404 page features text displaying the content cannot be found and features a back button:
 
 ![Screenshot of 404 page](docs/images/404.png)
 
@@ -704,13 +725,6 @@ There are a number of areas with scope for future improvement. This project has 
 * The search function to be updated to display results in the new categories.
 * Using the Google Books API to retrieve book information. I did explore this option before the inception of the project but decided against including it due to time constraints.
 
-<hr>
-
-## User Authentication
-
-All pages feature User Authentication meaning that a User must be logged in to view all site content. This encourages Users to signup as well as preventing malicious attempts to edit or delete content. If a user knows or guesses a correct URL without being logged in they will encounter this screen:
-
-[Screenshot of authentication](docs/images/user-authentication.png)
 
 <hr>
 
@@ -734,12 +748,12 @@ The API repository can be viewed [here](https://github.com/AndypSheridan/barbell
 
 The following software and tech was used:
 
-- [React-BootStrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to provide key components such as the navbar, containers, media and cards.
+- [React-BootStrap](https://react-bootstrap.netlify.app/) to provide key components such as the navbar, containers, media and cards.
 - [Cloudinary](https://cloudinary.com) to handle static images and files as well as to offer the User a front end method of uploading images.
 - CSS to provide custom styling in addition to Bootstrap.
-- [Django](https://www.djangoproject.com/) as a Python framework to develop the project.
-- [Django all auth](https://django-allauth.readthedocs.io/en/latest/) used to handle user authentication.
-- [DrawSQL](https://drawsql.app/) to develop the logic for the project.
+- [Django](https://www.djangoproject.com/) as a Python framework to develop the back-end API.
+- [Dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) used to handle user authentication.
+- [Lucid Chart](https://www.lucidchart.com/) to develop the logic for the project.
 - [ElephantSQL](https://www.elephantsql.com/) to handle the PostgreSQL database.
 - [Figma](https://www.figma.com/) to assist with the planning phase of the project.
 - [Font Awesome](https://fontawesome.com/) to provide search, heart, profile, social media icons etc.
@@ -760,23 +774,29 @@ The following software and tech was used:
 
 ## **Media**
 
-* All book images are from [Amazon UK](https://www.amazon.co.uk/)
-* All background images came from a free trial subscription to [Shutterstock](https://www.shutterstock.com/)
-* All author images and bios are from [Wikipedia](https://www.wikipedia.org/) other than:
-  * N.K. Jemisin: bio and image from [author website](https://nkjemisin.com/)
-  * Adrian Tchaikovsky: bio taken from [author website](https://adriantchaikovsky.com/)
+* The home background image and community.jpeg were created by the site owner Kate Ross.
+* Due to a lack of content at the time of writing, all other images on the About Page are from [Pexels](https://www.pexels.com/)
+* All tutorials are from [YouTube](https://www.youtube.com/)
+* User posts are either added directly by the user or are stock images from [Pexels](https://www.pexels.com/)
+* The logo was edited from a stock icon on [Flat Icon](https://www.flaticon.com/free-icon/barbell_4744822)
+* The 'no search results' icon is also from[Flat Icon](https://www.flaticon.com/free-icon/no-results_6134065)
+* All other icons from [Font Awesome](https://fontawesome.com/)
 ​
 <hr>
 
 ## **Credits**
 
-* The colour palette for the project is from [Pinterest](https://www.pinterest.co.uk/pin/204491639320145500/).
+* The Code Institute project 'Moments' served as an inspiration for some areas in this project. It was a useful reference tool and helped me to grow and adapt the project to my own needs.
 
-* The idea to use Cloudinary to handle static and media files came from the [Code Institute](https://codeinstitute.net/) walkthrough project: 'I Think, Therefore I Blog.
+* The colour palette for the project was generated on [Coolors](https://www.coolors.co/).
 
-* The [Django Documentation](https://docs.djangoproject.com/en/4.1/) was immensely helpful in helping me gain a greater understanding of the project.
+* The idea to use Cloudinary to handle static and media files came from the [Code Institute](https://codeinstitute.net/) walkthrough project: 'Moments'.
 
-* The JavaScript code used to populate the hidden created-by field in the 'add book' form came from [this](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) series of videos by John Elder on YouTube.
+* The [ReactJS documentation](https://react.dev/) was excellent and a great place to further my understanding.
+
+* The [Django Documentation](https://docs.djangoproject.com/en/4.1/) was immensely helpful in helping me gain a greater understanding of the back-end project.
+
+* The [Django Rest Framework Documentation](https://www.django-rest-framework.org/) was also instrumental when building out the back-end project.
 
 * [This Post](https://www.section.io/engineering-education/uploading-images-to-cloudinary-from-django-application/) from Shuaib Oseni was helpful when it came to creating the front end method to upload an image to CLoudinary.
 
@@ -785,12 +805,11 @@ The following software and tech was used:
 * General References:
   * Stack Overflow
   * Code Institute LMS
-  * Bootstrap Documentation
-  * Jinja Documentation
+  * React Bootstrap Documentation
   * Cloudinary Documentation
   * Geeks for Geeks
   * W3C School
-  * Course material on the CodeCademy website which helped reinforce my understanding of Python.
+  * Course material on the Codecademy website which helped reinforce my understanding of Python.
 
 <hr>
 
