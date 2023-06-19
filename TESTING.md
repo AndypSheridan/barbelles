@@ -87,21 +87,9 @@ The following bugs were identified during user testing:
 
 <br>
 
-* Bug 🐞 - Initial deployment of Django app failed.
-* Cause ⚒️ - There was a typo in the settings.py file.
+* Bug 🐞 - Could not connect to the API.
+* Cause ⚒️ - Had not removed the trailing slash from the CLIENT_DEV url.
 * ✅ - Corrected typo.
-
-<br>
-
-* Bug 🐞 - Users were unable to register without providing a valid email address, something I did not deem necessary for this project.
-* Cause ⚒️ - Email was set to required in settings.py.
-* ✅ - Adjusted the settings to remove the need for an email address. The User can still choose to provide one if they wish.
-
-<br>
-
-* Bug 🐞 - Lighthouse scores for some pages were poor.
-* Cause ⚒️ - There were several reasons for reduced performance but the main one seemed to emanate from an issue with jQuery.
-* ✅ - Removed jQuery from the app.
 
 
 <hr>
