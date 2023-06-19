@@ -117,7 +117,7 @@ The following bugs were identified during user testing:
 
 ## **Unfixed Bugs**
 
-* At this stage, there are no known unfixed bugs.
+* There is a known bug that this app cannot open on Apple mobile devices and most browsers other than Chrome. The bug is that when users try to log in, they will be redirected back to the login page. This bug is due to cookies not being saved in the local storage. For this bug to be fixed on Safari, "Prevent Cross-Site Tracking" will need to be turned off in settings. In the case of this app, I was able to use the app as intended on Safari on an iPhone 12, iPhone 14 Pro Max. It would not function as intended using Chrome iOS.
 
 <hr>
 
