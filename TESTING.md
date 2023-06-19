@@ -93,6 +93,15 @@ The following bugs were identified during user testing:
 
 <br>
 
+* Bug 🐞 - Terminal errors when interacting with the app when logged-out. Specifically:
+  - 401 errors on mount when not logged in
+  - 401 errors when going to the sign/sign up page
+  - 401 error when an access token has expired
+* Cause ⚒️ - According to the Code Institute walkthrough project, these errors are normal and should be treated as feedback from the API.
+* Resolution ✅ - Whilst the errors persist, it is reassuring to know these errors can essentially be disregarded for the purpose of this project.
+
+​<br>
+
 * Bug 🐞 - Users were able to access edit- and share-post pages when not logged in.
 * Cause ⚒️ - No defensive design present on these pages.
 * Resolution ✅ - Used the useRedirect hook to redirect logged-out users to the sign-in page.
