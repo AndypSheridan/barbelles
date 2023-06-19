@@ -19,6 +19,7 @@ const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 		}}
 	/>
 ));
+PostDropDownMenu.displayName = "PostDropDownMenu"
 
 const CommentDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 	<i
@@ -30,6 +31,7 @@ const CommentDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 		}}
 	/>
 ));
+CommentDropDownMenu.displayName = "CommentDropdownMenu"
 
 export const ProfileDropDown = ({ id }) => {
 	const history = useHistory();

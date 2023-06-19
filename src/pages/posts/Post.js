@@ -57,7 +57,7 @@ const Post = (props) => {
 								...post,
 								likes_count: post.likes_count + 1,
 								like_id: data.id,
-						  }
+						}
 						: post;
 				}),
 			}));
@@ -75,7 +75,7 @@ const Post = (props) => {
 								...post,
 								likes_count: post.likes_count - 1,
 								like_id: null,
-						  }
+						}
 						: post;
 				}),
 			}));

@@ -31,7 +31,7 @@ function TutorialCommentEditForm(props) {
 								...tutorialComment,
 								content: formContent.trim(),
 								updated_at: "now",
-						  }
+						}
 						: tutorialComment;
 				}),
 			}));
