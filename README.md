@@ -1,4 +1,4 @@
-# **BarBelles**
+# BarBelles
 ## **Site Overview**
 
 BarBelles is an online fitness community for women. This project, developed using ReactJS, aims to provide women with a safe and inclusive space to share their own personal fitness journeys as well as the opportunity to learn and interact with others in the community. Users can read posts by others, create, update and delete their own posts as well as follow other users. There is also the facility to add, view, edit or delete comments. Users can learn from video Tutorials added by the site owner, Kate Ross; only users with staff privileges can create, edit or delete tutorials but all users can 'favourite' them and add comments. 
@@ -64,7 +64,7 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
 
 <hr>
 
-## **Planning Stage**
+## Planning Stage
 
 ### **Site Aims:**
 
@@ -206,7 +206,7 @@ I used Github projects to create and track issues and User Stories. The Agile pr
 <hr>
 <br>
 
-# **Features**
+# Features
 
 ## **Site Navigation**
 
@@ -286,7 +286,6 @@ Upon successful sign in, a toast is displayed to provide feedback to the user an
 
 
 <hr>
-
 
 #### Sign Out
 
@@ -671,7 +670,7 @@ All buttons use the same effect on hover:
 
 <hr>
 
-### **Components**
+### Components
 
 Several components are reused throughout the project:
 
@@ -693,9 +692,10 @@ Several components are reused throughout the project:
 
 9. utils.js is used to provide the infinite scroll functionality.
 
+
 <hr>
 
-### **Toasts**
+## Toasts
 
 User feedback is provided in the shape of success or error toasts with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'x' and will be displayed in the following situations:
 
@@ -709,25 +709,20 @@ User feedback is provided in the shape of success or error toasts with the aim o
 
 In the event these action are not executed as intended, error toasts will be displayed.
 
-<hr>
-
-## **Defensive Design**
-
-In order to avoid the User unintentionally deleting their own content, some simple defensive design programming was implemented. If a User is logged in and clicks delete on one of their reviews, they will be prompted for confirmation they want to do so here:
-
-![Screenshot of delete page](docs/images/delete-book.png)
-
 
 <hr>
 
-### User Authentication
+## Defensive Design
 
-All pages feature User Authentication meaning that a User must be logged in to view all site content. This encourages Users to signup as well as preventing malicious attempts to edit or delete content. If a user knows or guesses a correct URL without being logged in they will encounter this screen:
+In order to avoid the User unintentionally logging out, some simple defensive design programming was implemented. If a User is logged in and clicks log out, it will trigger a modal asking for confirmation:
 
-![Screenshot of authentication](docs/images/user-authentication.png)
+![Screenshot of design out modal](docs/images/sign-out-modal.png)
 
 
-<hr>
+### **User Authentication**
+
+All pages feature user authentication provided by the useRedirect hook, meaning that a User must be logged in to view or interact with site content. This encourages Users to signup as well as making malicious attempts to edit or delete content more difficult. If a user knows or guesses a correct URL without being logged in they will be directed away from it.
+
 
 ### **404 Page**
 
@@ -738,27 +733,26 @@ A custom 404 page was added to catch instances when the User may have mis-typed 
 
 <hr>
 
-## **Future-Enhancements**
+## Future-Enhancements
 ​
-There are a number of areas with scope for future improvement. This project has been very challenging and ultimately the project deadline was looming. There is potential to add the following:
+There are a number of areas with scope for future improvement. This project has been very challenging and ultimately the project deadline was looming. The regular meetings with the client identified certain features which could be added. There is potential to add the following:
 ​
-* Adding movies and games to fit into a 'Categories' drop-down menu.
-* The option for Users to add to the Authors section.
-* User images to be added to comments and book reviews.
-* A community page for User who opt in to have their profiles displayed publicly.
-* The search function to be updated to display results in the new categories.
-* Using the Google Books API to retrieve book information. I did explore this option before the inception of the project but decided against including it due to time constraints.
+* A facility for members of the community to message each other.
+* An events calendar informing users of live video tutorials of workouts.
+* A list of packages which users could sign up for including personal training, group training, nutrition guidance etc.
+* As the number of tutorials grows, the facility to group them into catgories.
+* An option for users to track calories burned and add workout stats to their profiles.
 
 
 <hr>
 
-## **Testing Phase**
+## Testing Phase
 
 The testing process, along with bugs, can be viewed [here](/TESTING.md)​
 
 <hr>
 
-## **Deployment**
+## Deployment
 
 The Deployment was a fairly lengthy process so I have detailed it in a separate file. It can be found [here](/DEPLOYMENT.md)
 
@@ -768,7 +762,7 @@ The API repository can be viewed [here](https://github.com/AndypSheridan/barbell
 
 <hr>
 
-## **Software and Tech**
+## Software and Tech
 
 The following software and tech was used:
 
@@ -799,7 +793,7 @@ The following software and tech was used:
 
 <hr>
 
-## **Media**
+## Media
 
 * The home background image and community.jpeg were created by the site owner Kate Ross.
 * Due to a lack of content at the time of writing, all other images on the About Page are from [Pexels](https://www.pexels.com/)
@@ -811,7 +805,7 @@ The following software and tech was used:
 ​
 <hr>
 
-## **Credits**
+## Credits
 
 * The Code Institute project 'Moments' served as an inspiration for some areas in this project. It was a useful reference tool and helped me to grow and adapt the project to my own needs.
 
@@ -840,7 +834,7 @@ The following software and tech was used:
 
 <hr>
 
-## **Honourable mentions**
+## Honourable mentions
 
 * The biggest thank you goes to my mentor, Richard Wells, who gave a significant amount of his time to provide me with help, feedback and ideas on the project; he has been invaluable in so many ways and a genuine source of motivation for me as well as a much-needed source of calm when things threatened to overwhelm me.
 * Thanks to the Code Institute tutor support team for helping with some minor and not-so-minor bugs.
