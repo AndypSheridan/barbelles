@@ -75,6 +75,18 @@ The following bugs were identified during user testing:
 
 ​<br>
 
+* Bug 🐞 - Signing out did not function as expected.
+* Cause ⚒️ - I traced the error to a missing forward slash in the URL path in the API.
+* Resolution ✅ - Corrected the typo.
+
+​<br>
+
+* Bug 🐞 - The `nmp start` command no longer worked as expected, meaning I lost a full day of project-time.
+* Cause ⚒️ - The error was on Gitpod's side as a result of an update to the Browser file.
+* Resolution ✅ - Contacted Gitpod and was assured they were working on a solution. Hoped for a quick fix and fortunately the issue was resolved the following day.
+
+​<br>
+
 * Bug 🐞 - The follow button would update the follow count but no longer follow or unfollow as intended
 * Cause ⚒️ - Tutor support suggested that the database had somehow become corrupted.
 * Resolution ✅ - Reset the database, re-connect the database and re-add site content.
