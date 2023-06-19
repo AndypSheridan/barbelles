@@ -253,16 +253,38 @@ Results from the validation can be seen below:
 
 ### ***CSS***
 
-The custom CSS code was passed through the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/). The result can be seen below:
+The custom CSS code for each module was passed through the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/). The results from the major pages can be seen below:
 
-![CSS Validation Result](docs/validation/sfp-css-certificate.png)
+App.js
+![App.js CSS Validation Result](docs/validation/app-css-validation.png)
+
+Home / Sign up / Sign in
+![Home CSS Validation Result](docs/validation/signupform-css-validation.png)
+
+About
+![About CSS Validation Result](docs/validation/app-css-validation.png)
+
+Posts
+![Posts CSS Validation Result](docs/validation/posts-feed-page-css-validation.png)
+
+Tutorials
+![Tutorials CSS Validation Result](docs/validation/tutorials-feed-page.png)
+
+Post detail
+![Post detail CSS Validation Result](docs/validation/post-detail-css-validation.png)
+
+Tutorial detail
+![Tutorial detail CSS Validation Result](docs/validation/tutorial-detail-css-validation.png)
+
+Profiles
+![Profiles CSS Validation Result](docs/validation/profile-page-css-validation.png)
 
 
 <hr>
 
 ### ***JavaScript***
 
-Although there is very little JavaScript in this code, I ran it through the [JSHint Validation Service](https://jshint.com/). The result can be seen below:
+[JSHint Validation Service](https://jshint.com/). The result can be seen below:
 
 ![JS Validation Result](docs/validation/sfp-js-validation.png)
 
