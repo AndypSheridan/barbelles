@@ -284,30 +284,14 @@ Profiles
 
 ### ***JavaScript***
 
-[JSHint Validation Service](https://jshint.com/). The result can be seen below:
+I used ESLint[](https://eslint.org/)to test my code for the front-end. Unfortunately, it clashed with the development version of my project and the mouse would not work, nor would links function. Adding the code: ` The following issues were raised before I uninstalled ES lint, and have been ignored intentionally as they are in relation to code provided in the 'Moments' walkthrough project. I created rules to ignore the following in the eslint.rc file - and no further issues were raised:
 
-![JS Validation Result](docs/validation/sfp-js-validation.png)
-
-
-<hr>
-
-### ***Python / Django***
-
-The PEP8 Online Validator was down when creating this project, however I added a PEP8 validator to my workspace by running the command: "pip3 install pycodestyle". The validator identified the errors in the following files:
-
-![PycodeStyle Results views.py](docs/validation/views-py-errors.png)
-
-
-This highlights an error in line length which I was unable to rectify without breaking the code. I decided against changing it.
-
-![PycodeStyle Results settings.py](docs/validation/settings-py-errors.png)
-
-
-Again there are issues with line length but I was reluctant to change anything in this file. I surmised that as this was the default code, it was better to leave it in place.
-
-![PycodeStyle Results env.py](docs/validation/env-py-errors.png)
-
-The final errors displayed also related line length. I was unsure how to remedy this without compromising the code in the env.py file so overlooked this too.
+* Do not pass children as props
+* Props spreading is forbidden
+* Do not nest ternary expressions
+* Fragments should contain more than one child
+* The use of apostrophes was flagged as an issue
+* Minor instances relating to newlines, spaces and apostrophes were fixed when it did not impede the readability of the code.
 
 
 <hr>

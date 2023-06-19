@@ -1,3 +1,4 @@
+import React from "react";
 import UserPasswordEditForm from "./pages/profiles/UserPasswordEditForm";
 import UserProfileEditForm from "./pages/profiles/UserProfileEditForm";
 import TutorialDetailPage from "./pages/tutorials/TutorialDetailPage";
