@@ -759,16 +759,14 @@ The following software and tech was used:
 - [Font Awesome](https://fontawesome.com/) to provide search, heart, profile, social media icons etc.
 - Git (Gitpod and Github) as my version control for the site.
 - [Gitpod](https://gitpod.io/) and VS Code to create, load and push my code to Github.
+- [GitHub](https://github.com/) to create the repository for the project.
 - [Heroku](https://www.heroku.com/) to deploy the project.
-- HTML - The base language to create templates for the site
-- JavaScript - only used twice: for the back or cancel buttons and to populate the hidden created_by field in the add_book form.
-- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) used to implement logic from views.py and models.py.
-- Microsoft Excel to develop the logic for the project.
-- [Optimizilla](https://imagecompressor.com/) to compress background images for the site.
-- Python - Installed packages can be found in the requirements.txt file.
+- HTML
+- JavaScript - to develop all logic used on the front-end.
+- [JSX](https://legacy.reactjs.org/docs/introducing-jsx.html) used to implement JavaScript logic with HTML
+- [Optimizilla](https://imagecompressor.com/) to compress images for the site.
 - [React-Toastify](https://www.npmjs.com/package/react-toastify) to provide the user with feedback relating to various actions performed across the site.
-- [Shutterstock](https://www.shutterstock.com/) to source the background images for the site.
-- [Summernote](https://summernote.org/) to provide a WYSIWYG text editor in the admin area.
+- [Pexels](https://www.pexels.com/) to source images for the site.
 
 <hr>
 
@@ -815,11 +813,10 @@ The following software and tech was used:
 
 ## **Honourable mentions**
 
-* The biggest thank you goes to my mentor, Richard Wells, who gave a significant amount of his time to provide me with help, feedback and ideas on the project; he has been invaluable in so many ways and a genuine source of motivation for me.
-* Thanks to the Code Institute team for providing me with some basic knowledge of Python and Django.
-* Thanks to the Code Institute who helped me overcome a major bug in the final deployment of the project
-* Thanks to the Code Institute community on Slack who helped remind me that everyone has difficult days.
-* A huge thank you to my family who support my coding journey on a daily basis.
+* The biggest thank you goes to my mentor, Richard Wells, who gave a significant amount of his time to provide me with help, feedback and ideas on the project; he has been invaluable in so many ways and a genuine source of motivation for me as well as a much-needed source of calm when things threatened to overwhelm me.
+* Thanks to the Code Institute tutor support team for helping with some minor and not-so-minor bugs.
+* Thanks to the Code Institute community on Slack who helped remind me that everyone has difficult days and I wasn't alone.
+* A huge thank you to my family for supporting my coding journey on a daily basis.
 
 <hr>
 
