@@ -30,6 +30,7 @@
   * [**Edit Post Page**](#edit-post-page)
     * [*Desktop*](#edit-post-desktop)
     * [*Mobile*](#edit-post-mobile)
+  * [**Scores Summary**](#scores-summary)
 
 * [**Validation**](#validation)
   * [**HTML**](#html)
@@ -123,161 +124,86 @@ The following bugs were identified during user testing:
 
 ## **Lighthouse**
 
-The Lighthouse test results for all major pages can be found below. The Mobile scores are generally lower in terms of performance with the reason being some issues with the Bootstrap CDN and the images used. The majority of these images were already compressed to what I felt was an acceptable limit. Some of the lower scores are as a result of the Cloudinary integration and issues with cookies which I feel were beyond my control here.
+The Lighthouse test results for all major pages can be found below. 
 
 ### Home Page
 
 *Desktop*
 
-![Home page desktop lighthouse](docs/validation)
+![Home page desktop lighthouse](docs/validation/lighthouse-home.png)
 
 *Mobile*
 
-![Home page mobile lighthouse](docs/validation/index-lighthouse-mobile.png)
+![Home page mobile lighthouse](docs/validation/lighthouse-home-mobile.png)
 
-### Books Page
+### Posts Page
 
 *Desktop*
 
-![Books page desktop lighthouse](docs/validation/books-lighthouse-1.png)
+![Posts page desktop lighthouse](docs/validation/lighthouse-posts.png)
 
 *Mobile*
 
-![Books page mobile lighthouse](docs/validation/books-lighthouse-mobile.png)
+![Posts page mobile lighthouse](docs/validation/lighthouse-posts-mobile-1.png)
 
-### Authors Page
+### Tutorials Page
 
 *Desktop*
 
-![Authors page desktop lighthouse](docs/validation/authors-lighthouse.png)
-
-The lower 'best practice' score is as a result of the following which is a cookie issue related to Cloudinary:
-
-![Best practice score](docs/validation/authors-lighthouse-bp.png)
+![Tutorials page desktop lighthouse](docs/validation/lighthouse-tutorials.png)
 
 *Mobile*
 
-![Authors page mobile lighthouse](docs/validation/authors-lighthouse-mobile.png)
+![Tutorials page mobile lighthouse](docs/validation/lighthouse-tutorials-mobile.png)
 
 ### About Page
 
 *Desktop*
 
-![About page desktop lighthouse](docs/validation/about-lighthouse.png)
+![About page desktop lighthouse](docs/validation/lighthouse-about.png)
 
 *Mobile*
 
-![About page mobile lighthouse](docs/validation/about-lighthouse-mobile.png)
+![About page mobile lighthouse](docs/validation/lighthouse-about-mobile-1.png)
 
 ### Profile Page
 
 *Desktop*
 
-![Profile page desktop lighthouse](docs/validation/profile-lighthouse.png)
+![Profile page desktop lighthouse](docs/validation/lighthouse-profile.png)
 
 *Mobile*
 
-![Profile page mobile lighthouse](docs/validation/profile-lighthouse-mobile.png)
+![Profile page mobile lighthouse](docs/validation/lighthouse-profile.png)
 
-### Book Detail Page
+### Post Share Page
 
 *Desktop*
 
-![Book Detail page desktop lighthouse](docs/validation/book-detail-lighthouse1.png)
-
-The reasons for the reduced 'best practices' score can be seen below:
-
-![Book detail best practice lighthouse](docs/validation/book-detail-lighthouse-bp.png)
-
-In the above instance, the image proportions are as intended and I found no lack of clarity during testing.
-
-![Book detail best practice lighthouse 2](docs/validation/book-detail-lighthouse-bp-2.png)
-
-The above instance again flags issue to do with cookies and Cloudinary which I felt were beyond my control given the time constraints. They do not affect the performance or appearance of the page.
+![Share post page desktop lighthouse](docs/validation/lighthouse-posts-share.png)
 
 *Mobile*
 
-![Book Detail page mobile lighthouse](docs/validation/book-detail-lighthouse-mobile.png)
+![Share post page mobile lighthouse](docs/validation/book-detail-lighthouse-mobile.png)
 
-### Author Detail Page
+### Post Detail Page
 
 *Desktop*
 
-![Author Detail page desktop lighthouse](docs/validation/author-detail-lighthouse.png)
+![Author Detail page desktop lighthouse](docs/validation/lighthouse-post-detail.png)
 
-*Mobile*
 
-![Author Detail page mobile lighthouse](docs/validation/author-detail-lighthouse-mobile.png)
-
-### Add Book Page
+### Tutorial Detail Page
 
 *Desktop*
 
-![Add Book page desktop lighthouse](docs/validation/submit-review-lighthouse.png)
+![Tutorial detail page desktop lighthouse](docs/validation/lighthouse-tutorial-detail.png)
 
-*Mobile*
+### Scores Summary
 
-![Add Book page mobile lighthouse](docs/validation/submit-review-lighthouse-mobile.png)
+The Mobile scores are generally lower in terms of performance with the reason being some issues with the Bootstrap CDN and the images used. The majority of images added during development were already compressed to what I felt was an acceptable limit but images added by users were beyond my control. I had set a limit of 4MB via the back-end project so could perhaps have reduced this without compromising the UX. Some of the lower scores are as a result of the Cloudinary integration and issues with cookies which I feel were beyond my control here.
 
-### Edit Book Page
-
-*Desktop*
-
-![Edit Book page desktop lighthouse](docs/validation/edit-book-lighthouse.png)
-
-*Mobile*
-
-![Edit Book page mobile lighthouse](docs/validation/edit-review-lighthouse-mobile.png)
-
-### Delete Book Page
-
-*Desktop*
-
-![Delete Book page desktop lighthouse](docs/validation/delete-lighthouse.png)
-
-*Mobile*
-
-![Delete Book page mobile lighthouse](docs/validation/delete-lighthouse-mobile.png)
-
-### Search Results Page
-
-*Desktop*
-
-![Search Results page desktop lighthouse](docs/validation/search-lighthouse.png)
-
-*Mobile*
-
-![Search Results page mobile lighthouse](docs/validation/search-lighthouse-mobile.png)
-
-### Signup Page
-
-*Desktop*
-
-![Signup page desktop lighthouse](docs/validation/signup-lighthouse.png)
-
-*Mobile*
-
-![Signup page mobile lighthouse](docs/validation/signup-lighthouse-mobile.png)
-
-### Login Page
-
-*Desktop*
-
-![Log in page desktop lighthouse](docs/validation/login-lighthouse.png)
-
-*Mobile*
-
-![Log in page mobile lighthouse](docs/validation/login-lighthouse-mobile.png)
-
-### Logout Page
-
-*Desktop*
-
-![Log out page desktop lighthouse](docs/validation/logout-lighthouse.png)
-
-*Mobile*
-
-![Log out page mobile lighthouse](docs/validation/logout-lighthouse-mobile.png)
+One major factor resulting in a widespread poor performance score relates to the resolution of the logo. If I had the time, I would revisit this but I found no visible issue with the appearance or performance of the logo itself.
 
 <hr>
 
@@ -286,61 +212,41 @@ The above instance again flags issue to do with cookies and Cloudinary which I f
 
 ### **HTML**
 
-The code for all pages was run through the [W3C HTML Markup Validation Service](https://validator.w3.org/). Ultimately several pages needed to be entered as text due to the User Authentication features used across the site. This meant having to remove the Jinja templating language as it resulted in errors in any instance where it was still present in the code.
+The code for all pages was run through the [W3C HTML Markup Validation Service](https://validator.w3.org/).
 
 Results from the validation can be seen below:
 
 #### ***Home Page***
 
-![Home page HTML validation](docs/validation/sfportal-home-html-validation.png)
+![Home page HTML validation](docs/validation/signup-html-validation.png)
 
-#### ***Books Page***
+#### ***Posts Page***
 
-![Books page HTML validation](docs/validation/sfp-books-html-validation.png)
+![Posts page HTML validation](docs/validation/posts-feed-html-validation.png)
 
-#### ***Authors Page***
+#### ***Tutorials Page***
 
-![Authors page HTML validation](docs/validation/sfp-authors-html-validation.png)
+![Tutorials page HTML validation](docs/validation/tutorials-html-validation.png)
 
 #### ***About Page***
 
-![About page HTML validation](docs/validation/sfportal-about-html-validation.png)
+![About page HTML validation](docs/validation/about-html-validation.png)
 
 #### ***Profile Page***
 
-![Profile page HTML validation](docs/validation/sfp-profile-html-validation.png)
+![Profile page HTML validation](docs/validation/profile-html-validation.png)
 
-#### ***Book Detail Page***
+#### ***Post Detail Page***
 
-![Book Detail page HTML validation](docs/validation/sfp-book-detail-html-validation.png)
+![Post Detail page HTML validation](docs/validation/post-detail-html-validation.png)
 
 #### ***Author Detail Page***
 
-![Author Detail page HTML validation](docs/validation/sfp-author-detail-html-validation.png)
+![Tutorial Detail page HTML validation](docs/validation/tutorials-html-validation.png)
 
-#### ***Add Book Page***
+#### ***Share Post Page***
 
-![Add book page HTML validation](docs/validation/add-book-html-validation.png)
-
-#### ***Edit Book Page***
-
-![Edit book page HTML validation](docs/validation/edit-book-html-validation.png)
-
-#### ***Delete Book Page***
-
-![Delete book page HTML validation](docs/validation/sfp-delete-book-html-validation.png)
-
-#### ***Signup Page***
-
-![Signup page HTML validation](docs/validation/sfp-signup-html-validation.png)
-
-#### ***Login Page***
-
-![Login page HTML validation](docs/validation/sfp-login-html-validation.png)
-
-#### ***Log Out Page***
-
-![Log Out page HTML validation](docs/validation/sfp-logout-html-validation.png)
+![Add book page HTML validation](docs/validation/share-post-html-validation.png)
 
 
 <hr>
