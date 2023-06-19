@@ -6,45 +6,31 @@
   * [**Home Page**](#home-page)
     * [*Desktop*](#home-desktop)
     * [*Mobile*](#home-mobile)
-  * [**Books Page**](#books-page)
-    * [*Desktop*](#books-desktop)
-    * [*Mobile*](#books-mobile)
-  * [**Authors Page**](#authors-page)
-    * [*Desktop*](#authors-desktop)
-    * [*Mobile*](#authors-mobile)
+  * [**Posts Feed**](#posts-page)
+    * [*Desktop*](#posts-desktop)
+    * [*Mobile*](#posts-mobile)
+  * [**Tutorials**](#tutorials-page)
+    * [*Desktop*](#tutorials-desktop)
+    * [*Mobile*](#tutorials-mobile)
   * [**About Page**](#about-page)
     * [*Desktop*](#about-desktop)
     * [*Mobile*](#about-mobile)
   * [**Profile Page**](#profile-page)
     * [*Desktop*](#profile-desktop)
     * [*Mobile*](#profile-mobile)
-  * [**Book Detail**](#book-detail-page)
-    * [*Desktop*](#book-detail-desktop)
-    * [*Mobile*](#book-detail-mobile)
-  * [**Author Detail**](#author-detail-page)
-    * [*Desktop*](#author-detail-desktop)
-    * [*Mobile*](#author-detail-mobile)
-  * [**Add Book Page**](#add-book-page)
-    * [*Desktop*](#add-book-desktop)
-    * [*Mobile*](#add-book-mobile)
-  * [**Edit Book Page**](#edit-book-page)
-    * [*Desktop*](#edit-book-desktop)
-    * [*Mobile*](#edit-book-mobile)
-  * [**Delete Book**](#delete-book-page)
-    * [*Desktop*](#delete-book-desktop)
-    * [*Mobile*](#delete-book-mobile)
-  * [**Search Results Page**](#search-results-page)
-    * [*Desktop*](#search-results-desktop)
-    * [*Mobile*](#search-results-mobile)
-  * [**Sign Up Page**](#signup-page)
-    * [*Desktop*](#signup-desktop)
-    * [*Mobile*](#signup-mobile)
-  * [**Log In Page**](#login-page)
-    * [*Desktop*](#login-desktop)
-    * [*Mobile*](#login-mobile)
-  * [**Log Out Page**](#logout-page)
-    * [*Desktop*](#logout-desktop)
-    * [*Mobile*](#logout-mobile)
+  * [**Post Detail**](#post-detail-page)
+    * [*Desktop*](#post-detail-desktop)
+    * [*Mobile*](#post-detail-mobile)
+  * [**Tutorial Detail**](#tutorial-detail-page)
+    * [*Desktop*](#tutorial-detail-desktop)
+    * [*Mobile*](#tutorial-detail-mobile)
+  * [**Share Post Page**](#share-post-page)
+    * [*Desktop*](#share-post-desktop)
+    * [*Mobile*](#share-book-mobile)
+  * [**Edit Post Page**](#edit-post-page)
+    * [*Desktop*](#edit-post-desktop)
+    * [*Mobile*](#edit-post-mobile)
+
 * [**Validation**](#validation)
   * [**HTML**](#html)
   * [**CSS**](#css)
@@ -58,11 +44,11 @@
 
 ## **Testing Overview**
 
-At the time of writing this is the largest project I had undertaken so I felt the testing process needed to be as thorough as possible. The Sci-Portal was tested on a variety of devices including a MacBook Pro 2021, a MacBook Air 2020, an iPad Air 2020, iPhone 12, iPhone SE, Dell Desktop with 24" Screen, Kindle Fire and a Samsung Galaxy Tablet. The browsers used were Chrome, Safari and Edge.
+At the time of writing this is the largest project I had undertaken so I felt the testing process needed to be as thorough as possible. The project was tested on a variety of devices including a MacBook Pro 2021, a MacBook Air 2020, an iPad Air 2020, iPhone 14 ProMax iPhone 12, iPhone SE, Dell Windows Desktop with 24" Screen, Kindle Fire and a Samsung Galaxy Tablet. The browsers used were Chrome, Safari and Edge.
 
-The majority of User testing was conducted by myself, however I enlisted the help of family and several work colleagues, essentially to try to break the site or help me identify bugs and areas for improvement.
+The majority of User testing was conducted by myself, however I enlisted the help of family and the site owner, essentially to try to break the site or help me identify bugs and areas for improvement.
 
-All buttons and links were clicked multiple times to test they functioned as expected. Multiple test reviews were created, edited and deleted to check the efficacy of the CRUD (create, read, update and delete) functionality across the site.
+All buttons and links were clicked multiple times to test they functioned as expected. Multiple test posts, tutorials, comments and profiles were created, edited and deleted to check the efficacy of the CRUD (create, read, update and delete) functionality across the site.
 
 Inevitably there were bugs and these are outlined and summarised below.
 
@@ -143,7 +129,7 @@ The Lighthouse test results for all major pages can be found below. The Mobile s
 
 *Desktop*
 
-![Home page desktop lighthouse](docs/validation/index-lighthouse.png)
+![Home page desktop lighthouse](docs/validation)
 
 *Mobile*
 
