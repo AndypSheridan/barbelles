@@ -65,7 +65,31 @@ This concluded sprint two; further details of subsequent sprints and the entire 
 
 ### *Sprint 3*
 
-Sprints 3-6 outline all work carried out on the project as a whole with almost 100% of that being on the front-end.
+* February 24-28 2023
+  * Create basic structure of site and test content for each page
+
+Sprint 3 involved developing views, templates and urls for the main pages of the site. This is when the project board became an invaluable reference point. There were two occasions when the project as a whole seemed quite overwhelming but the project board helped to keep me focused. I did find that I had not been specific enough with some user stories so I edited these and added several more as I became more familiar with the process. This sprint finished ahead of schedule on the 27th.
+
+### *Sprint 4*
+
+* March 1-5 2023
+  * Add background images, add content for User to view, set up layout for all pages
+
+Sprint 4 took slightly longer than expected. The purpose of this was to add all background images and provide the User with a front end method to upload book photographs. Due to some image size and resolution issues, plus a lack of familiarity with the Cloudinary platform, it took longer than expected to achieve, so I finished this sprint on the 7th March.
+
+### *Sprint 5*
+
+* March 7-14 2023
+  * Enable CRUD functionality where necessary, add User profile
+
+I allowed a week for sprint 5. The purpose was to add all site content, navigation and ensure CRUD functionality worked in all instances where the admin or user needed it. These included adding a comment or review and editing or deleting a review. Initially I was ahead of schedule, but progress was significantly disrupted when it came to adding a user profile so this meant the sprint was not finished until the 15th March.
+
+### *Sprint 6*
+
+* March 16-23 2023
+  * Ensure all user stories actioned, finalise styling of all content, forms and pages
+
+This was another week-long sprint. With all User Stories working as intended, the aim of this sprint was to refine the appearance of the site and perform testing. In a meeting with my mentor towards the end of the sprint, some minor styling issues were identified, all subsequently actioned. A major problem came when setting debug=False in the settings.py file. The project then failed to deploy or if it did, there would be no access to my static files. This wasted a crucial day of the project and put me slightly behind. I finished this sprint on the 24th.
 
 ## **Epics**
 
