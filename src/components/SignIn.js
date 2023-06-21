@@ -14,6 +14,9 @@ import { toast } from "react-toastify";
 import Welcome from "./Welcome";
 import axios from "axios";
 
+/**
+ * Sign in form component.
+ */
 const SignIn = (props) => {
 	const setCurrentUser = useSetCurrentUser();
 
@@ -35,7 +38,9 @@ const SignIn = (props) => {
 			[event.target.name]: event.target.value,
 		});
 	};
-
+    /**
+     * Signs user in and redirects to 'posts-feed' page.
+     */
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 

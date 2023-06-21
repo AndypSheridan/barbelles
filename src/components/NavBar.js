@@ -86,9 +86,9 @@ const NavBar = () => {
 					<i className="fa-solid fa-list"></i> Tutorials
 				</NavLink>
 
-				/** 
-				* Conditionally renders Share tutorial based on 'is_admin' value. 
-				*/
+				{/**
+				 * Conditionally renders Share tutorial based on 'is_admin' value.
+				 */}
 				{currentUser?.profile_is_staff === true && (
 					<NavLink
 						to="/tutorials/share"
@@ -158,10 +158,10 @@ const NavBar = () => {
 			fixed="top"
 		>
 			<Container className={`mx-0 ${styles.NavBarContainer}`}>
-			    /**
-                * Conditionally renders Logo link to 'posts-feed page' if
-				* user is logged in, otherwise the logo cannot be clicked.
-                */
+				{/**
+				 * Conditionally renders Logo link to 'posts-feed page' if
+				 * user is logged in, otherwise the logo cannot be clicked.
+				 */}
 				{currentUser ? (
 					<NavLink to="/">
 						<Navbar.Brand className={styles.NavBarBrandText}>

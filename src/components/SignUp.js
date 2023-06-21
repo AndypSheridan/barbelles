@@ -11,6 +11,9 @@ import { toast } from "react-toastify";
 import Welcome from "./Welcome";
 import axios from "axios";
 
+/**
+ * Logic and form to handle registration for the site.
+ */
 const SignUp = (props) => {
 	useRedirect("loggedIn");
 	const [signUpData, setSignUpData] = useState({

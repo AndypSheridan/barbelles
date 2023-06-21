@@ -9,6 +9,9 @@ import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
 import axios from "axios";
 
+/**
+ * Displays sign out modal and logs out user from API.
+ */
 const SignOutModal = () => {
 	const [show, setShow] = useState(false);
 
