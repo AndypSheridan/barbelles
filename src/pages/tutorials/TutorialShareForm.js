@@ -13,6 +13,9 @@ import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+/**
+* Render form to create Tutorial for approved staff.
+*/
 function TutorialShareForm() {
     useRedirect("loggedOut");
     const [errors, setErrors] = useState();
@@ -33,6 +36,9 @@ function TutorialShareForm() {
         });
     };
 
+    /**
+    * Push tutorial data to API.
+    */
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();

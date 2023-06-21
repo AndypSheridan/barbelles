@@ -16,6 +16,10 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Tutorial from "./Tutorial";
 
+/**
+* Displays detail of single tutorial and comments.
+* Adapted from function code provided by CI 'Moments' walkthrough.
+*/
 const TutorialDetailPage = () => {
 	useRedirect("loggedOut");
 	const { id } = useParams();

@@ -11,6 +11,10 @@ import Media from "react-bootstrap/Media";
 import Card from "react-bootstrap/Card";
 import { toast } from "react-toastify";
 
+/**
+* Display content for single tutorial.
+* Adapted from code provided by CI 'Moments' walkthrough.
+*/
 const Tutorial = (props) => {
 	const {
 		id,
@@ -32,6 +36,9 @@ const Tutorial = (props) => {
 	const is_owner = currentUser?.username === owner;
 	const history = useHistory();
 
+	/**
+    * Creates favourite instance and increments count by 1.
+    */
 	const handleFavourite = async () => {
 		try {
 			const { data } = await axiosRes.post("/favourites/", {
@@ -52,6 +59,9 @@ const Tutorial = (props) => {
 		} catch (err) {}
 	};
 
+	/**
+    * Destroys favourite instance and decrements count by 1.
+    */
 	const handleUnfavourite = async () => {
 		try {
 			await axiosRes.delete(`/favourites/${favourite_id}/`);
@@ -70,10 +80,16 @@ const Tutorial = (props) => {
 		} catch (err) {}
 	};
 
+	/**
+    * Routes user to edit page.
+    */
 	const handleEdit = () => {
 		history.push(`/tutorials/${id}/edit`);
 	};
 
+	/**
+    * Deletes tutorial instance from API.
+    */
 	const handleDelete = async () => {
 		try {
 			await axiosRes.delete(`/tutorials/${id}/`);
