@@ -10,6 +10,9 @@ import logo from "../assets/logo2.png";
 import Nav from "react-bootstrap/Nav";
 import Avatar from "./Avatar";
 
+/**
+ * Navigation bar.
+ */
 const NavBar = () => {
 	const currentUser = useCurrentUser();
 	const [expanded, setExpanded] = useState(false);
@@ -83,6 +86,9 @@ const NavBar = () => {
 					<i className="fa-solid fa-list"></i> Tutorials
 				</NavLink>
 
+				/** 
+				* Conditionally renders Share tutorial based on 'is_admin' value. 
+				*/
 				{currentUser?.profile_is_staff === true && (
 					<NavLink
 						to="/tutorials/share"
@@ -94,7 +100,6 @@ const NavBar = () => {
 						Share tutorial
 					</NavLink>
 				)}
-
 				<NavLink
 					to="/favourited"
 					className={styles.NavLink}
@@ -126,7 +131,11 @@ const NavBar = () => {
 	);
 	const signedOutIcons = (
 		<>
-			<NavLink className={styles.NavLink} to="/about" activeClassName={styles.Active}>
+			<NavLink
+				className={styles.NavLink}
+				to="/about"
+				activeClassName={styles.Active}
+			>
 				<i className="fa-solid fa-circle-info pl-3"></i>
 				About
 			</NavLink>
@@ -149,6 +158,10 @@ const NavBar = () => {
 			fixed="top"
 		>
 			<Container className={`mx-0 ${styles.NavBarContainer}`}>
+			    /**
+                * Conditionally renders Logo link to 'posts-feed page' if
+				* user is logged in, otherwise the logo cannot be clicked.
+                */
 				{currentUser ? (
 					<NavLink to="/">
 						<Navbar.Brand className={styles.NavBarBrandText}>
