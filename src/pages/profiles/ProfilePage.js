@@ -23,6 +23,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "../posts/Post";
 
+/**
+* Show all profile data and stats.
+*/
 const ProfilePage = () => {
 	useRedirect("loggedOut");
 	const [hasLoaded, setHasLoaded] = useState(false);
@@ -36,6 +39,9 @@ const ProfilePage = () => {
 
 	const [profilePosts, setProfilePosts] = useState({ results: [] });
 
+	/**
+    * Retrieve profile data from API.
+    */
 	useEffect(() => {
 		const fetchData = async () => {
 			try {

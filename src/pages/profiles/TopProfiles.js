@@ -6,6 +6,9 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 
+/**
+* Display list of top profiles based on number of followers.
+*/
 const TopProfiles = ({ mobile }) => {
     const { topProfiles } = useProfileData();
 

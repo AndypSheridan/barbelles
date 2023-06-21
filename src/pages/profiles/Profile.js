@@ -7,6 +7,9 @@ import Avatar from "../../components/Avatar";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
+/**
+* Display profile avatar and follow / un-follow.
+*/
 const Profile = (props) => {
     const { profile, mobile, imageSize = 60 } = props;
     const { id, following_id, image, owner } = profile;
