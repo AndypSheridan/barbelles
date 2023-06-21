@@ -16,6 +16,9 @@ const CommentEditForm = (props) => {
         setFormContent(event.target.value);
     };
 
+    /**
+    * Updates API comment data.
+    */
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {

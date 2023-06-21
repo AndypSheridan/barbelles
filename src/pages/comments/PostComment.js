@@ -10,6 +10,10 @@ import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
+/**
+ * Adapted from code provided in CI 'Moments' walkthrough.
+ * Displayes comments on posts.
+ */
 const PostComment = (props) => {
     useRedirect("loggedOut");
     const {
@@ -28,6 +32,9 @@ const PostComment = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
+    /**
+    * Deletes comment from back-end API.
+    */
     const handleDelete = async () => {
         try {
             await axiosRes.delete(`/comments/${id}/`);
