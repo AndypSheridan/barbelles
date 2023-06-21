@@ -6,6 +6,10 @@ import SignIn from "../../components/SignIn";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+/**
+ * Renders home / sign-up / sign-in page.
+ * Uses form toggle to switch between SignIn and SignUp components.
+ */
 const SignUpForm = () => {
 	const [currentForm, setCurrentForm] = useState("signin");
 	const toggleForm = (formName) => {
