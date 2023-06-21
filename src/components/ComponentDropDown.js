@@ -4,11 +4,10 @@ import { useHistory } from "react-router-dom";
 
 import styles from "../styles/PostDropDown.module.css";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
-// import DropdownItem from "react-bootstrap/DropdownItem";
-// import DeleteConfirmModal from "./DeleteConfirmModal";
 
-// The forwardRef is important!!
-// Dropdown needs access to the DOM node in order to position the Menu
+/**
+ * Position dropdown menu correctly.
+ */
 const PostDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 	<i
 		className="fa-regular fa-square-caret-down"
@@ -33,6 +32,9 @@ const CommentDropDownMenu = React.forwardRef(({ onClick }, ref) => (
 ));
 CommentDropDownMenu.displayName = "CommentDropdownMenu"
 
+/**
+ * Profile dropdown menu component.
+ */
 export const ProfileDropDown = ({ id }) => {
 	const history = useHistory();
 	return (
