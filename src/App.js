@@ -27,9 +27,12 @@ function App() {
 
     return (
         <div className={`${styles.App} ${styles.MainDiv}`}>
+            {/* Navigation bar */}
             <NavBar />
+            {/* Main content */}
             <Container className={styles.Main}>
                 <Switch>
+                    {/* Render home page based on logged-in status */}
                     {currentUser ? (
                         <Route
                             exact
