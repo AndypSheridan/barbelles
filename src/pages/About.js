@@ -10,6 +10,10 @@ import styles from "../styles/About.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
+/**
+* About page displays site information.
+* Imports social links component.
+*/
 const About = () => {
 	return (
 		<Container className={styles.AboutContainer}>
