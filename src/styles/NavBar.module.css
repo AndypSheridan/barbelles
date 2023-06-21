@@ -54,3 +54,14 @@ i:hover {
         text-align: right;
     }
 }
+
+@media only screen and (max-width: 400px) {
+
+    .NavBarBrandText {
+        font-size: 1.8rem;
+    }
+
+    .NavBarBrandText > img {
+        width: 50px;
+    }
+}

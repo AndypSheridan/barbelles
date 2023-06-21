@@ -136,7 +136,7 @@ const NavBar = () => {
 				activeClassName={styles.Active}
 				onClick={() => setExpanded(false)}
 			>
-				<i className="fa-solid fa-plus"></i> Sign up
+				<i className="fa-solid fa-plus"></i> Log in or sign up
 			</NavLink>
 		</>
 	);
