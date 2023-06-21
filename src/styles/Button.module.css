@@ -1,3 +1,4 @@
+/* Standard button style site-wide */
 .Button {
     font-size: 1.2rem;
     align-self: center;
@@ -11,6 +12,7 @@
     font-weight: 600;
 }
 
+/* Follow / Un-follow icons */
 .Follow {
     background: transparent;
     border-color: transparent;
@@ -66,6 +68,7 @@
     background-color: #512d38;
 }
 
+/* Extra styles */
 .Wide {
     padding: 10px 50px;
     width: 100%;
