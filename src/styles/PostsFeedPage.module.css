@@ -1,3 +1,4 @@
+/* Styles for background and posts-feed */
 .homeBackground {
     padding-top: 8rem;
     margin-left: 0px;
@@ -22,6 +23,7 @@
     color: #512d38;
 }
 
+/* Search styles */
 .SearchBar input {
     border-radius: 20px;
     color: #242a3d;
@@ -43,6 +45,7 @@
     color: #ff66b3;
 }
 
+/* Social links styles */
 .Social {
     border-radius: 2px;
     justify-content: center;
