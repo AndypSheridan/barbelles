@@ -14,6 +14,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { toast } from "react-toastify";
 
+/**
+* Render edit-post form and pre-populate form fields with existing data.
+*/
 const PostEditForm = () => {
 	useRedirect("loggedOut");
 	const [errors, setErrors] = useState();
@@ -51,6 +54,9 @@ const PostEditForm = () => {
 		});
 	};
 
+	/**
+    * Adjust uploaded image.
+    */
 	const handleChangeImage = (event) => {
 		if (event.target.files.length) {
 			URL.revokeObjectURL(image);
@@ -61,6 +67,9 @@ const PostEditForm = () => {
 		}
 	};
 
+	/**
+    * Update post.
+    */
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		const formData = new FormData();

@@ -16,6 +16,9 @@ import { toast } from "react-toastify";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+/**
+* Render form to share a post.
+*/
 function PostShareForm() {
 	useRedirect("loggedOut");
 	const [errors, setErrors] = useState();
@@ -37,6 +40,9 @@ function PostShareForm() {
 		});
 	};
 
+	/**
+    * Adjust the image.
+    */
 	const handleChangeImage = (event) => {
 		if (event.target.files.length) {
 			URL.revokeObjectURL(image);
@@ -47,6 +53,9 @@ function PostShareForm() {
 		}
 	};
 
+	/**
+    * Send post data to API.
+    */
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		const formData = new FormData();

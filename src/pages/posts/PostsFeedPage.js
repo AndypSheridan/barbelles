@@ -14,6 +14,10 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Post from "./Post";
 
+/**
+* Displays list of all posts.
+* Adapted from function-code provided by CI 'Moments' walkthrough.
+*/
 const PostsFeedPage = ({ message, filter = "" }) => {
 	const [posts, setPosts] = useState({ results: [] });
 	const [hasLoaded, setHasLoaded] = useState(false);
@@ -21,6 +25,10 @@ const PostsFeedPage = ({ message, filter = "" }) => {
 
 	const [query, setQuery] = useState("");
 
+	/**
+    * Fetch first ten posts from API.
+	* Return filter results.
+    */
 	useEffect(() => {
 		const fetchPosts = async () => {
 			try {
