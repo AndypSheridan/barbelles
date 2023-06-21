@@ -37,7 +37,7 @@ Sprints 1 and 2 were where I carried out all of the work on the API and I have o
 
 ### *Sprint 1*
 
-* 7th - 12th May
+* 7th - 12th May 2023
   * Planning phase
 
 The purpose of this five day sprint was to thoroughly plan the project. This involved an initial meeting with the client, Kate Ross, to discuss her expected outcomes of the project. This was the first in a series of highly productive meetings where we looked at core functionality of what the finished site might have. Miss Ross was hoping to be the owner of a content-sharing website where female clients could share their fitness journeys away from the regular social media sites, thus creating a more private community. The outcome of this meeting was that the finished site would implement the following features: user posts, tutorials provided by the site owner, the facility to comment on both tutorials and posts, to like and save both, as well as a feature for users to follow other members of the community and view posts by those they follow.
@@ -50,7 +50,7 @@ We settled on nine models to provide the features that had been discussed. At th
 
 ### *Sprint 2*
 
-* 12th - 19th May
+* 12th - 19th May 2023
   * Sprint two was slightly longer and the intention was to start and finish work on the API.
 
 With the data models in place, work on the back-end started well, gradually building out the functionality for actions that would be performed by the user on the front-end. CRUD functionality for all agreed features was in place, and all API endpoints were covered. Details of the back-end-only testing can be found [here](/TESTING.md)
@@ -65,31 +65,31 @@ This concluded sprint two; further details of subsequent sprints and the entire 
 
 ### *Sprint 3*
 
-* February 24-28 2023
-  * Create basic structure of site and test content for each page
+* 19th -26th May 2023
+  * Begin work on ReactJS front-end project.
 
-Sprint 3 involved developing views, templates and urls for the main pages of the site. This is when the project board became an invaluable reference point. There were two occasions when the project as a whole seemed quite overwhelming but the project board helped to keep me focused. I did find that I had not been specific enough with some user stories so I edited these and added several more as I became more familiar with the process. This sprint finished ahead of schedule on the 27th.
+Sprint 3 is where the front-end development began in earnest. The GitHub repository and Gitpod workspace were created. Step one was to create a functioning navbar, basic routing and authentication. The sprint was completed a day early, with a minor issue relating to connecting to the API. 
 
 ### *Sprint 4*
 
-* March 1-5 2023
-  * Add background images, add content for User to view, set up layout for all pages
+* 26th May - 3rd June 2023
+  * Implement main pages and components for the front-end.
 
-Sprint 4 took slightly longer than expected. The purpose of this was to add all background images and provide the User with a front end method to upload book photographs. Due to some image size and resolution issues, plus a lack of familiarity with the Cloudinary platform, it took longer than expected to achieve, so I finished this sprint on the 7th March.
+Sprint 4 took slightly longer than expected. The purpose of this was to create the Posts, Tutorials, Comments, Likes and Favourites. The follower functionality added an extra day to the sprint but at the end the core functionality of the site was in place.
 
 ### *Sprint 5*
 
-* March 7-14 2023
-  * Enable CRUD functionality where necessary, add User profile
+* 4th-11th June 2023
+  * Begin testing. Ensure all CRUD functionality and user stories implemented.
 
-I allowed a week for sprint 5. The purpose was to add all site content, navigation and ensure CRUD functionality worked in all instances where the admin or user needed it. These included adding a comment or review and editing or deleting a review. Initially I was ahead of schedule, but progress was significantly disrupted when it came to adding a user profile so this meant the sprint was not finished until the 15th March.
+I allowed a week for sprint 5. The purpose was to add all site content and ensure CRUD functionality worked in all instances where the admin or user needed it. Testing all links and buttons along with adding, updating and deleting content was a thorough and time-consuming process. The final process of the sprint was to reference the Github project board to ensure all user stories had been actioned.
 
 ### *Sprint 6*
 
-* March 16-23 2023
-  * Ensure all user stories actioned, finalise styling of all content, forms and pages
+* 14th-25th June 2023
+  * Complete testing, ensure all styling completed and add all documentation for front- and back-end projects.
 
-This was another week-long sprint. With all User Stories working as intended, the aim of this sprint was to refine the appearance of the site and perform testing. In a meeting with my mentor towards the end of the sprint, some minor styling issues were identified, all subsequently actioned. A major problem came when setting debug=False in the settings.py file. The project then failed to deploy or if it did, there would be no access to my static files. This wasted a crucial day of the project and put me slightly behind. I finished this sprint on the 24th.
+I allowed 11 days for the final sprint which involved testing and validation for both projects. Styling the site to a standard which met the site owner's expectations was also a thorough process but one which met approval in our final meeting. Miss Ross felt very pleased with the look, feel and functionality of the site. The documentation took six days plus an extra day of proof-reading and code-tidying.
 
 ## **Epics**
 
