@@ -11,6 +11,10 @@ import Media from "react-bootstrap/Media";
 import Card from "react-bootstrap/Card";
 import { toast } from "react-toastify";
 
+/**
+ * Displays post content.
+ * Adapted from function-code provided in CI 'Moments' walkthrough.
+ */
 const Post = (props) => {
 	const {
 		id,
@@ -32,6 +36,9 @@ const Post = (props) => {
 	const is_owner = currentUser?.username === owner;
 	const history = useHistory();
 
+	/**
+    * Delete post instance from API.
+    */
 	const handleDelete = async () => {
 		try {
 			await axiosRes.delete(`/posts/${id}/`);
@@ -42,10 +49,16 @@ const Post = (props) => {
 		}
 	};
 
+	/**
+    * Route user to post-edit page.
+    */
 	const handleEdit = () => {
 		history.push(`/posts/${id}/edit`);
 	};
 
+	/**
+    * Retrieve likes count from API and increment by 1.
+    */
 	const handleLike = async () => {
 		try {
 			const { data } = await axiosRes.post("/likes/", { post: id });
@@ -64,6 +77,9 @@ const Post = (props) => {
 		} catch (err) {}
 	};
 
+	/**
+    * Retrieve likes count from API and decrement by 1.
+    */
 	const handleUnlike = async () => {
 		try {
 			await axiosRes.delete(`/likes/${like_id}`);

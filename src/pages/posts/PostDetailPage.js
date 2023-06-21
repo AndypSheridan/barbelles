@@ -16,6 +16,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Post from "./Post";
 
+/**
+* Displays details of single post, along with comments.
+* Function-code adapted from CI 'Moments' walkthrough project.
+*/
 const PostDetailPage = () => {
 	useRedirect("loggedOut");
 	const { id } = useParams();
@@ -25,6 +29,9 @@ const PostDetailPage = () => {
 	const profile_image = currentUser?.profile_image;
 	const [comments, setComments] = useState({ results: [] });
 
+	/**
+    * Retrieve post and comment data.
+    */
 	useEffect(() => {
 		const handleMount = async () => {
 			try {
