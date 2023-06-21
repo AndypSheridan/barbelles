@@ -2,6 +2,9 @@ import React from "react";
 import styles from "../styles/Welcome.module.css";
 import Container from "react-bootstrap/Container";
 
+/**
+ * Welcome message displayed on home page, if logged out.
+ */
 const Welcome = () => {
 	return (
 		<Container className={`my-3 text-center`}>

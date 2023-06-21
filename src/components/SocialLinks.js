@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Social links component.
+ */
 const SocialLinks = () => {
 	return (
 		<div>
