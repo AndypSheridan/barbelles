@@ -4,6 +4,10 @@ import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useHistory } from "react-router-dom";
 import { removeTokenTimestamp, shouldRefreshToken } from "../utils/utils";
 
+/**
+ * Determine current-user logged-in status.
+ * Adapted from code in CI 'Moments' walkthrough.
+ */
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
@@ -26,6 +30,10 @@ export const CurrentUserProvider = ({ children }) => {
 		handleMount();
 	}, []);
 
+	/**
+    * Axios interceptors.
+	* Will refresh token in the case of a 401 error to maintain logged-in status.
+    */
 	useMemo(() => {
 		axiosReq.interceptors.request.use(
 			async (config) => {

@@ -4,6 +4,9 @@ import { useCurrentUser } from "./CurrentUserContext";
 import { unfollowHelper } from "../utils/utils";
 import { followHelper } from "../utils/utils";
 
+/**
+ * Adapted from code provided in CI 'Moments' walkthrough.
+ */
 const ProfileDataContext = createContext();
 const SetProfileDataContext = createContext();
 
@@ -18,6 +21,10 @@ export const ProfileDataProvider = ({ children }) => {
 
     const currentUser = useCurrentUser();
 
+    /**
+    * Helper function for following user profiles.
+    * Creates follower instance and updates follower-count.
+    */
     const handleFollow = async (clickedProfile) => {
         try {
             const { data } = await axiosRes.post("/followers/", {
@@ -41,6 +48,10 @@ export const ProfileDataProvider = ({ children }) => {
         } catch (err) {}
     };
 
+    /**
+    * Helper function for un-follow user profile.
+    * Deletes instance from API and updates follow-count.
+    */
     const handleUnfollow = async (clickedProfile) => {
         try {
             await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
@@ -61,6 +72,11 @@ export const ProfileDataProvider = ({ children }) => {
         } catch (err) {}
     };
 
+    /**
+    * Adapted from code provided in CI 'Moments' walkthrough.
+    * Retrieves profile data from API.
+    * Order profiles based on most followers.
+    */
     useEffect(() => {
         const handleMount = async () => {
             try {
