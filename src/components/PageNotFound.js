@@ -7,6 +7,9 @@ import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Asset from "./Asset";
 
+/**
+ * Displays error graphic, message for non-existent pages.
+ */
 const PageNotFound = () => {
 	const history = useHistory();
 
