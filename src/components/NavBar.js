@@ -126,7 +126,7 @@ const NavBar = () => {
 	);
 	const signedOutIcons = (
 		<>
-			<NavLink className={styles.NavLink} to="/about">
+			<NavLink className={styles.NavLink} to="/about" activeClassName={styles.Active}>
 				<i className="fa-solid fa-circle-info pl-3"></i>
 				About
 			</NavLink>
@@ -136,7 +136,7 @@ const NavBar = () => {
 				activeClassName={styles.Active}
 				onClick={() => setExpanded(false)}
 			>
-				<i className="fa-solid fa-plus"></i> Log in or sign up
+				<i className="fa-solid fa-door-open"></i> Log in | sign up
 			</NavLink>
 		</>
 	);
