@@ -1,3 +1,4 @@
+/* Hide horizontal overflow */
 html {
     overflow-x: hidden;
 }
@@ -10,6 +11,7 @@ body {
     padding: 0px;
 }
 
+/* Form input styles */
 input[type="text"]::-webkit-input-placeholder {
     color: #b27092;
 }
@@ -41,6 +43,7 @@ input:focus {
     border-color: #ff66b3;
 }
 
+/* Global font and background colour */
 .App {
     font-family: "Roboto", sans-serif;
     background: #333333;
@@ -52,7 +55,6 @@ input:focus {
 }
 
 .Container {
-    /* overflow-x: hidden; */
     padding: 0px;
 }
 
@@ -99,6 +101,7 @@ input:focus {
     object-fit: contain;
 }
 
+/* Links and icons */
 a {
     color: #512d38 !important;
     transition: color ease-in-out 0.3s;
