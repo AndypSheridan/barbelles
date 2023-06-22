@@ -42,7 +42,7 @@ const Post = (props) => {
 	const handleDelete = async () => {
 		try {
 			await axiosRes.delete(`/posts/${id}/`);
-			history.goBack();
+			history.push("/posts-feed");
 			toast.success("Post deleted");
 		} catch (err) {
 			toast.error("Oops, please try again!");
