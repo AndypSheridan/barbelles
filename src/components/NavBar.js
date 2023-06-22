@@ -19,7 +19,11 @@ const NavBar = () => {
 
 	const signedInIcons = (
 		<>
-			<NavLink className={styles.NavLink} to="/about">
+			<NavLink
+				className={styles.NavLink}
+				activeClassName={styles.Active}
+				to="/about"
+			>
 				<i className="fa-solid fa-circle-info pl-3"></i>
 				About
 			</NavLink>
@@ -131,21 +135,16 @@ const NavBar = () => {
 	);
 	const signedOutIcons = (
 		<>
-			<NavLink
-				className={styles.NavLink}
-				to="/about"
-				activeClassName={styles.Active}
-			>
+			<NavLink className={styles.NavLink} to="/about">
 				<i className="fa-solid fa-circle-info pl-3"></i>
 				About
 			</NavLink>
 			<NavLink
 				to="/signup"
 				className={styles.NavLink}
-				activeClassName={styles.Active}
 				onClick={() => setExpanded(false)}
 			>
-				<i className="fa-solid fa-door-open"></i> Log in | sign up
+				<i className="fa-solid fa-arrow-right-to-bracket"></i> Log in or sign up
 			</NavLink>
 		</>
 	);
