@@ -93,7 +93,7 @@ const Tutorial = (props) => {
 	const handleDelete = async () => {
 		try {
 			await axiosRes.delete(`/tutorials/${id}/`);
-			history.goBack();
+			history.push("/tutorials");
 			toast.success("Tutorial deleted");
 		} catch (err) {
 			toast.error("Oops, please try again!");
