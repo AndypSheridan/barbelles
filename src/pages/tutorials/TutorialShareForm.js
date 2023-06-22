@@ -50,6 +50,7 @@ function TutorialShareForm() {
         try {
             const { data } = await axiosReq.post("/tutorials/", formData);
             history.push(`/tutorials/${data.id}`);
+            toast.success("Tutorial added!")
         } catch (err) {
             toast.error("Oops, please try again!");
             if (err.response?.status !== 401) {
