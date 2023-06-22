@@ -208,7 +208,7 @@ The Lighthouse test results for all major pages can be found below.
 
 The Mobile scores are generally lower in terms of performance with the reason being some issues with the Bootstrap CDN and the images used. The majority of images added during development were already compressed to what I felt was an acceptable limit but images added by users were beyond my control. I had set a limit of 4MB via the back-end project so could perhaps have reduced this without compromising the UX. Some of the lower scores are as a result of the Cloudinary integration and issues with cookies which I feel were beyond my control here.
 
-One major factor resulting in a widespread poor performance score relates to the resolution of the logo. If I had the time, I would revisit this but I found no visible issue with the appearance or performance of the logo itself.
+The 'best practices' score is consistently 83 across pages, the reason for this being the resolution of the logo image. However the logo appears and functions exactly as intended whether on the smallest or largest screens. It is set to shrink at screen sizes of 400px or less to accommodate the hamburger menu. If the image size was to change, it would compromise the look and feel of the navbar.
 
 <hr>
 
