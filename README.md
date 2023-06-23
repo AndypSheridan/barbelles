@@ -212,18 +212,19 @@ I used Github projects to create and track issues and User Stories. The Agile pr
 
 ### **Navbar**
 ​
-The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays links to the About Page and Sign up. All icons used in the navbar and site-wide are from [Font Awesome](www.fontawesome.com):
+The Navbar is a bootstrap component which allows a registered User to navigate their way around the site with ease. When logged out, it displays links to the About Page and Sign in / sign up page. All icons used in the navbar and site-wide are from [Font Awesome](www.fontawesome.com):
 
-![Screenshot of navbar](docs/images/navbar-logged-out.png)
+![Screenshot of navbar](docs/images/navbar-logged-out-2.png)
 
  When the User is logged in, it offers navigation to the About page and features dropdown menus to Post, Tutorial and Profile pages as well as the logout button:
 
-![Screenshot of navbar](docs/images/navbar-logged-in.png)
+![Screenshot of navbar](docs/images/navbar-logged-in-2.png)
 
 To display properly on smaller screens, I used a Bootstrap hamburger menu:
 
-![Screenshot of small-screen navbar](docs/images/navbar-logged-out-mobile.png)
-![Screenshot of small-screen navbar menu](docs/images/navbar-logged-in-mobile.png)
+![Screenshot of small-screen navbar](docs/images/navbar-mobile.png)
+![Screenshot of small-screen navbar](docs/images/navbar-logged-in-mobile-2.png)
+![Screenshot of small-screen navbar menu](docs/images/navbar-logged-out-mobile-2.png)
 
 The Posts dropdown menu features links to all posts, posts by community members the logged-in user follows, liked posts and the link for the user to share a post:
 
