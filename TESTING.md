@@ -81,7 +81,7 @@ The following bugs were identified during user testing:
 
 ​<br>
 
-* Bug 🐞 - The `nmp start` command no longer worked as expected, meaning I lost a full day of project-time.
+* Bug 🐞 - The `npm start` command no longer worked as expected, meaning I lost a full day of project-time.
 * Cause ⚒️ - The error was on Gitpod's side as a result of an update to the Browser file.
 * Resolution ✅ - Contacted Gitpod and was assured they were working on a solution. Hoped for a quick fix and fortunately the issue was resolved the following day.
 
@@ -197,7 +197,7 @@ The Lighthouse test results for all major pages can be found below.
 
 *Mobile*
 
-![Share post page mobile lighthouse](docs/validation/book-detail-lighthouse-mobile.png)
+![Share post page mobile lighthouse](docs/validation/lighthouse-posts-share-mobile.png)
 
 ### Post Detail Page
 
@@ -478,7 +478,7 @@ With the resolution of these final issues, the linter returned no warnings (the 
 
 ## **Automated testing**
 
-Some automated testing was performed on the following components:
+Automated testing was performed on the following components:
 
 - Asset.js
 - Navbar.js

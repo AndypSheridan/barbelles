@@ -16,7 +16,7 @@
 
 ## **Overview**
 
-This was my second project developed using Agile Methodologies and I encountered challenges, and some occasional confusion, along the way. The first challenge was the plethora of information I had absorbed in a short space of time. I was attempting to apply a number of Agile methods and use various different platforms to help the planning process: 
+This was my second project developed using Agile Methodologies and whilst I encountered challenges along the way, the processes used were of great assistance. The first challenge was the plethora of information I had absorbed in a short space of time. I was attempting to apply a number of Agile methods and use various different platforms to help the planning process: 
 
 I used a [Smart Sheet](https://www.smartsheet.com) template to help plan six sprints for this project:
 
