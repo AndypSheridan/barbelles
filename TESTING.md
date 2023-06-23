@@ -123,7 +123,15 @@ The following bugs were identified during user testing:
 
 ![Tutorials warnings](docs/validation/tutorials-errors.png)
 
-Upon investigation and research, it became evident that these warnings are beyond my control and can be safely ignored.
+After investigation and research, it became evident that these warnings are beyond my control and can be safely ignored.
+
+* When playing some (but not all) tutorials, which for the purpose of this project, are YouTube videos; the following errors occasionally appear in the console: 
+
+![Tutorial console errors](docs/validation/tutorial-youtube-errors.png)
+
+It is difficult to replicate, as sometimes they do not appear but are a result of a conflict with google ads and beyond my control.
+
+* During testing, I identified two occasions when the 'Share tutorial' link no longer appeared in the navbar dropdown menu when logged in as admin. The resolution to this issue was to reset the 'is_staff' status to true in the API. It was not entirely clear why this happened as I could not replicate it on demand.
 
 <hr>
 
