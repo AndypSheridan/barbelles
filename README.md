@@ -7,11 +7,11 @@ BarBelles serves as a front-end component which is connected to the [BarBelles A
 
 <hr>
 
+![Am I Responsive Posts Screenshot](docs/images/barbelles-posts-amiresponsive.png)
+
 ![Am I Responsive Screenshot](docs/images/barbelles-amiresponsive.png)
 
 <hr>
-
-![Am I Responsive Posts Screenshot](docs/images/barbelles-posts-amiresponsive.png)
 
 - Click [here](https://barbelles.herokuapp.com/) to view the final deployment of the front-end site.
 - Click [here](https://barbelles-api.herokuapp.com/) to view the final deployment of the API.
