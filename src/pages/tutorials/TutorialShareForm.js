@@ -62,10 +62,16 @@ function TutorialShareForm() {
     const textFields = (
         <div className="text-center">
             <Form.Group>
-                <Form.Label>YouTube link</Form.Label>
                 <p className={styles.DarkPink}>
-                    Example: https://www.youtube.com/watch?v=***********
+                    1. Copy Embed code from YouTube
                 </p>
+                <p className={styles.DarkPink}>
+                    2. Delete everything but the video link
+                </p>
+                <p className={styles.DarkPink}>
+                    e.g. https://www.youtube.com/watch?v=***********
+                </p>
+                <Form.Label>Link</Form.Label>
                 <Form.Control
                     value={video}
                     onChange={handleChange}
