@@ -9,6 +9,7 @@ import TopProfiles from "../profiles/TopProfiles";
 import Container from "react-bootstrap/Container";
 import { useLocation } from "react-router-dom";
 import Asset from "../../components/Asset";
+import { useRedirect } from "../../hooks/useRedirect"
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -19,6 +20,7 @@ import Post from "./Post";
 * Adapted from function-code provided by CI 'Moments' walkthrough.
 */
 const PostsFeedPage = ({ message, filter = "" }) => {
+	useRedirect("loggedOut")
 	const [posts, setPosts] = useState({ results: [] });
 	const [hasLoaded, setHasLoaded] = useState(false);
 	const { pathname } = useLocation();
