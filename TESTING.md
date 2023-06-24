@@ -117,6 +117,14 @@ The following bugs were identified during user testing:
 
 ## **Unfixed Bugs**
 
+* If the admin / site owner edits their profile, it may reset the `is_staff = True` to the default value of `False`. I identified this issue just before submission of the project and found it occurred in roughly 80% of cases. As this feature is only available to the site owner (or for testing purposes), it does not affect the core functionality of the site for regular users. The fix is relatively straightforward and requires accessing in the admin panel of the [API](https://barbelles-api.herokuapp.com/admin/). Once logged in (credentials supplied upon submission), it is just a case of checking the `is_staff` box in the specific profile to reinstate the functionality to share a tutorial. See image below:
+
+![Is_staff fix](docs/images/api-is-staff-fix.png)
+
+Once the changes are made, the "Share tutorial" link is available in the dropdown menu.
+
+Whilst this is a back-end issue, it occurs as a result of actions performed on the front-end so have added it as a bug here. I do not consider the fix to be ideal but it does not compromise the integrity of the project as a whole, as the site owner has access to the API in order to manage potentially content and users.
+
 * There is a known bug that this app cannot open on Apple mobile devices and most browsers other than Chrome. The bug is that when users try to log in, they will be redirected back to the login page. This bug is due to cookies not being saved in the local storage. For this bug to be fixed on Safari, "Prevent Cross-Site Tracking" will need to be turned off in settings. In the case of this app, I was able to use the app as intended on Safari on an iPhone 12, iPhone 14 Pro Max. It would not function as intended using Chrome iOS.
 
 * Whilst not a bug, the following console warnings appear when on the Tutorials feed or detail page:
@@ -130,8 +138,6 @@ After investigation and research, it became evident that these warnings are beyo
 ![Tutorial console errors](docs/validation/tutorial-youtube-errors.png)
 
 It is difficult to replicate, as sometimes they do not appear but are a result of a conflict with google ads and beyond my control.
-
-* During testing, I identified two occasions when the 'Share tutorial' link no longer appeared in the navbar dropdown menu when logged in as admin. The resolution to this issue was to reset the 'is_staff' status to true in the API. It was not entirely clear why this happened as I could not replicate it on demand.
 
 <hr>
 
