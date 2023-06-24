@@ -242,7 +242,7 @@ The final dropdown uses the avatar image of the logged-in user. If no image has 
 
 Upon navigating to the site, the user will find themselves at the landing / sign up / sign in page. The background image is a black and white one of the site owner, Kate Ross pushing a weighted sled:
 
-![Landing page](docs/images/landing.png)
+![Landing page](docs/images/home-logged-out-final.png)
 
 Options available to the user are:
 
@@ -326,7 +326,7 @@ The email icon opens the default email application with the recipient being a te
 
 The About page can be viewed regardless of whether the user is logged in or out and displays information about the site. The text welcomes the User to the site and explains what they can do once logged in a registered User.
 
-![Screenshot of about page ](docs/images/about.png)
+![Screenshot of about page ](docs/images/about-logged-out-final.png)
 
 Towards the bottom of the page, a Social Links component has been used:
 
@@ -507,11 +507,11 @@ The favourites page is the same as the Tutorials list, but makes use of a filter
 
 Users who have the permission, will see the Share tutorial link in the dropdown menu and can add a link to a tutorial or workout, which will be rendered in an iframe. Clicking the link will take them to this page:
 
-![Screenshot of upload tutorial page](docs/images/upload-tutorial.png)
+![Screenshot of upload tutorial page](docs/images/share-tutorial-updated.png)
 
 On smaller screens, the page looks like this:
 
-![Screenshot of upload tutorial page](docs/images/upload-tutorial-mobile.png)
+![Screenshot of upload tutorial page](docs/images/share-tutorial-mobile-updated.png)
 
 ### Tutorial Detail Page
 

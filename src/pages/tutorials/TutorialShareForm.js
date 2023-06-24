@@ -69,7 +69,7 @@ function TutorialShareForm() {
                     2. Delete everything but the video link
                 </p>
                 <p className={styles.DarkPink}>
-                    e.g. https://www.youtube.com/watch?v=***********
+                    e.g. https://www.youtube.com/embed/xxxxxxxxx
                 </p>
                 <Form.Label>Link</Form.Label>
                 <Form.Control
